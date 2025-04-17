@@ -1,0 +1,34 @@
+# Gitignore file for Du Lich Viet Nam project
+
+# 1. Files with sensitive information
+# NEVER commit your database credentials!
+/src/Config/database.php
+
+# 2. Dependency directories (managed by package managers)
+# Ignore Composer vendor directory
+/vendor/
+# Ignore NPM modules if you use frontend build tools
+/node_modules/
+
+
+# 4. IDE and Editor specific files/directories
+.vscode/      # Visual Studio Code configuration
+.idea/        # PhpStorm/IntelliJ IDEA configuration
+*.swp         # Vim swap files
+
+# 5. Operating System files
+.DS_Store     # macOS
+Thumbs.db     # Windows
+
+# 6. Cache and log files (example paths - adjust if you create these)
+/var/cache/
+/var/log/
+/temp/
+
+# 7. Environment specific files (e.g., if you have different configs for local/production)
+# /src/Config/env.local.php
+# /src/Config/env.production.php
+
+# 8. Any other files you manually compile or generate
+# *.log
+# *.tmp
