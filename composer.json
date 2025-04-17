@@ -1,0 +1,11 @@
+{
+    "name": "anh14/que-huong",
+    "description": "Vietnam tourism introduction website",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "Anh14\\QueHuong\\": "src/"
+        }
+    },
+    "require": {}
+}
