@@ -142,7 +142,24 @@
 .search-form button:hover {
   background-color: #0056b3;
 }
+#search-form {
+  position: absolute;
+  top: 60px;
+  right: 20px;
+  background: white;
+  padding: 5px;
+  border: 1px solid #ccc;
+}
+.search-toggle-btn img {
+  height: 20px;
+  filter: invert(1);
+}
 
+.search-toggle-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .nav-list {
