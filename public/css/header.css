@@ -1,0 +1,155 @@
+/* Reset cơ bản */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Header bao toàn bộ menu */
+.site-header {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  background-color: rgba(255, 255, 255, 0.1);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+/* Thanh điều hướng */
+.nav-menu {
+  max-width: 1200px;
+  margin: auto;
+  padding: 1rem 2rem;
+}
+
+/* Danh sách menu */
+.nav-list {
+  list-style: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+/* Từng mục menu */
+.nav-item {
+  margin: 0.5rem 1rem;
+}
+
+/* Link trong menu */
+.nav-item a {
+  text-decoration: none;
+  color: white;
+  font-weight: 500;
+  font-size: 1rem;
+  padding-bottom: 5px;
+  position: relative;
+}
+
+/* Tạo thanh ngang ẩn ban đầu bằng pseudo-element ::after */
+.nav-item a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0;
+  height: 2px;
+  background-color: #f20b0b;
+  transition: width 0.3s ease-in-out;
+}
+
+/* Khi hover vào link, làm thanh ngang ::after hiện ra */
+.nav-item a:hover::after {
+  width: 100%;
+}
+
+/* Logo */
+.logo-item img {
+  height: 40px;
+  width: auto;
+  vertical-align: middle;
+  border-radius: 4px;
+}
+
+/* Nút tìm kiếm */
+.search-toggle-item button {
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  line-height: 0;
+}
+.search-toggle-item img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+  transition: filter 0.3s;
+  vertical-align: middle;
+}
+
+.search-toggle-item button:hover img {
+  transform: scale(1.1);
+}
+
+.search-form {
+  position: absolute;
+  top: 100%;
+  right: 2rem;
+  margin-top: 10px;
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  padding: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  z-index: 999;
+  width: 250px;
+  display: flex;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: opacity 0.3s ease, visibility 0.3s ease, transform 0.3s ease;
+}
+.search-form:not(.hidden) {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+  transition: opacity 0.3s ease, visibility 0s linear 0s, transform 0.3s ease;
+}
+.search-form.hidden {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+}
+.search-form input[type="search"] {
+  flex-grow: 1;
+  padding: 8px;
+  border: 1px solid #ddd;
+  border-radius: 3px 0 0 3px;
+  border-right: none;
+  outline: none;
+  color: #333;
+}
+.search-form button {
+  padding: 8px 12px;
+  border: 1px solid #ddd;
+  background-color: #007bff;
+  color: white;
+  cursor: pointer;
+  border-radius: 0 3px 3px 0;
+  white-space: nowrap;
+}
+.search-form button:hover {
+  background-color: #0056b3;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .nav-list {
+    justify-content: center;
+  }
+  .search-form {
+    right: 1rem;
+    width: calc(100% - 2rem);
+  }
+}
