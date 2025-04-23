@@ -1,0 +1,176 @@
+/* --- Footer Styling --- */
+.site-footer {
+  background-color: #f8f9fa; /* Màu nền nhạt như trong ảnh */
+  color: #555; /* Màu chữ chính */
+  padding: 40px 0 20px 0; /* Padding trên/dưới */
+  font-size: 0.9em;
+  border-top: 1px solid #eee; /* Đường kẻ phân cách phía trên */
+}
+
+.container {
+  max-width: 1140px; /* Giới hạn chiều rộng */
+  margin: 0 auto; /* Căn giữa */
+  padding: 0 20px; /* Padding hai bên */
+}
+
+/* --- Phần link phía trên --- */
+.footer-top {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  margin-bottom: 30px;
+  padding-bottom: 30px;
+  border-bottom: 1px solid #eee; /* Đường kẻ phân cách giữa */
+}
+
+.footer-column {
+  flex: none;
+  min-width: 0;
+  padding: 0;
+}
+
+.footer-heading {
+  font-size: 1rem;
+  font-weight: bold;
+  color: #333; /* Màu chữ đậm hơn cho tiêu đề */
+  margin-bottom: 15px;
+  text-transform: none; /* Hoặc uppercase nếu muốn */
+}
+
+.footer-links {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 8px; /* Khoảng cách giữa các link */
+  font-size: 0.9rem;
+}
+
+.footer-links a {
+  color: #555; /* Màu link */
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-links a:hover {
+  color: #007bff; /* Màu link khi hover */
+  text-decoration: underline;
+}
+
+/* --- Phần dưới cùng (Copyright, Social, Payment) --- */
+.footer-bottom {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+  align-items: center; /* Căn giữa theo chiều dọc */
+  padding-top: 20px;
+}
+
+.social-icons {
+  display: flex;
+  gap: 15px;
+  justify-content: center;
+}
+
+.social-icons a {
+  display: inline-block;
+  opacity: 0.8;
+  transition: opacity 0.3s ease;
+}
+.social-icons a:hover {
+  opacity: 1;
+}
+.social-icons img {
+  width: 24px; /* Kích thước icon social */
+  height: 24px;
+}
+
+.copyright-info {
+  text-align: center; /* Căn giữa text */
+  margin: 10px 15px; /* Khoảng cách trên dưới/trái phải */
+  flex-grow: 1; /* Cho phép chiếm không gian còn lại */
+  line-height: 1.6;
+}
+.copyright-info p {
+  margin: 5px 0;
+}
+.dmca-badge img {
+  height: 20px; /* Kích thước badge DMCA */
+  vertical-align: middle; /* Căn giữa với text */
+  margin-left: 5px;
+}
+
+.footer-right {
+  display: flex;
+  align-items: center;
+}
+
+.payment-methods {
+  display: flex;
+  gap: 10px;
+  justify-content: center;
+  align-items: center;
+}
+
+.payment-methods img {
+  height: 24px; /* Kích thước logo payment */
+}
+
+.back-to-top {
+  display: inline-block;
+  background-color: #007bff; /* Màu nút back-to-top */
+  color: white;
+  width: 35px;
+  height: 35px;
+  line-height: 35px; /* Căn giữa icon theo chiều dọc */
+  text-align: center;
+  border-radius: 4px;
+  margin-left: 20px;
+  transition: background-color 0.3s ease;
+}
+.back-to-top:hover {
+  background-color: #0056b3;
+}
+.back-to-top img {
+  width: 16px; /* Kích thước mũi tên */
+  height: auto;
+  vertical-align: middle;
+  position: relative; /* Điều chỉnh vị trí nếu cần */
+  top: -1px; /* Điều chỉnh nhỏ */
+  filter: brightness(0) invert(1); /* Đổi màu icon svg thành trắng */
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .footer-column {
+    flex-basis: calc(50% - 30px); /* 2 cột trên tablet */
+    min-width: auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .footer-top {
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+  }
+
+  .footer-bottom {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .social-icons,
+  .payment-methods {
+    justify-content: center;
+  }
+
+  .back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    margin: 0;
+    z-index: 99;
+  }
+}
