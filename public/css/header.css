@@ -1,4 +1,7 @@
-/* File: public/css/header.css */
+/* ============================================ */
+/* File: public/css/header.css                 */
+/* Version: Bao gồm Custom Search Ví dụ 1     */
+/* ============================================ */
 
 /* === Reset cơ bản & Biến màu === */
 :root {
@@ -47,6 +50,9 @@ button {
   cursor: pointer;
   font-family: inherit;
   font-size: inherit;
+  background: none; /* Reset background */
+  border: none; /* Reset border */
+  padding: 0; /* Reset padding */
 }
 
 /* === Header & Nav Cơ bản === */
@@ -66,6 +72,7 @@ button {
 .nav-list {
   display: flex;
   align-items: center; /* Căn các mục menu theo chiều dọc */
+  justify-content: space-between; /* Phân bổ không gian đều giữa các mục */
 }
 
 .nav-item {
@@ -75,9 +82,10 @@ button {
 /* Style chung cho các link menu */
 .nav-item > a,
 .search-toggle-item > button {
-  display: flex; /* Để căn giữa nội dung nếu link/button có icon */
+  /* Áp dụng padding/height cho cả nút search */
+  display: flex;
   align-items: center;
-  padding: 1.5rem 1.2rem; /* Padding trên/dưới và trái/phải */
+  padding: 1.5rem 1rem; /* Padding trên/dưới và trái/phải */
   color: var(--text-dark);
   font-weight: 500;
   transition: color 0.3s ease;
@@ -94,30 +102,27 @@ button {
 
 /* Logo */
 .logo-item {
-  margin-right: auto; /* Đẩy logo về bên trái và các mục khác về bên phải */
-}
+} /* Không cần margin-right: auto nữa */
 
 .logo-item a {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
-  padding-right: 1.2rem; /* Giữ padding phải giống các mục khác */
+  padding-right: 1rem; /* Giữ padding phải */
   padding-left: 0; /* Bỏ padding trái cho logo */
 }
 
 #logoVietNam {
-  /* Style cụ thể cho ID logo */
-  height: 45px; /* Chiều cao logo */
+  height: 55px; /* Tăng chiều cao logo */
 }
 
-/* === Search === */
+/* === Search Customization (Ví dụ 1) === */
+
+/* Nút để bật/tắt ô tìm kiếm */
 .search-toggle-item {
-  /* Không cần margin-left đặc biệt nếu logo dùng margin-right: auto */
 }
 
 .search-toggle-item button {
-  background: none;
-  border: none;
-  padding: 1.5rem 1rem; /* Điều chỉnh padding nếu cần */
+  /* Style padding/height đã được áp dụng ở trên cùng .nav-item > a */
 }
 
 .search-toggle-item img {
@@ -130,21 +135,25 @@ button {
   opacity: 1;
 }
 
-/* Form tìm kiếm */
+/* Form tìm kiếm - Phần được custom giao diện */
 .search-form {
+  /* ---- Định vị & Trạng thái ẩn/hiện (Giữ nguyên logic) ---- */
   position: absolute;
-  top: calc(100% + 5px); /* Ngay dưới header, có khoảng cách 5px */
-  right: 15px; /* Căn phải theo padding của .nav-menu */
-  background-color: white;
-  border: 1px solid var(--border-color);
-  border-radius: 4px;
-  padding: 12px 15px; /* Padding bên trong form */
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  z-index: 101; /* Nổi trên mega menu một chút nếu cần */
-  width: 280px; /* Độ rộng form */
-  display: flex; /* Để input và button nằm cạnh nhau */
+  top: calc(100% + 8px); /* Tăng khoảng cách nhẹ nếu muốn */
+  right: 15px;
+  z-index: 101;
+  display: flex;
+  align-items: center;
 
-  /* Trạng thái ẩn & Transition */
+  /* ---- Giao diện được custom ---- */
+  background-color: #f0f0f0;
+  border: none;
+  border-radius: 25px; /* Bo tròn nhiều */
+  padding: 5px 5px 5px 15px;
+  box-shadow: 0 3px 8px rgba(0, 0, 0, 0.15);
+  width: 300px;
+
+  /* ---- Transition (Giữ nguyên hoặc chỉnh sửa nếu muốn) ---- */
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px) scale(0.98);
@@ -153,49 +162,69 @@ button {
   pointer-events: none;
 }
 
+/* Trạng thái ẩn */
 .search-form.hidden {
-  /* Lặp lại trạng thái ẩn để đảm bảo */
   opacity: 0;
   visibility: hidden;
   transform: translateY(-10px) scale(0.98);
   pointer-events: none;
 }
 
+/* Trạng thái hiện */
 .search-form:not(.hidden) {
   opacity: 1;
   visibility: visible;
   transform: translateY(0) scale(1);
-  transition-delay: 0s; /* Bỏ delay khi hiện ra */
+  transition-delay: 0s;
   pointer-events: auto;
 }
 
+/* Ô Input bên trong form */
 .search-form input[type="search"] {
-  flex-grow: 1; /* Chiếm hết không gian thừa */
-  padding: 8px 10px;
-  border: 1px solid #ddd;
-  border-radius: 3px 0 0 3px; /* Bo góc trái */
-  border-right: none;
+  flex-grow: 1;
+  background: transparent;
+  border: none;
   outline: none;
-  font-size: 0.9em;
+  padding: 8px 0;
+  color: var(--text-dark);
+  font-size: 1em;
 }
 
+/* Placeholder của ô input */
+.search-form input[type="search"]::placeholder {
+  color: var(--text-grey);
+  opacity: 0.8;
+}
+
+/* Nút Submit bên trong form */
 .search-form button[type="submit"] {
-  padding: 8px 12px;
-  border: 1px solid #ddd;
-  background-color: #f0f0f0;
-  border-radius: 0 3px 3px 0; /* Bo góc phải */
-  white-space: nowrap;
-  font-size: 0.9em;
-  transition: background-color 0.2s ease;
+  background-color: var(--primary-color);
+  color: white;
+  border: none;
+  border-radius: 50%;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  margin-left: 8px;
+  font-size: 0.9em; /* Cỡ chữ "Tìm" */
+  transition: background-color 0.2s ease, transform 0.1s ease;
 }
 
 .search-form button[type="submit"]:hover {
-  background-color: #e0e0e0;
+  background-color: #a00000;
+}
+
+.search-form button[type="submit"]:active {
+  transform: scale(0.95);
 }
 
 /* === Mega Menu Styling === */
 .nav-item.has-mega-menu {
-  position: static; /* Cho phép panel con chiếm full width */
+  position: static;
 }
 
 .mega-menu-panel {
@@ -207,9 +236,8 @@ button {
   background-color: var(--bg-light);
   border-top: 1px solid var(--border-color);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
-  padding: 2.5rem 0; /* Tăng padding trên dưới */
-  z-index: 100; /* Đảm bảo dưới header nhưng trên nội dung */
-
+  padding: 2.5rem 0;
+  z-index: 100;
   opacity: 0;
   visibility: hidden;
   transform: translateY(10px);
@@ -217,7 +245,6 @@ button {
   pointer-events: none;
 }
 
-/* Hiện panel khi hover vào mục LI cha */
 .nav-item.has-mega-menu:hover > .mega-menu-panel {
   opacity: 1;
   visibility: visible;
@@ -226,27 +253,32 @@ button {
 }
 
 .mega-menu-container {
-  max-width: 1140px; /* Giới hạn chiều rộng nội dung */
+  max-width: 1140px;
   margin: 0 auto;
   padding: 0 15px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr); /* 3 cột bằng nhau */
-  gap: 2.5rem; /* Khoảng cách giữa các cột */
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2.5rem;
 }
 
 .mega-menu-column {
-  /* Không cần style đặc biệt */
 }
 
 .mega-menu-image-header {
   margin-bottom: 1rem;
-  text-align: center;
+  /* text-align: center; */
+  display: flex; /* Sử dụng Flexbox */
+  flex-direction: column; /* Xếp các phần tử con theo cột (ảnh trên, chữ dưới) */
+  align-items: center; /* Căn giữa các phần tử con theo chiều ngang */
 }
 
 .mega-menu-image-header a {
-  display: inline-block;
+  display: block; /* Cho thẻ a chiếm dòng riêng trong flex column */
   border-radius: 8px;
-  overflow: hidden;
+  overflow: hidden; /* Giữ bo góc khi ảnh zoom */
+  width: 100%; /* Cho phép thẻ a co giãn */
+  /* Optional: Nếu bạn muốn giới hạn chiều rộng tối đa của ảnh */
+  /* max-width: 280px; */
 }
 
 .mega-menu-image-header img {
@@ -288,7 +320,6 @@ button {
 }
 
 .mega-menu-links li {
-  /* Không cần style đặc biệt */
 }
 
 .mega-menu-links a {
@@ -305,16 +336,14 @@ button {
 }
 
 /* === Responsive === */
-
-/* Màn hình nhỏ hơn (Large tablets / Small laptops) */
 @media (max-width: 1199px) {
   .nav-menu,
   .mega-menu-container {
-    max-width: 960px; /* Giảm max-width */
+    max-width: 960px;
   }
   .nav-item > a,
   .search-toggle-item > button {
-    padding: 1.5rem 1rem; /* Giảm padding ngang */
+    padding: 1.5rem 0.8rem;
   }
   .mega-menu-container {
     gap: 2rem;
@@ -324,70 +353,30 @@ button {
   }
 }
 
-/* Tablets */
 @media (max-width: 991px) {
   .nav-menu,
   .mega-menu-container {
     max-width: 720px;
   }
-  .nav-item > a,
-  .search-toggle-item > button {
-    padding: 1.2rem 0.8rem; /* Giảm padding nữa */
-  }
-
-  /* --- Hamburger Menu Logic (Cần HTML/JS để hoạt động) --- */
-  /* .hamburger-button { display: block; ... } */
-  /* .nav-list { display: none; position: absolute; top: 100%; left: 0; width: 100%; background: #fff; flex-direction: column; align-items: stretch; box-shadow: ... } */
-  /* .nav-list.mobile-menu-open { display: flex; } */
-  /* .nav-item { width: 100%; } */
-  /* .nav-item > a { width: 100%; padding: 1rem 1.5rem; border-bottom: 1px solid var(--border-color); } */
-  /* .logo-item { display: none; } */
-  /* ------------------------------------------------------- */
-
-  /* Thay đổi Mega Menu trên tablet */
-  .mega-menu-container {
-    grid-template-columns: repeat(2, 1fr); /* 2 cột */
-    gap: 1.5rem;
-    padding: 0 10px;
-  }
-  .mega-menu-image-header img {
-    height: 150px;
-  }
-  .mega-menu-column {
-    margin-bottom: 1.5rem;
-  }
-  /* Ẩn mega menu nếu dùng hamburger */
+  /* Hamburger menu logic would go here... */
+  /* .nav-list { display: none; ... } */
   .mega-menu-panel {
     display: none !important;
   }
 }
 
-/* Mobile phones */
 @media (max-width: 767px) {
   .nav-menu {
-    padding: 0 10px; /* Giảm padding hơn nữa */
+    padding: 0 10px;
   }
   #logoVietNam {
-    height: 40px; /* Logo nhỏ hơn */
+    height: 45px;
   }
-  .nav-item > a,
-  .search-toggle-item > button {
-    padding: 1rem 0.5rem;
+  /* Hamburger menu logic here... */
+  .search-form {
+    /* Adjust position or hide completely on small mobile */
+    width: calc(100% - 20px); /* Example: Full width minus padding */
+    right: 10px;
+    top: calc(100% + 5px);
   }
-  /* Ẩn hẳn search form trên mobile nhỏ nếu chiếm chỗ, dựa vào nút toggle */
-  /* .search-form { display: none; } */ /* Hoặc điều chỉnh vị trí phù hợp hơn */
-
-  /* Đảm bảo mega menu luôn ẩn */
-  .mega-menu-panel {
-    display: none !important;
-  }
-
-  /* Cần style cho menu hamburger nếu bạn thêm vào */
 }
-
-/* Chỉ là ví dụ nếu không ẩn mega-menu trên tablet mà muốn 1 cột */
-/* @media (max-width: 575px) {
-    .mega-menu-container {
-        grid-template-columns: 1fr;
-    }
-} */

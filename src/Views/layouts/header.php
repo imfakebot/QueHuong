@@ -1,8 +1,7 @@
 <?php
-// File: src/View/layout/header.php (hoặc tên file tương tự)
+// File: src/View/layout/header.php
 
 declare(strict_types=1);
-// Đặt tiêu đề mặc định hoặc lấy từ Controller (nếu có)
 $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
 ?>
 <!DOCTYPE html>
@@ -13,15 +12,8 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
     <meta name="description" content="Khám phá vẻ đẹp du lịch Việt Nam qua các địa điểm hấp dẫn và đặt tour dễ dàng.">
-
-    <!-- Link đến file CSS chính -->
     <link rel="stylesheet" href="/css/header.css">
-
-    <!-- (Tùy chọn) Link đến Favicon -->
-    <!-- <link rel="icon" href="/images/favicon.ico" type="image/x-icon"> -->
-
-    <!-- (Tùy chọn) Link Font Awesome nếu dùng icon font thay vì SVG/IMG -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    <link rel="stylesheet" href="/css/footer.css">
 </head>
 
 <body>
@@ -109,7 +101,6 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                 <li class="nav-item search-toggle-item">
                     <button id="search-toggle-btn" aria-label="Toggle search input">
                         <img src="/svg/search.svg" alt="Tìm kiếm">
-                        <!-- Hoặc dùng Font Awesome: <i class="fas fa-search" aria-hidden="true"></i> -->
                     </button>
                 </li>
             </ul> <!-- /nav-list -->
