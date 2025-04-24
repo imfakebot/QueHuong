@@ -15,6 +15,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
     <meta name="description" content="Khám phá vẻ đẹp du lịch Việt Nam qua các địa điểm hấp dẫn và đặt tour dễ dàng.">
     <!-- Link CSS cho header -->
     <link rel="stylesheet" href="/css/header.css">
+    <link rel="stylesheet" href="/css/main.css"> <!-- Link CSS chính cho toàn bộ trang -->
     <link rel="stylesheet" href="/css/footer.css">
     <!-- (Tùy chọn) Link CSS chung hoặc cho các phần khác nếu cần -->
     <!-- <link rel="stylesheet" href="/css/style.css"> -->

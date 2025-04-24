@@ -1,0 +1,12 @@
+html {
+  height: 100%;
+}
+body {
+  min-height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+main.site-content {
+  /* Hoặc selector cho phần nội dung chính */
+  flex-grow: 1;
+}
