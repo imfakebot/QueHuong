@@ -10,42 +10,85 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
 
 <head>
     <meta charset="UTF-8">
-    <!-- !!! QUAN TRỌNG: Thẻ Viewport cho Responsive !!! -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
     <meta name="description" content="Khám phá vẻ đẹp du lịch Việt Nam qua các địa điểm hấp dẫn và đặt tour dễ dàng.">
-
-    <!-- Link đến file CSS chính -->
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-
-    <!-- (Tùy chọn) Link đến Favicon -->
-    <!-- <link rel="icon" href="/images/favicon.ico" type="image/x-icon"> -->
-
-    <!-- (Tùy chọn) Link Font Awesome nếu dùng icon font thay vì SVG/IMG -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+    <!-- Các link khác -->
 </head>
 
 <body>
 
     <header class="site-header">
-        <!-- Container chính cho thanh điều hướng, sử dụng Flexbox -->
         <div class="nav-menu">
-
-            <!-- Phần Logo -->
             <div class="logo-container">
                 <a href="/">
                     <img src="/images/Vietnam.png" alt="Logo Du Lịch Quê Hương" id="logoVietNam">
                 </a>
             </div>
 
-            <!-- Menu điều hướng chính (Sẽ ẩn trên màn hình nhỏ) -->
             <nav class="main-navigation" id="main-navigation">
                 <ul class="nav-list">
-                    <li class="nav-item">
-                        <a href="/life">Life in VietNam</a>
-                    </li>
-                    <li class="nav-item has-mega-menu"> <!-- Mục chứa Mega Menu -->
+                    <!-- === LIFE IN VIETNAM - MEGA MENU === -->
+                    <li class="nav-item has-mega-menu">
+                        <a href="/life" aria-haspopup="true" aria-expanded="false">Life in VietNam</a>
+                        <div class="mega-menu-panel life-mega-menu" aria-hidden="true">
+                            <div class="mega-menu-container">
+                                <!-- Cột 1: Culture & Traditions -->
+                                <div class="mega-menu-column culture-column">
+                                    <div class="mega-menu-image-header">
+                                        <!-- Thay bằng ảnh phù hợp với văn hóa VN -->
+                                        <a href="/life/culture"><img src="/images/culture-placeholder.jpg" alt="Văn hóa Việt Nam"></a>
+                                        <h4>CULTURE</h4>
+                                    </div>
+                                    <h5 class="mega-menu-subheading">Traditions & Customs</h5>
+                                    <ul class="mega-menu-links">
+                                        <li><a href="/life/culture/festivals">Festivals & Holidays</a></li>
+                                        <li><a href="/life/culture/etiquette">Social Etiquette</a></li>
+                                        <li><a href="/life/culture/beliefs">Beliefs & Spirituality</a></li>
+                                        <li><a href="/life/culture/arts-crafts">Arts & Handicrafts</a></li>
+                                        <li><a href="/life/culture/ao-dai">Ao Dai: National Dress</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Cột 2: Food & Drink -->
+                                <div class="mega-menu-column food-column">
+                                    <div class="mega-menu-image-header">
+                                        <!-- Thay bằng ảnh món ăn đặc trưng -->
+                                        <a href="/life/food"><img src="/images/food-placeholder.jpg" alt="Ẩm thực Việt Nam"></a>
+                                        <h4>FOOD & DRINK</h4>
+                                    </div>
+                                    <h5 class="mega-menu-subheading">A Taste of Vietnam</h5>
+                                    <ul class="mega-menu-links">
+                                        <li><a href="/life/food/street-food">Street Food Guide</a></li>
+                                        <li><a href="/life/food/must-try">Must-Try Dishes</a></li>
+                                        <li><a href="/life/food/coffee-culture">Vietnamese Coffee</a></li>
+                                        <li><a href="/life/food/regional-cuisine">Regional Specialties</a></li>
+                                        <li><a href="/life/food/markets">Local Markets</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Cột 3: Travel Essentials -->
+                                <div class="mega-menu-column travel-column">
+                                    <div class="mega-menu-image-header">
+                                        <!-- Thay bằng ảnh liên quan đến du lịch/di chuyển -->
+                                        <a href="/life/travel-tips"><img src="/images/travel-placeholder.jpg" alt="Kinh nghiệm du lịch"></a>
+                                        <h4>TRAVEL ESSENTIALS</h4>
+                                    </div>
+                                    <h5 class="mega-menu-subheading">Tips for Your Trip</h5>
+                                    <ul class="mega-menu-links">
+                                        <li><a href="/life/travel-tips/visa">Visa Information</a></li>
+                                        <li><a href="/life/travel-tips/transport">Getting Around</a></li>
+                                        <li><a href="/life/travel-tips/money">Money & Budgeting</a></li>
+                                        <li><a href="/life/travel-tips/safety">Safety & Health</a></li>
+                                        <li><a href="/life/travel-tips/language">Basic Vietnamese Phrases</a></li>
+                                    </ul>
+                                </div>
+                            </div> <!-- /mega-menu-container -->
+                        </div> <!-- /mega-menu-panel -->
+                    </li> <!-- /has-mega-menu (Life in Vietnam) -->
+
+                    <!-- === PLACES MUST GO - MEGA MENU === -->
+                    <li class="nav-item has-mega-menu">
                         <a href="/destination" aria-haspopup="true" aria-expanded="false">Places must go</a>
                         <div class="mega-menu-panel places-mega-menu" aria-hidden="true">
                             <div class="mega-menu-container">
@@ -96,7 +139,9 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 </div>
                             </div> <!-- /mega-menu-container -->
                         </div> <!-- /mega-menu-panel -->
-                    </li> <!-- /has-mega-menu -->
+                    </li> <!-- /has-mega-menu (Places must go) -->
+
+                    <!-- === CÁC MỤC MENU KHÁC === -->
                     <li class="nav-item">
                         <a href="/thing">Things to do</a>
                     </li>
@@ -108,23 +153,18 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
 
             <!-- Các hành động bên phải (Tìm kiếm, Hamburger) -->
             <div class="header-actions">
-                <!-- Nút Tìm kiếm -->
-                <div class="search-toggle-item">
+                <div class="search-container">
                     <button id="search-toggle-btn" aria-label="Toggle search input">
-                        <img src="/svg/search.svg" alt="Tìm kiếm">
-                        <!-- Hoặc dùng Font Awesome: <i class="fas fa-search" aria-hidden="true"></i> -->
+                        <img src="/svg/search.svg" alt="Tìm kiếm" class="search-icon">
                     </button>
+                    <!-- Form tìm kiếm đã được chuyển ra ngoài -->
                 </div>
-
-                <!-- Nút Hamburger (Chỉ hiển thị trên màn hình nhỏ) -->
                 <button class="hamburger-button" id="hamburger-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="main-navigation">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
-                    <!-- Hoặc dùng Font Awesome: <i class="fas fa-bars" aria-hidden="true"></i> -->
                 </button>
             </div> <!-- /header-actions -->
-
         </div> <!-- /nav-menu container -->
 
         <!-- Form tìm kiếm ẩn (đặt bên ngoài .nav-menu container để định vị dễ hơn) -->
@@ -135,5 +175,5 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
 
     </header> <!-- /site-header -->
 
-    <!-- Thẻ main được mở ở đây và sẽ được đóng trong footer.php -->
     <main class="site-content">
+        <!-- Nội dung chính sẽ được nạp ở đây -->
