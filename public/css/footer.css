@@ -28,6 +28,7 @@
   flex: 1;
   /* Giảm chiều rộng tối thiểu để có thể co lại nhiều hơn */
   min-width: 200px;
+  margin-left: 30px; /* Giảm khoảng cách bên trái */
 }
 
 .footer-heading {
@@ -92,8 +93,9 @@
 /* --- Phần dưới cùng (footer-bottom) --- */
 .footer-bottom {
   display: flex;
+  flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-between;
+  justify-content: center;
   align-items: center;
   gap: 10px 15px; /* Giảm gap */
   padding-top: 15px; /* Giảm padding */
@@ -101,7 +103,10 @@
 }
 
 .copyright-info {
-  text-align: left;
+  display: flex;
+  flex-direction: column; /* Để căn giữa */
+  text-align: center;
+  justify-content: center;
   line-height: 1.5; /* Giảm line-height */
   margin: 0;
   color: #777;
