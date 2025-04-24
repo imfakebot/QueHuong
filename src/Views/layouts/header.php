@@ -13,18 +13,25 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
     <meta name="description" content="Khám phá vẻ đẹp du lịch Việt Nam qua các địa điểm hấp dẫn và đặt tour dễ dàng.">
+    <!-- Link CSS cho header -->
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css">
-    <!-- Các link khác -->
+    <!-- (Tùy chọn) Link CSS chung hoặc cho các phần khác nếu cần -->
+    <!-- <link rel="stylesheet" href="/css/style.css"> -->
+    <!-- (Tùy chọn) Link Font Awesome nếu dùng icon font -->
+    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+
 </head>
 
 <body>
 
     <header class="site-header">
-        <div class="nav-menu">
+        <div class="nav-menu"> <!-- Container chính cho thanh điều hướng -->
             <div class="logo-container">
                 <a href="/">
                     <img src="/images/Vietnam.png" alt="Logo Du Lịch Quê Hương" id="logoVietNam">
+                    <!-- Có thể thêm slogan ở đây nếu muốn -->
+                    <!-- <span class="site-slogan">Explore Your Vietnam</span> -->
                 </a>
             </div>
 
@@ -38,8 +45,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 1: Culture & Traditions -->
                                 <div class="mega-menu-column culture-column">
                                     <div class="mega-menu-image-header">
-                                        <!-- Thay bằng ảnh phù hợp với văn hóa VN -->
-                                        <a href="/life/culture"><img src="/images/culture-placeholder.jpg" alt="Văn hóa Việt Nam"></a>
+                                        <a href="/life/culture"><img src="/images/cultural.webp" alt="Văn hóa Việt Nam"></a>
                                         <h4>CULTURE</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading">Traditions & Customs</h5>
@@ -54,8 +60,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 2: Food & Drink -->
                                 <div class="mega-menu-column food-column">
                                     <div class="mega-menu-image-header">
-                                        <!-- Thay bằng ảnh món ăn đặc trưng -->
-                                        <a href="/life/food"><img src="/images/food-placeholder.jpg" alt="Ẩm thực Việt Nam"></a>
+                                        <a href="/life/food"><img src="/images/food.jpg" alt="Ẩm thực Việt Nam"></a>
                                         <h4>FOOD & DRINK</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading">A Taste of Vietnam</h5>
@@ -70,8 +75,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 3: Travel Essentials -->
                                 <div class="mega-menu-column travel-column">
                                     <div class="mega-menu-image-header">
-                                        <!-- Thay bằng ảnh liên quan đến du lịch/di chuyển -->
-                                        <a href="/life/travel-tips"><img src="/images/travel-placeholder.jpg" alt="Kinh nghiệm du lịch"></a>
+                                        <a href="/life/travel-tips"><img src="/images/travel_experience.jpg" alt="Kinh nghiệm du lịch"></a>
                                         <h4>TRAVEL ESSENTIALS</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading">Tips for Your Trip</h5>
@@ -141,30 +145,88 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                         </div> <!-- /mega-menu-panel -->
                     </li> <!-- /has-mega-menu (Places must go) -->
 
-                    <!-- === CÁC MỤC MENU KHÁC === -->
+                    <!-- === THINGS TO DO - MEGA MENU === -->
+                    <li class="nav-item has-mega-menu">
+                        <a href="/thing" aria-haspopup="true" aria-expanded="false">Things to do</a>
+                        <div class="mega-menu-panel things-mega-menu" aria-hidden="true">
+                            <div class="mega-menu-container">
+                                <!-- Cột 1: Adventure & Outdoors -->
+                                <div class="mega-menu-column adventure-column">
+                                    <div class="mega-menu-image-header">
+                                        <a href="/things/adventure"><img src="/images/adventure_and_outdoor.jpg" alt="Adventure & Outdoors"></a>
+                                        <h4>ADVENTURE & OUTDOORS</h4>
+                                    </div>
+                                    <h5 class="mega-menu-subheading">Thrills & Nature's Best</h5>
+                                    <ul class="mega-menu-links">
+                                        <li><a href="/things/trekking-sapa">Trekking in Sapa</a></li>
+                                        <li><a href="/things/kayaking-halong">Kayaking in Ha Long Bay</a></li>
+                                        <li><a href="/things/caving-phongnha">Exploring Phong Nha Caves</a></li>
+                                        <li><a href="/things/motorbiking">Motorbiking Adventures</a></li>
+                                        <li><a href="/things/watersports">Watersports & Beaches</a></li>
+                                        <li><a href="/things/canyoning-dalat">Canyoning in Da Lat</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Cột 2: Culture & Heritage -->
+                                <div class="mega-menu-column culture-column">
+                                    <div class="mega-menu-image-header">
+                                        <a href="/things/culture"><img src="/images/cultural_and_heritage.jpg" alt="Culture & Heritage"></a>
+                                        <h4>CULTURE & HERITAGE</h4>
+                                    </div>
+                                    <h5 class="mega-menu-subheading">Immerse in Local Life</h5>
+                                    <ul class="mega-menu-links">
+                                        <li><a href="/things/historical-sites">Visiting Historical Sites</a></li>
+                                        <li><a href="/things/museums">Exploring Museums</a></li>
+                                        <li><a href="/things/workshops">Hands-on Workshops (Cooking, Crafts)</a></li>
+                                        <li><a href="/things/performances">Traditional Performances</a></li>
+                                        <li><a href="/things/ancient-towns">Wandering Ancient Towns</a></li>
+                                        <li><a href="/things/local-markets">Visiting Local Markets</a></li>
+                                    </ul>
+                                </div>
+                                <!-- Cột 3: Relaxation & Wellness -->
+                                <div class="mega-menu-column wellness-column">
+                                    <div class="mega-menu-image-header">
+                                        <a href="/things/relaxation"><img src="/images/relax.jpg" alt="Relaxation & Wellness"></a>
+                                        <h4>RELAXATION & WELLNESS</h4>
+                                    </div>
+                                    <h5 class="mega-menu-subheading">Unwind & Rejuvenate</h5>
+                                    <ul class="mega-menu-links">
+                                        <li><a href="/things/spa-massage">Spa & Massage Therapies</a></li>
+                                        <li><a href="/things/beach-relaxation">Beach Escapes</a></li>
+                                        <li><a href="/things/yoga-meditation">Yoga & Meditation Retreats</a></li>
+                                        <li><a href="/things/cruises">Relaxing River & Bay Cruises</a></li>
+                                        <li><a href="/things/scenic-cafes">Enjoying Scenic Cafes</a></li>
+                                        <li><a href="/things/hot-springs">Natural Hot Springs</a></li>
+                                    </ul>
+                                </div>
+                            </div> <!-- /mega-menu-container -->
+                        </div> <!-- /mega-menu-panel -->
+                    </li> <!-- /has-mega-menu (Things to do) -->
+
+                    <!-- === MỤC MENU CUỐI CÙNG === -->
                     <li class="nav-item">
-                        <a href="/thing">Things to do</a>
+                        <a href="/trip">Your trip</a> <!-- Mục này không có mega menu -->
                     </li>
-                    <li class="nav-item">
-                        <a href="/trip">Your trip</a>
-                    </li>
+
                 </ul> <!-- /nav-list -->
             </nav> <!-- /main-navigation -->
 
-            <!-- Các hành động bên phải (Tìm kiếm, Hamburger) -->
+            <!-- Các hành động bên phải (Tìm kiếm, Hamburger cho mobile) -->
             <div class="header-actions">
-                <div class="search-container">
+                <!-- Nút tìm kiếm -->
+                <div class="search-container"> <!-- Bọc nút tìm kiếm -->
                     <button id="search-toggle-btn" aria-label="Toggle search input">
                         <img src="/svg/search.svg" alt="Tìm kiếm" class="search-icon">
+                        <!-- Hoặc <i class="fas fa-search"></i> nếu dùng Font Awesome -->
                     </button>
-                    <!-- Form tìm kiếm đã được chuyển ra ngoài -->
                 </div>
+                <!-- Nút Hamburger (chỉ hiển thị trên màn hình nhỏ) -->
                 <button class="hamburger-button" id="hamburger-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="main-navigation">
                     <span class="hamburger-box">
                         <span class="hamburger-inner"></span>
                     </span>
                 </button>
             </div> <!-- /header-actions -->
+
         </div> <!-- /nav-menu container -->
 
         <!-- Form tìm kiếm ẩn (đặt bên ngoài .nav-menu container để định vị dễ hơn) -->
@@ -176,4 +238,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
     </header> <!-- /site-header -->
 
     <main class="site-content">
-        <!-- Nội dung chính sẽ được nạp ở đây -->
+        <!-- =============================================== -->
+        <!-- NỘI DUNG CHÍNH CỦA TỪNG TRANG SẼ ĐƯỢC NẠP VÀO ĐÂY -->
+        <!-- File footer.php sẽ được gọi sau nội dung này -->
+        <!-- =============================================== -->
