@@ -29,7 +29,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
         <div class="nav-menu"> <!-- Container chính cho thanh điều hướng -->
             <div class="logo-container">
                 <a href="/">
-                    <img src="/images/Vietnam.png" alt="Logo Du Lịch Quê Hương" id="logoVietNam">
+                    <img src="/images/logo/Vietnam.png" alt="Logo Du Lịch Quê Hương" id="logoVietNam">
                     <!-- Có thể thêm slogan ở đây nếu muốn -->
                     <!-- <span class="site-slogan">Explore Your Vietnam</span> -->
                 </a>
@@ -45,7 +45,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 1: Culture & Traditions -->
                                 <div class="mega-menu-column culture-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/life/culture"><img src="/images/cultural.webp" alt="Văn hóa Việt Nam"></a>
+                                        <a href="/life/culture"><img src="/images/mega_menu/cultural.webp" alt="Văn hóa Việt Nam"></a>
                                         <h4>CULTURE</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading">Traditions & Customs</h5>
@@ -60,7 +60,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 2: Food & Drink -->
                                 <div class="mega-menu-column food-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/life/food"><img src="/images/food.jpg" alt="Ẩm thực Việt Nam"></a>
+                                        <a href="/life/food"><img src="/images/mega_menu/food.jpg" alt="Ẩm thực Việt Nam"></a>
                                         <h4>FOOD & DRINK</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading">A Taste of Vietnam</h5>
@@ -75,7 +75,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 3: Travel Essentials -->
                                 <div class="mega-menu-column travel-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/life/travel-tips"><img src="/images/travel_experience.jpg" alt="Kinh nghiệm du lịch"></a>
+                                        <a href="/life/travel-tips"><img src="/images//mega_menu/travel_experience.jpg" alt="Kinh nghiệm du lịch"></a>
                                         <h4>TRAVEL ESSENTIALS</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading">Tips for Your Trip</h5>
@@ -99,7 +99,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 1: Northern -->
                                 <div class="mega-menu-column region-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/destination/hanoi"><img src="/images/hanoi.png" alt="Thủ đô Hà Nội"></a>
+                                        <a href="/destination/hanoi"><img src="/images/mega_menu/hanoi.png" alt="Thủ đô Hà Nội"></a>
                                         <h4>HA NOI</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">NORTHERN VIETNAM</h5>
@@ -114,7 +114,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 2: Central -->
                                 <div class="mega-menu-column region-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/destination/da-nang"><img src="/images/DaNang.jpg" alt="Thành phố Đà Nẵng"></a>
+                                        <a href="/destination/da-nang"><img src="/images/mega_menu/DaNang.jpg" alt="Thành phố Đà Nẵng"></a>
                                         <h4>DA NANG</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">CENTRAL VIETNAM</h5>
@@ -129,7 +129,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 3: Southern -->
                                 <div class="mega-menu-column region-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/destination/ho-chi-minh"><img src="/images/TPHCM.jpg" alt="Thành phố Hồ Chí Minh"></a>
+                                        <a href="/destination/ho-chi-minh"><img src="/images/mega_menu/TPHCM.jpg" alt="Thành phố Hồ Chí Minh"></a>
                                         <h4>HO CHI MINH CITY</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">SOUTHERN VIETNAM</h5>
@@ -153,7 +153,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 1: Adventure & Outdoors -->
                                 <div class="mega-menu-column adventure-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/things/adventure"><img src="/images/adventure_and_outdoor.jpg" alt="Adventure & Outdoors"></a>
+                                        <a href="/things/adventure"><img src="/images/mega_menu/adventure_and_outdoor.jpg" alt="Adventure & Outdoors"></a>
                                         <h4>ADVENTURE & OUTDOORS</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading">Thrills & Nature's Best</h5>
@@ -169,7 +169,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 2: Culture & Heritage -->
                                 <div class="mega-menu-column culture-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/things/culture"><img src="/images/cultural_and_heritage.jpg" alt="Culture & Heritage"></a>
+                                        <a href="/things/culture"><img src="/images/mega_menu/cultural_and_heritage.jpg" alt="Culture & Heritage"></a>
                                         <h4>CULTURE & HERITAGE</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading">Immerse in Local Life</h5>
@@ -185,7 +185,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 3: Relaxation & Wellness -->
                                 <div class="mega-menu-column wellness-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/things/relaxation"><img src="/images/relax.jpg" alt="Relaxation & Wellness"></a>
+                                        <a href="/things/relaxation"><img src="/images/mega_menu/relax.jpg" alt="Relaxation & Wellness"></a>
                                         <h4>RELAXATION & WELLNESS</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading">Unwind & Rejuvenate</h5>
