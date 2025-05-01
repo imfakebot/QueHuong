@@ -78,8 +78,8 @@
 </footer>
 
 <!-- !!! Link đến file JavaScript chính !!! -->
-<script src="/js/main.js"></script>
-
+<script src="/js/footer.js"></script>
+<script src="/js/header.js"></script>
 </body>
 
 </html>
