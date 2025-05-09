@@ -80,7 +80,7 @@
 <!-- !!! Link đến file JavaScript chính !!! -->
 <script src="/js/footer.js"></script>
 <script src="/js/header.js"></script>
-<script src="/js/custom-slider.js"></script>
+<script src="/js/main.js"></script>
 </body>
 
 </html>
