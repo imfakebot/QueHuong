@@ -17,6 +17,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/main.css"> <!-- Link CSS chính cho toàn bộ trang -->
     <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
     <!-- (Tùy chọn) Link CSS chung hoặc cho các phần khác nếu cần -->
     <!-- <link rel="stylesheet" href="/css/style.css"> -->
     <!-- (Tùy chọn) Link Font Awesome nếu dùng icon font -->
@@ -115,7 +116,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 2: Central -->
                                 <div class="mega-menu-column region-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/destination/da-nang"><img src="/images/mega_menu/DaNang.jpg" alt="Thành phố Đà Nẵng"></a>
+                                        <a href="src\Views\destination\da-nang.html"><img src="/images/mega_menu/DaNang.jpg" alt="Thành phố Đà Nẵng"></a>
                                         <h4>DA NANG</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">CENTRAL VIETNAM</h5>
