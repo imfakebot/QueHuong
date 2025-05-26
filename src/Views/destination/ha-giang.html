@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Hà Giang - Vùng cao hùng vĩ</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/QueHuong/public/css/destination.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Hà Giang Travel</div>
+  </header>
+
+  <section class="hero" style="background-image: url('/QueHuong/public/images/mega_menu/Ha-Giang/ma-pi-leng.jpg');">
+    <div class="hero-text">
+      <h1>Khám phá Hà Giang</h1>
+      <p>Miền đá nở hoa với cảnh sắc hùng vĩ, cao nguyên đá và văn hóa dân tộc đặc sắc.</p>
+      <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="content-section overview fade-in">
+      <h2><i class="fas fa-city"></i> Tổng quan về Hà Giang</h2>
+      <p>Hà Giang là điểm đến hấp dẫn cho những người yêu thiên nhiên hoang sơ và trải nghiệm văn hóa bản địa. Cao nguyên đá Đồng Văn, đèo Mã Pí Lèng, những cánh đồng hoa tam giác mạch... tất cả tạo nên một Hà Giang vừa dữ dội, vừa nên thơ.</p>
+    </section>
+
+    <section class="tour-card fade-in">
+      <div class="tour-image">
+        <img src="/QueHuong/public/images/mega_menu/Ha-Giang/ma-pi-leng.jpg" alt="Đèo Mã Pí Lèng">
+        <div class="badge">Hùng vĩ</div>
+      </div>
+      <div class="tour-details">
+        <h2>Chinh phục đèo Mã Pí Lèng</h2>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span>(230 đánh giá)</span>
+        </div>
+        <p>Mã Pí Lèng là một trong "tứ đại đỉnh đèo" Việt Nam, nơi lý tưởng để ngắm sông Nho Quế và trải nghiệm cung đường hiểm trở nhưng ngoạn mục.</p>
+        <ul class="tour-info">
+          <li><i class="fa-regular fa-clock"></i> Nửa ngày</li>
+          <li><i class="fa-solid fa-mountain"></i> Đèo núi</li>
+          <li><i class="fa-solid fa-camera"></i> Sống ảo</li>
+          <li><a href="#">Tour khám phá</a></li>
+        </ul>
+        <div class="price-and-button">
+          <span class="price">Từ <strong>250.000đ</strong></span>
+          <a href="#" class="btn-cta">Xem chi tiết</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour-card fade-in">
+      <div class="tour-image">
+        <img src="/QueHuong/public/images/mega_menu/Ha-Giang/hoa-tam-giac-mach.jpg" alt="Hoa tam giác mạch">
+        <div class="badge">Thơ mộng</div>
+      </div>
+      <div class="tour-details">
+        <h2>Mùa hoa tam giác mạch</h2>
+        <div class="rating">
+          <span class="stars">★★★★☆</span>
+          <span>(180 đánh giá)</span>
+        </div>
+        <p>Cuối thu, khắp các bản làng Hà Giang rực rỡ sắc hồng tím của hoa tam giác mạch. Đây là thời điểm lý tưởng để chụp ảnh và hoà mình vào vẻ đẹp núi rừng.</p>
+        <ul class="tour-info">
+          <li><i class="fa-regular fa-clock"></i> 1 ngày</li>
+          <li><i class="fa-solid fa-leaf"></i> Thiên nhiên</li>
+          <li><i class="fa-solid fa-people-roof"></i> Văn hóa</li>
+          <li><a href="#">Tour mùa hoa</a></li>
+        </ul>
+        <div class="price-and-button">
+          <span class="price">Từ <strong>300.000đ</strong></span>
+          <a href="#" class="btn-cta">Xem chi tiết</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Hà Giang Travel
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      const trigger = window.innerHeight / 1.1;
+      faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < trigger) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

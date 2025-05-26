@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mai Châu - Bản làng yên bình</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/QueHuong/public/css/destination.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Mai Châu Travel</div>
+  </header>
+
+  <section class="hero" style="background-image: url('/QueHuong/public/images/mega_menu/Mai-Chau/mai-chau-thung-lung.jpg');">
+    <div class="hero-text">
+      <h1>Khám phá Mai Châu</h1>
+      <p>Thung lũng xanh mướt, bản làng người Thái và không khí yên bình đầy mê hoặc.</p>
+      <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="content-section overview fade-in">
+      <h2><i class="fas fa-city"></i> Tổng quan về Mai Châu</h2>
+      <p>Mai Châu là điểm đến lý tưởng cho những ai tìm kiếm sự bình yên, gần gũi thiên nhiên và khám phá văn hóa bản địa. Nằm giữa thung lũng bao quanh bởi núi rừng, nơi đây nổi bật với các bản làng truyền thống của người Thái và không khí trong lành.</p>
+    </section>
+
+    <section class="tour-card fade-in">
+      <div class="tour-image">
+        <img src="/QueHuong/public/images/mega_menu/Mai-Chau/nha-san.jpg" alt="Nhà sàn Mai Châu">
+        <div class="badge">Bản sắc</div>
+      </div>
+      <div class="tour-details">
+        <h2>Trải nghiệm nghỉ nhà sàn bản Lác</h2>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span>(150 đánh giá)</span>
+        </div>
+        <p>Ở homestay nhà sàn truyền thống, thưởng thức cơm lam, rượu cần và giao lưu văn nghệ cùng người dân bản địa là điểm nhấn độc đáo khi đến Mai Châu.</p>
+        <ul class="tour-info">
+          <li><i class="fa-regular fa-clock"></i> Qua đêm</li>
+          <li><i class="fa-solid fa-house-chimney"></i> Homestay</li>
+          <li><i class="fa-solid fa-people-group"></i> Văn hóa</li>
+          <li><a href="#">Tour cộng đồng</a></li>
+        </ul>
+        <div class="price-and-button">
+          <span class="price">Từ <strong>250.000đ</strong></span>
+          <a href="#" class="btn-cta">Xem chi tiết</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour-card fade-in">
+      <div class="tour-image">
+        <img src="/QueHuong/public/images/mega_menu/Mai-Chau/xe-dap.jpg" alt="Đạp xe Mai Châu">
+        <div class="badge">Xanh mát</div>
+      </div>
+      <div class="tour-details">
+        <h2>Đạp xe xuyên bản làng</h2>
+        <div class="rating">
+          <span class="stars">★★★★☆</span>
+          <span>(120 đánh giá)</span>
+        </div>
+        <p>Đạp xe thong dong giữa những cánh đồng lúa và làng quê thanh bình là một trải nghiệm thư giãn và đáng nhớ tại Mai Châu.</p>
+        <ul class="tour-info">
+          <li><i class="fa-regular fa-clock"></i> 2 giờ</li>
+          <li><i class="fa-solid fa-bicycle"></i> Vận động</li>
+          <li><i class="fa-solid fa-seedling"></i> Thiên nhiên</li>
+          <li><a href="#">Tour nhẹ nhàng</a></li>
+        </ul>
+        <div class="price-and-button">
+          <span class="price">Từ <strong>100.000đ</strong></span>
+          <a href="#" class="btn-cta">Xem chi tiết</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Mai Châu Travel
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      const trigger = window.innerHeight / 1.1;
+      faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < trigger) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

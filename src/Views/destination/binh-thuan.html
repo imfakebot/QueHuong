@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bình Thuận - Cát trắng & biển xanh</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/QueHuong/public/css/destination.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Bình Thuận Travel</div>
+  </header>
+
+  <section class="hero" style="background-image: url('/QueHuong/public/images/mega_menu/Binh-Thuan/bien-phan-thiet.jpg');">
+    <div class="hero-text">
+      <h1>Khám phá Bình Thuận</h1>
+      <p>Thiên đường cát trắng, biển xanh và những đồi cát bay kỳ thú tại Mũi Né – Phan Thiết.</p>
+      <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="content-section overview fade-in">
+      <h2><i class="fas fa-city"></i> Tổng quan về Bình Thuận</h2>
+      <p>Bình Thuận là tỉnh ven biển miền Trung Nam Bộ nổi tiếng với những bãi biển tuyệt đẹp, làn nước trong xanh, khí hậu nắng ấm quanh năm. Mũi Né – Phan Thiết là điểm đến lý tưởng cho du khách yêu thích nghỉ dưỡng, thể thao biển và khám phá văn hóa Chăm Pa.</p>
+    </section>
+
+    <section class="tour-card fade-in">
+      <div class="tour-image">
+        <img src="/QueHuong/public/images/mega_menu/Binh-Thuan/doi-cat-bay.jpg" alt="Đồi cát bay Mũi Né">
+        <div class="badge">Kỳ thú</div>
+      </div>
+      <div class="tour-details">
+        <h2>Trượt cát ở Đồi cát bay</h2>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span>(240 đánh giá)</span>
+        </div>
+        <p>Đồi cát Mũi Né đổi hình dạng liên tục bởi gió biển. Đây là nơi lý tưởng để trượt cát, chụp ảnh và ngắm hoàng hôn lãng mạn.</p>
+        <ul class="tour-info">
+          <li><i class="fa-regular fa-clock"></i> 1.5 giờ</li>
+          <li><i class="fa-solid fa-sun"></i> Nắng gió</li>
+          <li><i class="fa-solid fa-camera"></i> Check-in</li>
+          <li><a href="#">Tour khám phá</a></li>
+        </ul>
+        <div class="price-and-button">
+          <span class="price">Từ <strong>50.000đ</strong></span>
+          <a href="#" class="btn-cta">Xem chi tiết</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour-card fade-in">
+      <div class="tour-image">
+        <img src="/QueHuong/public/images/mega_menu/Binh-Thuan/lang-cham.jpg" alt="Làng Chăm Bình Thuận">
+        <div class="badge">Văn hóa</div>
+      </div>
+      <div class="tour-details">
+        <h2>Tham quan làng Chăm và tháp Pô Sah Inư</h2>
+        <div class="rating">
+          <span class="stars">★★★★☆</span>
+          <span>(180 đánh giá)</span>
+        </div>
+        <p>Làng Chăm và di tích tháp Pô Sah Inư là nơi lưu giữ tinh hoa văn hóa Chăm cổ, mang đến trải nghiệm văn hóa đặc sắc và đầy chiều sâu lịch sử.</p>
+        <ul class="tour-info">
+          <li><i class="fa-regular fa-clock"></i> 2 giờ</li>
+          <li><i class="fa-solid fa-landmark"></i> Kiến trúc</li>
+          <li><i class="fa-solid fa-people-group"></i> Dân tộc</li>
+          <li><a href="#">Tour văn hóa</a></li>
+        </ul>
+        <div class="price-and-button">
+          <span class="price">Từ <strong>40.000đ</strong></span>
+          <a href="#" class="btn-cta">Xem chi tiết</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Bình Thuận Travel
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      const trigger = window.innerHeight / 1.1;
+      faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < trigger) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>

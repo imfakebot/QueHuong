@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Ninh Bình - Non nước hữu tình</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="/QueHuong/public/css/destination.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+</head>
+<body>
+  <header>
+    <div class="logo">Ninh Bình Travel</div>
+  </header>
+
+  <section class="hero" style="background-image: url('/QueHuong/public/images/mega_menu/Ninh-Binh/trang-an.jpg');">
+    <div class="hero-text">
+      <h1>Khám phá Ninh Bình</h1>
+      <p>Thiên đường du lịch sinh thái với sông núi ngoạn mục, hang động kỳ thú và di tích cổ kính.</p>
+      <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    </div>
+  </section>
+
+  <main>
+    <section class="content-section overview fade-in">
+      <h2><i class="fas fa-city"></i> Tổng quan về Ninh Bình</h2>
+      <p>Ninh Bình được ví như "vịnh Hạ Long trên cạn" với quần thể danh thắng Tràng An, Tam Cốc - Bích Động, chùa Bái Đính... Nơi đây vừa có vẻ đẹp thiên nhiên hùng vĩ, vừa đậm chất lịch sử và văn hóa.</p>
+    </section>
+
+    <section class="tour-card fade-in">
+      <div class="tour-image">
+        <img src="/QueHuong/public/images/mega_menu/Ninh-Binh/trang-an-thuyen.jpg" alt="Tràng An">
+        <div class="badge">Hữu tình</div>
+      </div>
+      <div class="tour-details">
+        <h2>Du thuyền Tràng An</h2>
+        <div class="rating">
+          <span class="stars">★★★★★</span>
+          <span>(300 đánh giá)</span>
+        </div>
+        <p>Ngồi thuyền xuôi theo dòng sông len lỏi qua các hang động kỳ vĩ và núi non trùng điệp là trải nghiệm không thể quên tại Tràng An.</p>
+        <ul class="tour-info">
+          <li><i class="fa-regular fa-clock"></i> 3 giờ</li>
+          <li><i class="fa-solid fa-ship"></i> Thuyền</li>
+          <li><i class="fa-solid fa-mountain-sun"></i> Núi sông</li>
+          <li><a href="#">Tour sinh thái</a></li>
+        </ul>
+        <div class="price-and-button">
+          <span class="price">Từ <strong>250.000đ</strong></span>
+          <a href="#" class="btn-cta">Xem chi tiết</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="tour-card fade-in">
+      <div class="tour-image">
+        <img src="/QueHuong/public/images/mega_menu/Ninh-Binh/bai-dinh.jpg" alt="Chùa Bái Đính">
+        <div class="badge">Tâm linh</div>
+      </div>
+      <div class="tour-details">
+        <h2>Tham quan chùa Bái Đính</h2>
+        <div class="rating">
+          <span class="stars">★★★★☆</span>
+          <span>(200 đánh giá)</span>
+        </div>
+        <p>Chùa Bái Đính là quần thể chùa lớn nhất Đông Nam Á, với kiến trúc ấn tượng và không gian thanh tịnh thích hợp để chiêm bái và thư giãn tâm hồn.</p>
+        <ul class="tour-info">
+          <li><i class="fa-regular fa-clock"></i> 2 giờ</li>
+          <li><i class="fa-solid fa-pagoda"></i> Tôn giáo</li>
+          <li><i class="fa-solid fa-spa"></i> Thanh tịnh</li>
+          <li><a href="#">Tour tâm linh</a></li>
+        </ul>
+        <div class="price-and-button">
+          <span class="price">Miễn phí</span>
+          <a href="#" class="btn-cta">Xem chi tiết</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2025 Ninh Bình Travel
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script>
+    const faders = document.querySelectorAll('.fade-in');
+    window.addEventListener('scroll', () => {
+      const trigger = window.innerHeight / 1.1;
+      faders.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < trigger) {
+          el.classList.add('visible');
+        }
+      });
+    });
+  </script>
+</body>
+</html>
