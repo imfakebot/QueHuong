@@ -306,3 +306,35 @@
       font-size: 14px;
   }
   }
+
+  .two-column {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      align-items: center;
+    }
+    .two-column .text, .two-column .image {
+      flex: 1;
+    }
+    .two-column .image img {
+      width: 100%;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+    }
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.8s ease-out;
+    }
+    .fade-in.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .tip-box {
+      background: #fff7e6;
+      border-left: 5px solid #f7b731;
+      padding: 15px 20px;
+      margin: 20px 0;
+      font-style: italic;
+      box-shadow: 0 3px 8px rgba(0,0,0,0.05);
+    }

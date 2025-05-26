@@ -116,7 +116,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 2: Central -->
                                 <div class="mega-menu-column region-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="src\Views\destination\da-nang.html"><img src="/images/mega_menu/DaNang.jpg" alt="Thành phố Đà Nẵng"></a>
+                                        <a href="/destination/da-nang"><img src="/images/mega_menu/DaNang.jpg" alt="Thành phố Đà Nẵng"></a>
                                         <h4>DA NANG</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">CENTRAL VIETNAM</h5>
