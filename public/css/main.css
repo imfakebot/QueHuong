@@ -429,28 +429,26 @@
 }
 
 .container {
-    position: relative;
+  position: relative;
 }
 
 .tour-nav-prev,
 .tour-nav-next {
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    z-index: 10;
-    width: 40px;
-    height: 40px;
-    background: rgba(255, 255, 255, 0.95);
-    border-radius: 50%;
-    cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 50%;
+  cursor: pointer;
 }
 
 .tour-nav-prev {
-    left: -20px; /* Adjust based on your layout */
+  left: -20px; /* Adjust based on your layout */
 }
 
 .tour-nav-next {
-    right: -20px; /* Adjust based on your layout */
+  right: -20px; /* Adjust based on your layout */
 }
-
-
