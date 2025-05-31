@@ -1,28 +1,58 @@
- const swiper = new Swiper('.swiper', {
-      loop: true,
-      autoplay: {
-        delay: 3000,
-        disableOnInteraction: false,
-      },
-      slidesPerView: 1,
-      spaceBetween: 20,
-      navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev',
-      },
-      breakpoints: {
-        768: { slidesPerView: 2 },
-        1024: { slidesPerView: 3 },
-      }
-    });
+document.addEventListener('DOMContentLoaded', function () {
+  // Initialize Swiper for the gallery
+  const gallerySwiperElement = document.querySelector('.gallery-swiper');
 
-    const faders = document.querySelectorAll('.fade-in');
-    window.addEventListener('scroll', () => {
-      const trigger = window.innerHeight / 1.1;
-      faders.forEach(el => {
-        const rect = el.getBoundingClientRect();
-        if (rect.top < trigger) {
-          el.classList.add('visible');
+  if (gallerySwiperElement) {
+    const swiper = new Swiper(gallerySwiperElement, { // Sử dụng selector cụ thể hơn
+        loop: true,
+        autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+        },
+        slidesPerView: 1,
+        spaceBetween: 20,
+        navigation: {
+            nextEl: '.gallery-nav-next', // Selector cụ thể hơn cho nút next
+            prevEl: '.gallery-nav-prev', // Selector cụ thể hơn cho nút prev
+        },
+        // Bạn có thể thêm pagination ở đây nếu muốn, ví dụ:
+        // pagination: {
+        //   el: '.gallery-swiper .swiper-pagination', // Đảm bảo phần tử này tồn tại trong HTML
+        //   clickable: true,
+        // },
+        breakpoints: {
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 3 },
         }
-      });
     });
+  } else {
+    // Tùy chọn: Ghi log nếu không tìm thấy phần tử Swiper để dễ debug
+    // console.warn('Gallery Swiper element (.gallery-swiper) not found on this page.');
+  }
+
+  // Fade-in effect using IntersectionObserver for better performance
+  const faders = document.querySelectorAll('.fade-in');
+
+  if (faders.length > 0) {
+    const appearOptions = {
+        threshold: 0.1, // Phần tử được coi là hiển thị khi 10% của nó vào viewport
+        // rootMargin: "0px 0px -50px 0px" // Tùy chọn: điều chỉnh vùng kích hoạt
+    };
+
+    const appearOnScroll = new IntersectionObserver(function (
+        entries,
+        observer
+    ) {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add('visible');
+                observer.unobserve(entry.target); // Ngừng theo dõi sau khi đã hiển thị
+            }
+        });
+    }, appearOptions);
+
+    faders.forEach(fader => {
+        appearOnScroll.observe(fader);
+    });
+  }
+});

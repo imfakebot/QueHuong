@@ -63,10 +63,7 @@ $pageScripts = [
   </section>
 
   <section class="tour-card fade-in">
-    <!-- <div class="tour-image">
-        <img src="/QueHuong/public/images/mega_menu/Da-Nang/baibien.jpg" alt="Bán đảo Sơn Trà">
-        <div class="badge">Best seller</div>
-      </div> -->
+
     <div class="tour-details">
       <h2>Ngắm bán đảo Sơn Trà</h2>
       <div class="rating">
@@ -88,7 +85,7 @@ $pageScripts = [
     </div>
     <!-- Update Sơn Trà image -->
     <div class="tour-image">
-      <img src="/images/destinations/Da-Nang/SonTra.jpg" alt="Bán đảo Sơn Trà">
+      <img src="/images/destinations/Da-Nang/nui-son-tra.jpg" alt="Bán đảo Sơn Trà">
       <div class="badge">Best seller</div>
     </div>
   </section>
@@ -96,7 +93,7 @@ $pageScripts = [
   <section class="tour-card fade-in">
     <!-- Update Chăm Museum image -->
     <div class="tour-image">
-      <img src="/images/destinations/Da-Nang/ChamMuseum.jpg" alt="Bảo tàng Chăm">
+      <img src="/images/destinations/Da-Nang/bao-tang-cham.jpg" alt="Bảo tàng Chăm">
       <div class="badge">Hot</div>
     </div>
     <div class="tour-details">
@@ -146,7 +143,7 @@ $pageScripts = [
     </div>
     <!-- Update Food Tour image -->
     <div class="tour-image">
-      <img src="/images/destinations/Da-Nang/FoodTour.jpg" alt="Ẩm thực Đà Nẵng">
+      <img src="/images/destinations/Da-Nang/am-thuc-da-nang.jpg" alt="Ẩm thực Đà Nẵng">
       <div class="badge">Yummy</div>
     </div>
   </section>
@@ -161,7 +158,7 @@ $pageScripts = [
         <p>Khu nghỉ dưỡng trên núi với cáp treo dài nhất thế giới và Cầu Vàng nổi tiếng.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Da-Nang/NguHanhSon.jpg" alt="Ngũ Hành Sơn">
+        <img src="/images/destinations/Da-Nang/NHS.jpg" alt="Ngũ Hành Sơn">
         <h3>Ngũ Hành Sơn</h3>
         <p>Cụm núi đá vôi với nhiều hang động và chùa chiền linh thiêng.</p>
       </div>
@@ -184,11 +181,11 @@ $pageScripts = [
         <?php
         $galleryImages = [
           ['BaNaHills.jpg', 'Bà Nà Hills'],
-          ['MyKheBeach.jpg', 'Bãi biển Mỹ Khê'],
-          ['Fishing.jpg', 'Chài lưới biển'],
-          ['SonTraMountain.jpg', 'Núi Sơn Trà'],
+          ['bien-my-khe.jpg', 'Bãi biển Mỹ Khê'],
+          ['chailuoibien.jpg', 'Chài lưới biển'],
+          ['nui-son-tra.jpg', 'Núi Sơn Trà'],
           ['BunChaCa.jpg', 'Bún chả cá'],
-          ['DragonBridgeNight.jpg', 'Cầu Rồng về đêm']
+          ['caurong.jpg', 'Cầu Rồng về đêm']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {

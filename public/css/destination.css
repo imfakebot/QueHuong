@@ -130,6 +130,7 @@ h2 {
   width: 100%;
   height: 200px;
   object-fit: cover;
+  transition: transform 0.3s ease; /* Thêm transition cho ảnh */
 }
 
 .card h3 {
@@ -143,23 +144,52 @@ h2 {
   font-size: 16px;
 }
 
+/* Thêm hiệu ứng zoom cho ảnh trong card khi hover card */
+.card:hover img {
+  transform: scale(1.07); /* Giống mega menu */
+}
+
 .gallery .image-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
   gap: 20px;
 }
 
-.image-grid img {
-  width: 100%;
-  height: 200px;
-  object-fit: cover;
-  border-radius: 10px;
-  transition: transform 0.4s ease;
-  cursor: pointer;
+/*
+  QUAN TRỌNG: Để các thay đổi CSS dưới đây hoạt động đúng cho hiệu ứng giới hạn khung,
+  bạn cần thay đổi cấu trúc HTML của mỗi ảnh trong .image-grid.
+  Bọc mỗi thẻ <img> như sau:
+  Ví dụ:
+  <div class="image-grid">
+      <div class="image-grid-item-wrapper">
+          <img src="path/to/your/image.jpg" alt="...">
+      </div>
+      <!-- thêm các .image-grid-item-wrapper khác -->
+  </div>
+*/
+
+/* CSS cho thẻ bao (wrapper) mới của mỗi ảnh */
+.image-grid-item-wrapper {
+  height: 300px; /* Bạn có thể TĂNG giá trị này nếu muốn ảnh trong grid cao hơn, ví dụ: 450px */
+  border-radius: 10px; /* Chuyển border-radius từ img sang đây */
+  overflow: hidden; /* Đây là chìa khóa để giới hạn ảnh khi phóng to (scale) */
+  position: relative; /* Thường hữu ích cho các thẻ bao bọc */
 }
 
-.image-grid img:hover {
-  transform: scale(1.05);
+/* CSS cho thẻ <img> bên trong wrapper */
+.image-grid-item-wrapper img {
+  width: 100%;
+  height: 100%; /* Ảnh sẽ lấp đầy thẻ wrapper */
+  object-fit: cover;
+  display: block; /* Đảm bảo không có khoảng trống thừa bên dưới ảnh */
+  transition: transform 0.3s ease; /* Đồng bộ transition */
+  cursor: pointer;
+  /* border-radius đã được chuyển cho .image-grid-item-wrapper */
+}
+
+.image-grid-item-wrapper img:hover {
+  /* Hiệu ứng hover vẫn áp dụng cho thẻ <img> */
+  transform: scale(1.07); /* Đồng bộ scale factor */
 }
 
 footer {
@@ -233,26 +263,54 @@ footer {
   width: 100%;
   max-width: 1200px;
   margin: auto;
+  overflow: hidden; /* Thêm dòng này để ẩn các slide nằm ngoài khung */
+}
+
+.swiper-wrapper {
+  display: flex; /* Quan trọng: Cho phép các slide xếp hàng */
+  flex-direction: row; /* Quan trọng: Xếp theo hàng ngang */
+  align-items: stretch; /* Giúp các slide có chiều cao bằng nhau nếu nội dung khác nhau */
+  /* Các thuộc tính khác như width, transform, transition thường do Swiper.js quản lý */
+  /* height: auto; hoặc một giá trị cụ thể nếu cần */
 }
 
 .swiper-slide {
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
+  /* Thêm overflow: hidden để cắt phần ảnh bị phóng to tràn ra ngoài */
+  overflow: hidden;
+  /* Chuyển border-radius từ img sang swiper-slide để áp dụng cho cả khung */
+  border-radius: 10px;
+  /* Bạn có thể thêm box-shadow ở đây nếu muốn bóng đổ cho toàn bộ slide */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Đặt chiều cao cố định cho slide để ảnh có thể lấp đầy 100% chiều cao này */
+  height: 300px; /* Dựa trên max-height bạn muốn cho ảnh trước đó. Điều chỉnh nếu cần. */
+
+  /* Để hiển thị ít slide hơn mỗi lần (ví dụ: 1 slide lớn hoặc 2 slide vừa),
+     bạn có thể đặt chiều rộng cho slide.
+     LƯU Ý: Điều này hoạt động hiệu quả nhất nếu trong file JavaScript khởi tạo Swiper,
+     bạn đã đặt slidesPerView: 'auto'.
+     Nếu slidesPerView là một số cố định (ví dụ: 3), Swiper sẽ cố gắng hiển thị đúng số đó. */
+  width: 90%; /* Ví dụ: mỗi slide chiếm 90% chiều rộng của swiper container.
+                 Điều này sẽ làm cho chủ yếu 1 slide lớn được hiển thị tại một thời điểm.
+                 Để hiển thị khoảng 2 slide, bạn có thể thử: width: 48%; (cần điều chỉnh nếu có spaceBetween) */
+  flex-shrink: 0; /* Quan trọng: Ngăn slide bị co lại nhỏ hơn width đã đặt khi dùng với slidesPerView: 'auto' */
 }
 
 .swiper-slide img {
   width: 100%;
-  height: auto;
-  max-height: 300px;
+  height: 100%; /* Ảnh sẽ lấp đầy chiều cao của .swiper-slide */
   object-fit: cover;
-  border-radius: 10px;
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
-  transition: transform 0.3s;
+  /* border-radius đã được chuyển lên .swiper-slide */
+  /* box-shadow có thể bỏ ở img nếu đã có ở .swiper-slide, hoặc giữ lại nếu muốn hiệu ứng khác */
+  transition: transform 0.3s ease; /* Đồng bộ transition */
+  display: block; /* Đảm bảo ảnh là block element */
 }
 
 .swiper-slide img:hover {
-  transform: scale(1.05);
+  transform: scale(1.07); /* Đồng bộ scale factor */
 }
 
 @media (max-width: 768px) {
@@ -312,13 +370,24 @@ footer {
   gap: 20px;
   align-items: center;
 }
+.two-column .text {
+  flex: 1;
+}
 .two-column .text,
 .two-column .image {
   flex: 1;
+  position: relative; /* Thêm position relative cho .image wrapper */
+}
+.two-column .image {
+  overflow: hidden; /* Quan trọng: cắt phần ảnh tràn ra */
+  border-radius: 12px; /* Chuyển border-radius từ img sang đây */
 }
 .two-column .image img {
   width: 100%;
-  border-radius: 12px;
+  height: auto; /* Hoặc height: 100% nếu .image có chiều cao cố định */
+  object-fit: cover; /* Đảm bảo ảnh lấp đầy và cắt nếu cần */
+  display: block;
+  transition: transform 0.3s ease; /* Thêm transition */
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
 }
 .fade-in {
@@ -329,6 +398,11 @@ footer {
 .fade-in.visible {
   opacity: 1;
   transform: translateY(0);
+}
+
+/* Thêm hiệu ứng zoom cho ảnh trong .two-column .image */
+.two-column .image:hover img {
+  transform: scale(1.07);
 }
 .tip-box {
   background: #fff7e6;
@@ -408,12 +482,14 @@ body {
 .tour-image {
   flex: 1 1 300px;
   position: relative;
+  overflow: hidden; /* Quan trọng: cắt phần ảnh tràn ra */
 }
 
 .tour-image img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease; /* Thêm transition */
 }
 
 .badge {
@@ -426,6 +502,11 @@ body {
   border-radius: 8px;
   font-weight: bold;
   font-size: 14px;
+}
+
+/* Thêm hiệu ứng zoom cho ảnh trong .tour-image khi hover .tour-card */
+.tour-card:hover .tour-image img {
+  transform: scale(1.07);
 }
 
 .tour-details {
