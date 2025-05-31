@@ -1,0 +1,211 @@
+<?php
+$pageTitle = 'Đà Nẵng - Du lịch Việt Nam';
+
+// Add page-specific CSS files
+$pageStyles = [
+  'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
+  '/css/destination.css'
+];
+
+// Add page-specific scripts (already exists)
+$pageScripts = [
+  'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+  '/js/destination.js'
+];
+?>
+
+<!-- Rest of the existing HTML content -->
+
+<section class="hero">
+  <div class="hero-text">
+    <h1>Khám phá Đà Nẵng</h1>
+    <p>Thành phố biển năng động với những bãi biển tuyệt đẹp và văn hóa phong phú.</p>
+    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+  </div>
+</section>
+
+<main>
+  <section class="content-section overview fade-in">
+    <h2><i class="fas fa-city"></i> Tổng quan về Đà Nẵng</h2>
+    <p>Với những bãi biển rộng lớn, ẩm thực đường phố tuyệt vời, đèo Hải Vân huyền thoại và bộ sưu tập ngày càng tăng
+      của các quán cà phê, nhà hàng và quán bar, không có gì ngạc nhiên khi cư dân Đà Nẵng có một số nụ cười rạng rỡ
+      nhất cả nước. Bãi cát ấm áp của bãi biển Mỹ Khê quét về phía nam từ bán đảo Sơn Trà miền núi. Đà Nẵng có một số
+      khu nghỉ dưỡng sang trọng hàng đầu Việt Nam, nhưng phần lớn bãi biển vẫn thuộc về những người biến nó thành sân
+      chơi, phòng tập thể dục và nguồn sinh kế</p>
+  </section>
+
+  <section class="tour-card fade-in">
+    <!-- Update tour card images -->
+    <div class="tour-image">
+      <img src="/images/destinations/Da-Nang/BaNaHills.jpg" alt="Tận hưởng bãi biển">
+      <div class="badge">Best seller</div>
+    </div>
+    <div class="tour-details">
+      <h2>Tận hưởng bãi biển</h2>s
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span>(95 đánh giá)</span>
+      </div>
+      <p>Đảm bảo đặt đồng hồ báo thức sớm ít nhất một lần trong thời gian lưu trú. Dọc theo bờ biển, ngư dân bán sản
+        phẩm đánh bắt trong ngày, các trận đấu bóng đá và bóng chuyền mọc lên xung quanh, và mọi người chạy bộ, đi dạo
+        hoặc đơn giản là thư giãn trên cát.</p>
+      <ul class="tour-info">
+        <li><i class="fa-regular fa-clock"></i> 3 tiếng</li>
+        <li><i class="fa-solid fa-umbrella-beach"></i> Biển</li>
+        <li><i class="fa-solid fa-heart"></i> Thư giãn</li>
+        <li><a href="#">Chuyến đi nhẹ nhàng</a></li>
+      </ul>
+      <div class="price-and-button">
+        <span class="price">Từ <strong>49.000đ/người</strong></span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tour-card fade-in">
+    <!-- <div class="tour-image">
+        <img src="/QueHuong/public/images/mega_menu/Da-Nang/baibien.jpg" alt="Bán đảo Sơn Trà">
+        <div class="badge">Best seller</div>
+      </div> -->
+    <div class="tour-details">
+      <h2>Ngắm bán đảo Sơn Trà</h2>
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span>(120 đánh giá)</span>
+      </div>
+      <p>Bán đảo Sơn Trà vươn ra đại dương, những sườn đồi rừng rậm rạp của nó là nơi sinh sống của voọc chân đỏ có
+        nguy cơ tuyệt chủng - một trong những loài linh trưởng nổi bật nhất thế giới.</p>
+      <ul class="tour-info">
+        <li><i class="fa-regular fa-clock"></i> 6 tiếng</li>
+        <li><i class="fa-regular fa-star"></i> Riêng tư</li>
+        <li><i class="fa-solid fa-person-hiking"></i> Tự túc</li>
+        <li><a href="#">Tour thiên nhiên</a></li>
+      </ul>
+      <div class="price-and-button">
+        <span class="price">Từ <strong>89.000đ/người</strong></span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
+      </div>
+    </div>
+    <!-- Update Sơn Trà image -->
+    <div class="tour-image">
+      <img src="/images/destinations/Da-Nang/SonTra.jpg" alt="Bán đảo Sơn Trà">
+      <div class="badge">Best seller</div>
+    </div>
+  </section>
+
+  <section class="tour-card fade-in">
+    <!-- Update Chăm Museum image -->
+    <div class="tour-image">
+      <img src="/images/destinations/Da-Nang/ChamMuseum.jpg" alt="Bảo tàng Chăm">
+      <div class="badge">Hot</div>
+    </div>
+    <div class="tour-details">
+      <h2>Học hỏi về văn hóa Chăm</h2>
+      <div class="rating">
+        <span class="stars">★★★★☆</span>
+        <span>(80 đánh giá)</span>
+      </div>
+      <p>Người Chăm từng cai trị phần lớn miền Trung Việt Nam, và những tàn tích của các ngôi đền của họ đã được khai
+        quật quanh Đà Nẵng. Bảo tàng Điêu khắc Chăm tuyệt vời trưng bày bộ sưu tập điêu khắc Chăm lớn nhất thế giới.
+      </p>
+      <ul class="tour-info">
+        <li><i class="fa-regular fa-clock"></i> 2 tiếng</li>
+        <li><i class="fa-solid fa-landmark"></i> Văn hóa</li>
+        <li><i class="fa-solid fa-book-open"></i> Kiến thức</li>
+        <li><a href="#">Tour lịch sử</a></li>
+      </ul>
+      <div class="price-and-button">
+        <span class="price">Từ <strong>39.000đ/người</strong></span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="tour-card fade-in">
+    <!-- <div class="tour-image">
+        <img src="/QueHuong/public/images/mega_menu/Da-Nang/baibien.jpg" alt="Ẩm thực Đà Nẵng">
+        <div class="badge">Yummy</div>
+      </div> -->
+    <div class="tour-details">
+      <h2>Thưởng thức món ăn đường phố</h2>
+      <div class="rating">
+        <span class="stars">★★★★★</span>
+        <span>(150 đánh giá)</span>
+      </div>
+      <p>Đà Nẵng là thiên đường dành cho các tín đồ ẩm thực, với nhiều quán ăn ven biển và hàng quán đường phố.</p>
+      <ul class="tour-info">
+        <li><i class="fa-regular fa-clock"></i> 4 tiếng</li>
+        <li><i class="fa-solid fa-bowl-rice"></i> Ăn uống</li>
+        <li><i class="fa-solid fa-walkie-talkie"></i> Dẫn tour</li>
+        <li><a href="#">Tour ẩm thực</a></li>
+      </ul>
+      <div class="price-and-button">
+        <span class="price">Từ <strong>59.000đ/người</strong></span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
+      </div>
+    </div>
+    <!-- Update Food Tour image -->
+    <div class="tour-image">
+      <img src="/images/destinations/Da-Nang/FoodTour.jpg" alt="Ẩm thực Đà Nẵng">
+      <div class="badge">Yummy</div>
+    </div>
+  </section>
+
+  <section class="content-section highlights" id="highlights">
+    <h2>Điểm nổi bật</h2>
+    <!-- Update Highlights section -->
+    <div class="cards">
+      <div class="card">
+        <img src="/images/destinations/Da-Nang/BaNaHills.jpg" alt="Bà Nà Hills">
+        <h3>Bà Nà Hills</h3>
+        <p>Khu nghỉ dưỡng trên núi với cáp treo dài nhất thế giới và Cầu Vàng nổi tiếng.</p>
+      </div>
+      <div class="card">
+        <img src="/images/destinations/Da-Nang/NguHanhSon.jpg" alt="Ngũ Hành Sơn">
+        <h3>Ngũ Hành Sơn</h3>
+        <p>Cụm núi đá vôi với nhiều hang động và chùa chiền linh thiêng.</p>
+      </div>
+      <div class="card">
+        <img src="/images/destinations/Da-Nang/DragonBridge.jpg" alt="Cầu Rồng">
+        <h3>Cầu Rồng</h3>
+        <p>Cây cầu biểu tượng của Đà Nẵng, nổi bật với thiết kế hình rồng phun lửa và nước vào cuối tuần.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="gallery">
+    <h2>GALLERY</h2>
+    <!-- Navigation buttons moved outside -->
+    <div class="swiper-button-prev gallery-nav-prev"></div>
+    <div class="swiper-button-next gallery-nav-next"></div>
+
+    <div class="swiper gallery-swiper"> <!-- Added a specific class for this swiper instance -->
+      <div class="swiper-wrapper">
+        <?php
+        $galleryImages = [
+          ['BaNaHills.jpg', 'Bà Nà Hills'],
+          ['MyKheBeach.jpg', 'Bãi biển Mỹ Khê'],
+          ['Fishing.jpg', 'Chài lưới biển'],
+          ['SonTraMountain.jpg', 'Núi Sơn Trà'],
+          ['BunChaCa.jpg', 'Bún chả cá'],
+          ['DragonBridgeNight.jpg', 'Cầu Rồng về đêm']
+        ];
+
+        foreach ($galleryImages as [$image, $alt]) {
+          echo "<div class='swiper-slide'>";
+          echo "<img src='/images/destinations/Da-Nang/{$image}' alt='{$alt}'>";
+          echo "</div>";
+        }
+        ?>
+      </div>
+      <!-- Pagination can be added here if needed, e.g., <div class="swiper-pagination"></div> -->
+    </div>
+  </section>
+</main>
+
+<?php
+// Add any page-specific scripts
+// The $pageScripts array is already defined at the top of the file.
+// This re-declaration is redundant and can be removed.
+?>

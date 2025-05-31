@@ -1,41 +1,77 @@
+/* --- Global Styles & Resets --- */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: "Arial", sans-serif;
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* --- Container (Global & Section Specific) --- */
+.container {
+  width: 100%;
+  max-width: 1200px; /* Max width cho nội dung thông thường */
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px; /* Padding mặc định */
+  padding-right: 15px;
+  position: relative; /* Context mặc định */
+}
+
+/* --- Section Title --- */
+.section-title {
+  font-size: 2.5em;
+  color: #333;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  text-align: center;
+}
+
 /* --- Video Section --- */
 .video {
   width: 100%;
-  height: 80vh; /* Chiều cao chiếm 80% chiều cao màn hình xem */
-  overflow: hidden; /* Ẩn phần video thừa ra ngoài */
-  position: relative; /* Để có thể đặt text hoặc overlay lên trên nếu muốn */
-  margin-bottom: 40px; /* Khoảng cách với phần dưới */
+  height: 80vh;
+  overflow: hidden;
+  position: relative;
+  margin-bottom: 40px;
 }
 
 .video video {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Đảm bảo video lấp đầy mà không bị méo, có thể bị cắt xén */
+  object-fit: cover;
 }
 
 /* --- Why Vietnam Section --- */
 .why-vietnam {
-  padding: 40px 20px; /* Khoảng cách bên trong section */
-  text-align: center; /* Căn giữa tiêu đề */
-  background-color: #f9f9f9; /* Màu nền nhẹ cho section */
+  padding-top: 40px;
+  padding-bottom: 40px;
+  background-color: #f9f9f9;
 }
+/* .why-vietnam .container đã có style global */
 
-.section-title {
-  font-size: 2.5em; /* Kích thước tiêu đề lớn */
-  color: #333;
-  margin-bottom: 40px; /* Khoảng cách dưới tiêu đề */
-  text-transform: uppercase; /* Viết hoa tiêu đề */
-  letter-spacing: 1px;
-}
-
-/* --- Features Grid --- */
 .features-grid {
   display: grid;
-  /* Tạo 4 cột trên màn hình lớn, 2 cột trên tablet, 1 cột trên mobile */
-  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-  gap: 30px; /* Khoảng cách giữa các item */
-  max-width: 1200px; /* Giới hạn chiều rộng tối đa của grid */
-  margin: 0 auto; /* Căn giữa grid */
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 30px;
+  /* Không cần max-width ở đây nếu .container cha đã có */
 }
 
 .feature-item {
@@ -43,105 +79,107 @@
   padding: 25px;
   border-radius: 8px;
   box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  text-align: left; /* Căn trái nội dung trong item */
+  text-align: left;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .feature-item:hover {
-  transform: translateY(-5px); /* Hiệu ứng nhấc lên khi hover */
+  transform: translateY(-5px);
   box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
 }
 
-/* Phần chứa ảnh để dễ dàng kiểm soát kích thước và bo góc */
 .feature-item .image-container {
   width: 100%;
-  height: 200px; /* Đặt chiều cao cố định cho ảnh */
-  overflow: hidden; /* Ẩn phần ảnh thừa */
-  border-radius: 6px; /* Bo góc cho container ảnh */
+  height: 200px;
+  overflow: hidden;
+  border-radius: 6px;
   margin-bottom: 20px;
 }
 
 .feature-item img {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ảnh lấp đầy container mà không bị méo */
-  display: block; /* Bỏ khoảng trắng thừa dưới ảnh */
-  border-radius: 6px; /* Bo góc cho ảnh (có thể không cần nếu container đã bo) */
+  object-fit: cover;
+  border-radius: 6px;
 }
 
 .feature-item h3 {
   font-size: 1.5em;
   color: #333;
-  margin-top: 0; /* Bỏ margin trên của h3 nếu ảnh đã có margin-bottom */
   margin-bottom: 10px;
 }
 
 .feature-item p {
   font-size: 1em;
   color: #555;
-  line-height: 1.6;
 }
 
-/* --- Responsive điều chỉnh cho thiết bị nhỏ hơn --- */
-@media (max-width: 768px) {
-  .video {
-    height: 60vh; /* Giảm chiều cao video trên tablet/mobile */
-  }
-
-  .section-title {
-    font-size: 2em; /* Giảm kích thước tiêu đề */
-  }
-
-  /* Trên mobile, features-grid sẽ tự động thành 1 cột do minmax(280px, 1fr) */
+/* --- Featured Tours & Featured Destinations Sections (Nơi chứa Slider) --- */
+.featured-tours,
+.featured-destinations {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  /* padding-left/right sẽ tạo không gian cho nút */
+  padding-left: 70px; /* Khoảng cách từ mép trình duyệt đến NÚT */
+  padding-right: 70px;
+  overflow: hidden; /* Để các nút không làm thanh cuộn ngang xuất hiện nếu chúng bị đẩy ra xa */
 }
 
-@media (max-width: 480px) {
-  .why-vietnam {
-    padding: 30px 15px;
-  }
-
-  .section-title {
-    font-size: 1.8em;
-  }
-
-  .feature-item {
-    padding: 20px;
-  }
-
-  .feature-item h3 {
-    font-size: 1.3em;
-  }
-
-  .feature-item p {
-    font-size: 0.95em;
-  }
-}
-
-/* Featured Tours Section */
 .featured-tours {
-  padding: 80px 40px;
   background: #fff;
 }
 
-.tour-swiper {
-  position: relative;
-  width: calc(100% + 80px);
-  margin: 40px -40px;
-  overflow: hidden;
-  padding: 0 40px;
+/* Container bên trong các section slider: FULL WIDTH và là CONTEXT ĐỊNH VỊ */
+.featured-tours .container,
+.featured-destinations .container {
+  max-width: none;
+  width: 100%;
+  margin-left: 0;
+  margin-right: 0;
+  padding-left: 0; /* Quan trọng: không có padding riêng */
+  padding-right: 0; /* Quan trọng: không có padding riêng */
+  position: relative; /* BẮT BUỘC cho định vị nút con */
 }
 
+/* --- Custom Slider Styles (chung cho tour và destination) --- */
+.swiper {
+  /* Class .swiper của HTML, không phải của thư viện SwiperJS */
+  width: 100%; /* Chiếm toàn bộ .container (đã full-width) */
+  margin-top: 40px;
+  margin-bottom: 40px;
+  position: relative;
+  overflow: hidden; /* Các slide bên trong sẽ được cắt bởi đây */
+}
+
+.swiper-wrapper {
+  /* display: flex; và transition được đặt bởi JavaScript */
+  /* width tổng được đặt bởi JavaScript */
+  height: auto; /* Hoặc chiều cao cố định nếu muốn */
+}
+
+.swiper-slide {
+  /* width, flex-basis, marginRight được đặt bởi JavaScript */
+  box-sizing: border-box;
+  height: 100%; /* Để các item bên trong có thể dùng height: 100% */
+  /* Nếu muốn slide có padding bên trong nó, hãy thêm ở đây */
+  /* Ví dụ: padding: 0 10px; thì JS phải trừ đi padding này khi tính slideActualWidth */
+}
+
+/* --- Tour Item Styles --- */
 .tour-item {
   background: #fff;
   border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
   height: 100%;
-  transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .tour-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .tour-image-container {
@@ -154,155 +192,70 @@
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+.tour-item:hover .tour-image-container img {
+  transform: scale(1.05);
 }
 
 .tour-duration {
   position: absolute;
   bottom: 15px;
   right: 15px;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   color: #fff;
-  padding: 5px 10px;
+  padding: 6px 12px;
   border-radius: 4px;
-  font-size: 0.9em;
+  font-size: 0.85em;
+  font-weight: 500;
 }
 
 .tour-content {
   padding: 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
 }
 
 .tour-title {
-  font-size: 1.2em;
+  font-size: 1.25em;
   margin-bottom: 10px;
   color: #333;
+  font-weight: 600;
 }
 
 .tour-excerpt {
-  color: #666;
-  font-size: 0.95em;
+  color: #555;
+  font-size: 0.9em;
+  line-height: 1.5;
   margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.tour-price-wrapper {
+  margin-top: auto;
 }
 
 .tour-price {
-  color: #2ecc71;
+  color: #27ae60; /* Màu xanh lá cây dịu hơn */
   font-weight: bold;
-  font-size: 1.1em;
+  font-size: 1.15em;
 }
 
-/* Swiper Container Styles */
-.tour-swiper,
-.destination-swiper {
-  position: relative;
-  width: 100%;
-  overflow: hidden;
-  padding: 20px 40px;
-  margin-left: -40px;
-  margin-right: -40px;
-  margin-top: 40px;
-  margin-bottom: 40px;
-}
-
-.swiper-wrapper {
-  display: flex;
-  transition: transform 0.3s ease;
-  height: 100%;
-}
-
-.swiper-slide {
-  flex: 0 0 auto;
-  width: 100%;
-  height: auto;
-  padding: 0 15px;
-}
-
-/* Navigation Buttons */
-.swiper-button-next,
-.swiper-button-prev {
-  background: rgba(255, 255, 255, 0.9);
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
-  color: #2ecc71;
-}
-
-.swiper-button-prev {
-  left: 40px !important;
-}
-
-.swiper-button-next {
-  right: 40px !important;
-}
-
-.swiper-button-next:after,
-.swiper-button-prev:after {
-  font-size: 18px;
-}
-
-/* Pagination */
-.swiper-pagination-bullet {
-  /* right: 200px !important; */
-  width: 10px;
-  height: 10px;
-  background: #2ecc71;
-  opacity: 0.5;
-}
-
-.swiper-pagination-bullet-active {
-  opacity: 1;
-}
-
-/* Responsive adjustments */
-@media (max-width: 768px) {
-  .tour-swiper,
-  .destination-swiper {
-    padding-left: 30px;
-    padding-right: 30px;
-    margin-left: -30px;
-    margin-right: -30px;
-  }
-}
-
-@media (max-width: 480px) {
-  .tour-swiper,
-  .destination-swiper {
-    padding-left: 20px;
-    padding-right: 20px;
-    margin-left: -20px;
-    margin-right: -20px;
-  }
-}
-
-/* Featured Destinations Section */
-.featured-destinations {
-  padding: 80px 0;
-  background: #f8f9fa;
-}
-
-.destination-swiper {
-  position: relative;
-  width: calc(100% + 80px);
-  margin: 40px -40px;
-  overflow: hidden;
-}
-
-.destinations-grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 25px;
-  margin: 40px 0;
-}
-
+/* --- Destination Item Styles --- */
 .destination-item {
+  /* Class này thêm vào .swiper-slide cho destination */
   position: relative;
   border-radius: 12px;
   overflow: hidden;
   aspect-ratio: 4/3;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-  transition: transform 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .destination-item:hover {
   transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
 }
 
 .destination-item img {
@@ -321,134 +274,253 @@
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 20px;
+  padding: 18px 15px;
   background: linear-gradient(
     to top,
-    rgba(0, 0, 0, 0.8) 0%,
-    rgba(0, 0, 0, 0.4) 50%,
+    rgba(0, 0, 0, 0.85) 0%,
+    rgba(0, 0, 0, 0.5) 50%,
     transparent 100%
   );
   color: #fff;
-  font-size: 1.4em;
-  font-weight: bold;
+  font-size: 1.3em;
+  font-weight: 600;
   text-align: center;
-  transform: translateY(0);
-  transition: transform 0.3s ease;
 }
 
-.destination-item:hover .destination-name {
-  transform: translateY(-5px);
-}
-
-/* Swiper Navigation for Destinations */
-.destination-swiper .swiper-button-next,
-.destination-swiper .swiper-button-prev {
+/* --- Slider Navigation Buttons (External) --- */
+.tour-nav-prev,
+.tour-nav-next,
+.destination-nav-prev,
+.destination-nav-next {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10; /* Đảm bảo nổi lên trên swiper */
   width: 45px;
   height: 45px;
-  background: rgba(255, 255, 255, 0.95);
+  background-color: rgba(255, 255, 255, 0.9);
   border-radius: 50%;
-  color: #3498db;
-  transition: all 0.3s ease;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  transition: background-color 0.3s ease, box-shadow 0.3s ease,
+    transform 0.2s ease, opacity 0.3s ease;
+  opacity: 1; /* Mặc định hiển thị rõ */
 }
 
-.destination-swiper .swiper-button-next:hover,
-.destination-swiper .swiper-button-prev:hover {
-  background: #fff;
-  transform: translateY(-50%) scale(1.1);
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+.tour-nav-prev:hover,
+.tour-nav-next:hover,
+.destination-nav-prev:hover,
+.destination-nav-next:hover {
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  transform: translateY(-50%) scale(1.05);
 }
 
-/* Responsive Adjustments */
-@media (max-width: 1024px) {
-  .destination-swiper {
-    width: calc(100% + 60px);
-    margin: 30px -30px;
-  }
-
-  .destination-item {
-    aspect-ratio: 3/2;
-  }
+/* Vô hiệu hóa nút (JS sẽ thêm thuộc tính disabled) */
+.tour-nav-prev[disabled],
+.tour-nav-next[disabled],
+.destination-nav-prev[disabled],
+.destination-nav-next[disabled] {
+  opacity: 0.4;
+  cursor: default;
+  pointer-events: none; /* Ngăn chặn click khi disabled */
 }
 
-@media (max-width: 768px) {
-  .featured-destinations {
-    padding: 60px 0;
-  }
-
-  .destination-swiper {
-    width: calc(100% + 40px);
-    margin: 20px -20px;
-  }
-
-  .destination-name {
-    font-size: 1.2em;
-    padding: 15px;
-  }
+/* Vị trí nút: Cách mép của .featured-tours .container một khoảng */
+/* Ví dụ: nút rộng 45px, muốn khoảng trống 15px giữa nút và swiper */
+.tour-nav-prev,
+.destination-nav-prev {
+  left: -60px; /* -(45px nút + 15px_khoảng_trống) */
+}
+.tour-nav-next,
+.destination-nav-next {
+  right: -60px; /* -(45px nút + 15px_khoảng_trống) */
 }
 
-@media (max-width: 480px) {
-  .destination-item {
-    aspect-ratio: 16/9;
-  }
-
-  .destination-name {
-    font-size: 1.1em;
-    padding: 12px;
-  }
+/* Mũi tên (Sử dụng SVG inline hoặc font icon nếu muốn tùy chỉnh) */
+/* Đây là ví dụ dùng pseudo-elements đơn giản, bạn nên thay bằng SVG/icon font */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  font-family: sans-serif; /* Hoặc một font icon */
+  font-size: 24px;
+  font-weight: bold;
 }
 
-/* Buttons */
+/* --- Slider Pagination --- */
+.swiper-pagination {
+  position: absolute;
+  bottom: -25px; /* Đẩy xuống dưới slider một chút */
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex; /* Đặt bởi JS nếu có nhiều hơn 1 page */
+  justify-content: center;
+  align-items: center;
+  padding-top: 10px; /* Khoảng cách từ slider */
+  z-index: 5;
+}
+
+.swiper-pagination-bullet {
+  width: 9px;
+  height: 9px;
+  background-color: #ccc;
+  border-radius: 50%;
+  margin: 0 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  opacity: 0.6;
+}
+
+.swiper-pagination-bullet:hover {
+  background-color: #aaa;
+  transform: scale(1.1);
+}
+
+.swiper-pagination-bullet-active {
+  background-color: #555; /* Màu chung cho active */
+  opacity: 1;
+  transform: scale(1.1);
+}
+.tour-swiper .swiper-pagination-bullet-active {
+  background-color: #27ae60;
+}
+.destination-swiper .swiper-pagination-bullet-active {
+  background-color: #2980b9;
+}
+
+/* --- Buttons (View All) --- */
 .btn {
   display: inline-block;
-  padding: 12px 30px;
+  padding: 12px 28px;
   border-radius: 6px;
   text-decoration: none;
   font-weight: 500;
   transition: all 0.3s ease;
+  border: none;
+  cursor: pointer;
+  text-align: center;
+  font-size: 0.95em;
 }
 
 .btn-primary {
-  background: #2ecc71;
+  background: #27ae60;
   color: #fff;
 }
-
 .btn-secondary {
-  background: #3498db;
+  background: #2980b9;
   color: #fff;
 }
 
 .btn:hover {
   transform: translateY(-2px);
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
 }
 
 .view-all-tours,
 .view-all-destinations {
   text-align: center;
-  margin-top: 40px;
+  margin-top: 50px; /* Tăng khoảng cách sau pagination */
 }
 
-.container {
-  position: relative;
+/* --- Responsive Adjustments --- */
+@media (max-width: 1200px) {
+  /* Khi container global bắt đầu thu hẹp */
+  .featured-tours,
+  .featured-destinations {
+    padding-left: 40px; /* Giảm padding section để nút không quá sát mép */
+    padding-right: 40px;
+  }
+  .tour-nav-prev,
+  .destination-nav-prev {
+    left: -55px;
+  } /* Điều chỉnh nút gần hơn */
+  .tour-nav-next,
+  .destination-nav-next {
+    right: -55px;
+  }
 }
 
-.tour-nav-prev,
-.tour-nav-next {
-  position: absolute;
-  top: 50%;
-  transform: translateY(-50%);
-  z-index: 10;
-  width: 40px;
-  height: 40px;
-  background: rgba(255, 255, 255, 0.95);
-  border-radius: 50%;
-  cursor: pointer;
+@media (max-width: 992px) {
+  /* Tablet */
+  .section-title {
+    font-size: 2.2em;
+  }
+  .features-grid {
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  }
+
+  .featured-tours,
+  .featured-destinations {
+    padding-left: 20px; /* Giảm nữa */
+    padding-right: 20px;
+  }
+  /* Có thể ẩn nút hoàn toàn hoặc làm chúng nhỏ hơn và gần hơn nữa */
+  .tour-nav-prev,
+  .tour-nav-next,
+  .destination-nav-prev,
+  .destination-nav-next {
+    width: 40px;
+    height: 40px;
+  }
+  .tour-nav-prev,
+  .destination-nav-prev {
+    left: -15px;
+  } /* Rất gần hoặc chạm swiper */
+  .tour-nav-next,
+  .destination-nav-next {
+    right: -15px;
+  }
+  /* Hoặc display: none; */
 }
 
-.tour-nav-prev {
-  left: -20px; /* Adjust based on your layout */
+@media (max-width: 768px) {
+  /* Mobile lớn */
+  .video {
+    height: 60vh;
+  }
+  .section-title {
+    font-size: 2em;
+    margin-bottom: 30px;
+  }
+  .features-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .featured-tours,
+  .featured-destinations {
+    padding-left: 15px; /* Chỉ còn padding cơ bản của trang */
+    padding-right: 15px;
+    overflow: visible; /* Cho phép nút tràn ra nếu vẫn hiển thị và đặt left/right âm */
+  }
+  /* Ẩn nút bên ngoài trên mobile nếu dùng JS custom */
+  .tour-nav-prev,
+  .tour-nav-next,
+  .destination-nav-prev,
+  .destination-nav-next {
+    display: none;
+  }
+  .swiper-pagination {
+    bottom: -20px;
+  }
 }
 
-.tour-nav-next {
-  right: -20px; /* Adjust based on your layout */
+@media (max-width: 480px) {
+  /* Mobile nhỏ */
+  .section-title {
+    font-size: 1.7em;
+  }
+  .tour-title {
+    font-size: 1.1em;
+  }
+  .destination-name {
+    font-size: 1.15em;
+    padding: 15px 10px;
+  }
+  .btn {
+    padding: 10px 20px;
+    font-size: 0.9em;
+  }
 }

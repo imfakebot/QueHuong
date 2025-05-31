@@ -17,11 +17,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/main.css"> <!-- Link CSS chính cho toàn bộ trang -->
     <link rel="stylesheet" href="/css/footer.css">
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
-    <!-- (Tùy chọn) Link CSS chung hoặc cho các phần khác nếu cần -->
-    <!-- <link rel="stylesheet" href="/css/style.css"> -->
-    <!-- (Tùy chọn) Link Font Awesome nếu dùng icon font -->
-    <!-- <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"> -->
+
 
 </head>
 
@@ -240,7 +236,3 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
     </header> <!-- /site-header -->
 
     <main class="site-content">
-        <!-- =============================================== -->
-        <!-- NỘI DUNG CHÍNH CỦA TỪNG TRANG SẼ ĐƯỢC NẠP VÀO ĐÂY -->
-        <!-- File footer.php sẽ được gọi sau nội dung này -->
-        <!-- =============================================== -->
