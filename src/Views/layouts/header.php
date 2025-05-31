@@ -13,11 +13,21 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($pageTitle); ?></title>
     <meta name="description" content="Khám phá vẻ đẹp du lịch Việt Nam qua các địa điểm hấp dẫn và đặt tour dễ dàng.">
-    <!-- Link CSS cho header -->
+    <!-- CSS Toàn cục (Global Styles) -->
+    <link rel="stylesheet" href="/css/global.css"> <!-- File CSS cho các kiểu cơ bản, reset, typography -->
+    <!-- CSS Thành phần (Component Styles) -->
     <link rel="stylesheet" href="/css/header.css">
-    <link rel="stylesheet" href="/css/main.css"> <!-- Link CSS chính cho toàn bộ trang -->
-    <link rel="stylesheet" href="/css/footer.css">
+    <link rel="stylesheet" href="/css/footer.css"> <!-- File CSS cho footer -->
 
+
+    <?php
+    // Nạp các tệp CSS riêng của trang (nếu có)
+    if (!empty($pageStyles) && is_array($pageStyles)) {
+        foreach ($pageStyles as $styleUrl) {
+            echo '<link rel="stylesheet" href="' . htmlspecialchars($styleUrl) . '">' . PHP_EOL;
+        }
+    }
+    ?>
 
 </head>
 
@@ -112,7 +122,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 2: Central -->
                                 <div class="mega-menu-column region-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/destination/da-nang"><img src="/images/mega_menu/DaNang.jpg" alt="Thành phố Đà Nẵng"></a>
+                                        <a href="/destinations/da-nang"><img src="/images/mega_menu/DaNang.jpg" alt="Thành phố Đà Nẵng"></a>
                                         <h4>DA NANG</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">CENTRAL VIETNAM</h5>
@@ -234,5 +244,3 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
         </form>
 
     </header> <!-- /site-header -->
-
-    <main class="site-content">

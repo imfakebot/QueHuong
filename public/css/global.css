@@ -1,0 +1,40 @@
+/* /css/global.css */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: "Arial", sans-serif; /* Hoặc font bạn chọn */
+  line-height: 1.6;
+  color: #333;
+  background-color: #fff;
+  /* Các kiểu cơ bản khác cho body */
+}
+
+a {
+  text-decoration: none;
+  color: inherit; /* Hoặc màu link mặc định */
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+.container {
+  /* Một lớp container chung nếu bạn dùng */
+  width: 90%;
+  max-width: 1200px;
+  margin-left: auto;
+  margin-right: auto;
+}
+/* Các utility classes khác */

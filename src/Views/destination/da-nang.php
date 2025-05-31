@@ -3,7 +3,6 @@ $pageTitle = 'Đà Nẵng - Du lịch Việt Nam';
 
 // Add page-specific CSS files
 $pageStyles = [
-  'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css',
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
   '/css/destination.css'
 ];
@@ -42,7 +41,7 @@ $pageScripts = [
       <div class="badge">Best seller</div>
     </div>
     <div class="tour-details">
-      <h2>Tận hưởng bãi biển</h2>s
+      <h2>Tận hưởng bãi biển</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
         <span>(95 đánh giá)</span>
@@ -203,9 +202,3 @@ $pageScripts = [
     </div>
   </section>
 </main>
-
-<?php
-// Add any page-specific scripts
-// The $pageScripts array is already defined at the top of the file.
-// This re-declaration is redundant and can be removed.
-?>

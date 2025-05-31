@@ -79,8 +79,16 @@
 
 <!-- !!! Link đến file JavaScript chính !!! -->
 <script src="/js/footer.js"></script>
-<script src="/js/header.js"></script>
-<script src="/js/main.js"></script>
+
+
+<?php
+// Nạp các tệp JavaScript riêng của trang (nếu có)
+if (!empty($pageScripts) && is_array($pageScripts)) {
+    foreach ($pageScripts as $scriptUrl) {
+        echo '<script src="' . htmlspecialchars($scriptUrl) . '"></script>' . PHP_EOL;
+    }
+}
+?>
 </body>
 
 </html>

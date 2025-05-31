@@ -66,10 +66,10 @@ elseif (preg_match('#^/tours/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
 else {
     // Kiểm tra file tĩnh (CSS, JS, images, video) trước khi báo 404
     $filePath = __DIR__ . $requestUri; // __DIR__ là thư mục public
-    if (preg_match('/\.(?:png|jpg|jpeg|gif|css|js|mp4|webp)$/i', $requestUri) && file_exists($filePath)) {
-        // Cho phép máy chủ PHP tích hợp tự phục vụ các file tĩnh này
-        // Không làm gì cả ở đây sẽ khiến PHP cố gắng tìm một route.
-        // Để server tự xử lý, ta return false.
+    if (preg_match('/\.(?:png|jpg|jpeg|gif|css|js|mp4|webp|svg|ico|woff|woff2|ttf|eot)$/i', $requestUri) && file_exists($filePath)) { // Thêm các định dạng file tĩnh phổ biến
+        // Khi sử dụng máy chủ web tích hợp của PHP (php -S),
+        // việc trả về `false` từ script router sẽ yêu cầu máy chủ phục vụ file tĩnh đó trực tiếp.
+        // Nếu không, PHP sẽ cố gắng xử lý nó như một route.
         return false;
     }
 
@@ -81,7 +81,32 @@ else {
 
 // ----- NẠP LAYOUT -----
 
-// Nạp Header
+// Bắt đầu output buffering để nạp nội dung trang trước
+ob_start();
+if (!empty($contentView) && file_exists($contentView)) {
+    require_once $contentView;
+} else {
+    // Trường hợp này chỉ nên xảy ra nếu logic routing ở trên có lỗi
+    // và $contentView không được set đúng cách, hoặc file không tồn tại
+    // mà chưa bị bắt bởi các điều kiện file_exists ở trên.
+    $currentStatusCode = http_response_code();
+    if ($currentStatusCode === 200 || $currentStatusCode === false) { // Nếu chưa set 404 hoặc lỗi khác
+        http_response_code(404);
+    }
+    // Cập nhật pageTitle cho lỗi nếu chưa được đặt bởi routing
+    $pageTitle = $pageTitle ?? 'Lỗi - Du Lịch Quê Hương';
+
+    if (file_exists(VIEWS_PATH . '/errors/404.php')) {
+        require_once VIEWS_PATH . '/errors/404.php';
+    } else {
+        echo "<div style='text-align:center; padding: 50px;'><h1>404 - Content Missing</h1><p>The specific content file for this page could not be found.</p></div>";
+    }
+}
+$pageContentHtml = ob_get_clean(); // Lấy nội dung đã buffer và dừng buffering
+
+// Bây giờ $pageTitle, $pageStyles, $pageScripts đã được định nghĩa bởi $contentView (nếu có)
+
+// Nạp Header (sử dụng $pageTitle, $pageStyles)
 if (file_exists(VIEWS_PATH . '/layouts/header.php')) {
     require_once VIEWS_PATH . '/layouts/header.php';
 } else {
@@ -89,23 +114,8 @@ if (file_exists(VIEWS_PATH . '/layouts/header.php')) {
     die('Lỗi hệ thống: Header không tồn tại.');
 }
 
-// Nạp Nội dung chính
-if (!empty($contentView) && file_exists($contentView)) {
-    require_once $contentView;
-} else {
-    // Trường hợp này chỉ nên xảy ra nếu logic routing ở trên có lỗi
-    // và $contentView không được set đúng cách, hoặc file không tồn tại
-    // mà chưa bị bắt bởi các điều kiện file_exists ở trên.
-    if (http_response_code() !== 404) { // Nếu chưa set 404 ở trên
-        http_response_code(404);
-        $pageTitle = 'Lỗi Nội Dung - Du Lịch Quê Hương';
-    }
-    if (file_exists(VIEWS_PATH . '/errors/404.php')) {
-        require_once VIEWS_PATH . '/errors/404.php';
-    } else {
-        echo "<div style='text-align:center; padding: 50px;'><h1>404 - Content Missing</h1><p>The specific content file for this page could not be found.</p></div>";
-    }
-}
+// Xuất nội dung chính của trang
+echo $pageContentHtml;
 
 // Nạp Footer
 if (file_exists(VIEWS_PATH . '/layouts/footer.php')) {
