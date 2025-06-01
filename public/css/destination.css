@@ -51,7 +51,6 @@ nav ul li a:hover {
   height: 80vh;
   overflow: hidden;
   background-attachment: fixed;
-  background-image: url("../images/destinations/Da-Nang/DaNangReview.jpg"); /* Updated path */
   background-size: cover;
   background-position: center;
 }

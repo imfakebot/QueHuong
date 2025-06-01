@@ -7,7 +7,10 @@ $pageStyles = [
     '/css/destination.css'
 ];
 
-// $pageScripts = []; // Thêm script nếu cần
+$pageScripts = [
+    'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+    '/js/destination.js'
+]; // Thêm script nếu cần
 
 // Dữ liệu mẫu cho các điểm đến. Trong ứng dụng thực tế, bạn sẽ lấy từ database.
 $destinations = [
@@ -144,11 +147,3 @@ $destinations = [
         </div>
     </section>
 </main>
-
-<!--
-Lưu ý:
-- Hãy đảm bảo các đường dẫn hình ảnh trong mảng $destinations là chính xác và các file ảnh tồn tại.
-- Ảnh banner '/images/banners/destinations-main-banner.jpg' cũng cần được chuẩn bị.
-- File /css/destination.css nên có các định nghĩa CSS cho class .cards, .card, và .btn-cta để trang hiển thị đẹp mắt.
-  Nếu chưa có, bạn cần bổ sung các style này. Ví dụ, class .cards có thể dùng display: grid để tạo layout cột.
--->
