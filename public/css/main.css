@@ -143,12 +143,10 @@ img {
 
 /* --- Custom Slider Styles (chung cho tour và destination) --- */
 .swiper {
-  /* Class .swiper của HTML, không phải của thư viện SwiperJS */
-  width: 100%; /* Chiếm toàn bộ .container (đã full-width) */
+  /* Container chính của SwiperJS - các style bổ sung tùy chỉnh */
+  /* width, position, overflow thường được SwiperJS quản lý */
   margin-top: 40px;
   margin-bottom: 40px;
-  position: relative;
-  overflow: hidden; /* Các slide bên trong sẽ được cắt bởi đây */
 }
 
 .swiper-wrapper {
@@ -319,6 +317,26 @@ img {
   transform: translateY(-50%) scale(1.05);
 }
 
+/* Style cho SVG bên trong các nút điều hướng */
+.tour-nav-prev svg,
+.tour-nav-next svg,
+.destination-nav-prev svg,
+.destination-nav-next svg {
+  width: 22px; /* Điều chỉnh kích thước SVG nếu cần */
+  height: 22px; /* Giữ tỷ lệ khung hình cho SVG */
+  /* Màu fill hiện tại được đặt trực tiếp trong thẻ <path> của SVG trong HTML (fill="#1C274C") */
+  /* Nếu bạn muốn kiểm soát màu sắc qua CSS, bạn cần xóa thuộc tính 'fill' trong HTML SVG 
+     và đặt ở đây, ví dụ: fill: #YourDesiredColor; */
+}
+
+/* Ghi đè content mặc định của SwiperJS cho các nút điều hướng
+   để đảm bảo chỉ SVG tùy chỉnh được hiển thị và không có mũi tên CSS nào khác.
+   Các class swiper-button-prev/next là class chuẩn của Swiper. */
+.swiper-button-prev::after,
+.swiper-button-next::after {
+  content: "" !important; /* Buộc content của pseudo-element này phải rỗng */
+}
+
 /* Vô hiệu hóa nút (JS sẽ thêm thuộc tính disabled) */
 .tour-nav-prev[disabled],
 .tour-nav-next[disabled],
@@ -340,26 +358,18 @@ img {
   right: -60px; /* -(45px nút + 15px_khoảng_trống) */
 }
 
-/* Mũi tên (Sử dụng SVG inline hoặc font icon nếu muốn tùy chỉnh) */
-/* Đây là ví dụ dùng pseudo-elements đơn giản, bạn nên thay bằng SVG/icon font */
-.swiper-button-prev::after,
-.swiper-button-next::after {
-  font-family: sans-serif; /* Hoặc một font icon */
-  font-size: 24px;
-  font-weight: bold;
-}
-
 /* --- Slider Pagination --- */
 .swiper-pagination {
-  position: absolute;
-  bottom: -25px; /* Đẩy xuống dưới slider một chút */
-  left: 50%;
+  position: absolute !important; /* Đặt bởi SwiperJS */
+  bottom: -30px; /* Đẩy xuống dưới slider một chút */
+  left: 50% !important; /* Căn giữa theo chiều ngang */
   transform: translateX(-50%);
-  display: flex; /* Đặt bởi JS nếu có nhiều hơn 1 page */
+  display: flex !important; /* Đặt bởi JS nếu có nhiều hơn 1 page */
   justify-content: center;
   align-items: center;
   padding-top: 10px; /* Khoảng cách từ slider */
   z-index: 5;
+  /* width: fit-content; */ /* Có thể thêm để tường minh, nhưng display:flex thường đã đủ */
 }
 
 .swiper-pagination-bullet {

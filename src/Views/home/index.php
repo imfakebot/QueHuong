@@ -3,14 +3,13 @@ $pageTitle = 'Trang Chủ - Du Lịch Quê Hương'; // Hoặc tiêu đề bạn
 
 // CSS cần thiết cho trang chủ
 $pageStyles = [
-
+    'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css', // Thêm Swiper CSS
     '/css/main.css' // CSS riêng cho trang chủ (thay thế cho style.css cũ)
 ];
 
 // JavaScript cần thiết cho trang chủ
 $pageScripts = [
-
-
+    'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js', // Thêm Swiper JS
     '/js/main.js' // File JS để khởi tạo các slider trên trang chủ (bạn cần tạo file này)
 ];
 ?>
