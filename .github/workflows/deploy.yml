@@ -28,6 +28,7 @@ jobs:
         SOURCE: "./"
         REMOTE_HOST: "150.95.110.129" # THAY THẾ
         REMOTE_USER: "h1969580cd" # THAY THẾ BẰNG USERNAME HOSTING CỦA BẠN
+        REMOTE_PORT: "2222"
         TARGET: "/home/h1969580cd/domains/tanhisme.id.vn/public_html/" # THAY THẾ ĐƯỜNG DẪN
 
     # Bỏ comment và tùy chỉnh nếu bạn cần chạy lệnh sau khi deploy
