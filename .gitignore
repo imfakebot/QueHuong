@@ -12,13 +12,18 @@
 
 
 # 4. IDE and Editor specific files/directories
-.vscode/      # Visual Studio Code configuration
-.idea/        # PhpStorm/IntelliJ IDEA configuration
-*.swp         # Vim swap files
+.vscode/      
+# Visual Studio Code configuration
+.idea/        
+# PhpStorm/IntelliJ IDEA configuration
+*.swp         
+# Vim swap files
 
 # 5. Operating System files
-.DS_Store     # macOS
-Thumbs.db     # Windows
+.DS_Store     
+# macOS
+Thumbs.db     
+# Windows
 
 # 6. Cache and log files (example paths - adjust if you create these)
 /var/cache/
