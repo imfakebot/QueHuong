@@ -24,6 +24,7 @@ jobs:
       uses: easingthemes/ssh-deploy@v2.2.3
       env:
         SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_DEPLOY }}
+        DEBUG: "true"
         ARGS: "-rltgoDzvO --delete" # Các tùy chọn rsync
         SOURCE: "./"
         REMOTE_HOST: "150.95.110.129" # THAY THẾ
