@@ -1,0 +1,44 @@
+name: Deploy to Production
+
+on:
+  push:
+    branches:
+      - main # Hoặc nhánh bạn muốn deploy
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout code
+      uses: actions/checkout@v3
+
+    # Bỏ comment và tùy chỉnh nếu bạn có bước build hoặc cài dependencies
+    # - name: Setup PHP
+    #   uses: shivammathur/setup-php@v2
+    #   with:
+    #     php-version: '8.1'
+    # - name: Install Composer dependencies
+    #   run: composer install --no-dev --optimize-autoloader # Cần có composer.json và composer.lock trong repo
+
+    - name: Deploy to server
+      uses: easingthemes/ssh-deploy@v2.2.3
+      env:
+        SSH_PRIVATE_KEY: ${{ secrets.SSH_PRIVATE_KEY_DEPLOY }}
+        ARGS: "-rltgoDzvO --delete" # Các tùy chọn rsync
+        SOURCE: "./"
+        REMOTE_HOST: "tanhisme.id.vn" # THAY THẾ
+        REMOTE_USER: "h1969580cd" # THAY THẾ BẰNG USERNAME HOSTING CỦA BẠN
+        TARGET: "/home/h1969580cd/domains/tanhisme.id.vn/public_html/" # THAY THẾ ĐƯỜNG DẪN
+
+    # Bỏ comment và tùy chỉnh nếu bạn cần chạy lệnh sau khi deploy
+    # - name: Post-deployment commands
+    #   uses: appleboy/ssh-action@master
+    #   with:
+    #     host: ${{ env.REMOTE_HOST }}
+    #     username: ${{ env.REMOTE_USER }}
+    #     key: ${{ secrets.SSH_PRIVATE_KEY_DEPLOY }}
+    #     script: |
+    #       cd ${{ env.TARGET }}
+    #       # Ví dụ: php artisan cache:clear (nếu là Laravel)
+    #       # Ví dụ: npm run build (nếu cần build trên server, ít phổ biến hơn)
+    #       echo "Deployment finished!"
