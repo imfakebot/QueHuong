@@ -73,4 +73,23 @@ document.addEventListener("DOMContentLoaded", function () {
   } else {
     console.error("Hamburger button or main navigation element not found!");
   }
+
+  // === Thêm mã cho hiệu ứng header sticky ===
+  const siteHeader = document.querySelector(".site-header");
+  if (siteHeader) {
+    const scrollThreshold = 200; // Số pixel cần cuộn trước khi hiệu ứng được áp dụng
+
+    window.addEventListener("scroll", function () {
+      if (window.pageYOffset > scrollThreshold) {
+        siteHeader.classList.add("scrolled");
+      } else {
+        siteHeader.classList.remove("scrolled");
+      }
+    });
+  } else {
+    console.warn(
+      "Site header element (.site-header) not found for sticky effect."
+    );
+  }
+  // === Kết thúc mã cho hiệu ứng header sticky ===
 }); // Kết thúc DOMContentLoaded
