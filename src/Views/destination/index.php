@@ -125,7 +125,7 @@ $destinations = [
 ];
 ?>
 
-<section class="hero" style="background-image: url('/images/others/banner-destination.jpg');"> <!-- Thay thế bằng ảnh banner của bạn -->
+<section class="hero" style="background-image: url('https://cms.junglebosstours.com/assets/0a767e37-3aa6-45e5-9222-6caeb8983e45?format=webp');"> <!-- Thay thế bằng ảnh banner của bạn -->
     <div class="hero-text">
         <h1>Khám Phá Các Điểm Đến Tuyệt Vời</h1>
         <p>Việt Nam tươi đẹp đang chờ bạn khám phá, từ núi non hùng vĩ đến những bãi biển thơ mộng.</p>

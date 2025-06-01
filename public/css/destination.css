@@ -50,7 +50,7 @@ nav ul li a:hover {
   position: relative;
   height: 80vh;
   overflow: hidden;
-  background-attachment: fixed;
+  background-attachment: scroll;
   background-size: cover;
   background-position: center;
 }
@@ -58,20 +58,22 @@ nav ul li a:hover {
 .hero-text {
   position: absolute;
   bottom: 50px;
-  left: 50px;
+  left: 50px; /* Mặc định cho desktop */
   color: white;
   max-width: 600px;
   animation: fadeInUp 1.2s ease forwards;
+  padding-right: 20px; /* Thêm padding để không sát mép phải trên mobile */
 }
 
 .hero-text h1 {
-  font-size: 48px;
+  font-size: 48px; /* Mặc định cho desktop */
   font-family: "Playfair Display", serif;
   margin-bottom: 10px;
 }
 
 .hero-text p {
-  font-size: 20px;
+  font-size: 20px; /* Mặc định cho desktop */
+  line-height: 1.5; /* Cải thiện khả năng đọc */
 }
 
 @keyframes fadeInUp {
@@ -331,19 +333,34 @@ footer {
 
   .hero-text {
     bottom: 20px;
-    left: 20px;
+    left: 20px; /* Giảm khoảng cách trái cho tablet/mobile */
+    max-width: 90%; /* Cho phép text chiếm nhiều hơn chiều rộng màn hình */
   }
 
   .hero-text h1 {
-    font-size: 32px;
+    font-size: 32px; /* Giảm kích thước chữ cho tablet */
   }
 
   .hero-text p {
-    font-size: 16px;
+    font-size: 16px; /* Giảm kích thước chữ cho tablet */
   }
 
   h2 {
     font-size: 26px;
+  }
+
+  /* Responsive cho hero trên mobile nhỏ hơn */
+  @media (max-width: 480px) {
+    .hero {
+      height: 60vh; /* Giảm chiều cao hero trên mobile nhỏ */
+    }
+    .hero-text {
+      bottom: 15px;
+      left: 15px;
+    }
+    .hero-text h1 {
+      font-size: 26px; /* Giảm nữa cho mobile nhỏ */
+    }
   }
 
   .card h3 {
@@ -578,20 +595,5 @@ body {
   }
   to {
     opacity: 1;
-  }
-}
-
-@media (max-width: 480px) {
-  .hero-text h1 {
-    font-size: 26px;
-  }
-
-  .hero-text p {
-    font-size: 14px;
-  }
-
-  .btn-cta {
-    padding: 10px 20px;
-    font-size: 14px;
   }
 }
