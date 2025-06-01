@@ -116,7 +116,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Đà Nẵng - Du lịch Việt Nam';
+$pageTitle = 'TP Hồ Chí Minh - Du lịch Việt Nam';
 
 // Add page-specific CSS files
 $pageStyles = [
