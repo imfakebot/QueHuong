@@ -80,47 +80,36 @@ else {
 
 
 // ----- NẠP LAYOUT -----
-
-// Bắt đầu output buffering để nạp nội dung trang trước
-ob_start();
-if (!empty($contentView) && file_exists($contentView)) {
-    require_once $contentView;
-} else {
-    // Trường hợp này chỉ nên xảy ra nếu logic routing ở trên có lỗi
-    // và $contentView không được set đúng cách, hoặc file không tồn tại
-    // mà chưa bị bắt bởi các điều kiện file_exists ở trên.
-    $currentStatusCode = http_response_code();
-    if ($currentStatusCode === 200 || $currentStatusCode === false) { // Nếu chưa set 404 hoặc lỗi khác
-        http_response_code(404);
-    }
-    // Cập nhật pageTitle cho lỗi nếu chưa được đặt bởi routing
-    $pageTitle = $pageTitle ?? 'Lỗi - Du Lịch Quê Hương';
-
+if (http_response_code() === 404) {
+    // Nếu là trang 404, chỉ hiển thị nội dung 404 mà không có header/footer
     if (file_exists(VIEWS_PATH . '/errors/404.php')) {
         require_once VIEWS_PATH . '/errors/404.php';
     } else {
-        echo "<div style='text-align:center; padding: 50px;'><h1>404 - Content Missing</h1><p>The specific content file for this page could not be found.</p></div>";
     }
-}
-$pageContentHtml = ob_get_clean(); // Lấy nội dung đã buffer và dừng buffering
-
-// Bây giờ $pageTitle, $pageStyles, $pageScripts đã được định nghĩa bởi $contentView (nếu có)
-
-// Nạp Header (sử dụng $pageTitle, $pageStyles)
-if (file_exists(VIEWS_PATH . '/layouts/header.php')) {
-    require_once VIEWS_PATH . '/layouts/header.php';
 } else {
-    error_log("Lỗi: Không tìm thấy tệp header.php tại " . VIEWS_PATH . '/layouts/header.php');
-    die('Lỗi hệ thống: Header không tồn tại.');
-}
+    // Các trang bình thường sẽ nạp đầy đủ layout
+    ob_start();
+    if (!empty($contentView) && file_exists($contentView)) {
+        require_once $contentView;
+    }
+    $pageContentHtml = ob_get_clean();
 
-// Xuất nội dung chính của trang
-echo $pageContentHtml;
+    // Nạp Header
+    if (file_exists(VIEWS_PATH . '/layouts/header.php')) {
+        require_once VIEWS_PATH . '/layouts/header.php';
+    } else {
+        error_log("Lỗi: Không tìm thấy tệp header.php tại " . VIEWS_PATH . '/layouts/header.php');
+        die('Lỗi hệ thống: Header không tồn tại.');
+    }
 
-// Nạp Footer
-if (file_exists(VIEWS_PATH . '/layouts/footer.php')) {
-    require_once VIEWS_PATH . '/layouts/footer.php';
-} else {
-    error_log("Lỗi: Không tìm thấy tệp footer.php tại " . VIEWS_PATH . '/layouts/footer.php');
-    die('Lỗi hệ thống: Footer không tồn tại.');
+    // Xuất nội dung chính
+    echo $pageContentHtml;
+
+    // Nạp Footer
+    if (file_exists(VIEWS_PATH . '/layouts/footer.php')) {
+        require_once VIEWS_PATH . '/layouts/footer.php';
+    } else {
+        error_log("Lỗi: Không tìm thấy tệp footer.php tại " . VIEWS_PATH . '/layouts/footer.php');
+        die('Lỗi hệ thống: Footer không tồn tại.');
+    }
 }
