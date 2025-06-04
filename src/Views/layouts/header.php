@@ -142,9 +142,9 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">SOUTHERN VIETNAM</h5>
                                     <ul class="mega-menu-links region-links">
-                                        <li><a href="/destination/con-dao">Con Dao</a></li>
-                                        <li><a href="/destination/binh-thuan">Binh Thuan</a></li>
-                                        <li><a href="/destination/can-tho">Can Tho</a></li>
+                                        <li><a href="/destinations/con-dao">Con Dao</a></li>
+                                        <li><a href="/destinations/binh-thuan">Binh Thuan</a></li>
+                                        <li><a href="/destinations/can-tho">Can Tho</a></li>
                                         <li><a href="/destinations/chau-doc">Chau Doc</a></li>
                                         <li><a href="/destinations/phu-quoc">Phu Quoc</a></li>
                                     </ul>

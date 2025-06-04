@@ -16,7 +16,7 @@ $pageScripts = [
 
 <!-- Rest of the existing HTML content -->
 
-<section class="hero">
+<section class="hero" style="background-image: url('/images/destinations/Da-Nang/DaNangReview.jpg');">
   <div class="hero-text">
     <h1>Khám phá Đà Nẵng</h1>
     <p>Thành phố biển năng động với những bãi biển tuyệt đẹp và văn hóa phong phú.</p>
