@@ -364,69 +364,83 @@ $pageScripts = [
             <div class="swiper-wrapper">
                 <!-- ADVENTURE & OUTDOORS -->
                 <div class="swiper-slide">
-                    <div class="feature-item">
-                        <div class="image-container">
-                            <img src="/images/activities/trekking_sapa.jpg" alt="Trekking in Sapa"> <!-- Giữ nguyên nếu phù hợp hoặc thay bằng /images/mega_menu/adventure_and_outdoor.jpg làm ảnh chung cho nhóm -->
+                    <a href="/things/trekking-sapa" class="feature-link"> <!-- Thêm thẻ <a> bọc ngoài -->
+                        <div class="feature-item">
+                            <div class="image-container">
+                                <img src="/images/activities/trekking_in_sapa.jpg" alt="Trekking in Sapa">
+                            </div>
+                            <h3>Trekking in Sapa</h3>
+                            <p>Witness breathtaking terraced rice fields, meet ethnic minority groups, and experience the stunning mountain landscapes.</p>
                         </div>
-                        <h3>Trekking in Sapa</h3>
-                        <p>Witness breathtaking terraced rice fields, meet ethnic minority groups, and experience the stunning mountain landscapes.</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="feature-item">
-                        <div class="image-container">
-                            <img src="/images/activities/kayaking_halong.jpg" alt="Kayaking in Ha Long Bay"> <!-- Cần ảnh mới -->
+                    <a href="/things/kayaking-halong" class="feature-link"> <!-- Thêm thẻ <a> bọc ngoài -->
+                        <div class="feature-item">
+                            <div class="image-container">
+                                <img src="/images/activities/kayaking_halong.jpg" alt="Kayaking in Ha Long Bay">
+                            </div>
+                            <h3>Kayaking in Ha Long Bay</h3>
+                            <p>Paddle through emerald waters, explore hidden grottoes, and get up close to magnificent limestone karsts.</p>
                         </div>
-                        <h3>Kayaking in Ha Long Bay</h3>
-                        <p>Paddle through emerald waters, explore hidden grottoes, and get up close to magnificent limestone karsts.</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="feature-item">
-                        <div class="image-container">
-                            <img src="/images/activities/caving_phongnha.jpg" alt="Exploring Phong Nha Caves"> <!-- Cần ảnh mới -->
+                    <a href="/things/caving-phongnha" class="feature-link"> <!-- Thêm thẻ <a> bọc ngoài -->
+                        <div class="feature-item">
+                            <div class="image-container">
+                                <img src="/images/activities/caving_phongnha.jpg" alt="Exploring Phong Nha Caves">
+                            </div>
+                            <h3>Exploring Phong Nha Caves</h3>
+                            <p>Venture into world-renowned caves, marveling at spectacular stalactites and stalagmites in Phong Nha-Ke Bang.</p>
                         </div>
-                        <h3>Exploring Phong Nha Caves</h3>
-                        <p>Venture into world-renowned caves, marveling at spectacular stalactites and stalagmites in Phong Nha-Ke Bang.</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="feature-item">
-                        <div class="image-container">
-                            <img src="/images/activities/motorbiking_adventures.jpg" alt="Motorbiking Adventures"> <!-- Cần ảnh mới -->
+                    <a href="/things/motorbiking" class="feature-link"> <!-- Thêm thẻ <a> bọc ngoài -->
+                        <div class="feature-item">
+                            <div class="image-container">
+                                <img src="/images/activities/motorbiking_adventures.jpg" alt="Motorbiking Adventures">
+                            </div>
+                            <h3>Motorbiking Adventures</h3>
+                            <p>Experience the freedom of the open road, discovering scenic routes and remote areas across Vietnam.</p>
                         </div>
-                        <h3>Motorbiking Adventures</h3>
-                        <p>Experience the freedom of the open road, discovering scenic routes and remote areas across Vietnam.</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="feature-item">
-                        <div class="image-container">
-                            <img src="/images/activities/watersports_beaches.jpg" alt="Watersports & Beaches"> <!-- Cần ảnh mới -->
+                    <a href="/things/watersports" class="feature-link"> <!-- Thêm thẻ <a> bọc ngoài -->
+                        <div class="feature-item">
+                            <div class="image-container">
+                                <img src="/images/activities/watersports_beaches.jpg" alt="Watersports & Beaches">
+                            </div>
+                            <h3>Watersports & Beaches</h3>
+                            <p>Enjoy thrilling watersports or relax on pristine beaches along Vietnam's beautiful and diverse coastline.</p>
                         </div>
-                        <h3>Watersports & Beaches</h3>
-                        <p>Enjoy thrilling watersports or relax on pristine beaches along Vietnam's beautiful and diverse coastline.</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide">
-                    <div class="feature-item">
-                        <div class="image-container">
-                            <img src="/images/activities/canyoning_dalat.jpg" alt="Canyoning in Da Lat"> <!-- Cần ảnh mới -->
+                    <a href="/things/canyoning-dalat" class="feature-link"> <!-- Thêm thẻ <a> bọc ngoài -->
+                        <div class="feature-item">
+                            <div class="image-container">
+                                <img src="/images/activities/canyoning_dalat.jpg" alt="Canyoning in Da Lat">
+                            </div>
+                            <h3>Canyoning in Da Lat</h3>
+                            <p>Challenge yourself with abseiling down waterfalls and navigating canyons in the cool highlands of Da Lat.</p>
                         </div>
-                        <h3>Canyoning in Da Lat</h3>
-                        <p>Challenge yourself with abseiling down waterfalls and navigating canyons in the cool highlands of Da Lat.</p>
-                    </div>
+                    </a>
                 </div>
 
                 <!-- CULTURE & HERITAGE -->
                 <div class="swiper-slide">
-                    <div class="feature-item">
-                        <div class="image-container">
-                            <img src="/images/activities/historical_sites.jpg" alt="Visiting Historical Sites"> <!-- Cần ảnh mới, ví dụ: /images/mega_menu/cultural_and_heritage.jpg -->
+                    <a href="/things/historical-sites" class="feature-link"> <!-- Thêm thẻ <a> bọc ngoài -->
+                        <div class="feature-item">
+                            <div class="image-container">
+                                <img src="/images/activities/historical_sites.jpg" alt="Visiting Historical Sites">
+                            </div>
+                            <h3>Visiting Historical Sites</h3>
+                            <p>Step back in time exploring ancient citadels, imperial tombs, and significant historical landmarks across the country.</p>
                         </div>
-                        <h3>Visiting Historical Sites</h3>
-                        <p>Step back in time exploring ancient citadels, imperial tombs, and significant historical landmarks across the country.</p>
-                    </div>
+                    </a>
                 </div>
                 <div class="swiper-slide">
                     <div class="feature-item">
