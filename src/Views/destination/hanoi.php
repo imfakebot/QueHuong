@@ -1,15 +1,18 @@
 <?php
-$pageTitle = 'Đà Nẵng - Du lịch Việt Nam';
+$pageTitle = 'Hà Nội - Du lịch Việt Nam';
 
 // Add page-specific CSS files
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
+  'https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css',
   '/css/destination.css'
 ];
 
 // Add page-specific scripts (already exists)
 $pageScripts = [
+  'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js',
   'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+  'https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js',
   '/js/destination.js'
 ];
 ?>
@@ -147,7 +150,12 @@ $pageScripts = [
 
         foreach ($galleryImages as [$image, $alt]) {
           echo "<div class='swiper-slide'>";
+          echo "<a href='/images/destinations/Ha-Noi/{$image}' 
+                         data-lightbox='hanoi-gallery' 
+                         data-title='{$alt}' 
+                         class='gallery-link'>";
           echo "<img src='/images/destinations/Ha-Noi/{$image}' alt='{$alt}'>";
+          echo "</a>";
           echo "</div>";
         }
         ?>
