@@ -136,18 +136,20 @@
 }
 
 .footer-back-to-top {
-  margin-left: auto;
-}
-.back-to-top {
-  display: inline-flex;
+  margin-left: auto; /* Bỏ dòng này nếu muốn nút (và khung chứa nó) được căn giữa bởi .footer-bottom
+                              /* Nếu bỏ, justify-content: center của .footer-bottom sẽ tác động đến mục này */
+  display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #e9ecef; /* Nền nút back-to-top (xám rất nhạt) */
-  color: #495057; /* Màu icon bên trong nếu là font icon */
-  width: 30px;
-  height: 30px;
+}
+.back-to-top {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 80px;
+  height: 60px;
   border-radius: 3px;
-  opacity: 0;
+  opacity: 1;
   visibility: hidden;
   transition: opacity 0.3s ease, visibility 0s linear 0.3s,
     background-color 0.3s ease;
@@ -156,18 +158,29 @@
   opacity: 0.7; /* Tăng opacity cho dễ thấy trên nền sáng */
   visibility: visible;
   transition-delay: 0s;
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  justify-items: center;
 }
 .back-to-top:hover {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   background-color: #ced4da; /* Đậm hơn chút khi hover */
   opacity: 1;
 }
 .back-to-top img {
-  width: 12px;
+  width: 14px;
   height: auto;
   /* Nếu icon gốc màu trắng, cần chuyển sang tối: */
   filter: brightness(0.2);
   /* Hoặc nếu icon đã là màu tối thì không cần filter hoặc filter nhẹ: */
   /* filter: brightness(0.5); */
+  padding: 0;
+  margin: 0;
+  position: relative;
 }
 
 /* ==========================================================================

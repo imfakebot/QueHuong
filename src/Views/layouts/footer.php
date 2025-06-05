@@ -70,7 +70,14 @@
                 <!-- Nút Back to top - href trỏ về id="top" trên thẻ body -->
                 <a href="#top" class="back-to-top" aria-label="Back to top">
                     <!-- !!! Đảm bảo có file SVG !!! -->
-                    <img src="/svg/arrow-up.svg" alt="Lên đầu trang">
+                    <svg fill="#213aba" viewBox="0 0 32 32" version="1.1" xmlns="http://www.w3.org/2000/svg" stroke="#213aba">
+                        <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                        <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                        <g id="SVGRepo_iconCarrier">
+                            <title>up</title>
+                            <path d="M11.25 15.688l-7.656 7.656-3.594-3.688 11.063-11.094 11.344 11.344-3.5 3.5z"></path>
+                        </g>
+                    </svg>
                 </a>
             </div>
         </div> <!-- /footer-bottom -->
