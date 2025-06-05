@@ -201,41 +201,6 @@ footer {
   font-size: 16px;
 }
 
-/* Lightbox styles */
-/* .lightbox {
-  display: none;
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  background: rgba(0, 0, 0, 0.8);
-  justify-content: center;
-  align-items: center;
-}
-
-.lightbox img {
-  max-width: 90%;
-  max-height: 90%;
-  border-radius: 10px;
-  box-shadow: 0 0 20px rgba(255, 255, 255, 0.2);
-}
-
-.lightbox:target {
-  display: flex;
-}
-
-.close-btn {
-  position: absolute;
-  top: 20px;
-  right: 30px;
-  font-size: 30px;
-  color: white;
-  text-decoration: none;
-  font-weight: bold;
-} */
-
 .content-section h1 {
   font-family: "Playfair Display", serif;
 }
@@ -628,4 +593,92 @@ body {
 .lb-data .lb-details {
   width: 100%;
   text-align: center;
+}
+
+/* Things to do Section Styling */
+.things-to-do h2 {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.activity-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 30px;
+}
+
+.activity-item {
+  display: flex;
+  align-items: flex-start;
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.12);
+}
+
+.activity-icon {
+  flex-shrink: 0;
+  margin-right: 20px;
+  width: 60px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #fef2f2;
+  border-radius: 50%;
+}
+
+.activity-icon i {
+  font-size: 2.5em;
+  color: #b72c2c;
+}
+
+.activity-content h3 {
+  font-family: "Playfair Display", serif;
+  font-size: 1.3em;
+  color: #333;
+  margin-top: 0;
+  margin-bottom: 8px;
+}
+
+.activity-content h3::after {
+  display: none;
+}
+
+.activity-content p {
+  font-size: 0.95em;
+  line-height: 1.6;
+  color: #555;
+  margin-bottom: 0;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .activity-item {
+    padding: 15px;
+  }
+
+  .activity-icon {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+  }
+
+  .activity-icon i {
+    font-size: 2em;
+  }
+
+  .activity-content h3 {
+    font-size: 1.2em;
+  }
 }
