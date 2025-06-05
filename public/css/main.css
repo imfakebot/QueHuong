@@ -235,7 +235,7 @@ img {
 }
 
 .tour-price {
-  color: #27ae60; /* Màu xanh lá cây dịu hơn */
+  color: #2980b9;
   font-weight: bold;
   font-size: 1.15em;
 }
@@ -389,12 +389,12 @@ img {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #555; /* Màu chung cho active */
+  background-color: #2980b9;
   opacity: 1;
   transform: scale(1.1);
 }
 .tour-swiper .swiper-pagination-bullet-active {
-  background-color: #27ae60;
+  background-color: #2980b9;
 }
 .destination-swiper .swiper-pagination-bullet-active {
   background-color: #2980b9;
@@ -415,7 +415,7 @@ img {
 }
 
 .btn-primary {
-  background: #27ae60;
+  background: #2980b9;
   color: #fff;
 }
 .btn-secondary {
@@ -532,5 +532,197 @@ img {
   .btn {
     padding: 10px 20px;
     font-size: 0.9em;
+  }
+
+  .exciting-activities-slider {
+    padding: 60px 0;
+    background-color: #f8f9fa; /* Hoặc màu nền bạn muốn */
+  }
+
+  /* Container của slider activities cần position relative để đặt nút nav */
+  .exciting-activities-slider .container {
+    position: relative; /* Quan trọng cho việc đặt nút điều hướng */
+  }
+
+  /* Nút điều hướng cho Activity Slider */
+  .activity-nav-prev,
+  .activity-nav-next {
+    position: absolute;
+    top: 50%; /* Căn giữa theo chiều dọc với slider */
+    transform: translateY(
+      -150%
+    ); /* Điều chỉnh để căn giữa với tiêu đề section và slider */
+    z-index: 10;
+    width: 40px; /* Kích thước nút */
+    height: 40px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, opacity 0.3s ease;
+  }
+  .activity-nav-prev:hover,
+  .activity-nav-next:hover {
+    background-color: #fff;
+  }
+  .activity-nav-prev svg,
+  .activity-nav-next svg {
+    width: 20px; /* Kích thước icon SVG */
+    height: 20px;
+  }
+  .activity-nav-prev {
+    left: -20px; /* Đặt bên ngoài container một chút */
+  }
+  .activity-nav-next {
+    right: -20px; /* Đặt bên ngoài container một chút */
+  }
+
+  /* Responsive cho nút điều hướng trên màn hình nhỏ */
+  @media (max-width: 767px) {
+    .activity-nav-prev,
+    .activity-nav-next {
+      top: 40%; /* Điều chỉnh lại vị trí cho mobile */
+      transform: translateY(-50%);
+      width: 35px;
+      height: 35px;
+    }
+    .activity-nav-prev {
+      left: 5px;
+    }
+    .activity-nav-next {
+      right: 5px;
+    }
+  }
+
+  /* Activity Category Slide */
+  .activity-category-slide {
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .activity-category-slide:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  }
+
+  .activity-category-link {
+    display: block;
+    text-decoration: none;
+    color: inherit;
+  }
+
+  .activity-image-header {
+    position: relative;
+    height: 200px; /* Chiều cao cố định cho ảnh danh mục */
+    overflow: hidden;
+  }
+  .activity-image-header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .activity-category-slide:hover .activity-image-header img {
+    transform: scale(1.05);
+  }
+
+  .activity-category-title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: linear-gradient(
+      to top,
+      rgba(0, 0, 0, 0.7) 0%,
+      rgba(0, 0, 0, 0) 100%
+    );
+    color: #fff;
+    padding: 15px;
+    margin: 0;
+    font-size: 1.4rem;
+    font-weight: 600;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+  }
+
+  .activity-category-description {
+    padding: 15px;
+    font-size: 0.9rem;
+    color: #555;
+    min-height: 60px; /* Đảm bảo chiều cao đồng đều */
+  }
+
+  /* Activity Item Slide (Nếu bạn dùng để làm nổi bật hoạt động cụ thể) */
+  .activity-item-slide {
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .activity-item-slide:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
+  }
+
+  .activity-item-link {
+    display: block;
+    text-decoration: none;
+    color: #333;
+  }
+  .activity-image-container {
+    /* Tái sử dụng class nếu có, hoặc tạo mới */
+    height: 180px; /* Chiều cao ảnh cho item hoạt động */
+    overflow: hidden;
+  }
+  .activity-image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+  }
+  .activity-item-slide:hover .activity-image-container img {
+    transform: scale(1.05);
+  }
+
+  .activity-content {
+    padding: 15px;
+  }
+  .activity-item-title {
+    font-size: 1.1rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+  }
+  .activity-item-excerpt {
+    font-size: 0.85rem;
+    color: #666;
+    line-height: 1.5;
+  }
+
+  /* Pagination cho Activity Slider */
+  .activity-swiper .swiper-pagination {
+    position: relative; /* Đặt lại vị trí nếu muốn nó ở dưới slider */
+    bottom: auto;
+    margin-top: 25px; /* Khoảng cách từ slider xuống pagination */
+  }
+  .activity-swiper .swiper-pagination-bullet {
+    background-color: #ccc;
+    opacity: 1;
+  }
+  .activity-swiper .swiper-pagination-bullet-active {
+    background-color: var(
+      --primary-color,
+      #007bff
+    ); /* Sử dụng biến màu chính nếu có */
+  }
+
+  /* Nút xem tất cả */
+  .view-all-things-to-do {
+    text-align: center;
+    margin-top: 40px;
   }
 }

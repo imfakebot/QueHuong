@@ -1,41 +1,37 @@
 /* ==========================================================================
-   Footer Styling - Như cũ nhưng gọn hơn (Đặt trong /css/footer.css)
+   Footer Styling - BRIGHT THEME (Đặt trong /css/footer.css)
    ========================================================================== */
 
 .site-footer {
-  background-color: #f8f9fa;
-  color: #666; /* Màu chữ nhạt hơn chút */
-  padding: 30px 0 15px 0; /* Giảm padding trên/dưới */
-  font-size: 0.88em; /* Giảm font chữ chung */
-  border-top: 1px solid #eee;
-  margin-top: auto; /* Giữ footer ở đáy */
+  background-color: #ffffff; /* Nền trắng tinh */
+  color: #555; /* Màu chữ chung (xám đậm vừa) */
+  padding: 30px 0 15px 0;
+  font-size: 0.88em;
+  border-top: 1px solid #e9ecef; /* Border trên rất nhạt */
+  margin-top: auto;
 }
 
 /* --- Phần các cột link --- */
 .footer-columns-wrapper {
   display: flex;
   flex-wrap: wrap;
-  /* Giảm gap giữa các cột */
   gap: 25px;
-  /* Giảm khoảng cách dưới và padding dưới */
   margin-bottom: 20px;
   padding-bottom: 20px;
-  border-bottom: 1px solid #eee;
-  /* Container sẽ căn giữa */
+  border-bottom: 1px solid #e9ecef; /* Border dưới rất nhạt */
 }
 
 .footer-column {
   flex: 1;
-  /* Giảm chiều rộng tối thiểu để có thể co lại nhiều hơn */
   min-width: 200px;
-  margin-left: 30px; /* Giảm khoảng cách bên trái */
+  margin-left: 30px;
 }
 
 .footer-heading {
-  font-size: 0.95rem; /* Giảm nhẹ font heading */
+  font-size: 0.95rem;
   font-weight: 600;
-  color: #333;
-  margin-bottom: 10px; /* Giảm khoảng cách dưới heading */
+  color: #212529; /* Màu heading (đen nhạt) */
+  margin-bottom: 10px;
 }
 
 .footer-links {
@@ -45,27 +41,28 @@
 }
 
 .footer-links li {
-  margin-bottom: 6px; /* Giảm khoảng cách giữa các link */
+  margin-bottom: 6px;
 }
 
 .footer-links a {
-  color: #555;
+  color: #495057; /* Màu link (xám đậm hơn chữ thường một chút) */
   text-decoration: none;
   transition: color 0.3s ease;
-  font-size: 0.85rem; /* Giảm nhẹ font link */
+  font-size: 0.85rem;
 }
 
 .footer-links a:hover {
-  color: #007bff;
+  color: #007bff; /* Màu link khi hover (xanh dương - màu nhấn) */
 }
 
 .footer-contact-info {
-  line-height: 1.6; /* Giảm nhẹ line-height */
+  line-height: 1.6;
   margin-bottom: 12px;
   font-size: 0.85rem;
+  color: #555; /* Giống màu chữ chung */
 }
 .footer-contact-info a {
-  color: #007bff;
+  color: #007bff; /* Màu link liên hệ (xanh dương - màu nhấn) */
 }
 .footer-contact-info a:hover {
   text-decoration: underline;
@@ -73,21 +70,24 @@
 
 .social-icons {
   display: flex;
-  gap: 10px; /* Giảm gap icon */
-  margin-top: 8px; /* Giảm khoảng cách trên icon */
+  gap: 10px;
+  margin-top: 8px;
 }
 .social-icons a {
   display: inline-block;
-  opacity: 0.7;
+  opacity: 0.6; /* Giảm opacity chút cho icon đỡ chói */
   transition: opacity 0.3s ease;
 }
 .social-icons a:hover {
   opacity: 1;
 }
 .social-icons img {
-  width: 20px; /* Icon nhỏ hơn */
+  width: 20px;
   height: 20px;
   display: block;
+  /* Nếu icon gốc màu trắng/sáng, có thể cần filter để đậm hơn: */
+  /* filter: brightness(0.5); */
+  /* Hoặc nếu icon gốc đã là màu tối thì không cần filter */
 }
 
 /* --- Phần dưới cùng (footer-bottom) --- */
@@ -97,19 +97,20 @@
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 10px 15px; /* Giảm gap */
-  padding-top: 15px; /* Giảm padding */
-  font-size: 0.82em; /* Font nhỏ hơn */
+  gap: 10px 15px;
+  padding-top: 15px;
+  font-size: 0.82em;
+  color: #6c757d; /* Màu chữ phần bottom (xám nhạt hơn) */
 }
 
 .copyright-info {
   display: flex;
-  flex-direction: column; /* Để căn giữa */
+  flex-direction: column;
   text-align: center;
   justify-content: center;
-  line-height: 1.5; /* Giảm line-height */
+  line-height: 1.5;
   margin: 0;
-  color: #777;
+  color: #6c757d; /* Giống .footer-bottom */
 }
 .copyright-info p {
   margin: 0;
@@ -118,6 +119,7 @@
   height: 18px;
   vertical-align: middle;
   margin-left: 5px;
+  /* Không cần filter nếu badge đã có màu phù hợp nền sáng */
 }
 
 .footer-secondary-links {
@@ -130,6 +132,7 @@
 }
 .payment-methods img {
   height: 20px;
+  /* Không cần filter nếu icon payment đã có màu phù hợp nền sáng */
 }
 
 .footer-back-to-top {
@@ -139,9 +142,9 @@
   display: inline-flex;
   justify-content: center;
   align-items: center;
-  background-color: #ccc;
-  color: white;
-  width: 30px; /* Nút nhỏ hơn */
+  background-color: #e9ecef; /* Nền nút back-to-top (xám rất nhạt) */
+  color: #495057; /* Màu icon bên trong nếu là font icon */
+  width: 30px;
   height: 30px;
   border-radius: 3px;
   opacity: 0;
@@ -150,41 +153,45 @@
     background-color 0.3s ease;
 }
 .back-to-top.visible {
-  /* Class từ JS */
-  opacity: 0.6;
+  opacity: 0.7; /* Tăng opacity cho dễ thấy trên nền sáng */
   visibility: visible;
   transition-delay: 0s;
 }
 .back-to-top:hover {
-  background-color: #aaa;
+  background-color: #ced4da; /* Đậm hơn chút khi hover */
   opacity: 1;
 }
 .back-to-top img {
-  width: 12px; /* Icon mũi tên nhỏ hơn */
+  width: 12px;
   height: auto;
-  filter: brightness(0) invert(1);
+  /* Nếu icon gốc màu trắng, cần chuyển sang tối: */
+  filter: brightness(0.2);
+  /* Hoặc nếu icon đã là màu tối thì không cần filter hoặc filter nhẹ: */
+  /* filter: brightness(0.5); */
 }
 
 /* ==========================================================================
-   Responsive Footer - Compact Version (Giữ nguyên cấu trúc nhiều cột)
-   ========================================================================== */
+       Responsive Footer - Compact Version (Giữ nguyên cấu trúc nhiều cột)
+       ========================================================================== */
 
+/* Các media query không cần thay đổi về màu sắc, chỉ thay đổi layout */
 @media (max-width: 992px) {
   /* Tablet */
   .footer-columns-wrapper {
-    gap: 20px; /* Giảm gap hơn nữa */
+    gap: 20px;
   }
   .footer-column {
-    flex-basis: calc(50% - 10px); /* 2 cột, tính toán lại gap */
+    flex-basis: calc(50% - 10px);
     min-width: 0;
+    /* margin-left giữ nguyên hoặc điều chỉnh nếu thấy cần thiết */
   }
 }
 
 @media (max-width: 768px) {
   /* Mobile */
   .footer-columns-wrapper {
-    flex-direction: column; /* Xếp dọc */
-    gap: 20px; /* Giữ khoảng cách dọc */
+    flex-direction: column;
+    gap: 20px;
     align-items: flex-start;
     padding-bottom: 15px;
     margin-bottom: 15px;
@@ -192,13 +199,14 @@
   .footer-column {
     flex-basis: auto;
     width: 100%;
+    margin-left: 0; /* Căn lề trái cho mobile khi xếp dọc */
   }
 
   .footer-bottom {
     flex-direction: column;
     align-items: center;
     text-align: center;
-    gap: 15px; /* Giữ gap dọc */
+    gap: 15px;
   }
 
   .copyright-info {
@@ -207,9 +215,8 @@
   }
 
   .footer-secondary-links {
-    /* Chứa payment */
     order: 1;
-    margin-bottom: 10px; /* Thêm khoảng cách */
+    margin-bottom: 10px;
   }
 
   .footer-back-to-top {
@@ -218,18 +225,15 @@
   }
 
   .social-icons {
-    /* Nếu nằm trong cột riêng thì đã được xử lý, nếu không thì: */
     order: 4;
     justify-content: center;
     margin-top: 10px;
   }
 
-  /* Nút back-to-top cố định */
   .back-to-top {
     position: fixed;
     bottom: 15px;
     right: 15px;
     z-index: 99;
-    /* Trạng thái ẩn/hiện đã được định nghĩa */
   }
 }
