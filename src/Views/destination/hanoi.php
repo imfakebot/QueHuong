@@ -20,7 +20,8 @@ $pageScripts = [
 <!-- Rest of the existing HTML content -->
 
 <section class="hero" style="background-image: url('/images/destinations/Ha-Noi/Hanoi-review.jpg');">
-  <div class="hero-text">
+  <div class="hero-overlay"></div> <!-- Lớp phủ được thêm vào đây -->
+  <div class="hero-text"> <!-- hero-text giờ nằm sau lớp phủ -->
     <h1>Khám phá Hà Nội</h1>
     <p>Thủ đô ngàn năm văn hiến với vẻ đẹp cổ kính, trầm mặc và nền ẩm thực đặc sắc.</p>
     <a href="#highlights" class="btn-cta">Khám phá ngay</a>
@@ -184,7 +185,7 @@ $pageScripts = [
         <p>Khu phố với những ngôi nhà cổ, ẩm thực đường phố và không khí đặc trưng của thủ đô xưa.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Ha-Noi/NhaTholon.jpg" alt="Nhà thờ Lớn Hà Nội">
+        <img src="/images/destinations/Ha-Noi/NhaThoLon.jpg" alt="Nhà thờ Lớn Hà Nội">
         <h3>Nhà thờ Lớn Hà Nội</h3>
         <p>Công trình kiến trúc Pháp cổ kính nằm giữa lòng thủ đô, điểm check-in nổi bật của giới trẻ.</p>
       </div>
