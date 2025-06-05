@@ -155,7 +155,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
 
                     <!-- === THINGS TO DO - MEGA MENU === -->
                     <li class="nav-item has-mega-menu">
-                        <a href="/thing" aria-haspopup="true" aria-expanded="false">Things to do</a>
+                        <a href="/things" aria-haspopup="true" aria-expanded="false">Things to do</a>
                         <div class="mega-menu-panel things-mega-menu" aria-hidden="true">
                             <div class="mega-menu-container">
                                 <!-- Cột 1: Adventure & Outdoors -->

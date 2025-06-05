@@ -30,6 +30,9 @@ if ($requestUri === '/' || $requestUri === '/home') {
 } elseif ($requestUri === '/destinations') { // Trang liệt kê tất cả destinations
     $pageTitle = 'Các Điểm Đến - Du Lịch Quê Hương';
     $contentView = VIEWS_PATH . '/destination/index.php';
+} elseif ($requestUri === '/things') { // Trang liệt kê tất cả "Things to do"
+    $pageTitle = 'Things To Do in Vietnam - Du Lịch Quê Hương';
+    $contentView = VIEWS_PATH . '/things/index.php';
 }
 // 2. Route động cho chi tiết ĐIỂM ĐẾN: /destinations/{slug}
 elseif (preg_match('#^/destinations/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
@@ -59,10 +62,23 @@ elseif (preg_match('#^/tours/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
         $pageTitle = '404 Not Found - Du Lịch Quê Hương';
         $contentView = VIEWS_PATH . '/errors/404.php';
     }
+} // 4. Route động cho chi tiết "THINGS TO DO": /things/{slug}
+elseif (preg_match('#^/things/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
+    $thingSlug = $matches[1]; // Lấy slug từ URL (ví dụ: "trekking-sapa")
+    $potentialView = VIEWS_PATH . '/things/' . $thingSlug . '.php';
+
+    if (file_exists($potentialView)) {
+        // $pageTitle sẽ được đặt bên trong file view của "thing" đó
+        $contentView = $potentialView;
+    } else {
+        http_response_code(404);
+        $pageTitle = '404 Not Found - Du Lịch Quê Hương';
+        $contentView = VIEWS_PATH . '/errors/404.php';
+    }
 }
 // ... (Thêm các route động khác nếu cần, ví dụ /blog/{slug}) ...
 
-// 4. Mặc định / Xử lý 404 cho các trường hợp còn lại
+// 5. Mặc định / Xử lý 404 cho các trường hợp còn lại
 else {
     // Kiểm tra file tĩnh (CSS, JS, images, video) trước khi báo 404
     $filePath = __DIR__ . $requestUri; // __DIR__ là thư mục public
