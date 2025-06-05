@@ -612,7 +612,7 @@ $pageScripts = [
                     <div class="activity-card">
                         <a href="/things/hot-springs" class="activity-link"> <!-- Added a dummy link -->
                             <div class="activity-image-container">
-                                <img src="/images/activities/natural_hot_springs.jpg" alt="Natural Hot Springs">
+                                <img src="/images/activities/natural_hot_springs.webp" alt="Natural Hot Springs">
                             </div>
                             <div class="activity-content-details">
                                 <h3 class="activity-card-title">Natural Hot Springs</h3>
