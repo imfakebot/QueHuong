@@ -87,39 +87,47 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // Initialize Swiper for Exciting Activities
-  if (document.querySelector(".exciting-activities .activities-swiper")) {
-    const activitiesSwiper = new Swiper(".exciting-activities .activities-swiper", {
-      loop: true,
-      grabCursor: true,
-      pagination: {
-        el: ".exciting-activities .activities-pagination", // Selector cho pagination của activities
-        clickable: true,
-      },
-      navigation: {
-        nextEl: ".exciting-activities .activities-nav-next", // Selector cho nút next của activities
-        prevEl: ".exciting-activities .activities-nav-prev", // Selector cho nút prev của activities
-      },
-      autoplay: {
-        delay: 4000, // Thời gian tự động chuyển slide (ms), có thể khác các slider khác
-        disableOnInteraction: false,
-      },
-      // Responsive breakpoints cho activities
-      slidesPerView: 1, // Mặc định cho màn hình nhỏ nhất
-      spaceBetween: 20, // Khoảng cách mặc định
-      breakpoints: {
-        // Khi chiều rộng màn hình >= 768px (tablets)
-        768: {
-          slidesPerView: 2,
-          spaceBetween: 25,
+  if (
+    document.querySelector(".exciting-activities-slider .activities-swiper")
+  ) {
+    // Sửa selector section
+    const activitiesSwiper = new Swiper(
+      ".exciting-activities-slider .activities-swiper", // Sửa selector section
+      {
+        loop: true,
+        grabCursor: true,
+        pagination: {
+          el: ".exciting-activities-slider .activities-pagination", // Sửa selector section
+          clickable: true,
         },
-        // Khi chiều rộng màn hình >= 1024px (desktops)
-        1024: {
-          slidesPerView: 3,
-          spaceBetween: 30,
+        navigation: {
+          nextEl: ".exciting-activities-slider .activity-nav-next", // Sửa selector nút next
+          prevEl: ".exciting-activities-slider .activity-nav-prev", // Sửa selector nút prev
         },
-      },
-    });
+        autoplay: {
+          delay: 4000, // Thời gian tự động chuyển slide (ms), có thể khác các slider khác
+          disableOnInteraction: false,
+        },
+        // Responsive breakpoints cho activities
+        slidesPerView: 1, // Mặc định cho màn hình nhỏ nhất
+        spaceBetween: 20, // Khoảng cách mặc định
+        breakpoints: {
+          // Khi chiều rộng màn hình >= 768px (tablets)
+          768: {
+            slidesPerView: 2,
+            spaceBetween: 25,
+          },
+          // Khi chiều rộng màn hình >= 1024px (desktops)
+          1024: {
+            slidesPerView: 3,
+            spaceBetween: 30,
+          },
+        },
+      }
+    );
   } else {
-    console.log("Activities Swiper (.exciting-activities .activities-swiper) not found. Swiper not initialized for activities.");
+    console.log(
+      "Activities Swiper (.exciting-activities-slider .activities-swiper) not found. Swiper not initialized for activities."
+    );
   }
 });

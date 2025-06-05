@@ -65,13 +65,11 @@ img {
   padding-bottom: 40px;
   background-color: #f9f9f9;
 }
-/* .why-vietnam .container đã có style global */
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
   gap: 30px;
-  /* Không cần max-width ở đây nếu .container cha đã có */
 }
 
 .feature-item {
@@ -114,53 +112,55 @@ img {
   color: #555;
 }
 
-/* --- Featured Tours & Featured Destinations Sections (Nơi chứa Slider) --- */
+/* --- Featured Tours, Featured Destinations & Exciting Activities Sections (Nơi chứa Slider) --- */
 .featured-tours,
-.featured-destinations {
+.featured-destinations,
+.exciting-activities-slider {
+  /* Added .exciting-activities-slider here */
   padding-top: 80px;
   padding-bottom: 80px;
-  /* padding-left/right sẽ tạo không gian cho nút */
-  padding-left: 70px; /* Khoảng cách từ mép trình duyệt đến NÚT */
+  padding-left: 70px;
   padding-right: 70px;
-  overflow: hidden; /* Để các nút không làm thanh cuộn ngang xuất hiện nếu chúng bị đẩy ra xa */
+  overflow: hidden;
 }
 
 .featured-tours {
   background: #fff;
 }
+.featured-destinations {
+  background: #f9f9f9; /* Example background, adjust as needed */
+}
+.exciting-activities-slider {
+  background: #fff; /* Example background, or #f9f9f9 like destinations */
+}
 
 /* Container bên trong các section slider: FULL WIDTH và là CONTEXT ĐỊNH VỊ */
 .featured-tours .container,
-.featured-destinations .container {
+.featured-destinations .container,
+.exciting-activities-slider .container {
+  /* Added .exciting-activities-slider .container */
   max-width: none;
   width: 100%;
   margin-left: 0;
   margin-right: 0;
-  padding-left: 0; /* Quan trọng: không có padding riêng */
-  padding-right: 0; /* Quan trọng: không có padding riêng */
-  position: relative; /* BẮT BUỘC cho định vị nút con */
+  padding-left: 0;
+  padding-right: 0;
+  position: relative;
 }
 
-/* --- Custom Slider Styles (chung cho tour và destination) --- */
+/* --- Custom Slider Styles (chung cho tour, destination, activity) --- */
 .swiper {
-  /* Container chính của SwiperJS - các style bổ sung tùy chỉnh */
-  /* width, position, overflow thường được SwiperJS quản lý */
   margin-top: 40px;
   margin-bottom: 40px;
 }
 
 .swiper-wrapper {
-  /* display: flex; và transition được đặt bởi JavaScript */
-  /* width tổng được đặt bởi JavaScript */
-  height: auto; /* Hoặc chiều cao cố định nếu muốn */
+  height: auto;
 }
 
 .swiper-slide {
-  /* width, flex-basis, marginRight được đặt bởi JavaScript */
   box-sizing: border-box;
-  height: 100%; /* Để các item bên trong có thể dùng height: 100% */
-  /* Nếu muốn slide có padding bên trong nó, hãy thêm ở đây */
-  /* Ví dụ: padding: 0 10px; thì JS phải trừ đi padding này khi tính slideActualWidth */
+  height: 100%;
 }
 
 /* --- Tour Item Styles --- */
@@ -240,9 +240,64 @@ img {
   font-size: 1.15em;
 }
 
+/* --- Activity Card Styles (Mimicking Tour Item) --- */
+.activity-card {
+  background: #fff;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.activity-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+}
+
+.activity-image-container {
+  position: relative;
+  height: 250px; /* Same as tour image */
+  overflow: hidden;
+}
+
+.activity-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.activity-card:hover .activity-image-container img {
+  transform: scale(1.05);
+}
+
+.activity-content-details {
+  padding: 20px; /* Same as tour content */
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.activity-card-title {
+  font-size: 1.25em; /* Same as tour title */
+  margin-bottom: 10px;
+  color: #333;
+  font-weight: 600;
+}
+
+.activity-card-excerpt {
+  color: #555; /* Same as tour excerpt */
+  font-size: 0.9em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
 /* --- Destination Item Styles --- */
 .destination-item {
-  /* Class này thêm vào .swiper-slide cho destination */
   position: relative;
   border-radius: 12px;
   overflow: hidden;
@@ -285,15 +340,18 @@ img {
   text-align: center;
 }
 
-/* --- Slider Navigation Buttons (External) --- */
+/* --- Slider Navigation Buttons (External - Common for all sliders) --- */
 .tour-nav-prev,
 .tour-nav-next,
 .destination-nav-prev,
-.destination-nav-next {
+.destination-nav-next,
+.activity-nav-prev,
+.activity-nav-next {
+  /* Added activity nav classes */
   position: absolute;
   top: 50%;
   transform: translateY(-50%);
-  z-index: 10; /* Đảm bảo nổi lên trên swiper */
+  z-index: 10;
   width: 45px;
   height: 45px;
   background-color: rgba(255, 255, 255, 0.9);
@@ -305,71 +363,73 @@ img {
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
   transition: background-color 0.3s ease, box-shadow 0.3s ease,
     transform 0.2s ease, opacity 0.3s ease;
-  opacity: 1; /* Mặc định hiển thị rõ */
+  opacity: 1;
 }
 
 .tour-nav-prev:hover,
 .tour-nav-next:hover,
 .destination-nav-prev:hover,
-.destination-nav-next:hover {
+.destination-nav-next:hover,
+.activity-nav-prev:hover,
+.activity-nav-next:hover {
+  /* Added activity nav classes */
   background-color: #fff;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
   transform: translateY(-50%) scale(1.05);
 }
 
-/* Style cho SVG bên trong các nút điều hướng */
 .tour-nav-prev svg,
 .tour-nav-next svg,
 .destination-nav-prev svg,
-.destination-nav-next svg {
-  width: 22px; /* Điều chỉnh kích thước SVG nếu cần */
-  height: 22px; /* Giữ tỷ lệ khung hình cho SVG */
-  /* Màu fill hiện tại được đặt trực tiếp trong thẻ <path> của SVG trong HTML (fill="#1C274C") */
-  /* Nếu bạn muốn kiểm soát màu sắc qua CSS, bạn cần xóa thuộc tính 'fill' trong HTML SVG 
-     và đặt ở đây, ví dụ: fill: #YourDesiredColor; */
+.destination-nav-next svg,
+.activity-nav-prev svg,
+.activity-nav-next svg {
+  /* Added activity nav classes */
+  width: 22px;
+  height: 22px;
 }
 
-/* Ghi đè content mặc định của SwiperJS cho các nút điều hướng
-   để đảm bảo chỉ SVG tùy chỉnh được hiển thị và không có mũi tên CSS nào khác.
-   Các class swiper-button-prev/next là class chuẩn của Swiper. */
 .swiper-button-prev::after,
 .swiper-button-next::after {
-  content: "" !important; /* Buộc content của pseudo-element này phải rỗng */
+  content: "" !important;
 }
 
-/* Vô hiệu hóa nút (JS sẽ thêm thuộc tính disabled) */
 .tour-nav-prev[disabled],
 .tour-nav-next[disabled],
 .destination-nav-prev[disabled],
-.destination-nav-next[disabled] {
+.destination-nav-next[disabled],
+.activity-nav-prev[disabled],
+.activity-nav-next[disabled] {
+  /* Added activity nav classes */
   opacity: 0.4;
   cursor: default;
-  pointer-events: none; /* Ngăn chặn click khi disabled */
+  pointer-events: none;
 }
 
-/* Vị trí nút: Cách mép của .featured-tours .container một khoảng */
-/* Ví dụ: nút rộng 45px, muốn khoảng trống 15px giữa nút và swiper */
 .tour-nav-prev,
-.destination-nav-prev {
-  left: -60px; /* -(45px nút + 15px_khoảng_trống) */
+.destination-nav-prev,
+.activity-nav-prev {
+  /* Added activity nav class */
+  left: -60px;
 }
 .tour-nav-next,
-.destination-nav-next {
-  right: -60px; /* -(45px nút + 15px_khoảng_trống) */
+.destination-nav-next,
+.activity-nav-next {
+  /* Added activity nav class */
+  right: -60px;
 }
 
-/* --- Slider Pagination --- */
+/* --- Slider Pagination (Common for all sliders) --- */
 .swiper-pagination {
-  position: absolute !important; /* Đặt bởi SwiperJS */
-  bottom: -30px; /* Đẩy xuống dưới slider một chút */
-  left: 50% !important; /* Căn giữa theo chiều ngang */
+  position: absolute !important;
+  bottom: -30px;
+  left: 50% !important;
   transform: translateX(-50%);
-  display: flex !important; /* Đặt bởi JS nếu có nhiều hơn 1 page */
+  display: flex !important;
   justify-content: center;
   align-items: center;
-  padding-top: 10px; /* Khoảng cách từ slider */
+  padding-top: 10px;
   z-index: 5;
-  /* width: fit-content; */ /* Có thể thêm để tường minh, nhưng display:flex thường đã đủ */
 }
 
 .swiper-pagination-bullet {
@@ -389,16 +449,12 @@ img {
 }
 
 .swiper-pagination-bullet-active {
-  background-color: #2980b9;
+  background-color: #2980b9; /* Common active color */
   opacity: 1;
   transform: scale(1.1);
 }
-.tour-swiper .swiper-pagination-bullet-active {
-  background-color: #2980b9;
-}
-.destination-swiper .swiper-pagination-bullet-active {
-  background-color: #2980b9;
-}
+/* Specific classes for pagination divs in HTML ensure JS targets them correctly,
+   but common .swiper-pagination-bullet-active style is applied. */
 
 /* --- Buttons (View All) --- */
 .btn {
@@ -419,7 +475,7 @@ img {
   color: #fff;
 }
 .btn-secondary {
-  background: #2980b9;
+  background: #2980b9; /* Made secondary same as primary for consistency, adjust if needed */
   color: #fff;
 }
 
@@ -429,31 +485,34 @@ img {
 }
 
 .view-all-tours,
-.view-all-destinations {
+.view-all-destinations,
+.view-all-activities {
+  /* Added .view-all-activities */
   text-align: center;
-  margin-top: 50px; /* Tăng khoảng cách sau pagination */
+  margin-top: 50px;
 }
 
 /* --- Responsive Adjustments --- */
 @media (max-width: 1200px) {
-  /* Khi container global bắt đầu thu hẹp */
   .featured-tours,
-  .featured-destinations {
-    padding-left: 40px; /* Giảm padding section để nút không quá sát mép */
+  .featured-destinations,
+  .exciting-activities-slider {
+    padding-left: 40px;
     padding-right: 40px;
   }
   .tour-nav-prev,
-  .destination-nav-prev {
+  .destination-nav-prev,
+  .activity-nav-prev {
     left: -55px;
-  } /* Điều chỉnh nút gần hơn */
+  }
   .tour-nav-next,
-  .destination-nav-next {
+  .destination-nav-next,
+  .activity-nav-next {
     right: -55px;
   }
 }
 
 @media (max-width: 992px) {
-  /* Tablet */
   .section-title {
     font-size: 2.2em;
   }
@@ -462,31 +521,33 @@ img {
   }
 
   .featured-tours,
-  .featured-destinations {
-    padding-left: 20px; /* Giảm nữa */
+  .featured-destinations,
+  .exciting-activities-slider {
+    padding-left: 20px;
     padding-right: 20px;
   }
-  /* Có thể ẩn nút hoàn toàn hoặc làm chúng nhỏ hơn và gần hơn nữa */
   .tour-nav-prev,
   .tour-nav-next,
   .destination-nav-prev,
-  .destination-nav-next {
+  .destination-nav-next,
+  .activity-nav-prev,
+  .activity-nav-next {
     width: 40px;
     height: 40px;
   }
   .tour-nav-prev,
-  .destination-nav-prev {
+  .destination-nav-prev,
+  .activity-nav-prev {
     left: -15px;
-  } /* Rất gần hoặc chạm swiper */
+  }
   .tour-nav-next,
-  .destination-nav-next {
+  .destination-nav-next,
+  .activity-nav-next {
     right: -15px;
   }
-  /* Hoặc display: none; */
 }
 
 @media (max-width: 768px) {
-  /* Mobile lớn */
   .video {
     height: 60vh;
   }
@@ -500,29 +561,39 @@ img {
   }
 
   .featured-tours,
-  .featured-destinations {
-    padding-left: 15px; /* Chỉ còn padding cơ bản của trang */
+  .featured-destinations,
+  .exciting-activities-slider {
+    padding-left: 15px;
     padding-right: 15px;
-    overflow: visible; /* Cho phép nút tràn ra nếu vẫn hiển thị và đặt left/right âm */
+    overflow: visible;
   }
-  /* Ẩn nút bên ngoài trên mobile nếu dùng JS custom */
   .tour-nav-prev,
   .tour-nav-next,
   .destination-nav-prev,
-  .destination-nav-next {
-    display: none;
+  .destination-nav-next,
+  .activity-nav-prev,
+  .activity-nav-next {
+    display: none; /* Hide all external nav buttons on smaller screens */
   }
   .swiper-pagination {
-    bottom: -20px;
+    bottom: -20px; /* Adjust if needed, or make relative */
+    /* To make pagination relative and below slider on mobile:
+    position: relative !important;
+    bottom: auto !important;
+    transform: none !important;
+    left: auto !important;
+    margin-top: 20px;
+    */
   }
 }
 
 @media (max-width: 480px) {
-  /* Mobile nhỏ */
   .section-title {
     font-size: 1.7em;
   }
-  .tour-title {
+  .tour-title,
+  .activity-card-title {
+    /* Added activity title */
     font-size: 1.1em;
   }
   .destination-name {
@@ -532,197 +603,5 @@ img {
   .btn {
     padding: 10px 20px;
     font-size: 0.9em;
-  }
-
-  .exciting-activities-slider {
-    padding: 60px 0;
-    background-color: #f8f9fa; /* Hoặc màu nền bạn muốn */
-  }
-
-  /* Container của slider activities cần position relative để đặt nút nav */
-  .exciting-activities-slider .container {
-    position: relative; /* Quan trọng cho việc đặt nút điều hướng */
-  }
-
-  /* Nút điều hướng cho Activity Slider */
-  .activity-nav-prev,
-  .activity-nav-next {
-    position: absolute;
-    top: 50%; /* Căn giữa theo chiều dọc với slider */
-    transform: translateY(
-      -150%
-    ); /* Điều chỉnh để căn giữa với tiêu đề section và slider */
-    z-index: 10;
-    width: 40px; /* Kích thước nút */
-    height: 40px;
-    background-color: rgba(255, 255, 255, 0.8);
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-    transition: background-color 0.3s ease, opacity 0.3s ease;
-  }
-  .activity-nav-prev:hover,
-  .activity-nav-next:hover {
-    background-color: #fff;
-  }
-  .activity-nav-prev svg,
-  .activity-nav-next svg {
-    width: 20px; /* Kích thước icon SVG */
-    height: 20px;
-  }
-  .activity-nav-prev {
-    left: -20px; /* Đặt bên ngoài container một chút */
-  }
-  .activity-nav-next {
-    right: -20px; /* Đặt bên ngoài container một chút */
-  }
-
-  /* Responsive cho nút điều hướng trên màn hình nhỏ */
-  @media (max-width: 767px) {
-    .activity-nav-prev,
-    .activity-nav-next {
-      top: 40%; /* Điều chỉnh lại vị trí cho mobile */
-      transform: translateY(-50%);
-      width: 35px;
-      height: 35px;
-    }
-    .activity-nav-prev {
-      left: 5px;
-    }
-    .activity-nav-next {
-      right: 5px;
-    }
-  }
-
-  /* Activity Category Slide */
-  .activity-category-slide {
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
-    background-color: #fff;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .activity-category-slide:hover {
-    transform: translateY(-5px);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
-  }
-
-  .activity-category-link {
-    display: block;
-    text-decoration: none;
-    color: inherit;
-  }
-
-  .activity-image-header {
-    position: relative;
-    height: 200px; /* Chiều cao cố định cho ảnh danh mục */
-    overflow: hidden;
-  }
-  .activity-image-header img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-  }
-  .activity-category-slide:hover .activity-image-header img {
-    transform: scale(1.05);
-  }
-
-  .activity-category-title {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 100%;
-    background: linear-gradient(
-      to top,
-      rgba(0, 0, 0, 0.7) 0%,
-      rgba(0, 0, 0, 0) 100%
-    );
-    color: #fff;
-    padding: 15px;
-    margin: 0;
-    font-size: 1.4rem;
-    font-weight: 600;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
-  }
-
-  .activity-category-description {
-    padding: 15px;
-    font-size: 0.9rem;
-    color: #555;
-    min-height: 60px; /* Đảm bảo chiều cao đồng đều */
-  }
-
-  /* Activity Item Slide (Nếu bạn dùng để làm nổi bật hoạt động cụ thể) */
-  .activity-item-slide {
-    border-radius: 8px;
-    overflow: hidden;
-    background-color: #fff;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-  }
-  .activity-item-slide:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.12);
-  }
-
-  .activity-item-link {
-    display: block;
-    text-decoration: none;
-    color: #333;
-  }
-  .activity-image-container {
-    /* Tái sử dụng class nếu có, hoặc tạo mới */
-    height: 180px; /* Chiều cao ảnh cho item hoạt động */
-    overflow: hidden;
-  }
-  .activity-image-container img {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    transition: transform 0.4s ease;
-  }
-  .activity-item-slide:hover .activity-image-container img {
-    transform: scale(1.05);
-  }
-
-  .activity-content {
-    padding: 15px;
-  }
-  .activity-item-title {
-    font-size: 1.1rem;
-    font-weight: 600;
-    margin-bottom: 8px;
-  }
-  .activity-item-excerpt {
-    font-size: 0.85rem;
-    color: #666;
-    line-height: 1.5;
-  }
-
-  /* Pagination cho Activity Slider */
-  .activity-swiper .swiper-pagination {
-    position: relative; /* Đặt lại vị trí nếu muốn nó ở dưới slider */
-    bottom: auto;
-    margin-top: 25px; /* Khoảng cách từ slider xuống pagination */
-  }
-  .activity-swiper .swiper-pagination-bullet {
-    background-color: #ccc;
-    opacity: 1;
-  }
-  .activity-swiper .swiper-pagination-bullet-active {
-    background-color: var(
-      --primary-color,
-      #007bff
-    ); /* Sử dụng biến màu chính nếu có */
-  }
-
-  /* Nút xem tất cả */
-  .view-all-things-to-do {
-    text-align: center;
-    margin-top: 40px;
   }
 }
