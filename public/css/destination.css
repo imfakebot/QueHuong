@@ -172,19 +172,6 @@ h2 {
   gap: 20px;
 }
 
-/*
-  QUAN TRỌNG: Để các thay đổi CSS dưới đây hoạt động đúng cho hiệu ứng giới hạn khung,
-  bạn cần thay đổi cấu trúc HTML của mỗi ảnh trong .image-grid.
-  Bọc mỗi thẻ <img> như sau:
-  Ví dụ:
-  <div class="image-grid">
-      <div class="image-grid-item-wrapper">
-          <img src="path/to/your/image.jpg" alt="...">
-      </div>
-      <!-- thêm các .image-grid-item-wrapper khác -->
-  </div>
-*/
-
 /* CSS cho thẻ bao (wrapper) mới của mỗi ảnh */
 .image-grid-item-wrapper {
   height: 300px; /* Bạn có thể TĂNG giá trị này nếu muốn ảnh trong grid cao hơn, ví dụ: 450px */
