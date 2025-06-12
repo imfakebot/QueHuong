@@ -67,4 +67,17 @@ document.addEventListener("DOMContentLoaded", function () {
     imageFadeDuration: 300,
     positionFromTop: 100,
   });
+
+  // Handle image loading animations
+  const images = document.querySelectorAll(".card img");
+
+  images.forEach((img) => {
+    if (img.complete) {
+      img.classList.add("loaded");
+    } else {
+      img.addEventListener("load", () => {
+        img.classList.add("loaded");
+      });
+    }
+  });
 });
