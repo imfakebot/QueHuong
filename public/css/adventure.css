@@ -1,0 +1,142 @@
+.adventure-hero {
+    background: url('/assets/images/adventure-hero.jpg') center/cover no-repeat;
+    height: 400px;
+    position: relative;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.adventure-hero .overlay {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 40px;
+    text-align: center;
+    border-radius: 10px;
+    z-index: 2; /* Đảm bảo hero-text nằm trên lớp phủ */
+}
+.adventure-hero h1 {
+    font-size: 3rem;
+    margin-bottom: 10px;
+}
+.adventure-hero p {
+    font-size: 1.2rem;
+}
+.adventure-content {
+    padding: 60px 20px;
+    background: #f9f9f9;
+}
+.adventure-content h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-bottom: 40px;
+    color: #055160;
+}
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 20px;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-5px);
+}
+.card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+.card h3 {
+    margin: 16px;
+    font-size: 1.3rem;
+}
+.card p {
+    margin: 0 16px 16px;
+    color: #555;
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.3
+  ); /* Màu đen với độ mờ 30%. Bạn có thể điều chỉnh màu và độ mờ */
+  z-index: 1; /* Đảm bảo lớp phủ nằm trên ảnh nền */
+}
+
+/* gallery */
+.gallery .image-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.gallery {
+  padding: 40px 20px;
+  text-align: center;
+  background: #fff;
+}
+
+.gallery h2 {
+  color: goldenrod;
+  font-size: 32px;
+  margin-bottom: 30px;
+}
+
+.swiper {
+  width: 100%;
+  max-width: 1200px;
+  margin: auto;
+  overflow: hidden; /* Thêm dòng này để ẩn các slide nằm ngoài khung */
+}
+
+.swiper-wrapper {
+  display: flex; /* Quan trọng: Cho phép các slide xếp hàng */
+  flex-direction: row; /* Quan trọng: Xếp theo hàng ngang */
+  align-items: stretch; /* Giúp các slide có chiều cao bằng nhau nếu nội dung khác nhau */
+  /* Các thuộc tính khác như width, transform, transition thường do Swiper.js quản lý */
+  /* height: auto; hoặc một giá trị cụ thể nếu cần */
+}
+
+.swiper-slide {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  /* Thêm overflow: hidden để cắt phần ảnh bị phóng to tràn ra ngoài */
+  overflow: hidden;
+  /* Chuyển border-radius từ img sang swiper-slide để áp dụng cho cả khung */
+  border-radius: 10px;
+  /* Bạn có thể thêm box-shadow ở đây nếu muốn bóng đổ cho toàn bộ slide */
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  /* Đặt chiều cao cố định cho slide để ảnh có thể lấp đầy 100% chiều cao này */
+  height: 300px; /* Dựa trên max-height bạn muốn cho ảnh trước đó. Điều chỉnh nếu cần. */
+
+  width: 90%;
+  flex-shrink: 0; /* Quan trọng: Ngăn slide bị co lại nhỏ hơn width đã đặt khi dùng với slidesPerView: 'auto' */
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: 100%; /* Ảnh sẽ lấp đầy chiều cao của .swiper-slide */
+  object-fit: cover;
+
+  transition: transform 0.3s ease; /* Đồng bộ transition */
+  display: block; /* Đảm bảo ảnh là block element */
+}
+
+.swiper-slide img:hover {
+  transform: scale(1.07); /* Đồng bộ scale factor */
+}
+

@@ -92,8 +92,6 @@ elseif (preg_match('#^/life/culture/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) 
     }
 }
 
-
-    
 // ... (Thêm các route động khác nếu cần, ví dụ /blog/{slug}) ...
 
 // 5. Mặc định / Xử lý 404 cho các trường hợp còn lại
