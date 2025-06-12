@@ -5,6 +5,7 @@ declare(strict_types=1);
 define('BASE_PATH', dirname(__DIR__));
 define('VIEWS_PATH', BASE_PATH . '/src/Views');
 
+
 $pageTitle = 'Quê Hương Việt Nam'; // Tiêu đề mặc định
 
 $requestUri = strtok($_SERVER['REQUEST_URI'], '?');
@@ -76,6 +77,23 @@ elseif (preg_match('#^/things/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
         $contentView = VIEWS_PATH . '/errors/404.php';
     }
 }
+
+//5. Route động cho chi tiết LIFE CULTURE: /life/culture/{slug}
+elseif (preg_match('#^/life/culture/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
+    $cultureSlug = $matches[1]; // ví dụ: festivals
+    $potentialView = VIEWS_PATH . '/life/culture/' . $cultureSlug . '.php';
+
+    if (file_exists($potentialView)) {
+        $contentView = $potentialView;
+    } else {
+        http_response_code(404);
+        $pageTitle = '404 Not Found - Du Lịch Quê Hương';
+        $contentView = VIEWS_PATH . '/errors/404.php';
+    }
+}
+
+
+    
 // ... (Thêm các route động khác nếu cần, ví dụ /blog/{slug}) ...
 
 // 5. Mặc định / Xử lý 404 cho các trường hợp còn lại
