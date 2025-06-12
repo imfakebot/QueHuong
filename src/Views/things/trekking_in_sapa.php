@@ -356,32 +356,16 @@
             <div class="container">
                 <h2 class="fade-in">Các Lộ Trình Trekking Phổ Biến</h2>
                 <div class="tours-grid">
+                    <?php foreach ($tours as $tour): ?>
                     <article class="tour-card fade-in">
-                        <img src="https://images.unsplash.com/photo-1559941329-93b19dfa42b1?q=80&w=1770&auto=format&fit=crop" alt="Trekking nhẹ nhàng ở bản Cát Cát">
+                        <img src="<?php echo htmlspecialchars($tour['image']); ?>" alt="<?php echo htmlspecialchars($tour['title']); ?>">
                         <div class="tour-card-content">
-                            <h3>Khám Phá Bản Làng (1 Ngày)</h3>
-                            <p>Phù hợp cho du khách có ít thời gian, muốn trải nghiệm nhẹ nhàng qua các bản làng Cát Cát, Lao Chải, Tả Van.</p>
-                            <a href="#" class="btn">Xem Chi Tiết</a>
+                            <h3><?php echo htmlspecialchars($tour['title']); ?></h3>
+                            <p><?php echo htmlspecialchars($tour['description']); ?></p>
+                            <a href="<?php echo htmlspecialchars($tour['link']); ?>" class="btn">Xem Chi Tiết</a>
                         </div>
                     </article>
-
-                    <article class="tour-card fade-in">
-                        <img src="https://images.unsplash.com/photo-1590692211470-363683f1c422?q=80&w=1774&auto=format&fit=crop" alt="Ngủ đêm tại homestay">
-                        <div class="tour-card-content">
-                            <h3>Hành Trình Về Bản (2N1Đ)</h3>
-                            <p>Trải nghiệm sâu sắc và chân thực nhất. Trekking sâu vào thung lũng Mường Hoa, ngủ đêm tại homestay của người dân tộc.</p>
-                            <a href="#" class="btn">Xem Chi Tiết</a>
-                        </div>
-                    </article>
-
-                    <article class="tour-card fade-in">
-                        <img src="https://images.unsplash.com/photo-1604239223129-193e415a7f53?q=80&w=1770&auto=format&fit=crop" alt="Chinh phục đỉnh Fansipan">
-                        <div class="tour-card-content">
-                            <h3>Chinh Phục Fansipan (2-3 Ngày)</h3>
-                            <p>Dành cho người có thể lực tốt, yêu thích thử thách. Cảm giác đứng trên "nóc nhà Đông Dương" là một phần thưởng vô giá.</p>
-                            <a href="#" class="btn">Xem Chi Tiết</a>
-                        </div>
-                    </article>
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
@@ -391,12 +375,9 @@
             <div class="container">
                 <h2 class="fade-in">Thư Viện Ảnh: Khoảnh Khắc Sapa</h2>
                 <div class="gallery-grid">
-                    <img class="fade-in" src="https://images.unsplash.com/photo-1528394469335-854a0046b412?q=80&w=1932&auto=format&fit=crop" alt="Ruộng bậc thang Sapa mùa lúa chín">
-                    <img class="fade-in" src="https://images.unsplash.com/photo-1534341932442-0e9e7a9b4001?q=80&w=1770&auto=format&fit=crop" alt="Trẻ em dân tộc H'Mông">
-                    <img class="fade-in" src="https://images.unsplash.com/photo-1574523916298-500e57a55235?q=80&w=1770&auto=format&fit=crop" alt="Đi trekking trong sương sớm">
-                    <img class="fade-in" src="https://images.unsplash.com/photo-1589182337358-2cb65d287113?q=80&w=1770&auto=format&fit=crop" alt="Một góc homestay">
-                    <img class="fade-in" src="https://images.unsplash.com/photo-1574523916298-500e57a55235?q=80&w=1770&auto=format&fit=crop" alt="Đi trekking trong sương sớm">
-                    <img class="fade-in" src="https://images.unsplash.com/photo-1534341932442-0e9e7a9b4001?q=80&w=1770&auto=format&fit=crop" alt="Trẻ em dân tộc H'Mông">
+                    <?php foreach ($galleryImages as $image): ?>
+                    <img class="fade-in" src="<?php echo htmlspecialchars($image['url']); ?>" alt="<?php echo htmlspecialchars($image['alt']); ?>">
+                    <?php endforeach; ?>
                 </div>
             </div>
         </section>
