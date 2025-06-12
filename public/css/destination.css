@@ -129,6 +129,7 @@ h2 {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 25px;
+  align-items: stretch;
 }
 
 .card {
@@ -137,6 +138,8 @@ h2 {
   overflow: hidden;
   box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
   transition: transform 0.3s ease;
+  display: flex;
+  flex-direction: column;
 }
 
 .card:hover {
@@ -147,23 +150,48 @@ h2 {
   width: 100%;
   height: 200px;
   object-fit: cover;
-  transition: transform 0.3s ease; /* Thêm transition cho ảnh */
+  transition: transform 0.3s ease;
 }
 
-.card h3 {
-  padding: 15px;
+.card:hover img {
+  transform: scale(1.07);
+}
+
+.card-content {
+  padding: 15px 20px 20px;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.card-content h3 {
+  padding: 0;
   font-size: 20px;
   color: #b72c2c;
+  margin-top: 0;
 }
 
-.card p {
-  padding: 0 15px 20px;
+.card-content p {
+  padding: 0;
   font-size: 16px;
+  margin-bottom: 20px;
 }
 
-/* Thêm hiệu ứng zoom cho ảnh trong card khi hover card */
-.card:hover img {
-  transform: scale(1.07); /* Giống mega menu */
+.btn-more {
+  margin-top: auto;
+  background: #b72c2c;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 30px;
+  text-align: center;
+  font-weight: 500;
+  text-decoration: none;
+  transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.btn-more:hover {
+  background: #e63946;
+  transform: translateY(-3px);
 }
 
 .gallery .image-grid {
@@ -257,14 +285,7 @@ footer {
   /* Đặt chiều cao cố định cho slide để ảnh có thể lấp đầy 100% chiều cao này */
   height: 300px; /* Dựa trên max-height bạn muốn cho ảnh trước đó. Điều chỉnh nếu cần. */
 
-  /* Để hiển thị ít slide hơn mỗi lần (ví dụ: 1 slide lớn hoặc 2 slide vừa),
-     bạn có thể đặt chiều rộng cho slide.
-     LƯU Ý: Điều này hoạt động hiệu quả nhất nếu trong file JavaScript khởi tạo Swiper,
-     bạn đã đặt slidesPerView: 'auto'.
-     Nếu slidesPerView là một số cố định (ví dụ: 3), Swiper sẽ cố gắng hiển thị đúng số đó. */
-  width: 90%; /* Ví dụ: mỗi slide chiếm 90% chiều rộng của swiper container.
-                 Điều này sẽ làm cho chủ yếu 1 slide lớn được hiển thị tại một thời điểm.
-                 Để hiển thị khoảng 2 slide, bạn có thể thử: width: 48%; (cần điều chỉnh nếu có spaceBetween) */
+  width: 90%;
   flex-shrink: 0; /* Quan trọng: Ngăn slide bị co lại nhỏ hơn width đã đặt khi dùng với slidesPerView: 'auto' */
 }
 
@@ -272,8 +293,7 @@ footer {
   width: 100%;
   height: 100%; /* Ảnh sẽ lấp đầy chiều cao của .swiper-slide */
   object-fit: cover;
-  /* border-radius đã được chuyển lên .swiper-slide */
-  /* box-shadow có thể bỏ ở img nếu đã có ở .swiper-slide, hoặc giữ lại nếu muốn hiệu ứng khác */
+
   transition: transform 0.3s ease; /* Đồng bộ transition */
   display: block; /* Đảm bảo ảnh là block element */
 }
@@ -440,7 +460,7 @@ h3::after {
   height: 3px;
   background: #b72c2c;
   left: 0;
-  bottom: -5px;
+  bottom: -0.5px;
   transition: width 0.3s ease-in-out;
 }
 
@@ -684,4 +704,13 @@ body {
   .activity-content h3 {
     font-size: 1.2em;
   }
+}
+.page-container {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
+}
+
+.destination-listing h2 {
+  text-align: center;
+  margin-bottom: 2rem !important; /* Dùng !important để ghi đè các style h2 khác nếu cần */
 }

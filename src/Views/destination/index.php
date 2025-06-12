@@ -3,11 +3,14 @@ $pageTitle = 'Các Điểm Đến Hấp Dẫn - Du Lịch Quê Hương';
 
 // Nạp các tệp CSS cần thiết. Giả sử /css/destination.css chứa các style cho .card và .btn-cta
 $pageStyles = [
+
     'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css', // Nếu bạn cần icons
     '/css/destination.css'
 ];
 
 $pageScripts = [
+    'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js',
+    'https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.4/js/lightbox.min.js',
     'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
     '/js/destination.js'
 ]; // Thêm script nếu cần
@@ -133,16 +136,24 @@ $destinations = [
     </div>
 </section>
 
-<main class="container page-container" style="padding-top: 2rem; padding-bottom: 2rem;">
+<main class="container page-container">
     <section class="content-section destination-listing">
-        <h2 style="text-align: center; margin-bottom: 2rem;">Tất Cả Điểm Đến</h2>
-        <div class="cards"> <!-- Sử dụng class 'cards' tương tự như trong trang chi tiết điểm đến -->
+        <h2>Tất Cả Điểm Đến</h2>
+        <div class="cards">
             <?php foreach ($destinations as $destination): ?>
-                <div class="card"> <!-- Sử dụng class 'card' -->
-                    <img src="<?php echo htmlspecialchars($destination['image']); ?>" alt="Hình ảnh <?php echo htmlspecialchars($destination['name']); ?>" style="width:100%; height:auto; object-fit: cover; aspect-ratio: 16/9;">
-                    <h3 style="margin-top: 1rem;"><?php echo htmlspecialchars($destination['name']); ?></h3>
-                    <p><?php echo htmlspecialchars($destination['description']); ?></p>
-                    <a href="/destinations/<?php echo htmlspecialchars($destination['slug']); ?>" class="btn-cta" style="display: inline-block; margin-top: 10px;">Xem chi tiết</a>
+                <div class="card">
+                    <img src="<?php echo htmlspecialchars($destination['image']); ?>"
+                        alt="Hình ảnh <?php echo htmlspecialchars($destination['name']); ?>">
+
+                    <!-- Vùng nội dung được bao bọc bởi .card-content -->
+                    <div class="card-content">
+                        <h3><?php echo html_entity_decode($destination['name']); ?></h3>
+                        <p><?php echo html_entity_decode($destination['description']); ?></p>
+
+                        <!-- Button sẽ tự động được đẩy xuống dưới cùng -->
+                        <a href="/destinations/<?php echo htmlspecialchars($destination['slug']); ?>"
+                            class="btn-more">Xem chi tiết</a>
+                    </div>
                 </div>
             <?php endforeach; ?>
         </div>
