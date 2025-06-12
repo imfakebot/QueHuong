@@ -176,18 +176,24 @@ $pageScripts = [
     <div class="cards">
       <div class="card">
         <img src="/images/destinations/Ha-Noi/VanMieu.jpg" alt="Văn Miếu Quốc Tử Giám">
-        <h3>Văn Miếu Quốc Tử Giám</h3>
-        <p>Trường đại học đầu tiên của Việt Nam, nơi tôn vinh nền học thuật và truyền thống tôn sư trọng đạo.</p>
+        <div class="card-content">
+          <h3>Văn Miếu Quốc Tử Giám</h3>
+          <p>Trường đại học đầu tiên của Việt Nam, nơi tôn vinh nền học thuật và truyền thống tôn sư trọng đạo.</p>
+        </div>
       </div>
       <div class="card">
         <img src="/images/destinations/Ha-Noi/Phoco.jpg" alt="Phố cổ Hà Nội">
-        <h3>Phố cổ Hà Nội</h3>
-        <p>Khu phố với những ngôi nhà cổ, ẩm thực đường phố và không khí đặc trưng của thủ đô xưa.</p>
+        <div class="card-content">
+          <h3>Phố cổ Hà Nội</h3>
+          <p>Khu phố với những ngôi nhà cổ, ẩm thực đường phố và không khí đặc trưng của thủ đô xưa.</p>
+        </div>
       </div>
       <div class="card">
         <img src="/images/destinations/Ha-Noi/NhaThoLon.jpg" alt="Nhà thờ Lớn Hà Nội">
-        <h3>Nhà thờ Lớn Hà Nội</h3>
-        <p>Công trình kiến trúc Pháp cổ kính nằm giữa lòng thủ đô, điểm check-in nổi bật của giới trẻ.</p>
+        <div class="card-content">
+          <h3>Nhà thờ Lớn Hà Nội</h3>
+          <p>Công trình kiến trúc Pháp cổ kính nằm giữa lòng thủ đô, điểm check-in nổi bật của giới trẻ.</p>
+        </div>
       </div>
     </div>
   </section>
