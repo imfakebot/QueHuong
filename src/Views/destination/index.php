@@ -15,7 +15,6 @@ $pageScripts = [
     '/js/destination.js'
 ]; // Thêm script nếu cần
 
-// Dữ liệu mẫu cho các điểm đến. Trong ứng dụng thực tế, bạn sẽ lấy từ database.
 $destinations = [
     [
         'slug' => 'hanoi',
