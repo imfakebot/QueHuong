@@ -89,7 +89,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Huế - Kinh đô xưa, di sản hôm nay';
+$pageTitle = 'Hue - Ancient Capital, Heritage of Today';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -103,111 +103,112 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/Hue/review.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Huế</h1>
-    <p>Thành phố di sản với những công trình cung đình, đền đài cổ kính và dòng sông Hương thơ mộng.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    <h1>Explore Hue</h1>
+    <p>The heritage city with ancient palaces, temples, and the poetic Perfume River.</p>
+    <a href="#highlights" class="btn-cta">Discover now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-university"></i> Tổng quan về Huế</h2>
-    <p>Huế từng là kinh đô của triều Nguyễn – triều đại phong kiến cuối cùng của Việt Nam. Với những di tích lịch sử như Hoàng thành, lăng tẩm các vị vua, đền đài cổ kính và nền âm nhạc cung đình đặc sắc, Huế là điểm đến lý tưởng cho du khách yêu thích văn hóa và lịch sử.</p>
+    <h2><i class="fas fa-university"></i> Overview of Hue</h2>
+    <p>Hue was once the imperial capital of the Nguyen Dynasty – the last feudal dynasty of Vietnam. With historical landmarks like the Imperial City, royal tombs, ancient temples, and traditional royal court music, Hue is an ideal destination for culture and history lovers.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/Hue/dai-noi.jpg" alt="Đại Nội Huế">
-      <div class="badge">Di tích</div>
+      <img src="/images/destinations/Hue/dai-noi.jpg" alt="Hue Imperial City">
+      <div class="badge">Historical Site</div>
     </div>
     <div class="tour-details">
-      <h2>Tham quan Đại Nội Huế</h2>
+      <h2>Visit Hue Imperial City</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(215 đánh giá)</span>
+        <span>(215 reviews)</span>
       </div>
-      <p>Khám phá Hoàng thành – trung tâm quyền lực xưa kia của vương triều Nguyễn với kiến trúc cổ kính.</p>
+      <p>Discover the Imperial City – the former center of power of the Nguyen Dynasty with its majestic architecture.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 tiếng</li>
-        <li><i class="fa-solid fa-landmark"></i> Cung đình</li>
-        <li><i class="fa-solid fa-book"></i> Lịch sử</li>
-        <li><a href="#">Tour văn hóa</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-landmark"></i> Palace</li>
+        <li><i class="fa-solid fa-book"></i> History</li>
+        <li><a href="#">Cultural tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>70.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>70,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">See details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Du thuyền trên sông Hương & nghe ca Huế</h2>
+      <h2>Perfume River Cruise & Hue Singing</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(192 đánh giá)</span>
+        <span>(192 reviews)</span>
       </div>
-      <p>Trải nghiệm ngồi thuyền rồng, nghe nhã nhạc cung đình Huế trong không gian thơ mộng của sông Hương.</p>
+      <p>Experience a dragon boat ride while enjoying royal court music in the poetic atmosphere of the Perfume River.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1.5 tiếng</li>
-        <li><i class="fa-solid fa-water"></i> Sông Hương</li>
-        <li><i class="fa-solid fa-music"></i> Nhã nhạc</li>
-        <li><a href="#">Tour thư giãn</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1.5 hours</li>
+        <li><i class="fa-solid fa-water"></i> Perfume River</li>
+        <li><i class="fa-solid fa-music"></i> Royal Music</li>
+        <li><a href="#">Relaxing tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>100.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>100,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">See details</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/Hue/song-huong.jpg" alt="Du thuyền sông Hương">
-      <div class="badge">Âm nhạc</div>
+      <img src="/images/destinations/Hue/song-huong.jpg" alt="Perfume River Cruise">
+      <div class="badge">Music</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/Hue/lang-tu-duc.jpg" alt="Lăng Tự Đức">
-      <div class="badge">Lăng tẩm</div>
+      <img src="/images/destinations/Hue/lang-tu-duc.jpg" alt="Tomb of Tu Duc">
+      <div class="badge">Royal Tomb</div>
     </div>
     <div class="tour-details">
-      <h2>Khám phá Lăng Tự Đức</h2>
+      <h2>Explore Tu Duc Tomb</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(134 đánh giá)</span>
+        <span>(134 reviews)</span>
       </div>
-      <p>Lăng Tự Đức mang đậm nét thơ mộng, là một trong những lăng tẩm đẹp nhất của triều Nguyễn.</p>
+      <p>Tu Duc Tomb is full of poetic charm, one of the most beautiful royal mausoleums of the Nguyen Dynasty.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1 tiếng</li>
-        <li><i class="fa-solid fa-tree"></i> Cảnh quan</li>
-        <li><i class="fa-solid fa-monument"></i> Kiến trúc</li>
-        <li><a href="#">Tour hoàng gia</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1 hour</li>
+        <li><i class="fa-solid fa-tree"></i> Landscape</li>
+        <li><i class="fa-solid fa-monument"></i> Architecture</li>
+        <li><a href="#">Royal tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>40.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>40,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">See details</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/Hue/am-thuc-hue.jpg" alt="Ẩm thực Huế">
-        <h3>Ẩm thực Huế</h3>
-        <p>Huế nổi tiếng với món bún bò, bánh bèo, bánh nậm, chè cung đình và nhiều món ăn cung đình tinh tế.</p>
+        <img src="/images/destinations/Hue/am-thuc-hue.jpg" alt="Hue Cuisine">
+        <h3>Hue Cuisine</h3>
+        <p>Hue is famous for dishes like beef noodle soup, bánh bèo, bánh nậm, royal sweet soup, and refined imperial delicacies.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Hue/nha-nhac.jpg" alt="Nhã nhạc cung đình">
-        <h3>Nhã nhạc cung đình</h3>
-        <p>Di sản phi vật thể UNESCO – biểu tượng tinh hoa văn hóa âm nhạc triều Nguyễn.</p>
+        <img src="/images/destinations/Hue/nha-nhac.jpg" alt="Royal Court Music">
+        <h3>Royal Court Music</h3>
+        <p>A UNESCO intangible cultural heritage – a symbol of the musical elegance of the Nguyen Dynasty.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Hue/le-hoi-hue.jpg" alt="Lễ hội Festival Huế">
-        <h3>Festival Huế</h3>
-        <p>Lễ hội văn hóa quy mô quốc tế được tổ chức định kỳ, tái hiện cung đình xưa qua nghệ thuật đương đại.</p>
+        <img src="/images/destinations/Hue/le-hoi-hue.jpg" alt="Hue Festival">
+        <h3>Hue Festival</h3>
+        <p>An international cultural festival held periodically, recreating royal life through contemporary arts.</p>
       </div>
     </div>
   </section>
@@ -221,12 +222,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['dai-noi.jpg', 'Đại Nội Huế'],
-          ['song-huong.jpg', 'Sông Hương'],
-          ['lang-tu-duc.jpg', 'Lăng Tự Đức'],
-          ['am-thuc-hue.jpg', 'Ẩm thực Huế'],
-          ['nha-nhac.jpg', 'Nhã nhạc cung đình'],
-          ['le-hoi-hue.jpg', 'Festival Huế']
+          ['dai-noi.jpg', 'Hue Imperial City'],
+          ['song-huong.jpg', 'Perfume River'],
+          ['lang-tu-duc.jpg', 'Tomb of Tu Duc'],
+          ['am-thuc-hue.jpg', 'Hue Cuisine'],
+          ['nha-nhac.jpg', 'Royal Court Music'],
+          ['le-hoi-hue.jpg', 'Hue Festival']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -239,4 +240,5 @@ $pageScripts = [
     </div>
   </section>
 </main>
+
 

@@ -1,5 +1,5 @@
 <?php
-$pageTitle = 'Đà Nẵng - Du lịch Việt Nam';
+$pageTitle = 'Da Nang - Travel Vietnam';
 
 // Add page-specific CSS files
 $pageStyles = [
@@ -7,7 +7,7 @@ $pageStyles = [
   '/css/destination.css'
 ];
 
-// Add page-specific scripts (already exists)
+// Add page-specific scripts
 $pageScripts = [
   'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
   '/js/destination.js'
@@ -17,175 +17,156 @@ $pageScripts = [
 <!-- Rest of the existing HTML content -->
 
 <section class="hero" style="background-image: url('/images/destinations/Da-Nang/DaNangReview.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Đà Nẵng</h1>
-    <p>Thành phố biển năng động với những bãi biển tuyệt đẹp và văn hóa phong phú.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    <h1>Discover Da Nang</h1>
+    <p>A dynamic coastal city with beautiful beaches and rich culture.</p>
+    <a href="#highlights" class="btn-cta">Explore now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-city"></i> Tổng quan về Đà Nẵng</h2>
-    <p>Với những bãi biển rộng lớn, ẩm thực đường phố tuyệt vời, đèo Hải Vân huyền thoại và bộ sưu tập ngày càng tăng
-      của các quán cà phê, nhà hàng và quán bar, không có gì ngạc nhiên khi cư dân Đà Nẵng có một số nụ cười rạng rỡ
-      nhất cả nước. Bãi cát ấm áp của bãi biển Mỹ Khê quét về phía nam từ bán đảo Sơn Trà miền núi. Đà Nẵng có một số
-      khu nghỉ dưỡng sang trọng hàng đầu Việt Nam, nhưng phần lớn bãi biển vẫn thuộc về những người biến nó thành sân
-      chơi, phòng tập thể dục và nguồn sinh kế</p>
+    <h2><i class="fas fa-city"></i> Overview of Da Nang</h2>
+    <p>With wide beaches, amazing street food, the legendary Hai Van Pass, and an ever-growing collection of cafes, restaurants, and bars, it’s no surprise Da Nang residents wear some of the brightest smiles in the country. The warm sands of My Khe Beach sweep south from the mountainous Son Tra Peninsula. Da Nang is home to some of Vietnam’s top luxury resorts, but much of the beach still belongs to locals who turn it into a playground, gym, and livelihood.</p>
   </section>
 
   <section class="tour-card fade-in">
-    <!-- Update tour card images -->
     <div class="tour-image">
-      <img src="/images/destinations/Da-Nang/BaNaHills.jpg" alt="Tận hưởng bãi biển">
+      <img src="/images/destinations/Da-Nang/BaNaHills.jpg" alt="Enjoy the beach">
       <div class="badge">Best seller</div>
     </div>
     <div class="tour-details">
-      <h2>Tận hưởng bãi biển</h2>
+      <h2>Enjoy the Beach</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(95 đánh giá)</span>
+        <span>(95 reviews)</span>
       </div>
-      <p>Đảm bảo đặt đồng hồ báo thức sớm ít nhất một lần trong thời gian lưu trú. Dọc theo bờ biển, ngư dân bán sản
-        phẩm đánh bắt trong ngày, các trận đấu bóng đá và bóng chuyền mọc lên xung quanh, và mọi người chạy bộ, đi dạo
-        hoặc đơn giản là thư giãn trên cát.</p>
+      <p>Be sure to set your alarm early at least once during your stay. Along the coast, fishermen sell their daily catch, beach football and volleyball games pop up, and people jog, stroll, or simply relax on the sand.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 3 tiếng</li>
-        <li><i class="fa-solid fa-umbrella-beach"></i> Biển</li>
-        <li><i class="fa-solid fa-heart"></i> Thư giãn</li>
-        <li><a href="#">Chuyến đi nhẹ nhàng</a></li>
+        <li><i class="fa-regular fa-clock"></i> 3 hours</li>
+        <li><i class="fa-solid fa-umbrella-beach"></i> Beach</li>
+        <li><i class="fa-solid fa-heart"></i> Relaxation</li>
+        <li><a href="#">Leisure trip</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>49.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>49,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
-
     <div class="tour-details">
-      <h2>Ngắm bán đảo Sơn Trà</h2>
+      <h2>Explore Son Tra Peninsula</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(120 đánh giá)</span>
+        <span>(120 reviews)</span>
       </div>
-      <p>Bán đảo Sơn Trà vươn ra đại dương, những sườn đồi rừng rậm rạp của nó là nơi sinh sống của voọc chân đỏ có
-        nguy cơ tuyệt chủng - một trong những loài linh trưởng nổi bật nhất thế giới.</p>
+      <p>The Son Tra Peninsula juts out into the ocean, and its forested hills are home to the endangered red-shanked douc langur — one of the most striking primates in the world.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 6 tiếng</li>
-        <li><i class="fa-regular fa-star"></i> Riêng tư</li>
-        <li><i class="fa-solid fa-person-hiking"></i> Tự túc</li>
-        <li><a href="#">Tour thiên nhiên</a></li>
+        <li><i class="fa-regular fa-clock"></i> 6 hours</li>
+        <li><i class="fa-regular fa-star"></i> Private</li>
+        <li><i class="fa-solid fa-person-hiking"></i> Independent</li>
+        <li><a href="#">Nature tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>89.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>89,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View details</a>
       </div>
     </div>
-    <!-- Update Sơn Trà image -->
     <div class="tour-image">
-      <img src="/images/destinations/Da-Nang/nui-son-tra.jpg" alt="Bán đảo Sơn Trà">
+      <img src="/images/destinations/Da-Nang/nui-son-tra.jpg" alt="Son Tra Peninsula">
       <div class="badge">Best seller</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
-    <!-- Update Chăm Museum image -->
     <div class="tour-image">
-      <img src="/images/destinations/Da-Nang/bao-tang-cham.jpg" alt="Bảo tàng Chăm">
+      <img src="/images/destinations/Da-Nang/bao-tang-cham.jpg" alt="Cham Museum">
       <div class="badge">Hot</div>
     </div>
     <div class="tour-details">
-      <h2>Học hỏi về văn hóa Chăm</h2>
+      <h2>Learn About Cham Culture</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(80 đánh giá)</span>
+        <span>(80 reviews)</span>
       </div>
-      <p>Người Chăm từng cai trị phần lớn miền Trung Việt Nam, và những tàn tích của các ngôi đền của họ đã được khai
-        quật quanh Đà Nẵng. Bảo tàng Điêu khắc Chăm tuyệt vời trưng bày bộ sưu tập điêu khắc Chăm lớn nhất thế giới.
-      </p>
+      <p>The Cham people once ruled much of Central Vietnam, and the ruins of their temples have been excavated around Da Nang. The excellent Cham Sculpture Museum showcases the world's largest collection of Cham sculptures.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 tiếng</li>
-        <li><i class="fa-solid fa-landmark"></i> Văn hóa</li>
-        <li><i class="fa-solid fa-book-open"></i> Kiến thức</li>
-        <li><a href="#">Tour lịch sử</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-landmark"></i> Culture</li>
+        <li><i class="fa-solid fa-book-open"></i> Knowledge</li>
+        <li><a href="#">Historical tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>39.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>39,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
-    <!-- <div class="tour-image">
-        <img src="/QueHuong/public/images/mega_menu/Da-Nang/baibien.jpg" alt="Ẩm thực Đà Nẵng">
-        <div class="badge">Yummy</div>
-      </div> -->
     <div class="tour-details">
-      <h2>Thưởng thức món ăn đường phố</h2>
+      <h2>Enjoy Street Food</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(150 đánh giá)</span>
+        <span>(150 reviews)</span>
       </div>
-      <p>Đà Nẵng là thiên đường dành cho các tín đồ ẩm thực, với nhiều quán ăn ven biển và hàng quán đường phố.</p>
+      <p>Da Nang is a paradise for food lovers, with many seaside eateries and bustling street food stalls.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 4 tiếng</li>
-        <li><i class="fa-solid fa-bowl-rice"></i> Ăn uống</li>
-        <li><i class="fa-solid fa-walkie-talkie"></i> Dẫn tour</li>
-        <li><a href="#">Tour ẩm thực</a></li>
+        <li><i class="fa-regular fa-clock"></i> 4 hours</li>
+        <li><i class="fa-solid fa-bowl-rice"></i> Food</li>
+        <li><i class="fa-solid fa-walkie-talkie"></i> Guided tour</li>
+        <li><a href="#">Food tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>59.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>59,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View details</a>
       </div>
     </div>
-    <!-- Update Food Tour image -->
     <div class="tour-image">
-      <img src="/images/destinations/Da-Nang/am-thuc-da-nang.jpg" alt="Ẩm thực Đà Nẵng">
+      <img src="/images/destinations/Da-Nang/am-thuc-da-nang.jpg" alt="Da Nang Cuisine">
       <div class="badge">Yummy</div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
-    <!-- Update Highlights section -->
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/Da-Nang/BaNaHills.jpg" alt="Bà Nà Hills">
-        <h3>Bà Nà Hills</h3>
-        <p>Khu nghỉ dưỡng trên núi với cáp treo dài nhất thế giới và Cầu Vàng nổi tiếng.</p>
+        <img src="/images/destinations/Da-Nang/BaNaHills.jpg" alt="Ba Na Hills">
+        <h3>Ba Na Hills</h3>
+        <p>A mountain resort featuring the world’s longest cable car and the iconic Golden Bridge.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Da-Nang/NHS.jpg" alt="Ngũ Hành Sơn">
-        <h3>Ngũ Hành Sơn</h3>
-        <p>Cụm núi đá vôi với nhiều hang động và chùa chiền linh thiêng.</p>
+        <img src="/images/destinations/Da-Nang/NHS.jpg" alt="Marble Mountains">
+        <h3>Marble Mountains</h3>
+        <p>A cluster of limestone hills with caves and sacred pagodas.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Da-Nang/DragonBridge.jpg" alt="Cầu Rồng">
-        <h3>Cầu Rồng</h3>
-        <p>Cây cầu biểu tượng của Đà Nẵng, nổi bật với thiết kế hình rồng phun lửa và nước vào cuối tuần.</p>
+        <img src="/images/destinations/Da-Nang/DragonBridge.jpg" alt="Dragon Bridge">
+        <h3>Dragon Bridge</h3>
+        <p>Da Nang’s iconic bridge, designed like a dragon that breathes fire and water on weekends.</p>
       </div>
     </div>
   </section>
 
   <section class="gallery">
     <h2>GALLERY</h2>
-    <!-- Navigation buttons moved outside -->
     <div class="swiper-button-prev gallery-nav-prev"></div>
     <div class="swiper-button-next gallery-nav-next"></div>
 
-    <div class="swiper gallery-swiper"> <!-- Added a specific class for this swiper instance -->
+    <div class="swiper gallery-swiper">
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['BaNaHills.jpg', 'Bà Nà Hills'],
-          ['bien-my-khe.jpg', 'Bãi biển Mỹ Khê'],
-          ['chailuoibien.jpg', 'Chài lưới biển'],
-          ['nui-son-tra.jpg', 'Núi Sơn Trà'],
-          ['BunChaCa.jpg', 'Bún chả cá'],
-          ['caurong.jpg', 'Cầu Rồng về đêm']
+          ['BaNaHills.jpg', 'Ba Na Hills'],
+          ['bien-my-khe.jpg', 'My Khe Beach'],
+          ['chailuoibien.jpg', 'Sea Netting'],
+          ['nui-son-tra.jpg', 'Son Tra Mountain'],
+          ['BunChaCa.jpg', 'Fish Cake Noodles'],
+          ['caurong.jpg', 'Dragon Bridge at night']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -195,7 +176,6 @@ $pageScripts = [
         }
         ?>
       </div>
-      <!-- Pagination can be added here if needed, e.g., <div class="swiper-pagination"></div> -->
     </div>
   </section>
 </main>

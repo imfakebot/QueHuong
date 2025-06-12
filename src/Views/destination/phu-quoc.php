@@ -89,7 +89,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Phú Quốc - Thiên đường đảo ngọc của Việt Nam';
+$pageTitle = 'Phu Quoc - Vietnam\'s Pearl Island Paradise';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -103,111 +103,112 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/PhuQuoc/review.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Phú Quốc</h1>
-    <p>Thiên đường nghỉ dưỡng, biển xanh cát trắng, cùng những khu vui chơi và resort sang trọng bậc nhất Việt Nam.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    <h1>Discover Phu Quoc</h1>
+    <p>A paradise for relaxation with blue seas, white sands, luxurious resorts, and top-tier entertainment.</p>
+    <a href="#highlights" class="btn-cta">Explore Now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-map-location-dot"></i> Tổng quan về Phú Quốc</h2>
-    <p>Phú Quốc là hòn đảo lớn nhất Việt Nam, thuộc tỉnh Kiên Giang, nổi tiếng với những bãi biển hoang sơ tuyệt đẹp, hải sản tươi ngon, cùng hệ sinh thái rừng nguyên sinh đa dạng. Đây còn là điểm đến lý tưởng với nhiều khu nghỉ dưỡng cao cấp và các hoạt động du lịch biển hấp dẫn.</p>
+    <h2><i class="fas fa-map-location-dot"></i> Overview of Phu Quoc</h2>
+    <p>Phu Quoc is the largest island in Vietnam, part of Kien Giang province, famous for its pristine beaches, fresh seafood, and diverse tropical forests. It is an ideal destination with many high-end resorts and exciting marine activities.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/PhuQuoc/bai-sao.jpg" alt="Bãi Sao">
-      <div class="badge">Biển</div>
+      <img src="/images/destinations/PhuQuoc/bai-sao.jpg" alt="Sao Beach">
+      <div class="badge">Beach</div>
     </div>
     <div class="tour-details">
-      <h2>Thư giãn tại Bãi Sao</h2>
+      <h2>Relax at Sao Beach</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(2.345 đánh giá)</span>
+        <span>(2,345 reviews)</span>
       </div>
-      <p>Bãi biển đẹp nhất Phú Quốc với làn nước trong xanh và bãi cát trắng mịn, lý tưởng để tắm biển và chụp ảnh.</p>
+      <p>The most beautiful beach in Phu Quoc with crystal-clear water and smooth white sand – perfect for swimming and photography.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> Tùy chọn</li>
-        <li><i class="fa-solid fa-umbrella-beach"></i> Biển</li>
-        <li><i class="fa-solid fa-camera"></i> Check-in</li>
-        <li><a href="#">Bãi Sao</a></li>
+        <li><i class="fa-regular fa-clock"></i> Flexible time</li>
+        <li><i class="fa-solid fa-umbrella-beach"></i> Beach</li>
+        <li><i class="fa-solid fa-camera"></i> Photo spot</li>
+        <li><a href="#">Sao Beach</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Miễn phí</span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">Free</span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Khám phá VinWonders & Safari</h2>
+      <h2>Explore VinWonders & Safari</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(4.578 đánh giá)</span>
+        <span>(4,578 reviews)</span>
       </div>
-      <p>Khu vui chơi giải trí và sở thú bán hoang dã lớn nhất Việt Nam với hàng trăm trò chơi hấp dẫn cho cả gia đình.</p>
+      <p>The largest theme park and semi-wild zoo in Vietnam, offering hundreds of fun activities for the whole family.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> Cả ngày</li>
-        <li><i class="fa-solid fa-landmark"></i> Công viên chủ đề</li>
+        <li><i class="fa-regular fa-clock"></i> Full day</li>
+        <li><i class="fa-solid fa-landmark"></i> Theme park</li>
         <li><i class="fa-solid fa-paw"></i> Safari</li>
         <li><a href="#">VinWonders</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>650.000đ</strong></span>
-        <a href="#" class="btn-cta">Đặt vé</a>
+        <span class="price">From <strong>650,000đ</strong></span>
+        <a href="#" class="btn-cta">Book Ticket</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/PhuQuoc/vinwonders.jpg" alt="VinWonders Phú Quốc">
-      <div class="badge">Giải trí</div>
+      <img src="/images/destinations/PhuQuoc/vinwonders.jpg" alt="VinWonders Phu Quoc">
+      <div class="badge">Entertainment</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/PhuQuoc/lan-bien.jpg" alt="Lặn biển ngắm san hô">
-      <div class="badge">Trải nghiệm</div>
+      <img src="/images/destinations/PhuQuoc/lan-bien.jpg" alt="Scuba Diving Coral Reef">
+      <div class="badge">Experience</div>
     </div>
     <div class="tour-details">
-      <h2>Lặn biển ngắm san hô</h2>
+      <h2>Scuba Diving to See Coral Reefs</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(1.123 đánh giá)</span>
+        <span>(1,123 reviews)</span>
       </div>
-      <p>Trải nghiệm lặn biển tại quần đảo An Thới, chiêm ngưỡng rạn san hô rực rỡ và sinh vật biển phong phú.</p>
+      <p>Dive into the waters around An Thoi Archipelago to admire colorful coral reefs and diverse marine life.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2-3 giờ</li>
-        <li><i class="fa-solid fa-water"></i> Biển</li>
-        <li><i class="fa-solid fa-fish"></i> San hô</li>
-        <li><a href="#">An Thới</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2–3 hours</li>
+        <li><i class="fa-solid fa-water"></i> Ocean</li>
+        <li><i class="fa-solid fa-fish"></i> Coral</li>
+        <li><a href="#">An Thoi</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>500.000đ</strong></span>
-        <a href="#" class="btn-cta">Đặt tour</a>
+        <span class="price">From <strong>500,000đ</strong></span>
+        <a href="#" class="btn-cta">Book Tour</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/PhuQuoc/chua-ho-quoc.jpg" alt="Chùa Hộ Quốc">
-        <h3>Chùa Hộ Quốc</h3>
-        <p>Ngôi chùa linh thiêng nằm trên núi, hướng ra biển với phong cảnh hùng vĩ.</p>
+        <img src="/images/destinations/PhuQuoc/chua-ho-quoc.jpg" alt="Ho Quoc Pagoda">
+        <h3>Ho Quoc Pagoda</h3>
+        <p>A sacred temple nestled on the mountain overlooking the sea, offering breathtaking views.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/PhuQuoc/cho-dem.jpg" alt="Chợ đêm Phú Quốc">
-        <h3>Chợ đêm Dinh Cậu</h3>
-        <p>Thiên đường ẩm thực đường phố và quà lưu niệm sôi động mỗi tối.</p>
+        <img src="/images/destinations/PhuQuoc/cho-dem.jpg" alt="Phu Quoc Night Market">
+        <h3>Dinh Cau Night Market</h3>
+        <p>A lively food and souvenir paradise that lights up every evening.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/PhuQuoc/nuoc-mam.jpg" alt="Nước mắm Phú Quốc">
-        <h3>Nhà thùng nước mắm</h3>
-        <p>Khám phá quy trình sản xuất nước mắm truyền thống danh tiếng.</p>
+        <img src="/images/destinations/PhuQuoc/nuoc-mam.jpg" alt="Phu Quoc Fish Sauce">
+        <h3>Traditional Fish Sauce Factory</h3>
+        <p>Discover the traditional process behind Vietnam’s famous Phu Quoc fish sauce.</p>
       </div>
     </div>
   </section>
@@ -221,12 +222,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['bai-sao.jpg', 'Bãi Sao'],
+          ['bai-sao.jpg', 'Sao Beach'],
           ['vinwonders.jpg', 'VinWonders'],
-          ['lan-bien.jpg', 'Lặn biển san hô'],
-          ['chua-ho-quoc.jpg', 'Chùa Hộ Quốc'],
-          ['cho-dem.jpg', 'Chợ đêm Phú Quốc'],
-          ['nuoc-mam.jpg', 'Nhà thùng nước mắm']
+          ['lan-bien.jpg', 'Scuba Diving'],
+          ['chua-ho-quoc.jpg', 'Ho Quoc Pagoda'],
+          ['cho-dem.jpg', 'Night Market'],
+          ['nuoc-mam.jpg', 'Fish Sauce Factory']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -239,3 +240,4 @@ $pageScripts = [
     </div>
   </section>
 </main>
+

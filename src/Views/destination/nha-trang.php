@@ -89,7 +89,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Nha Trang - Thiên đường biển đảo';
+$pageTitle = 'Nha Trang - Paradise of Islands and Sea';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -103,40 +103,41 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/NhaTrang/review.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Nha Trang</h1>
-    <p>Thành phố biển với những bãi cát trắng, làn nước trong xanh và hệ thống đảo tuyệt đẹp.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    <h1>Explore Nha Trang</h1>
+    <p>A coastal city known for its white sand beaches, crystal-clear waters, and stunning island systems.</p>
+    <a href="#highlights" class="btn-cta">Discover Now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-umbrella-beach"></i> Tổng quan về Nha Trang</h2>
-    <p>Nha Trang là thành phố ven biển nổi tiếng với những bãi biển đẹp, vịnh biển xanh mát và các hòn đảo hoang sơ. Ngoài ra, nơi đây còn nổi bật với các khu nghỉ dưỡng cao cấp, món hải sản tươi ngon và các hoạt động giải trí sôi động.</p>
+    <h2><i class="fas fa-umbrella-beach"></i> Overview of Nha Trang</h2>
+    <p>Nha Trang is a coastal city famous for its beautiful beaches, fresh blue bays, and untouched islands. It's also known for its luxury resorts, delicious fresh seafood, and vibrant recreational activities.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/NhaTrang/vinh-nha-trang.jpg" alt="Vịnh Nha Trang">
-      <div class="badge">Vịnh biển</div>
+      <img src="/images/destinations/NhaTrang/vinh-nha-trang.jpg" alt="Nha Trang Bay">
+      <div class="badge">Bay</div>
     </div>
     <div class="tour-details">
-      <h2>Du ngoạn vịnh Nha Trang bằng cano</h2>
+      <h2>Speedboat Tour of Nha Trang Bay</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(342 đánh giá)</span>
+        <span>(342 reviews)</span>
       </div>
-      <p>Tham quan các đảo nổi tiếng như Hòn Mun, Hòn Tằm và lặn ngắm san hô trong làn nước trong vắt.</p>
+      <p>Visit famous islands like Hon Mun, Hon Tam and enjoy snorkeling in crystal-clear waters.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 5 tiếng</li>
-        <li><i class="fa-solid fa-ship"></i> Du thuyền</li>
-        <li><i class="fa-solid fa-water"></i> Biển đảo</li>
-        <li><a href="#">Tour biển</a></li>
+        <li><i class="fa-regular fa-clock"></i> 5 hours</li>
+        <li><i class="fa-solid fa-ship"></i> Yacht</li>
+        <li><i class="fa-solid fa-water"></i> Sea & Islands</li>
+        <li><a href="#">Sea Tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>350.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>350,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
@@ -146,68 +147,68 @@ $pageScripts = [
       <h2>VinWonders Nha Trang</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(428 đánh giá)</span>
+        <span>(428 reviews)</span>
       </div>
-      <p>Công viên giải trí lớn nhất Việt Nam với hàng loạt trò chơi hấp dẫn, thủy cung, rạp phim 4D và công viên nước.</p>
+      <p>The largest amusement park in Vietnam featuring thrilling rides, an aquarium, 4D cinema, and water park.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> Cả ngày</li>
-        <li><i class="fa-solid fa-ticket"></i> Vé trọn gói</li>
-        <li><i class="fa-solid fa-child"></i> Gia đình</li>
-        <li><a href="#">Vui chơi giải trí</a></li>
+        <li><i class="fa-regular fa-clock"></i> Full day</li>
+        <li><i class="fa-solid fa-ticket"></i> All-inclusive ticket</li>
+        <li><i class="fa-solid fa-child"></i> Family-friendly</li>
+        <li><a href="#">Amusement & Fun</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>880.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>880,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
     <div class="tour-image">
       <img src="/images/destinations/NhaTrang/vinwonders.jpg" alt="VinWonders Nha Trang">
-      <div class="badge">Giải trí</div>
+      <div class="badge">Entertainment</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/NhaTrang/tam-bun.jpg" alt="Tắm bùn Nha Trang">
-      <div class="badge">Thư giãn</div>
+      <img src="/images/destinations/NhaTrang/tam-bun.jpg" alt="Mud Bath Nha Trang">
+      <div class="badge">Relaxation</div>
     </div>
     <div class="tour-details">
-      <h2>Tắm bùn khoáng nóng Nha Trang</h2>
+      <h2>Hot Mineral Mud Bath in Nha Trang</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(198 đánh giá)</span>
+        <span>(198 reviews)</span>
       </div>
-      <p>Thư giãn trong bồn bùn khoáng tự nhiên giúp làm đẹp da, cải thiện sức khỏe và tinh thần.</p>
+      <p>Relax in natural mineral mud baths that help rejuvenate skin and promote physical and mental wellness.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1.5 tiếng</li>
-        <li><i class="fa-solid fa-spa"></i> Dưỡng sinh</li>
-        <li><i class="fa-solid fa-leaf"></i> Thiên nhiên</li>
+        <li><i class="fa-regular fa-clock"></i> 1.5 hours</li>
+        <li><i class="fa-solid fa-spa"></i> Wellness</li>
+        <li><i class="fa-solid fa-leaf"></i> Nature</li>
         <li><a href="#">Spa & Wellness</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>120.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>120,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/NhaTrang/hai-san.jpg" alt="Hải sản Nha Trang">
-        <h3>Hải sản tươi ngon</h3>
-        <p>Nha Trang nổi tiếng với hải sản phong phú: tôm hùm, nhum biển, mực một nắng, cá mú hấp…</p>
+        <img src="/images/destinations/NhaTrang/hai-san.jpg" alt="Nha Trang Seafood">
+        <h3>Fresh Seafood</h3>
+        <p>Nha Trang is famous for its abundant seafood: lobster, sea urchin, dried squid, steamed grouper, and more.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/NhaTrang/lan-bien.jpg" alt="Lặn biển ngắm san hô">
-        <h3>Lặn biển ngắm san hô</h3>
-        <p>Hòn Mun là một trong những điểm lặn ngắm san hô đẹp nhất Việt Nam với hệ sinh thái biển đa dạng.</p>
+        <img src="/images/destinations/NhaTrang/lan-bien.jpg" alt="Snorkeling in Nha Trang">
+        <h3>Snorkeling & Coral Viewing</h3>
+        <p>Hon Mun is one of Vietnam’s best coral snorkeling spots with a diverse marine ecosystem.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/NhaTrang/thap-ba.jpg" alt="Tháp Bà Ponagar">
-        <h3>Tháp Bà Ponagar</h3>
-        <p>Di tích Chăm Pa cổ kính nằm trên đồi cao với tầm nhìn tuyệt đẹp ra vịnh Nha Trang.</p>
+        <img src="/images/destinations/NhaTrang/thap-ba.jpg" alt="Po Nagar Cham Towers">
+        <h3>Po Nagar Cham Towers</h3>
+        <p>Ancient Cham ruins located on a hill with a magnificent view of Nha Trang Bay.</p>
       </div>
     </div>
   </section>
@@ -221,12 +222,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['vinh-nha-trang.jpg', 'Vịnh Nha Trang'],
+          ['vinh-nha-trang.jpg', 'Nha Trang Bay'],
           ['vinwonders.jpg', 'VinWonders'],
-          ['tam-bun.jpg', 'Tắm bùn Nha Trang'],
-          ['hai-san.jpg', 'Hải sản Nha Trang'],
-          ['lan-bien.jpg', 'Lặn biển Nha Trang'],
-          ['thap-ba.jpg', 'Tháp Bà Ponagar']
+          ['tam-bun.jpg', 'Mud Bath Nha Trang'],
+          ['hai-san.jpg', 'Nha Trang Seafood'],
+          ['lan-bien.jpg', 'Snorkeling Nha Trang'],
+          ['thap-ba.jpg', 'Po Nagar Cham Towers']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -239,3 +240,4 @@ $pageScripts = [
     </div>
   </section>
 </main>
+

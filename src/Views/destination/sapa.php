@@ -89,7 +89,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Sapa - Thành phố trong sương';
+$pageTitle = 'Sapa - The City in the Mist';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -103,111 +103,112 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/Sapa/review.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Sapa</h1>
-    <p>Thành phố sương mờ giữa núi rừng Tây Bắc, nơi hòa quyện văn hóa dân tộc và cảnh sắc thiên nhiên hùng vĩ.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    <h1>Discover Sapa</h1>
+    <p>The misty town nestled in the Northwest mountains, where ethnic culture meets majestic nature.</p>
+    <a href="#highlights" class="btn-cta">Explore Now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-map-location-dot"></i> Tổng quan về Sapa</h2>
-    <p>Sapa là một thị trấn thuộc tỉnh Lào Cai, nổi tiếng với khí hậu mát lạnh quanh năm, những thửa ruộng bậc thang ngoạn mục và bản sắc văn hóa của các dân tộc thiểu số như H’Mông, Dao đỏ. Đỉnh Fansipan – nóc nhà Đông Dương cùng các bản làng cổ kính và cảnh sắc thiên nhiên hoang sơ khiến nơi đây trở thành điểm đến lý tưởng quanh năm.</p>
+    <h2><i class="fas fa-map-location-dot"></i> Overview of Sapa</h2>
+    <p>Sapa is a town in Lao Cai province, famous for its cool year-round climate, spectacular terraced rice fields, and the cultural richness of ethnic minorities such as the H’Mong and Red Dao. Fansipan Peak – the Roof of Indochina – along with ancient villages and untouched natural scenery, makes Sapa a perfect destination all year round.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/Sapa/fansipan.jpg" alt="Đỉnh Fansipan Sapa">
-      <div class="badge">Nóc nhà Đông Dương</div>
+      <img src="/images/destinations/Sapa/fansipan.jpg" alt="Fansipan Peak Sapa">
+      <div class="badge">Roof of Indochina</div>
     </div>
     <div class="tour-details">
-      <h2>Chinh phục đỉnh Fansipan</h2>
+      <h2>Conquer Fansipan Peak</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(2.134 đánh giá)</span>
+        <span>(2,134 reviews)</span>
       </div>
-      <p>Trải nghiệm cáp treo lên đỉnh Fansipan – nóc nhà Đông Dương cao 3.143m, ngắm toàn cảnh núi rừng Tây Bắc từ trên cao.</p>
+      <p>Take the cable car to Fansipan Peak – the 3,143m high Roof of Indochina – and admire the panoramic view of the Northwest mountains.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1 ngày</li>
-        <li><i class="fa-solid fa-mountain-sun"></i> Cảnh núi non</li>
-        <li><i class="fa-solid fa-cable-car"></i> Cáp treo hiện đại</li>
+        <li><i class="fa-regular fa-clock"></i> 1 day</li>
+        <li><i class="fa-solid fa-mountain-sun"></i> Mountain scenery</li>
+        <li><i class="fa-solid fa-cable-car"></i> Modern cable car</li>
         <li><a href="#">Fansipan</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>700.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>700,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Tham quan bản Cát Cát</h2>
+      <h2>Visit Cat Cat Village</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(1.008 đánh giá)</span>
+        <span>(1,008 reviews)</span>
       </div>
-      <p>Bản Cát Cát – nơi lưu giữ nét văn hóa người H'Mông với nhà cổ, nghề thủ công truyền thống và thác nước tuyệt đẹp.</p>
+      <p>Cat Cat Village preserves the cultural traits of the H'Mong people with old houses, traditional crafts, and stunning waterfalls.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 3 giờ</li>
-        <li><i class="fa-solid fa-house-chimney"></i> Làng cổ</li>
-        <li><i class="fa-solid fa-water"></i> Thác Cát Cát</li>
-        <li><a href="#">Bản Cát Cát</a></li>
+        <li><i class="fa-regular fa-clock"></i> 3 hours</li>
+        <li><i class="fa-solid fa-house-chimney"></i> Ancient village</li>
+        <li><i class="fa-solid fa-water"></i> Cat Cat waterfall</li>
+        <li><a href="#">Cat Cat Village</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>90.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>90,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/Sapa/cat-cat.jpg" alt="Bản Cát Cát Sapa">
-      <div class="badge">Văn hóa dân tộc</div>
+      <img src="/images/destinations/Sapa/cat-cat.jpg" alt="Cat Cat Village Sapa">
+      <div class="badge">Ethnic Culture</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/Sapa/ruong-bac-thang.jpg" alt="Ruộng bậc thang Sapa">
-      <div class="badge">Phong cảnh</div>
+      <img src="/images/destinations/Sapa/ruong-bac-thang.jpg" alt="Terraced Fields Sapa">
+      <div class="badge">Scenery</div>
     </div>
     <div class="tour-details">
-      <h2>Chiêm ngưỡng ruộng bậc thang</h2>
+      <h2>Admire Terraced Fields</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(845 đánh giá)</span>
+        <span>(845 reviews)</span>
       </div>
-      <p>Khám phá những thửa ruộng bậc thang trải dài bất tận, đặc biệt đẹp vào mùa lúa chín tháng 9 – 10.</p>
+      <p>Explore endless terraced rice fields, especially breathtaking during the ripe rice season in September – October.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 giờ</li>
-        <li><i class="fa-solid fa-leaf"></i> Thiên nhiên Tây Bắc</li>
-        <li><i class="fa-solid fa-camera"></i> Chụp ảnh đẹp</li>
-        <li><a href="#">Lao Chải – Tả Van</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-leaf"></i> Northwest nature</li>
+        <li><i class="fa-solid fa-camera"></i> Great for photography</li>
+        <li><a href="#">Lao Chai – Ta Van</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>150.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>150,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/Sapa/cho-dem.jpg" alt="Chợ đêm Sapa">
-        <h3>Chợ đêm Sapa</h3>
-        <p>Trải nghiệm không khí sôi động với nhiều món nướng, quà lưu niệm và nét sinh hoạt địa phương.</p>
+        <img src="/images/destinations/Sapa/cho-dem.jpg" alt="Sapa Night Market">
+        <h3>Sapa Night Market</h3>
+        <p>Experience the vibrant atmosphere with grilled foods, souvenirs, and local life.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Sapa/nha-tho-da.jpg" alt="Nhà thờ đá Sapa">
-        <h3>Nhà thờ đá cổ</h3>
-        <p>Biểu tượng kiến trúc Pháp giữa lòng thị trấn, nơi thường diễn ra các lễ hội truyền thống của người bản địa.</p>
+        <img src="/images/destinations/Sapa/nha-tho-da.jpg" alt="Sapa Stone Church">
+        <h3>Ancient Stone Church</h3>
+        <p>A French architectural icon in the heart of town, often hosting traditional festivals.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Sapa/am-thuc.jpg" alt="Ẩm thực Sapa">
-        <h3>Ẩm thực vùng cao</h3>
-        <p>Thưởng thức thắng cố, cá suối nướng, lợn cắp nách và rượu ngô thơm nồng bản địa.</p>
+        <img src="/images/destinations/Sapa/am-thuc.jpg" alt="Sapa Cuisine">
+        <h3>Highland Cuisine</h3>
+        <p>Enjoy local specialties like "thang co", grilled stream fish, “carried-under-arm” pork, and fragrant corn wine.</p>
       </div>
     </div>
   </section>
@@ -221,12 +222,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['fansipan.jpg', 'Đỉnh Fansipan'],
-          ['cat-cat.jpg', 'Bản Cát Cát'],
-          ['ruong-bac-thang.jpg', 'Ruộng bậc thang'],
-          ['nha-tho-da.jpg', 'Nhà thờ đá Sapa'],
-          ['cho-dem.jpg', 'Chợ đêm Sapa'],
-          ['am-thuc.jpg', 'Ẩm thực Sapa']
+          ['fansipan.jpg', 'Fansipan Peak'],
+          ['cat-cat.jpg', 'Cat Cat Village'],
+          ['ruong-bac-thang.jpg', 'Terraced Fields'],
+          ['nha-tho-da.jpg', 'Sapa Stone Church'],
+          ['cho-dem.jpg', 'Sapa Night Market'],
+          ['am-thuc.jpg', 'Sapa Cuisine']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -239,3 +240,4 @@ $pageScripts = [
     </div>
   </section>
 </main>
+
