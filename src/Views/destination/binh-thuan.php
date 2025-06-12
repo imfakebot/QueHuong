@@ -90,7 +90,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Bình Thuận - Vùng đất nắng gió và biển xanh';
+$pageTitle = 'Binh Thuan - Land of Sun, Wind and Blue Sea';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -104,111 +104,112 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/BinhThuan/review.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Bình Thuận</h1>
-    <p>Miền đất của biển cả, cát trắng và nền văn hóa Chăm độc đáo.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    <h1>Discover Binh Thuan</h1>
+    <p>A land of sea, white sand, and unique Cham culture.</p>
+    <a href="#highlights" class="btn-cta">Explore Now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-map-location-dot"></i> Tổng quan về Bình Thuận</h2>
-    <p>Bình Thuận là một tỉnh ven biển thuộc vùng Duyên hải Nam Trung Bộ, nổi tiếng với bãi biển dài, cát trắng mịn và khí hậu nắng ấm quanh năm. Mũi Né - Phan Thiết là điểm đến nổi bật với những đồi cát bay kỳ thú, làng chài yên bình và nền văn hóa Chăm đa sắc màu. Đây là địa điểm lý tưởng cho nghỉ dưỡng biển và trải nghiệm thể thao mạo hiểm.</p>
+    <h2><i class="fas fa-map-location-dot"></i> Overview of Binh Thuan</h2>
+    <p>Binh Thuan is a coastal province in South Central Vietnam, famous for its long beaches, fine white sand, and sunny climate all year round. Mui Ne - Phan Thiet stands out with enchanting sand dunes, peaceful fishing villages, and a vibrant Cham cultural heritage. It’s an ideal destination for beach relaxation and adventure sports.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/BinhThuan/doi-cat.jpg" alt="Đồi cát bay Mũi Né">
-      <div class="badge">Thiên nhiên</div>
+      <img src="/images/destinations/BinhThuan/doi-cat.jpg" alt="Mui Ne Sand Dunes">
+      <div class="badge">Nature</div>
     </div>
     <div class="tour-details">
-      <h2>Chinh phục đồi cát bay Mũi Né</h2>
+      <h2>Conquer the Mui Ne Sand Dunes</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(1.987 đánh giá)</span>
+        <span>(1,987 reviews)</span>
       </div>
-      <p>Thử sức với trượt cát, chụp ảnh và chiêm ngưỡng vẻ đẹp kỳ ảo của đồi cát thay hình đổi dạng theo từng giờ.</p>
+      <p>Try sandboarding, take amazing photos, and admire the magical landscape that changes shape throughout the day.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 giờ</li>
-        <li><i class="fa-solid fa-mountain-sun"></i> Cảnh quan đặc sắc</li>
-        <li><i class="fa-solid fa-camera-retro"></i> Check-in sống ảo</li>
-        <li><a href="#">Đồi Cát Đỏ</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-mountain-sun"></i> Scenic views</li>
+        <li><i class="fa-solid fa-camera-retro"></i> Instagram-worthy spots</li>
+        <li><a href="#">Red Sand Dunes</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>50.000đ</strong></span>
-        <a href="#" class="btn-cta">Xem tour</a>
+        <span class="price">From <strong>50,000 VND</strong></span>
+        <a href="#" class="btn-cta">View Tour</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Khám phá làng chài Mũi Né</h2>
+      <h2>Explore Mui Ne Fishing Village</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(1.100 đánh giá)</span>
+        <span>(1,100 reviews)</span>
       </div>
-      <p>Trải nghiệm cuộc sống mộc mạc của ngư dân, ngắm bình minh trên biển và thưởng thức hải sản tươi sống.</p>
+      <p>Experience the simple life of local fishermen, watch the sunrise over the sea, and enjoy the freshest seafood.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1.5 giờ</li>
-        <li><i class="fa-solid fa-fish"></i> Văn hóa biển</li>
-        <li><i class="fa-solid fa-utensils"></i> Hải sản tươi</li>
-        <li><a href="#">Làng chài Mũi Né</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1.5 hours</li>
+        <li><i class="fa-solid fa-fish"></i> Coastal culture</li>
+        <li><i class="fa-solid fa-utensils"></i> Fresh seafood</li>
+        <li><a href="#">Mui Ne Fishing Village</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>Miễn phí</strong></span>
-        <a href="#" class="btn-cta">Khám phá</a>
+        <span class="price">From <strong>Free</strong></span>
+        <a href="#" class="btn-cta">Explore</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/BinhThuan/lang-chai.jpg" alt="Làng chài Mũi Né">
-      <div class="badge">Văn hóa</div>
+      <img src="/images/destinations/BinhThuan/lang-chai.jpg" alt="Mui Ne Fishing Village">
+      <div class="badge">Culture</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/BinhThuan/thap-cham.jpg" alt="Tháp Chăm Poshanu">
-      <div class="badge">Di tích</div>
+      <img src="/images/destinations/BinhThuan/thap-cham.jpg" alt="Poshanu Cham Towers">
+      <div class="badge">Heritage</div>
     </div>
     <div class="tour-details">
-      <h2>Tham quan tháp Chăm Poshanu</h2>
+      <h2>Visit Poshanu Cham Towers</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(753 đánh giá)</span>
+        <span>(753 reviews)</span>
       </div>
-      <p>Chiêm ngưỡng kiến trúc Chăm cổ độc đáo, hòa mình vào không gian văn hóa lịch sử của người Chăm xưa.</p>
+      <p>Marvel at ancient Cham architecture and immerse yourself in the cultural and historical space of the Cham people.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1 giờ</li>
-        <li><i class="fa-solid fa-landmark"></i> Kiến trúc cổ</li>
-        <li><i class="fa-solid fa-book"></i> Lịch sử - văn hóa</li>
-        <li><a href="#">Tháp Poshanu</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1 hour</li>
+        <li><i class="fa-solid fa-landmark"></i> Ancient architecture</li>
+        <li><i class="fa-solid fa-book"></i> Cultural & historical insights</li>
+        <li><a href="#">Poshanu Towers</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>15.000đ</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>15,000 VND</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/BinhThuan/bien-mui-ne.jpg" alt="Biển Mũi Né">
-        <h3>Biển Mũi Né</h3>
-        <p>Bãi biển trải dài, nước trong xanh, thích hợp cho nghỉ dưỡng và thể thao biển.</p>
+        <img src="/images/destinations/BinhThuan/bien-mui-ne.jpg" alt="Mui Ne Beach">
+        <h3>Mui Ne Beach</h3>
+        <p>Long stretch of beach, clear blue water — perfect for relaxation and water sports.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/BinhThuan/ke-ga.jpg" alt="Hải đăng Kê Gà">
-        <h3>Hải đăng Kê Gà</h3>
-        <p>Ngọn hải đăng cổ nhất Việt Nam, tọa lạc giữa biển xanh mênh mông.</p>
+        <img src="/images/destinations/BinhThuan/ke-ga.jpg" alt="Ke Ga Lighthouse">
+        <h3>Ke Ga Lighthouse</h3>
+        <p>The oldest lighthouse in Vietnam, located in the middle of the vast sea.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/BinhThuan/am-thuc.jpg" alt="Ẩm thực Bình Thuận">
-        <h3>Ẩm thực địa phương</h3>
-        <p>Thưởng thức bánh căn, bánh hỏi lòng heo, dông nướng, và nhiều món hải sản đặc sắc.</p>
+        <img src="/images/destinations/BinhThuan/am-thuc.jpg" alt="Binh Thuan Cuisine">
+        <h3>Local Cuisine</h3>
+        <p>Try bánh căn, bánh hỏi with pork offal, grilled iguana, and many unique seafood dishes.</p>
       </div>
     </div>
   </section>
@@ -222,12 +223,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['doi-cat.jpg', 'Đồi cát bay Mũi Né'],
-          ['lang-chai.jpg', 'Làng chài Mũi Né'],
-          ['thap-cham.jpg', 'Tháp Chăm Poshanu'],
-          ['bien-mui-ne.jpg', 'Biển Mũi Né'],
-          ['ke-ga.jpg', 'Hải đăng Kê Gà'],
-          ['am-thuc.jpg', 'Ẩm thực Bình Thuận']
+          ['doi-cat.jpg', 'Mui Ne Sand Dunes'],
+          ['lang-chai.jpg', 'Mui Ne Fishing Village'],
+          ['thap-cham.jpg', 'Poshanu Cham Towers'],
+          ['bien-mui-ne.jpg', 'Mui Ne Beach'],
+          ['ke-ga.jpg', 'Ke Ga Lighthouse'],
+          ['am-thuc.jpg', 'Binh Thuan Cuisine']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -240,4 +241,5 @@ $pageScripts = [
     </div>
   </section>
 </main>
+
 

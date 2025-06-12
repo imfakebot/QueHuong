@@ -89,7 +89,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Đà Nẵng - Du lịch Việt Nam';
+$pageTitle = 'Đà Lạt - Du lịch Đà Lạt';
 
 // Add page-specific CSS files
 $pageStyles = [
@@ -107,111 +107,112 @@ $pageScripts = [
 <!-- Rest of the existing HTML content -->
 
 <section class="hero" style="background-image: url('/images/destinations/Da-Lat/da-lat.jpg');">
-    <div class="hero-text">
-      <h1>Khám phá Đà Lạt</h1>
-      <p>Thành phố ngàn hoa, khí hậu mát mẻ quanh năm và cảnh đẹp nên thơ.</p>
-      <a href="#highlights" class="btn-cta">Khám phá ngay</a>
-    </div>
-  </section>
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>Explore Da Lat</h1>
+    <p>The city of flowers with cool weather all year round and poetic scenery.</p>
+    <a href="#highlights" class="btn-cta">Discover Now</a>
+  </div>
+</section>
 
- <main>
+<main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-mountain-sun"></i> Tổng quan về Đà Lạt</h2>
-    <p>Đà Lạt là thành phố du lịch nổi tiếng với khí hậu se lạnh, rừng thông bạt ngàn và những công trình kiến trúc cổ kính. Đây là điểm đến lý tưởng cho nghỉ dưỡng, chụp ảnh và khám phá thiên nhiên.</p>
+    <h2><i class="fas fa-mountain-sun"></i> Overview of Da Lat</h2>
+    <p>Da Lat is a famous tourist city known for its chilly climate, vast pine forests, and ancient architecture. It's an ideal destination for relaxation, photography, and nature exploration.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/Da-Lat/HoXuanHuong.jpg" alt="Hồ Xuân Hương">
-      <div class="badge">Lãng mạn</div>
+      <img src="/images/destinations/Da-Lat/HoXuanHuong.jpg" alt="Xuan Huong Lake">
+      <div class="badge">Romantic</div>
     </div>
     <div class="tour-details">
-      <h2>Tham quan Hồ Xuân Hương</h2>
+      <h2>Visit Xuan Huong Lake</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(110 đánh giá)</span>
+        <span>(110 reviews)</span>
       </div>
-      <p>Trái tim của Đà Lạt, nơi lý tưởng để dạo bộ, đạp vịt và tận hưởng không khí trong lành.</p>
+      <p>The heart of Da Lat – perfect for strolling, paddle boating, and enjoying fresh air.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1.5 tiếng</li>
-        <li><i class="fa-solid fa-water"></i> Hồ nước</li>
-        <li><i class="fa-solid fa-person-walking"></i> Dạo bộ</li>
-        <li><a href="#">Tour thư giãn</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1.5 hours</li>
+        <li><i class="fa-solid fa-water"></i> Lake</li>
+        <li><i class="fa-solid fa-person-walking"></i> Walk</li>
+        <li><a href="#">Relaxing Tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>25.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>25,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Khám phá Thung Lũng Tình Yêu</h2>
+      <h2>Discover Valley of Love</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(95 đánh giá)</span>
+        <span>(95 reviews)</span>
       </div>
-      <p>Thung lũng nổi tiếng với cảnh sắc thơ mộng, phù hợp cho các cặp đôi và du khách yêu thiên nhiên.</p>
+      <p>A famous valley with romantic scenery, perfect for couples and nature lovers.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 tiếng</li>
-        <li><i class="fa-solid fa-heart"></i> Tình yêu</li>
-        <li><i class="fa-solid fa-leaf"></i> Thiên nhiên</li>
-        <li><a href="#">Tour lãng mạn</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-heart"></i> Love</li>
+        <li><i class="fa-solid fa-leaf"></i> Nature</li>
+        <li><a href="#">Romantic Tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>40.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>40,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/Da-Lat/ThungLungTinhYeu.jpg" alt="Thung Lũng Tình Yêu">
-      <div class="badge">Thiên nhiên</div>
+      <img src="/images/destinations/Da-Lat/ThungLungTinhYeu.jpg" alt="Valley of Love">
+      <div class="badge">Nature</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/Da-Lat/NhaThoConGa.jpg" alt="Nhà thờ Con Gà">
-      <div class="badge">Cổ kính</div>
+      <img src="/images/destinations/Da-Lat/NhaThoConGa.jpg" alt="Rooster Church">
+      <div class="badge">Historic</div>
     </div>
     <div class="tour-details">
-      <h2>Thăm Nhà thờ Con Gà</h2>
+      <h2>Visit Rooster Church</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(82 đánh giá)</span>
+        <span>(82 reviews)</span>
       </div>
-      <p>Nhà thờ lớn nhất tại Đà Lạt mang phong cách Gothic, là điểm đến lý tưởng để tìm hiểu văn hóa – kiến trúc.</p>
+      <p>The largest church in Da Lat with Gothic architecture, a great place to explore culture and architecture.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1 tiếng</li>
-        <li><i class="fa-solid fa-church"></i> Tôn giáo</li>
-        <li><i class="fa-solid fa-camera"></i> Chụp ảnh</li>
-        <li><a href="#">Tour văn hóa</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1 hour</li>
+        <li><i class="fa-solid fa-church"></i> Religious</li>
+        <li><i class="fa-solid fa-camera"></i> Photography</li>
+        <li><a href="#">Cultural Tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>20.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>20,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/Da-Lat/LangBiang.jpg" alt="Núi Langbiang">
-        <h3>Núi Langbiang</h3>
-        <p>Đỉnh núi nổi tiếng của Đà Lạt với cảnh quan hùng vĩ, thích hợp cho trekking và ngắm toàn cảnh thành phố.</p>
+        <img src="/images/destinations/Da-Lat/LangBiang.jpg" alt="Langbiang Mountain">
+        <h3>Langbiang Mountain</h3>
+        <p>A famous peak in Da Lat with majestic views, ideal for trekking and cityscape photography.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Da-Lat/ChoDaLat.jpg" alt="Chợ Đà Lạt">
-        <h3>Chợ Đà Lạt</h3>
-        <p>Nơi du khách có thể thưởng thức đặc sản địa phương và mua quà lưu niệm độc đáo.</p>
+        <img src="/images/destinations/Da-Lat/ChoDaLat.jpg" alt="Da Lat Market">
+        <h3>Da Lat Market</h3>
+        <p>A great place to enjoy local specialties and buy unique souvenirs.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Da-Lat/GaDaLat.jpg" alt="Ga Đà Lạt">
-        <h3>Ga Đà Lạt</h3>
-        <p>Nhà ga cổ nhất Đông Dương, với kiến trúc độc đáo và chuyến tàu cổ phục vụ khách du lịch.</p>
+        <img src="/images/destinations/Da-Lat/GaDaLat.jpg" alt="Da Lat Railway Station">
+        <h3>Da Lat Railway Station</h3>
+        <p>The oldest railway station in Indochina with unique architecture and a vintage tourist train ride.</p>
       </div>
     </div>
   </section>
@@ -225,12 +226,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['HoXuanHuong.jpg', 'Hồ Xuân Hương'],
-          ['ThungLungTinhYeu.jpg', 'Thung Lũng Tình Yêu'],
-          ['NhaThoConGa.jpg', 'Nhà thờ Con Gà'],
-          ['LangBiang.jpg', 'Núi Langbiang'],
-          ['ChoDaLat.jpg', 'Chợ Đà Lạt'],
-          ['GaDaLat.jpg', 'Ga Đà Lạt']
+          ['HoXuanHuong.jpg', 'Xuan Huong Lake'],
+          ['ThungLungTinhYeu.jpg', 'Valley of Love'],
+          ['NhaThoConGa.jpg', 'Rooster Church'],
+          ['LangBiang.jpg', 'Langbiang Mountain'],
+          ['ChoDaLat.jpg', 'Da Lat Market'],
+          ['GaDaLat.jpg', 'Da Lat Railway Station']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {

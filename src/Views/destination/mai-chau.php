@@ -89,7 +89,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Mai Châu - Thung lũng yên bình giữa núi rừng Tây Bắc';
+$pageTitle = 'Mai Chau - A Peaceful Valley in the Northwestern Mountains';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -103,111 +103,112 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/MaiChau/review.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Mai Châu</h1>
-    <p>Trải nghiệm vẻ đẹp bình yên của núi rừng, bản làng dân tộc và cuộc sống giản dị của người Thái.</p>
-    <a href="#highlights" class="btn-cta">Trải nghiệm ngay</a>
+    <h1>Discover Mai Chau</h1>
+    <p>Experience the serene beauty of mountains, ethnic villages, and the simple life of the Thai people.</p>
+    <a href="#highlights" class="btn-cta">Start Exploring</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-map-location-dot"></i> Tổng quan về Mai Châu</h2>
-    <p>Mai Châu nằm ở tỉnh Hòa Bình, là điểm đến lý tưởng để thư giãn và khám phá văn hóa vùng cao. Với khung cảnh thung lũng thơ mộng, những nếp nhà sàn truyền thống và người dân thân thiện, Mai Châu mang đến trải nghiệm du lịch sinh thái và cộng đồng đầy ý nghĩa.</p>
+    <h2><i class="fas fa-map-location-dot"></i> Overview of Mai Chau</h2>
+    <p>Located in Hoa Binh province, Mai Chau is an ideal destination for relaxation and cultural exploration. With its poetic valley scenery, traditional stilt houses, and friendly locals, Mai Chau offers a meaningful ecotourism and community-based travel experience.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/MaiChau/nha-san.jpg" alt="Homestay nhà sàn Mai Châu">
+      <img src="/images/destinations/MaiChau/nha-san.jpg" alt="Mai Chau Stilt House Homestay">
       <div class="badge">Homestay</div>
     </div>
     <div class="tour-details">
-      <h2>Trải nghiệm ngủ nhà sàn bản Lác</h2>
+      <h2>Stay in Lac Village Stilt Houses</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(198 đánh giá)</span>
+        <span>(198 reviews)</span>
       </div>
-      <p>Ở cùng người dân bản địa, thưởng thức ẩm thực truyền thống và giao lưu văn nghệ dân tộc.</p>
+      <p>Stay with local families, enjoy traditional cuisine, and join in ethnic cultural performances.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 ngày 1 đêm</li>
-        <li><i class="fa-solid fa-mountain-sun"></i> Văn hóa địa phương</li>
-        <li><i class="fa-solid fa-bed"></i> Nghỉ nhà sàn</li>
-        <li><a href="#">Du lịch cộng đồng</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 days 1 night</li>
+        <li><i class="fa-solid fa-mountain-sun"></i> Local culture</li>
+        <li><i class="fa-solid fa-bed"></i> Stilt house stay</li>
+        <li><a href="#">Community tourism</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>550.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>550,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Đạp xe khám phá bản làng</h2>
+      <h2>Bike Through Villages</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(302 đánh giá)</span>
+        <span>(302 reviews)</span>
       </div>
-      <p>Đạp xe qua các cánh đồng lúa, ghé thăm những bản nhỏ và trải nghiệm đời sống địa phương.</p>
+      <p>Ride through rice fields, visit small villages, and experience local daily life.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> Nửa ngày</li>
-        <li><i class="fa-solid fa-bicycle"></i> Hoạt động nhẹ</li>
-        <li><i class="fa-solid fa-camera"></i> Chụp ảnh đồng quê</li>
-        <li><a href="#">Khám phá</a></li>
+        <li><i class="fa-regular fa-clock"></i> Half day</li>
+        <li><i class="fa-solid fa-bicycle"></i> Light activity</li>
+        <li><i class="fa-solid fa-camera"></i> Countryside photography</li>
+        <li><a href="#">Explore</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>200.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>200,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/MaiChau/dap-xe.jpg" alt="Đạp xe ở Mai Châu">
-      <div class="badge">Dã ngoại</div>
+      <img src="/images/destinations/MaiChau/dap-xe.jpg" alt="Cycling in Mai Chau">
+      <div class="badge">Outdoor</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/MaiChau/pom-coong.jpg" alt="Bản Poom Coọng">
-      <div class="badge">Khám phá</div>
+      <img src="/images/destinations/MaiChau/pom-coong.jpg" alt="Pom Coong Village">
+      <div class="badge">Explore</div>
     </div>
     <div class="tour-details">
-      <h2>Tham quan bản Pom Coọng</h2>
+      <h2>Visit Pom Coong Village</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(145 đánh giá)</span>
+        <span>(145 reviews)</span>
       </div>
-      <p>Khám phá bản làng truyền thống của người Thái, tìm hiểu nghề dệt thổ cẩm và đời sống văn hóa bản địa.</p>
+      <p>Discover the traditional Thai village, learn about brocade weaving and local culture.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1 tiếng</li>
-        <li><i class="fa-solid fa-earth-asia"></i> Văn hóa dân tộc</li>
-        <li><i class="fa-solid fa-hand-holding-heart"></i> Trải nghiệm bản địa</li>
-        <li><a href="#">Khám phá</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1 hour</li>
+        <li><i class="fa-solid fa-earth-asia"></i> Ethnic culture</li>
+        <li><i class="fa-solid fa-hand-holding-heart"></i> Local experience</li>
+        <li><a href="#">Explore</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>100.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>100,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/MaiChau/thung-lung.jpg" alt="Thung lũng Mai Châu">
-        <h3>Thung lũng Mai Châu</h3>
-        <p>Khung cảnh thiên nhiên xanh mướt, thơ mộng giữa núi rừng Tây Bắc.</p>
+        <img src="/images/destinations/MaiChau/thung-lung.jpg" alt="Mai Chau Valley">
+        <h3>Mai Chau Valley</h3>
+        <p>Lush green scenery and poetic landscapes among the Northwestern mountains.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/MaiChau/am-thuc.jpg" alt="Ẩm thực Mai Châu">
-        <h3>Ẩm thực dân tộc</h3>
-        <p>Thưởng thức xôi nếp nương, thịt nướng ống tre, rượu cần đặc trưng vùng cao.</p>
+        <img src="/images/destinations/MaiChau/am-thuc.jpg" alt="Mai Chau Cuisine">
+        <h3>Ethnic Cuisine</h3>
+        <p>Enjoy sticky rice, bamboo-grilled meat, and traditional highland wine.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/MaiChau/van-nghe.jpg" alt="Văn nghệ dân tộc">
-        <h3>Văn nghệ Thái</h3>
-        <p>Hòa mình vào những điệu múa xòe, hát dân ca truyền thống buổi tối quanh lửa trại.</p>
+        <img src="/images/destinations/MaiChau/van-nghe.jpg" alt="Ethnic Performances">
+        <h3>Thai Cultural Shows</h3>
+        <p>Join traditional Thai dances and folk songs around the campfire at night.</p>
       </div>
     </div>
   </section>
@@ -221,12 +222,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['nha-san.jpg', 'Nhà sàn bản Lác'],
-          ['dap-xe.jpg', 'Đạp xe khám phá'],
-          ['pom-coong.jpg', 'Bản Pom Coọng'],
-          ['thung-lung.jpg', 'Thung lũng Mai Châu'],
-          ['am-thuc.jpg', 'Ẩm thực dân tộc'],
-          ['van-nghe.jpg', 'Văn nghệ dân tộc']
+          ['nha-san.jpg', 'Stilt House in Lac Village'],
+          ['dap-xe.jpg', 'Cycling Experience'],
+          ['pom-coong.jpg', 'Pom Coong Village'],
+          ['thung-lung.jpg', 'Mai Chau Valley'],
+          ['am-thuc.jpg', 'Ethnic Cuisine'],
+          ['van-nghe.jpg', 'Cultural Performances']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -239,3 +240,4 @@ $pageScripts = [
     </div>
   </section>
 </main>
+

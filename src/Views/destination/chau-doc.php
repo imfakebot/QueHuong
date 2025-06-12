@@ -89,7 +89,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Châu Đốc - Thành phố tâm linh miền Tây';
+$pageTitle = 'Chau Doc - The Spiritual City of the Mekong Delta';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -103,111 +103,112 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/ChauDoc/review.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Châu Đốc</h1>
-    <p>Miền đất linh thiêng với núi non, sông nước và những điểm hành hương nổi tiếng nhất miền Tây.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    <h1>Explore Chau Doc</h1>
+    <p>A sacred land of mountains, rivers, and some of the most famous pilgrimage sites in the Mekong Delta.</p>
+    <a href="#highlights" class="btn-cta">Discover Now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-map-location-dot"></i> Tổng quan về Châu Đốc</h2>
-    <p>Châu Đốc là thành phố trực thuộc tỉnh An Giang, nằm gần biên giới Việt - Campuchia. Nơi đây nổi tiếng với những điểm du lịch tâm linh như Miếu Bà Chúa Xứ Núi Sam, chùa Tây An, lăng Thoại Ngọc Hầu... Ngoài ra, Châu Đốc còn mang đậm bản sắc văn hóa của người Chăm, Khmer và Hoa, tạo nên một bức tranh đa sắc màu đặc trưng vùng sông nước.</p>
+    <h2><i class="fas fa-map-location-dot"></i> Overview of Chau Doc</h2>
+    <p>Chau Doc is a city in An Giang Province, located near the Vietnam-Cambodia border. It is famous for its spiritual attractions like the Ba Chua Xu Temple on Sam Mountain, Tay An Pagoda, and the Tomb of Thoai Ngoc Hau. The city is also a melting pot of Cham, Khmer, and Hoa cultures, forming a unique and colorful cultural mosaic typical of the water-rich Mekong region.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/ChauDoc/mieu-ba.jpg" alt="Miếu Bà Chúa Xứ Núi Sam">
-      <div class="badge">Tâm linh</div>
+      <img src="/images/destinations/ChauDoc/mieu-ba.jpg" alt="Ba Chua Xu Temple">
+      <div class="badge">Spiritual</div>
     </div>
     <div class="tour-details">
-      <h2>Viếng Miếu Bà Chúa Xứ Núi Sam</h2>
+      <h2>Visit Ba Chua Xu Temple on Sam Mountain</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(3.289 đánh giá)</span>
+        <span>(3,289 reviews)</span>
       </div>
-      <p>Địa điểm hành hương nổi tiếng nhất miền Tây, thu hút hàng triệu lượt khách mỗi năm, đặc biệt vào dịp lễ vía Bà.</p>
+      <p>The most famous pilgrimage site in the Mekong Delta, attracting millions of visitors annually, especially during the Ba Festival.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1-2 giờ</li>
-        <li><i class="fa-solid fa-mountain-sun"></i> Núi Sam</li>
-        <li><i class="fa-solid fa-person-praying"></i> Hành hương</li>
-        <li><a href="#">Miếu Bà Chúa Xứ</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1–2 hours</li>
+        <li><i class="fa-solid fa-mountain-sun"></i> Sam Mountain</li>
+        <li><i class="fa-solid fa-person-praying"></i> Pilgrimage</li>
+        <li><a href="#">Ba Chua Xu Temple</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Miễn phí</span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">Free</span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Tham quan làng Chăm Châu Giang</h2>
+      <h2>Visit Chau Giang Cham Village</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(1.214 đánh giá)</span>
+        <span>(1,214 reviews)</span>
       </div>
-      <p>Khám phá đời sống và văn hóa của cộng đồng người Chăm ven sông Hậu, thăm nhà sàn, thánh đường Hồi giáo và thưởng thức ẩm thực truyền thống.</p>
+      <p>Discover the lifestyle and culture of the Cham community along the Hau River, visit stilt houses, mosques, and taste traditional Cham cuisine.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 giờ</li>
-        <li><i class="fa-solid fa-people-group"></i> Văn hóa Chăm</li>
-        <li><i class="fa-solid fa-mosque"></i> Thánh đường Mubarak</li>
-        <li><a href="#">Châu Giang</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-people-group"></i> Cham Culture</li>
+        <li><i class="fa-solid fa-mosque"></i> Mubarak Mosque</li>
+        <li><a href="#">Chau Giang</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>50.000đ</strong></span>
-        <a href="#" class="btn-cta">Khám phá</a>
+        <span class="price">From <strong>50,000 VND</strong></span>
+        <a href="#" class="btn-cta">Explore</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/ChauDoc/lang-cham.jpg" alt="Làng Chăm Châu Giang">
-      <div class="badge">Văn hóa</div>
+      <img src="/images/destinations/ChauDoc/lang-cham.jpg" alt="Chau Giang Cham Village">
+      <div class="badge">Cultural</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/ChauDoc/rung-tra-su.jpg" alt="Rừng Tràm Trà Sư">
-      <div class="badge">Sinh thái</div>
+      <img src="/images/destinations/ChauDoc/rung-tra-su.jpg" alt="Tra Su Cajuput Forest">
+      <div class="badge">Ecotourism</div>
     </div>
     <div class="tour-details">
-      <h2>Khám phá Rừng Tràm Trà Sư</h2>
+      <h2>Discover Tra Su Cajuput Forest</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(1.987 đánh giá)</span>
+        <span>(1,987 reviews)</span>
       </div>
-      <p>Ngồi xuồng len lỏi giữa rừng tràm xanh ngát, ngắm chim trời và trải nghiệm thiên nhiên nguyên sinh đặc trưng miền Tây.</p>
+      <p>Take a paddle boat through the lush green cajuput forest, spot exotic birds, and immerse in the pristine nature of the Mekong Delta.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 3 giờ</li>
-        <li><i class="fa-solid fa-tree"></i> Rừng ngập nước</li>
-        <li><i class="fa-solid fa-dove"></i> Quan sát chim</li>
-        <li><a href="#">Trà Sư</a></li>
+        <li><i class="fa-regular fa-clock"></i> 3 hours</li>
+        <li><i class="fa-solid fa-tree"></i> Wetland Forest</li>
+        <li><i class="fa-solid fa-dove"></i> Bird Watching</li>
+        <li><a href="#">Tra Su</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>150.000đ</strong></span>
-        <a href="#" class="btn-cta">Tham quan</a>
+        <span class="price">From <strong>150,000 VND</strong></span>
+        <a href="#" class="btn-cta">Visit</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/ChauDoc/am-thuc.jpg" alt="Ẩm thực Châu Đốc">
-        <h3>Ẩm thực Châu Đốc</h3>
-        <p>Thưởng thức mắm Châu Đốc trứ danh, bún cá, tung lò mò và nhiều món ăn đặc sản độc đáo.</p>
+        <img src="/images/destinations/ChauDoc/am-thuc.jpg" alt="Chau Doc Cuisine">
+        <h3>Chau Doc Cuisine</h3>
+        <p>Taste the famous fermented fish paste (mam), fish noodle soup, beef sausages, and many other unique specialties.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/ChauDoc/chua-tay-an.jpg" alt="Chùa Tây An">
-        <h3>Chùa Tây An</h3>
-        <p>Ngôi chùa mang phong cách kiến trúc Ấn Độ độc đáo, nằm gần Miếu Bà Chúa Xứ.</p>
+        <img src="/images/destinations/ChauDoc/chua-tay-an.jpg" alt="Tay An Pagoda">
+        <h3>Tay An Pagoda</h3>
+        <p>A pagoda with unique Indian-style architecture, located near Ba Chua Xu Temple.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/ChauDoc/song-hau.jpg" alt="Sông Hậu Châu Đốc">
-        <h3>Sông Hậu hữu tình</h3>
-        <p>Ngắm hoàng hôn và trải nghiệm đời sống miền sông nước bên bến phà Châu Giang.</p>
+        <img src="/images/destinations/ChauDoc/song-hau.jpg" alt="Hau River in Chau Doc">
+        <h3>Charming Hau River</h3>
+        <p>Watch the sunset and experience river life at the Chau Giang ferry station.</p>
       </div>
     </div>
   </section>
@@ -221,12 +222,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['mieu-ba.jpg', 'Miếu Bà Chúa Xứ'],
-          ['lang-cham.jpg', 'Làng Chăm Châu Giang'],
-          ['rung-tra-su.jpg', 'Rừng Tràm Trà Sư'],
-          ['am-thuc.jpg', 'Ẩm thực Châu Đốc'],
-          ['chua-tay-an.jpg', 'Chùa Tây An'],
-          ['song-hau.jpg', 'Sông Hậu Châu Đốc']
+          ['mieu-ba.jpg', 'Ba Chua Xu Temple'],
+          ['lang-cham.jpg', 'Chau Giang Cham Village'],
+          ['rung-tra-su.jpg', 'Tra Su Cajuput Forest'],
+          ['am-thuc.jpg', 'Chau Doc Cuisine'],
+          ['chua-tay-an.jpg', 'Tay An Pagoda'],
+          ['song-hau.jpg', 'Hau River']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -239,3 +240,4 @@ $pageScripts = [
     </div>
   </section>
 </main>
+

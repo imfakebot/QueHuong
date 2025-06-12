@@ -1,11 +1,11 @@
 <?php
-$pageTitle = 'Hà Nội - Du lịch Việt Nam';
+$pageTitle = 'Hanoi - Travel Vietnam';
 
 // Add page-specific CSS files
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
   'https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/css/lightbox.min.css',
-  '/css/destination.css' // File CSS của bạn
+  '/css/destination.css'
 ];
 
 // Add page-specific scripts
@@ -13,38 +13,36 @@ $pageScripts = [
   'https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js',
   'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
   'https://cdn.jsdelivr.net/npm/lightbox2@2.11.4/dist/js/lightbox.min.js',
-  '/js/destination.js' // File JS của bạn
+  '/js/destination.js'
 ];
 ?>
 
-<!-- Rest of the existing HTML content -->
-
 <section class="hero" style="background-image: url('/images/destinations/Ha-Noi/Hanoi-review.jpg');">
-  <div class="hero-overlay"></div> <!-- Lớp phủ được thêm vào đây -->
-  <div class="hero-text"> <!-- hero-text giờ nằm sau lớp phủ -->
-    <h1>Khám phá Hà Nội</h1>
-    <p>Thủ đô ngàn năm văn hiến với vẻ đẹp cổ kính, trầm mặc và nền ẩm thực đặc sắc.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+  <div class="hero-overlay"></div>
+  <div class="hero-text">
+    <h1>Explore Hanoi</h1>
+    <p>The thousand-year-old capital with ancient charm and unique culinary culture.</p>
+    <a href="#highlights" class="btn-cta">Discover Now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-city"></i> Tổng quan về Hà Nội</h2>
-    <p>Hà Nội là trái tim của Việt Nam với hơn một nghìn năm lịch sử. Thành phố quyến rũ du khách bởi sự pha trộn hài hòa giữa nét cổ kính của phố cổ, những công trình kiến trúc Pháp và nhịp sống hiện đại. Không chỉ vậy, Hà Nội còn nổi tiếng với ẩm thực phong phú và nền văn hóa truyền thống sâu sắc.</p>
+    <h2><i class="fas fa-city"></i> Overview of Hanoi</h2>
+    <p>Hanoi is the heart of Vietnam with more than a thousand years of history. The city captivates visitors with its harmonious blend of ancient Old Quarter charm, French colonial architecture, and vibrant modern life. Hanoi is also famous for its diverse cuisine and rich cultural traditions.</p>
   </section>
 
-  <!-- START: Things to do Section - NEW LAYOUT -->
+  <!-- START: Things to do Section -->
   <section class="content-section things-to-do fade-in">
-    <h2><i class="fas fa-clipboard-check"></i> Trải nghiệm không thể bỏ lỡ</h2>
+    <h2><i class="fas fa-clipboard-check"></i> Must-try Experiences</h2>
     <div class="activity-grid">
       <div class="activity-item">
         <div class="activity-icon">
           <i class="fas fa-masks-theater"></i>
         </div>
         <div class="activity-content">
-          <h3>Xem múa rối nước</h3>
-          <p>Khám phá nghệ thuật sân khấu truyền thống độc đáo, một nét văn hóa đặc sắc của Việt Nam ngay tại thủ đô.</p>
+          <h3>Watch Water Puppetry</h3>
+          <p>Experience this unique traditional stage art, a distinctive cultural feature of Vietnam right in the capital.</p>
         </div>
       </div>
       <div class="activity-item">
@@ -52,8 +50,8 @@ $pageScripts = [
           <i class="fas fa-landmark-dome"></i>
         </div>
         <div class="activity-content">
-          <h3>Thăm Hoàng thành Thăng Long</h3>
-          <p>Dạo bước trong khu di sản thế giới, tìm hiểu về lịch sử ngàn năm văn hiến của kinh thành xưa.</p>
+          <h3>Visit the Imperial Citadel of Thang Long</h3>
+          <p>Walk through the world heritage site and learn about the thousand-year-old history of the former royal city.</p>
         </div>
       </div>
       <div class="activity-item">
@@ -61,8 +59,8 @@ $pageScripts = [
           <i class="fas fa-mug-hot"></i>
         </div>
         <div class="activity-content">
-          <h3>Thưởng thức cà phê trứng</h3>
-          <p>Nếm thử hương vị cà phê độc đáo, béo ngậy - một đặc sản không thể bỏ qua khi đến Hà Nội.</p>
+          <h3>Try Egg Coffee</h3>
+          <p>Enjoy the rich, creamy flavor of this iconic drink – a specialty not to be missed in Hanoi.</p>
         </div>
       </div>
       <div class="activity-item">
@@ -70,8 +68,8 @@ $pageScripts = [
           <i class="fas fa-bicycle"></i>
         </div>
         <div class="activity-content">
-          <h3>Dạo quanh Hồ Tây bằng xe đạp</h3>
-          <p>Tận hưởng không khí trong lành, ngắm cảnh hồ thơ mộng và khám phá cuộc sống yên bình ven hồ.</p>
+          <h3>Cycle around West Lake</h3>
+          <p>Soak in the fresh air, admire the scenic views, and discover the peaceful lifestyle around the lake.</p>
         </div>
       </div>
       <div class="activity-item">
@@ -79,8 +77,8 @@ $pageScripts = [
           <i class="fas fa-street-view"></i>
         </div>
         <div class="activity-content">
-          <h3>Lang thang Phố Cổ</h3>
-          <p>Khám phá 36 phố phường với những ngôi nhà cổ kính, các cửa hàng thủ công và ẩm thực đường phố hấp dẫn.</p>
+          <h3>Wander through the Old Quarter</h3>
+          <p>Explore the 36 bustling streets filled with ancient houses, handicraft shops, and tempting street food.</p>
         </div>
       </div>
       <div class="activity-item">
@@ -88,8 +86,8 @@ $pageScripts = [
           <i class="fas fa-camera-retro"></i>
         </div>
         <div class="activity-content">
-          <h3>Check-in Cầu Long Biên</h3>
-          <p>Ghi lại những khoảnh khắc ấn tượng tại cây cầu lịch sử, chứng nhân của bao thăng trầm thủ đô.</p>
+          <h3>Check-in at Long Bien Bridge</h3>
+          <p>Capture impressive moments at this historic bridge that has witnessed many ups and downs of the city.</p>
         </div>
       </div>
     </div>
@@ -98,106 +96,99 @@ $pageScripts = [
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/Ha-Noi/HoHoanKiem.jpg" alt="Hồ Hoàn Kiếm">
-      <div class="badge">Biểu tượng</div>
+      <img src="/images/destinations/Ha-Noi/HoHoanKiem.jpg" alt="Hoan Kiem Lake">
+      <div class="badge">Iconic</div>
     </div>
     <div class="tour-details">
-      <h2>Thăm Hồ Hoàn Kiếm và đền Ngọc Sơn</h2>
+      <h2>Visit Hoan Kiem Lake & Ngoc Son Temple</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(180 đánh giá)</span>
+        <span>(180 reviews)</span>
       </div>
-      <p>Hồ Hoàn Kiếm là biểu tượng văn hóa, lịch sử của Hà Nội. Dạo quanh hồ, ghé thăm đền Ngọc Sơn và cây cầu Thê Húc đỏ rực, bạn sẽ cảm nhận rõ nhịp sống chậm rãi và yên bình giữa lòng thủ đô sôi động.</p>
+      <p>Hoan Kiem Lake is a cultural and historical symbol of Hanoi. Walk around the lake, visit Ngoc Son Temple and the iconic red The Huc Bridge to feel the peaceful rhythm of life in the vibrant capital.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 tiếng</li>
-        <li><i class="fa-solid fa-water"></i> Hồ nước</li>
-        <li><i class="fa-solid fa-landmark"></i> Di tích</li>
-        <li><a href="#">Tour lịch sử</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-water"></i> Lake</li>
+        <li><i class="fa-solid fa-landmark"></i> Landmark</li>
+        <li><a href="#">History tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Miễn phí</span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">Free</span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/Ha-Noi/BunChaHaNoi.jpg" alt="Ẩm thực Hà Nội">
+      <img src="/images/destinations/Ha-Noi/BunChaHaNoi.jpg" alt="Hanoi Cuisine">
       <div class="badge">Must try</div>
     </div>
     <div class="tour-details">
-      <h2>Thưởng thức ẩm thực phố cổ</h2>
+      <h2>Enjoy Old Quarter Street Food</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(200 đánh giá)</span>
+        <span>(200 reviews)</span>
       </div>
-      <p>Phố cổ Hà Nội là thiên đường ẩm thực với những món ăn trứ danh như bún chả, phở bò, bánh cuốn, bún thang... Đừng quên ghé vào một quán nhỏ để cảm nhận trọn vẹn vị ngon truyền thống.</p>
+      <p>Hanoi’s Old Quarter is a food paradise, offering legendary dishes like bun cha, pho, banh cuon, and bun thang. Don’t forget to drop by a small eatery to savor the authentic flavors.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 3 tiếng</li>
-        <li><i class="fa-solid fa-utensils"></i> Ăn uống</li>
-        <li><i class="fa-solid fa-person-walking"></i> Đi bộ</li>
-        <li><a href="#">Tour ẩm thực</a></li>
+        <li><i class="fa-regular fa-clock"></i> 3 hours</li>
+        <li><i class="fa-solid fa-utensils"></i> Cuisine</li>
+        <li><i class="fa-solid fa-person-walking"></i> Walking</li>
+        <li><a href="#">Food tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>59.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>59,000đ/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/Ha-Noi/LangBac.jpg" alt="Lăng Bác">
-      <div class="badge">Trang nghiêm</div>
+      <img src="/images/destinations/Ha-Noi/LangBac.jpg" alt="Ho Chi Minh Mausoleum">
+      <div class="badge">Solemn</div>
     </div>
     <div class="tour-details">
-      <h2>Tham quan Lăng Chủ tịch Hồ Chí Minh</h2>
+      <h2>Visit Ho Chi Minh Mausoleum</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(160 đánh giá)</span>
+        <span>(160 reviews)</span>
       </div>
-      <p>Lăng Chủ tịch là nơi an nghỉ của Bác Hồ - vị lãnh tụ vĩ đại của dân tộc. Không gian xung quanh quảng trường Ba Đình và khu nhà sàn Bác Hồ mang đến cảm xúc linh thiêng và tự hào cho du khách.</p>
+      <p>The Mausoleum is the final resting place of President Ho Chi Minh – the great leader of the Vietnamese people. The surrounding Ba Dinh Square and stilt house area offer a sacred and proud atmosphere.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 giờ</li>
-        <li><i class="fa-solid fa-monument"></i> Lịch sử</li>
-        <li><i class="fa-solid fa-flag"></i> Quốc gia</li>
-        <li><a href="#">Tour văn hóa</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-monument"></i> History</li>
+        <li><i class="fa-solid fa-flag"></i> National</li>
+        <li><a href="#">Cultural tour</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Miễn phí</span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">Free</span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/Ha-Noi/VanMieu.jpg" alt="Văn Miếu Quốc Tử Giám">
-        <div class="card-content">
-          <h3>Văn Miếu Quốc Tử Giám</h3>
-          <p>Trường đại học đầu tiên của Việt Nam, nơi tôn vinh nền học thuật và truyền thống tôn sư trọng đạo.</p>
-        </div>
+        <img src="/images/destinations/Ha-Noi/VanMieu.jpg" alt="Temple of Literature">
+        <h3>Temple of Literature</h3>
+        <p>The first university in Vietnam, honoring the tradition of education and respect for teachers.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Ha-Noi/Phoco.jpg" alt="Phố cổ Hà Nội">
-        <div class="card-content">
-          <h3>Phố cổ Hà Nội</h3>
-          <p>Khu phố với những ngôi nhà cổ, ẩm thực đường phố và không khí đặc trưng của thủ đô xưa.</p>
-        </div>
+        <img src="/images/destinations/Ha-Noi/Phoco.jpg" alt="Hanoi Old Quarter">
+        <h3>Hanoi Old Quarter</h3>
+        <p>An area of ancient houses, street food, and the unique nostalgic atmosphere of the capital.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Ha-Noi/NhaThoLon.jpg" alt="Nhà thờ Lớn Hà Nội">
-        <div class="card-content">
-          <h3>Nhà thờ Lớn Hà Nội</h3>
-          <p>Công trình kiến trúc Pháp cổ kính nằm giữa lòng thủ đô, điểm check-in nổi bật của giới trẻ.</p>
-        </div>
+        <img src="/images/destinations/Ha-Noi/NhaThoLon.jpg" alt="St. Joseph’s Cathedral">
+        <h3>St. Joseph’s Cathedral</h3>
+        <p>A French colonial architectural gem in the heart of the city – a popular check-in spot for the youth.</p>
       </div>
     </div>
   </section>
-
 
   <section class="gallery">
     <h2>GALLERY</h2>
@@ -207,12 +198,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['HoHoanKiem.jpg', 'Hồ Gươm'],
-          ['VanMieu.jpg', 'Văn Miếu - Quốc Tử Giám'],
-          ['LangBac.jpg', 'Lăng Bác'],
-          ['HoTay.jpg', 'Hồ Tây'],
-          ['NhaThoLon.jpg', 'Nhà thờ Lớn Hà Nội'], // Đảm bảo tên file chính xác
-          ['Phoco.jpg', 'Phố cổ Hà Nội']
+          ['HoHoanKiem.jpg', 'Hoan Kiem Lake'],
+          ['VanMieu.jpg', 'Temple of Literature'],
+          ['LangBac.jpg', 'Ho Chi Minh Mausoleum'],
+          ['HoTay.jpg', 'West Lake'],
+          ['NhaThoLon.jpg', 'St. Joseph’s Cathedral'],
+          ['Phoco.jpg', 'Hanoi Old Quarter']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {

@@ -103,6 +103,7 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/ConDao/review.jpg');">
+  <div class="hero-overlay"></div> <!-- Lớp phủ được thêm vào đây -->
   <div class="hero-text">
     <h1>Khám phá Côn Đảo</h1>
     <p>Hòn đảo lịch sử giữa đại dương, nơi hòa quyện giữa thiên nhiên hoang sơ và những dấu ấn hào hùng.</p>

@@ -89,7 +89,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Cần Thơ - Thủ phủ miền Tây sông nước';
+$pageTitle = 'Can Tho - The Capital of the Mekong Delta';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -103,111 +103,112 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/CanTho/review.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Cần Thơ</h1>
-    <p>Thành phố bên sông Hậu với chợ nổi độc đáo, miệt vườn trù phú và văn hóa miền Tây đậm đà.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    <h1>Discover Can Tho</h1>
+    <p>A riverside city on the Hau River, famous for floating markets, lush orchards, and rich Mekong Delta culture.</p>
+    <a href="#highlights" class="btn-cta">Explore Now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-map-location-dot"></i> Tổng quan về Cần Thơ</h2>
-    <p>Cần Thơ là thành phố trung tâm của vùng Đồng bằng sông Cửu Long, nổi tiếng với những khu chợ nổi đặc sắc, hệ thống kênh rạch chằng chịt và các miệt vườn xanh mướt. Đến với Cần Thơ, du khách không chỉ được ngồi ghe xuồng len lỏi qua các khu chợ, mà còn trải nghiệm nét văn hóa miền Tây dân dã, chân tình và thưởng thức những món ăn đậm vị sông nước.</p>
+    <h2><i class="fas fa-map-location-dot"></i> Overview of Can Tho</h2>
+    <p>Can Tho is the central city of the Mekong Delta region, well-known for its unique floating markets, intricate canal systems, and lush fruit gardens. Visitors can enjoy boat rides through bustling markets, experience the warm and sincere southern hospitality, and savor flavorful local cuisine.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/CanTho/cho-noi.jpg" alt="Chợ nổi Cái Răng">
-      <div class="badge">Trải nghiệm</div>
+      <img src="/images/destinations/CanTho/cho-noi.jpg" alt="Cai Rang Floating Market">
+      <div class="badge">Experience</div>
     </div>
     <div class="tour-details">
-      <h2>Khám phá chợ nổi Cái Răng</h2>
+      <h2>Explore Cai Rang Floating Market</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(2.321 đánh giá)</span>
+        <span>(2,321 reviews)</span>
       </div>
-      <p>Tham quan khu chợ nổi sầm uất trên sông vào sáng sớm, tìm hiểu cách buôn bán độc đáo của người miền Tây và thưởng thức bún riêu, cà phê trên ghe.</p>
+      <p>Visit the lively floating market in the early morning, learn about the unique river trade, and enjoy breakfast like rice noodle soup and coffee right on the boat.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 giờ</li>
-        <li><i class="fa-solid fa-water"></i> Trên sông</li>
-        <li><i class="fa-solid fa-mug-hot"></i> Ăn sáng trên ghe</li>
-        <li><a href="#">Chợ nổi Cái Răng</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-water"></i> On the river</li>
+        <li><i class="fa-solid fa-mug-hot"></i> Breakfast on boat</li>
+        <li><a href="#">Cai Rang Floating Market</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>100.000đ</strong></span>
-        <a href="#" class="btn-cta">Tham gia ngay</a>
+        <span class="price">From <strong>100,000 VND</strong></span>
+        <a href="#" class="btn-cta">Join Now</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Tham quan nhà cổ Bình Thủy</h2>
+      <h2>Visit Binh Thuy Ancient House</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(1.456 đánh giá)</span>
+        <span>(1,456 reviews)</span>
       </div>
-      <p>Ngôi nhà cổ hơn 100 năm tuổi, mang kiến trúc Pháp - Việt giao hòa, là bối cảnh trong nhiều bộ phim nổi tiếng.</p>
+      <p>A 100-year-old house blending French and Vietnamese architecture, used as a filming location for many famous movies.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1 giờ</li>
-        <li><i class="fa-solid fa-house-chimney"></i> Kiến trúc cổ</li>
-        <li><i class="fa-solid fa-clapperboard"></i> Điểm quay phim</li>
-        <li><a href="#">Nhà cổ Bình Thủy</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1 hour</li>
+        <li><i class="fa-solid fa-house-chimney"></i> Heritage architecture</li>
+        <li><i class="fa-solid fa-clapperboard"></i> Film location</li>
+        <li><a href="#">Binh Thuy Ancient House</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>20.000đ</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>20,000 VND</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/CanTho/nha-co.jpg" alt="Nhà cổ Bình Thủy">
-      <div class="badge">Văn hóa</div>
+      <img src="/images/destinations/CanTho/nha-co.jpg" alt="Binh Thuy Ancient House">
+      <div class="badge">Culture</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/CanTho/miet-vuon.jpg" alt="Miệt vườn Cần Thơ">
-      <div class="badge">Sinh thái</div>
+      <img src="/images/destinations/CanTho/miet-vuon.jpg" alt="Can Tho Orchard">
+      <div class="badge">Ecotourism</div>
     </div>
     <div class="tour-details">
-      <h2>Trải nghiệm miệt vườn Cần Thơ</h2>
+      <h2>Experience Can Tho Orchards</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(987 đánh giá)</span>
+        <span>(987 reviews)</span>
       </div>
-      <p>Thưởng thức trái cây tại vườn, tát mương bắt cá, ăn bánh xèo miền Tây và nghe đờn ca tài tử mộc mạc.</p>
+      <p>Enjoy fresh fruit in the garden, try fish catching in muddy ditches, savor crispy pancakes, and listen to southern folk music.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 3 giờ</li>
-        <li><i class="fa-solid fa-tree"></i> Vườn cây trái</li>
-        <li><i class="fa-solid fa-music"></i> Đờn ca tài tử</li>
-        <li><a href="#">Vườn trái cây Mỹ Khánh</a></li>
+        <li><i class="fa-regular fa-clock"></i> 3 hours</li>
+        <li><i class="fa-solid fa-tree"></i> Fruit garden</li>
+        <li><i class="fa-solid fa-music"></i> Folk music performance</li>
+        <li><a href="#">My Khanh Fruit Garden</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>150.000đ</strong></span>
-        <a href="#" class="btn-cta">Đặt vé</a>
+        <span class="price">From <strong>150,000 VND</strong></span>
+        <a href="#" class="btn-cta">Book Now</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/CanTho/mon-ngon.jpg" alt="Ẩm thực miền Tây">
-        <h3>Ẩm thực miền Tây</h3>
-        <p>Thưởng thức lẩu mắm, bánh xèo, bánh cống, cá lóc nướng trui và nhiều món đặc sản dân dã.</p>
+        <img src="/images/destinations/CanTho/mon-ngon.jpg" alt="Mekong Cuisine">
+        <h3>Mekong Cuisine</h3>
+        <p>Try hotpot with fermented fish, crispy pancakes, deep-fried shrimp cakes, grilled snakehead fish, and more rustic specialties.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/CanTho/cau-can-tho.jpg" alt="Cầu Cần Thơ">
-        <h3>Cầu Cần Thơ</h3>
-        <p>Biểu tượng hiện đại nối liền hai bờ sông Hậu, đẹp lung linh khi lên đèn ban đêm.</p>
+        <img src="/images/destinations/CanTho/cau-can-tho.jpg" alt="Can Tho Bridge">
+        <h3>Can Tho Bridge</h3>
+        <p>A modern symbol spanning the Hau River, stunningly lit at night.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/CanTho/cho-dem.jpg" alt="Chợ đêm Ninh Kiều">
-        <h3>Chợ đêm Ninh Kiều</h3>
-        <p>Địa điểm sôi động về đêm với nhiều món ăn đường phố, đồ lưu niệm và biểu diễn nghệ thuật.</p>
+        <img src="/images/destinations/CanTho/cho-dem.jpg" alt="Ninh Kieu Night Market">
+        <h3>Ninh Kieu Night Market</h3>
+        <p>A vibrant night spot with street food, souvenirs, and live performances.</p>
       </div>
     </div>
   </section>
@@ -221,12 +222,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['cho-noi.jpg', 'Chợ nổi Cái Răng'],
-          ['nha-co.jpg', 'Nhà cổ Bình Thủy'],
-          ['miet-vuon.jpg', 'Miệt vườn Cần Thơ'],
-          ['mon-ngon.jpg', 'Ẩm thực miền Tây'],
-          ['cau-can-tho.jpg', 'Cầu Cần Thơ'],
-          ['cho-dem.jpg', 'Chợ đêm Ninh Kiều']
+          ['cho-noi.jpg', 'Cai Rang Floating Market'],
+          ['nha-co.jpg', 'Binh Thuy Ancient House'],
+          ['miet-vuon.jpg', 'Can Tho Orchard'],
+          ['mon-ngon.jpg', 'Mekong Cuisine'],
+          ['cau-can-tho.jpg', 'Can Tho Bridge'],
+          ['cho-dem.jpg', 'Ninh Kieu Night Market']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -239,3 +240,4 @@ $pageScripts = [
     </div>
   </section>
 </main>
+

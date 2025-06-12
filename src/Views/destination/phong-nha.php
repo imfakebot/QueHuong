@@ -89,7 +89,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Phong Nha - Kỳ quan đệ nhất động';
+$pageTitle = 'Phong Nha - The First Wonder of Caves';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -103,111 +103,112 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/PhongNha/review1.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Phong Nha</h1>
-    <p>Vườn quốc gia với hệ thống hang động kỳ vĩ, rừng nguyên sinh và sông ngầm tuyệt đẹp.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    <h1>Explore Phong Nha</h1>
+    <p>A national park with majestic cave systems, pristine forests, and stunning underground rivers.</p>
+    <a href="#highlights" class="btn-cta">Discover Now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-mountain-sun"></i> Tổng quan về Phong Nha</h2>
-    <p>Phong Nha - Kẻ Bàng là Di sản thiên nhiên thế giới với hệ thống hang động kỳ vĩ như Động Phong Nha, Hang Én, Hang Sơn Đoòng – hang lớn nhất thế giới. Đây là điểm đến lý tưởng cho du lịch sinh thái, thám hiểm và nghỉ dưỡng giữa thiên nhiên hoang sơ.</p>
+    <h2><i class="fas fa-mountain-sun"></i> Overview of Phong Nha</h2>
+    <p>Phong Nha - Ke Bang is a UNESCO World Heritage site known for its magnificent caves such as Phong Nha Cave, En Cave, and Son Doong Cave – the largest cave in the world. It is an ideal destination for eco-tourism, adventure, and nature-based relaxation.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/PhongNha/phong-nha-cave.jpg" alt="Động Phong Nha">
-      <div class="badge">Hang động</div>
+      <img src="/images/destinations/PhongNha/phong-nha-cave.jpg" alt="Phong Nha Cave">
+      <div class="badge">Cave</div>
     </div>
     <div class="tour-details">
-      <h2>Thuyền khám phá Động Phong Nha</h2>
+      <h2>Boat Tour to Phong Nha Cave</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(298 đánh giá)</span>
+        <span>(298 reviews)</span>
       </div>
-      <p>Trải nghiệm đi thuyền ngược dòng sông Son để vào động, chiêm ngưỡng nhũ đá lung linh huyền ảo.</p>
+      <p>Take a boat ride up the Son River into the cave to admire shimmering stalactites and stalagmites.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 tiếng</li>
-        <li><i class="fa-solid fa-water"></i> Sông & Hang</li>
-        <li><i class="fa-solid fa-flag"></i> Hướng dẫn viên</li>
-        <li><a href="#">Thám hiểm</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-water"></i> River & Cave</li>
+        <li><i class="fa-solid fa-flag"></i> Guided</li>
+        <li><a href="#">Adventure</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>250.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>250,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Hang Tối & Zipline</h2>
+      <h2>Dark Cave & Zipline</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(174 đánh giá)</span>
+        <span>(174 reviews)</span>
       </div>
-      <p>Tham gia hành trình vượt rừng, trượt zipline dài nhất Việt Nam và tắm bùn trong lòng hang Tối.</p>
+      <p>Join a jungle trek, try the longest zipline in Vietnam, and enjoy a mud bath inside the Dark Cave.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> Nửa ngày</li>
-        <li><i class="fa-solid fa-person-hiking"></i> Mạo hiểm</li>
-        <li><i class="fa-solid fa-tree"></i> Thiên nhiên</li>
-        <li><a href="#">Hoạt động ngoài trời</a></li>
+        <li><i class="fa-regular fa-clock"></i> Half day</li>
+        <li><i class="fa-solid fa-person-hiking"></i> Adventure</li>
+        <li><i class="fa-solid fa-tree"></i> Nature</li>
+        <li><a href="#">Outdoor Activity</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>450.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>450,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/PhongNha/hang-toi.jpg" alt="Hang Tối Phong Nha">
-      <div class="badge">Mạo hiểm</div>
+      <img src="/images/destinations/PhongNha/hang-toi.jpg" alt="Dark Cave">
+      <div class="badge">Adventure</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/PhongNha/son-doong.jpg" alt="Hang Sơn Đoòng">
-      <div class="badge">Độc quyền</div>
+      <img src="/images/destinations/PhongNha/son-doong.jpg" alt="Son Doong Cave">
+      <div class="badge">Exclusive</div>
     </div>
     <div class="tour-details">
-      <h2>Chinh phục Hang Sơn Đoòng</h2>
+      <h2>Conquer Son Doong Cave</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(89 đánh giá)</span>
+        <span>(89 reviews)</span>
       </div>
-      <p>Tour thám hiểm cao cấp tới hang động lớn nhất thế giới với hệ sinh thái và khí hậu riêng biệt.</p>
+      <p>Join a premium expedition to the world's largest cave with its own unique ecosystem and climate.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 4 ngày 3 đêm</li>
-        <li><i class="fa-solid fa-person-running"></i> Khám phá</li>
-        <li><i class="fa-solid fa-fire"></i> Cắm trại</li>
-        <li><a href="#">Đặc biệt</a></li>
+        <li><i class="fa-regular fa-clock"></i> 4 days 3 nights</li>
+        <li><i class="fa-solid fa-person-running"></i> Exploration</li>
+        <li><i class="fa-solid fa-fire"></i> Camping</li>
+        <li><a href="#">Special</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>69.000.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>69,000,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">View Details</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/PhongNha/song-son.jpg" alt="Sông Son">
-        <h3>Sông Son</h3>
-        <p>Con sông thơ mộng dẫn lối vào hang động, mang màu xanh biếc trong veo quanh năm.</p>
+        <img src="/images/destinations/PhongNha/song-son.jpg" alt="Son River">
+        <h3>Son River</h3>
+        <p>A poetic river leading into the caves, crystal clear with blue-green water all year round.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/PhongNha/ruc-mon.jpg" alt="Rừng nguyên sinh">
-        <h3>Rừng nguyên sinh</h3>
-        <p>Khám phá hệ động thực vật đa dạng, hòa mình giữa thiên nhiên hùng vĩ.</p>
+        <img src="/images/destinations/PhongNha/ruc-mon.jpg" alt="Primary Forest">
+        <h3>Primary Forest</h3>
+        <p>Discover diverse flora and fauna, immerse yourself in majestic wilderness.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/PhongNha/phong-nha-culture.jpg" alt="Văn hóa địa phương">
-        <h3>Văn hóa bản địa</h3>
-        <p>Giao lưu với người Bru – Vân Kiều, trải nghiệm ẩm thực miền núi độc đáo.</p>
+        <img src="/images/destinations/PhongNha/phong-nha-culture.jpg" alt="Local Culture">
+        <h3>Local Culture</h3>
+        <p>Interact with the Bru - Van Kieu people and experience unique mountain cuisine.</p>
       </div>
     </div>
   </section>
@@ -221,12 +222,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['phong-nha-cave.jpg', 'Động Phong Nha'],
-          ['hang-toi.jpg', 'Hang Tối'],
-          ['son-doong.jpg', 'Hang Sơn Đoòng'],
-          ['song-son.jpg', 'Sông Son'],
-          ['ruc-mon.jpg', 'Rừng Phong Nha'],
-          ['phong-nha-culture.jpg', 'Văn hóa địa phương']
+          ['phong-nha-cave.jpg', 'Phong Nha Cave'],
+          ['hang-toi.jpg', 'Dark Cave'],
+          ['son-doong.jpg', 'Son Doong Cave'],
+          ['song-son.jpg', 'Son River'],
+          ['ruc-mon.jpg', 'Phong Nha Forest'],
+          ['phong-nha-culture.jpg', 'Local Culture']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -239,4 +240,5 @@ $pageScripts = [
     </div>
   </section>
 </main>
+
 

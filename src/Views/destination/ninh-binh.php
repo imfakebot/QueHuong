@@ -89,7 +89,7 @@
 </html> -->
 
 <?php
-$pageTitle = 'Ninh Bình - Di sản Tràng An và vùng đất cố đô';
+$pageTitle = 'Ninh Binh - Trang An Heritage and the Ancient Capital Region';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -103,111 +103,112 @@ $pageScripts = [
 ?>
 
 <section class="hero" style="background-image: url('/images/destinations/NinhBinh/review.jpg');">
+  <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Khám phá Ninh Bình</h1>
-    <p>Hành trình về miền đất cố đô với non nước hữu tình, quần thể danh thắng Tràng An và di tích lịch sử văn hóa đặc sắc.</p>
-    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
+    <h1>Discover Ninh Binh</h1>
+    <p>Journey to the land of the ancient capital with scenic landscapes, the Trang An World Heritage Complex, and rich cultural and historical sites.</p>
+    <a href="#highlights" class="btn-cta">Explore Now</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-map-location-dot"></i> Tổng quan về Ninh Bình</h2>
-    <p>Ninh Bình là điểm đến nổi bật ở miền Bắc Việt Nam với vẻ đẹp thiên nhiên hùng vĩ cùng giá trị văn hóa – lịch sử lâu đời. Từ quần thể Tràng An – Di sản Thế giới được UNESCO công nhận đến Tam Cốc – Bích Động, Hang Múa, và cố đô Hoa Lư, Ninh Bình hứa hẹn mang đến hành trình khám phá phong phú và sâu sắc.</p>
+    <h2><i class="fas fa-map-location-dot"></i> Overview of Ninh Binh</h2>
+    <p>Ninh Binh is a standout destination in Northern Vietnam, known for its majestic natural scenery and deep-rooted cultural and historical values. From the UNESCO-recognized Trang An Complex to Tam Coc - Bich Dong, Hang Mua, and the ancient capital of Hoa Lu, it promises a rich and profound journey of exploration.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/NinhBinh/trang-an.jpg" alt="Tràng An Ninh Bình">
-      <div class="badge">Di sản UNESCO</div>
+      <img src="/images/destinations/NinhBinh/trang-an.jpg" alt="Trang An Ninh Binh">
+      <div class="badge">UNESCO Heritage</div>
     </div>
     <div class="tour-details">
-      <h2>Thuyền khám phá Tràng An</h2>
+      <h2>Boat Tour of Trang An</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(1.245 đánh giá)</span>
+        <span>(1,245 reviews)</span>
       </div>
-      <p>Ngồi thuyền xuyên qua hang động kỳ vĩ, núi đá vôi và đền đài cổ kính giữa thiên nhiên xanh mướt.</p>
+      <p>Take a boat through majestic caves, limestone mountains, and ancient temples amidst lush greenery.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 3 giờ</li>
-        <li><i class="fa-solid fa-water"></i> Du ngoạn sông nước</li>
-        <li><i class="fa-solid fa-landmark"></i> Di tích lịch sử</li>
-        <li><a href="#">Tràng An</a></li>
+        <li><i class="fa-regular fa-clock"></i> 3 hours</li>
+        <li><i class="fa-solid fa-water"></i> River cruise</li>
+        <li><i class="fa-solid fa-landmark"></i> Historical site</li>
+        <li><a href="#">Trang An</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>250.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>250,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">See Details</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Khám phá Hang Múa</h2>
+      <h2>Explore Hang Mua</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(978 đánh giá)</span>
+        <span>(978 reviews)</span>
       </div>
-      <p>Chinh phục 486 bậc đá để đến đỉnh Hang Múa, nơi bạn có thể ngắm toàn cảnh Tam Cốc tuyệt đẹp từ trên cao.</p>
+      <p>Climb 486 stone steps to the top of Hang Mua for a breathtaking panoramic view of Tam Coc.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 giờ</li>
-        <li><i class="fa-solid fa-hiking"></i> Leo núi</li>
-        <li><i class="fa-solid fa-camera"></i> Sống ảo cực đẹp</li>
-        <li><a href="#">Hang Múa</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 hours</li>
+        <li><i class="fa-solid fa-hiking"></i> Hiking</li>
+        <li><i class="fa-solid fa-camera"></i> Perfect for photos</li>
+        <li><a href="#">Hang Mua</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>100.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>100,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">See Details</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/NinhBinh/hang-mua.jpg" alt="Hang Múa Ninh Bình">
-      <div class="badge">Phong cảnh</div>
+      <img src="/images/destinations/NinhBinh/hang-mua.jpg" alt="Hang Mua Ninh Binh">
+      <div class="badge">Scenery</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/NinhBinh/hoa-lu.jpg" alt="Cố đô Hoa Lư">
-      <div class="badge">Lịch sử</div>
+      <img src="/images/destinations/NinhBinh/hoa-lu.jpg" alt="Hoa Lu Ancient Capital">
+      <div class="badge">History</div>
     </div>
     <div class="tour-details">
-      <h2>Tham quan cố đô Hoa Lư</h2>
+      <h2>Visit Hoa Lu Ancient Capital</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(512 đánh giá)</span>
+        <span>(512 reviews)</span>
       </div>
-      <p>Khám phá kinh đô đầu tiên của nước Đại Cồ Việt, nơi gắn với hai triều đại Đinh và Tiền Lê.</p>
+      <p>Explore the first capital of Dai Co Viet, linked to the Dinh and Early Le dynasties.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1.5 giờ</li>
-        <li><i class="fa-solid fa-landmark-dome"></i> Di tích cổ</li>
-        <li><i class="fa-solid fa-scroll"></i> Kiến thức lịch sử</li>
-        <li><a href="#">Hoa Lư</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1.5 hours</li>
+        <li><i class="fa-solid fa-landmark-dome"></i> Ancient relics</li>
+        <li><i class="fa-solid fa-scroll"></i> Historical insight</li>
+        <li><a href="#">Hoa Lu</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Từ <strong>70.000đ/người</strong></span>
-        <a href="#" class="btn-cta">Xem chi tiết</a>
+        <span class="price">From <strong>70,000 VND/person</strong></span>
+        <a href="#" class="btn-cta">See Details</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Điểm nổi bật</h2>
+    <h2>Highlights</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/NinhBinh/tam-coc.jpg" alt="Tam Cốc Bích Động">
-        <h3>Tam Cốc – Bích Động</h3>
-        <p>“Vịnh Hạ Long trên cạn” với những dãy núi đá vôi, hang động và dòng sông uốn lượn giữa ruộng lúa.</p>
+        <img src="/images/destinations/NinhBinh/tam-coc.jpg" alt="Tam Coc Bich Dong">
+        <h3>Tam Coc – Bich Dong</h3>
+        <p>Dubbed the “Halong Bay on land” with limestone mountains, caves, and a winding river through rice fields.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/NinhBinh/bai-dinh.jpg" alt="Chùa Bái Đính">
-        <h3>Chùa Bái Đính</h3>
-        <p>Ngôi chùa lớn nhất Đông Nam Á với kiến trúc đồ sộ và nhiều kỷ lục Phật giáo.</p>
+        <img src="/images/destinations/NinhBinh/bai-dinh.jpg" alt="Bai Dinh Pagoda">
+        <h3>Bai Dinh Pagoda</h3>
+        <p>The largest pagoda in Southeast Asia, famous for its grand architecture and Buddhist records.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/NinhBinh/am-thuc.jpg" alt="Ẩm thực Ninh Bình">
-        <h3>Ẩm thực đặc sản</h3>
-        <p>Thưởng thức dê núi, cơm cháy và nhiều món ngon dân dã đặc trưng vùng đất cố đô.</p>
+        <img src="/images/destinations/NinhBinh/am-thuc.jpg" alt="Ninh Binh Cuisine">
+        <h3>Local Cuisine</h3>
+        <p>Enjoy mountain goat meat, crispy rice, and other rustic specialties from the ancient capital region.</p>
       </div>
     </div>
   </section>
@@ -221,12 +222,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['trang-an.jpg', 'Tràng An'],
-          ['hang-mua.jpg', 'Hang Múa'],
-          ['hoa-lu.jpg', 'Cố đô Hoa Lư'],
-          ['tam-coc.jpg', 'Tam Cốc Bích Động'],
-          ['bai-dinh.jpg', 'Chùa Bái Đính'],
-          ['am-thuc.jpg', 'Ẩm thực Ninh Bình']
+          ['trang-an.jpg', 'Trang An'],
+          ['hang-mua.jpg', 'Hang Mua'],
+          ['hoa-lu.jpg', 'Hoa Lu Ancient Capital'],
+          ['tam-coc.jpg', 'Tam Coc Bich Dong'],
+          ['bai-dinh.jpg', 'Bai Dinh Pagoda'],
+          ['am-thuc.jpg', 'Ninh Binh Cuisine']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -239,3 +240,4 @@ $pageScripts = [
     </div>
   </section>
 </main>
+

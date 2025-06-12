@@ -1,112 +1,100 @@
 <?php
-$pageTitle = 'Adventure and Outdoor - Khám Phá Phiêu Lưu';
+$pageTitle = 'Adventure & Outdoors - Du Lịch Quê Hương';
 
 $pageStyles = [
-    '/css/things.css'
+  'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
+  '/css/adventure.css'
 ];
 
-$googleFonts = [
-    'Roboto:wght@400;700',
-    'Playfair+Display:wght@700'
-];
-
-$pageScripts = ['/js/adventure.js'];
-
-// Data for camping spots
-$campingSpots = [
-    [
-        'image' => 'https://picsum.photos/seed/forestcamp/400/300',
-        'alt' => 'Cắm trại rừng thông',
-        'title' => 'Rừng Thông Đà Lạt',
-        'description' => 'Không gian yên tĩnh, không khí trong lành, lý tưởng cho những buổi cắm trại cuối tuần cùng bạn bè và gia đình.'
-    ],
-    [
-        'image' => 'https://picsum.photos/seed/lakecamp/400/300',
-        'alt' => 'Cắm trại ven hồ',
-        'title' => 'Hồ Ba Bể, Bắc Kạn',
-        'description' => 'Cắm trại ven hồ, chèo thuyền kayak khám phá hồ nước ngọt tự nhiên lớn nhất Việt Nam giữa núi rừng hùng vĩ.'
-    ],
-    [
-        'image' => 'https://picsum.photos/seed/beachcamp/400/300',
-        'alt' => 'Cắm trại bãi biển',
-        'title' => 'Coco Beachcamp, Lagi',
-        'description' => 'Trải nghiệm cắm trại trên bãi biển với không gian đầy màu sắc, các hoạt động vui chơi và âm nhạc sôi động.'
-    ]
-];
-
-// Mountain activities
-$mountainActivities = [
-    ['Leo núi Fansipan', '#'],
-    ['Trekking Tà Xùa săn mây', '#'],
-    ['Khám phá cao nguyên đá Hà Giang', '#'],
-    ['Cắm trại qua đêm trên núi', '#'],
-    ['Ngắm bình minh & hoàng hôn', '#'],
-    ['Tìm hiểu văn hóa bản địa', '#']
-];
-
-// Water activities
-$waterActivities = [
-    ['Lặn biển ngắm san hô Phú Quốc', '#'],
-    ['Chèo thuyền kayak Vịnh Hạ Long', '#'],
-    ['Lướt ván tại Mũi Né', '#'],
-    ['Câu cá giải trí ngoài khơi', '#'],
-    ['Du thuyền ngắm cảnh', '#'],
-    ['Khám phá đảo hoang', '#']
+$pageScripts = [
+  'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
+  '/js/destination.js'
 ];
 ?>
 
-<!-- HERO SECTION -->
-<header class="hero fade-in" style="background-image: url('https://picsum.photos/seed/adventurehero/1920/1080');">
+<section class="adventure-hero" style="background-image: url('/images/mega_menu/adventure_and_outdoor.jpg');">
     <div class="hero-overlay"></div>
-    <div class="hero-text">
-        <h1>Khám Phá Phiêu Lưu & Ngoài Trời</h1>
-        <p>Những chuyến đi kỳ thú và trải nghiệm thiên nhiên hoang dã đang chờ đón bạn. Hãy bắt đầu hành trình của mình!</p>
-        <a href="#section-mountains" class="btn-cta--light">Khám Phá Ngay</a>
+    <div class="overlay">
+        <h1>Phiêu Lưu & Hoạt Động Ngoài Trời</h1>
+        <p>Khám phá Việt Nam theo cách mạo hiểm và hoang dã nhất!</p>
     </div>
-</header>
+</section>
 
-<main>
-    <!-- SECTION 1: MOUNTAINS -->
-    <section id="section-mountains" class="category-feature-section">
-        <div class="category-feature__background" style="background-image: url('https://picsum.photos/seed/mountainsview/1600/900');"></div>
-        <div class="category-feature__overlay"></div>
-        <div class="page-container">
-            <div class="category-feature__content category-feature__content--align-left fade-in">
-                <h2 class="category-feature__title">Chinh Phục Đỉnh Cao</h2>
-                <p class="category-feature__description">
-                    Trải nghiệm cảm giác hùng vĩ từ những đỉnh núi cao nhất, khám phá những cung đường trekking đầy thử thách và tận hưởng không khí trong lành của núi rừng.
-                </p>
-                <div class="category-feature__list-wrapper">
-                    <ul class="category-feature__list">
-                        <?php foreach (array_slice($mountainActivities, 0, 3) as [$text, $link]): ?>
-                            <li><a href="<?php echo $link; ?>"><?php echo $text; ?></a></li>
-                        <?php endforeach; ?>
-                    </ul>
-                    <ul class="category-feature__list">
-                        <?php foreach (array_slice($mountainActivities, 3) as [$text, $link]): ?>
-                            <li><a href="<?php echo $link; ?>"><?php echo $text; ?></a></li>
-                        <?php endforeach; ?>
-                    </ul>
-                </div>
-                <a href="#" class="btn-cta--light">Xem Các Tour Leo Núi</a>
-            </div>
-        </div>
-    </section>
+<section class="adventure-content">
+    <div class="container">
+        <h2>Trải Nghiệm Nổi Bật</h2>
+        <div class="grid">
+    <div class="card">
+        <img src="/assets/images/trekking.jpg" alt="Trekking Sapa">
+        <h3>Trekking Sapa</h3>
+        <p>Băng qua ruộng bậc thang và khám phá bản làng vùng cao Tây Bắc.</p>
+    </div>
+    <div class="card">
+        <img src="/assets/images/kayak.jpg" alt="Kayaking Hạ Long">
+        <h3>Kayak Vịnh Hạ Long</h3>
+        <p>Khám phá kỳ quan thiên nhiên bằng chèo thuyền giữa núi đá vôi.</p>
+    </div>
+    <div class="card">
+        <img src="/assets/images/phongnha.jpg" alt="Phong Nha Caves">
+        <h3>Thám Hiểm Động Phong Nha</h3>
+        <p>Đi sâu vào hang động kỳ vĩ, hệ thống đá vôi tuyệt đẹp và sông ngầm.</p>
+    </div>
+    <div class="card">
+        <img src="/assets/images/motorbike.jpg" alt="Motorbike Adventure">
+        <h3>Phiêu Lưu Xe Máy</h3>
+        <p>Chạy xe xuyên qua đèo Hải Vân, đồi núi và cung đường ven biển hoang sơ.</p>
+    </div>
+    <div class="card">
+        <img src="/assets/images/camping.jpg" alt="Camping Đà Lạt">
+        <h3>Cắm trại Đà Lạt</h3>
+        <p>Đêm se lạnh giữa rừng thông và ánh lửa trại ấm áp bên bạn bè.</p>
+    </div>
+    <div class="card">
+        <img src="/assets/images/bike.jpg" alt="Đạp xe Mai Châu">
+        <h3>Đạp Xe Mai Châu</h3>
+        <p>Dạo qua làng quê yên bình, đồng lúa và nụ cười thân thiện của người Mường.</p>
+    </div>
+    <div class="card">
+        <img src="/assets/images/watersports.jpg" alt="Water Sports">
+        <h3>Thể Thao Nước & Biển</h3>
+        <p>Lướt sóng, lặn biển, hoặc chơi mô tô nước tại các bãi biển tuyệt đẹp.</p>
+    </div>
+    <div class="card">
+        <img src="/assets/images/canyoning.jpg" alt="Canyoning Đà Lạt">
+        <h3>Canyoning Đà Lạt</h3>
+        <p>Leo thác, đu dây và nhảy xuống suối trong cuộc phiêu lưu kịch tính.</p>
+    </div>
+</div>
 
-    <!-- SECTION 3: CAMPING SPOTS -->
-    <section id="section-camping" class="page-container fade-in">
-        <h2 class="category-feature__title">Điểm Đến Cắm Trại Lý Tưởng</h2>
-        <div class="cards">
-            <?php foreach ($campingSpots as $spot): ?>
-                <article class="card">
-                    <img src="<?php echo $spot['image']; ?>" alt="<?php echo $spot['alt']; ?>">
-                    <div class="card-content">
-                        <h3><?php echo $spot['title']; ?></h3>
-                        <p><?php echo $spot['description']; ?></p>
-                        <a href="#" class="btn-card">Xem Chi Tiết</a>
-                    </div>
-                </article>
-            <?php endforeach; ?>
-        </div>
-    </section>
-</main>
+    </div>
+</section>
+
+<section class="gallery">
+    <h2>GALLERY</h2>
+    <div class="swiper-button-prev gallery-nav-prev"></div>
+    <div class="swiper-button-next gallery-nav-next"></div>
+
+    <div class="swiper gallery-swiper">
+      <div class="swiper-wrapper">
+        <?php
+        $galleryImages = [
+          ['doi-cat.jpg', 'Mui Ne Sand Dunes'],
+          ['lang-chai.jpg', 'Mui Ne Fishing Village'],
+          ['thap-cham.jpg', 'Poshanu Cham Towers'],
+          ['bien-mui-ne.jpg', 'Mui Ne Beach'],
+          ['ke-ga.jpg', 'Ke Ga Lighthouse'],
+          ['am-thuc.jpg', 'Binh Thuan Cuisine']
+        ];
+
+        foreach ($galleryImages as [$image, $alt]) {
+          echo "<div class='swiper-slide'>";
+          echo "<img src='/images/destinations/BinhThuan/{$image}' alt='{$alt}'>";
+          echo "</div>";
+        }
+        ?>
+      </div>
+    </div>
+  </section>
+
+
+
