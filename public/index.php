@@ -34,6 +34,9 @@ if ($requestUri === '/' || $requestUri === '/home') {
 } elseif ($requestUri === '/things') { // Trang liệt kê tất cả "Things to do"
     $pageTitle = 'Things To Do in Vietnam - Du Lịch Quê Hương';
     $contentView = VIEWS_PATH . '/things/index.php';
+} elseif ($requestUri === '/life') { // Trang liệt kê tất cả "Things to do"
+    $pageTitle = 'Life in Vietnam - Du Lịch Quê Hương';
+    $contentView = VIEWS_PATH . '/life/index.php';
 }
 // 2. Route động cho chi tiết ĐIỂM ĐẾN: /destinations/{slug}
 elseif (preg_match('#^/destinations/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
