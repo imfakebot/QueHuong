@@ -140,9 +140,9 @@ $destinations = [
             <?php foreach ($destinations as $destination): ?>
                 <div class="card">
                     <img src="<?php echo htmlspecialchars($destination['image']); ?>" alt="Image of <?php echo htmlspecialchars($destination['name']); ?>" style="width:100%; height:auto; object-fit: cover; aspect-ratio: 16/9;">
-                    <h3 style="margin-top: 1rem;"><?php echo htmlspecialchars($destination['name']); ?></h3>
+                    <h3 style="margin-top: 1rem;color:red"><?php echo htmlspecialchars($destination['name']); ?></h3>
                     <p><?php echo htmlspecialchars($destination['description']); ?></p>
-                    <a href="/destinations/<?php echo htmlspecialchars($destination['slug']); ?>" class="btn-cta" style="display: inline-block; margin-top: 10px;">View Details</a>
+                    <a href="/destinations/<?php echo htmlspecialchars($destination['slug']); ?>" class="btn-cta" style="display: inline-block; margin-top: 10px;text-align: center">View Details</a>
                 </div>
             <?php endforeach; ?>
         </div>

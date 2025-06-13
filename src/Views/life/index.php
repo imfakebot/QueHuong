@@ -1,14 +1,14 @@
 <?php
 // Hiển thị lỗi nếu có
-ini_set('display_errors', 1);
-ini_set('display_startup_errors', 1);
-error_reporting(E_ALL);
+// ini_set('display_errors', 1);
+// ini_set('display_startup_errors', 1);
+// error_reporting(E_ALL);
 
 // Tiêu đề trang
 $pageTitle = 'Lễ hội & Ngày lễ Việt Nam';
 
 // Đường dẫn đến header
-require_once __DIR__ . '/../layout/header.php';
+// require_once __DIR__ . '/../layout/header.php';
 
 // Dữ liệu mẫu về lễ hội
 $festivals = [
@@ -50,7 +50,7 @@ $festivals = [
     </div>
 </div>
 
-<?php
-// Đường dẫn đến footer
-require_once __DIR__ . '/../layout/footer.php';
-?>
+<!-- <?php
+        // Đường dẫn đến footer
+        require_once __DIR__ . '/../layout/footer.php';
+        ?> -->

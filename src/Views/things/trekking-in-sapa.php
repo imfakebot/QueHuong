@@ -1,3 +1,41 @@
+<?php
+// =================================================================
+// PHẦN LOGIC VÀ DỮ LIỆU CỦA PHP
+// Trong ứng dụng thực tế, bạn sẽ lấy dữ liệu này từ cơ sở dữ liệu
+// =================================================================
+
+// Dữ liệu giả (mock data) cho các tour trekking
+$tours = [
+    [
+        'id' => 1,
+        'image' => 'https://images.unsplash.com/photo-1590639136179-82324021793c?q=80&w=870&auto=format&fit=crop&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1',
+        'title' => 'Trekking 2N1Đ: Tả Van - Lao Chải',
+        'description' => 'Cung đường cổ điển, khám phá thung lũng Mường Hoa, ngủ tại homestay của người dân tộc Giáy.',
+    ],
+    [
+        'id' => 2,
+        'image' => 'https://images.unsplash.com/photo-1579895398250-7b833535515b?q=80&w=870&auto=format&fit=crop&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1',
+        'title' => 'Chinh Phục Fansipan "Nóc Nhà Đông Dương"',
+        'description' => 'Thử thách giới hạn bản thân với hành trình 2 ngày leo lên đỉnh núi cao nhất Việt Nam.',
+    ],
+    [
+        'id' => 3,
+        'image' => 'https://images.unsplash.com/photo-1621451536706-5b4aa13a2954?q=80&w=774&auto=format&fit=crop&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&ixlib=rb-1.2.1',
+        'title' => 'Khám Phá Bản Cát Cát & Thác Bạc',
+        'description' => 'Hành trình nhẹ nhàng, phù hợp cho gia đình, tìm hiểu văn hóa người H\'Mông và thưởng ngoạn cảnh đẹp.',
+    ]
+];
+
+// Dữ liệu giả cho thư viện ảnh
+$galleryImages = [
+    ['url' => 'https://images.unsplash.com/photo-1534226888640-928e330f6d62?q=80&w=870&auto=format&fit=crop', 'alt' => 'Ruộng bậc thang Sapa mùa lúa chín'],
+    ['url' => 'https://images.unsplash.com/photo-1619717887967-a0680261314b?q=80&w=870&auto=format&fit=crop', 'alt' => 'Một em bé người dân tộc H\'Mông'],
+    ['url' => 'https://images.unsplash.com/photo-1589339336502-082195f45f3c?q=80&w=774&auto=format&fit=crop', 'alt' => 'Đỉnh Fansipan trong mây'],
+    ['url' => 'https://images.unsplash.com/photo-1603584829983-8a213567b45f?q=80&w=871&auto=format&fit=crop', 'alt' => 'Con đường trekking uốn lượn'],
+    ['url' => 'https://images.unsplash.com/photo-1508804185885-1e8899a27d03?q=80&w=870&auto=format&fit=crop', 'alt' => 'Buổi sáng tại một homestay ở Sapa'],
+    ['url' => 'https://images.unsplash.com/photo-1579979119569-37398b67189f?q=80&w=870&auto=format&fit=crop', 'alt' => 'Thung lũng Mường Hoa nhìn từ trên cao'],
+];
+?>
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -60,6 +98,10 @@
 
         p {
             margin-bottom: 1rem;
+        }
+
+        ul {
+            list-style-position: inside;
         }
 
         /* === HEADER & NAV (Ví dụ đơn giản) === */
@@ -321,7 +363,7 @@
 
     <header class="main-header">
         <div class="container">
-            <a href="#" class="logo">Vietnam Adventures</a>
+            <a href="index.php" class="logo">Vietnam Adventures</a>
             <nav>
                 <!-- Menu links can go here -->
             </nav>
@@ -356,15 +398,15 @@
             <div class="container">
                 <h2 class="fade-in">Các Lộ Trình Trekking Phổ Biến</h2>
                 <div class="tours-grid">
-                    <?php foreach ($tours as $tour): ?>
-                    <article class="tour-card fade-in">
-                        <img src="<?php echo htmlspecialchars($tour['image']); ?>" alt="<?php echo htmlspecialchars($tour['title']); ?>">
-                        <div class="tour-card-content">
-                            <h3><?php echo htmlspecialchars($tour['title']); ?></h3>
-                            <p><?php echo htmlspecialchars($tour['description']); ?></p>
-                            <a href="<?php echo htmlspecialchars($tour['link']); ?>" class="btn">Xem Chi Tiết</a>
-                        </div>
-                    </article>
+                    <?php foreach ($tours as $tour) : ?>
+                        <article class="tour-card fade-in">
+                            <img src="<?php echo htmlspecialchars($tour['image']); ?>" alt="<?php echo htmlspecialchars($tour['title']); ?>">
+                            <div class="tour-card-content">
+                                <h3><?php echo htmlspecialchars($tour['title']); ?></h3>
+                                <p><?php echo htmlspecialchars($tour['description']); ?></p>
+                                <a href="tour-detail.php?id=<?php echo $tour['id']; ?>" class="btn">Xem Chi Tiết</a>
+                            </div>
+                        </article>
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -375,8 +417,8 @@
             <div class="container">
                 <h2 class="fade-in">Thư Viện Ảnh: Khoảnh Khắc Sapa</h2>
                 <div class="gallery-grid">
-                    <?php foreach ($galleryImages as $image): ?>
-                    <img class="fade-in" src="<?php echo htmlspecialchars($image['url']); ?>" alt="<?php echo htmlspecialchars($image['alt']); ?>">
+                    <?php foreach ($galleryImages as $image) : ?>
+                        <img class="fade-in" src="<?php echo htmlspecialchars($image['url']); ?>" alt="<?php echo htmlspecialchars($image['alt']); ?>">
                     <?php endforeach; ?>
                 </div>
             </div>
@@ -399,8 +441,8 @@
                 <h2 class="fade-in">Sẵn Sàng Viết Nên Câu Chuyện Của Riêng Bạn?</h2>
                 <p class="fade-in">Đừng chỉ nghe kể về Sapa, hãy tự mình trải nghiệm và tạo nên những kỷ niệm khó quên.</p>
                 <div class="fade-in">
-                    <a href="#" class="btn">Chọn Tour Trekking</a>
-                    <a href="#" class="btn">Liên Hệ Tư Vấn</a>
+                    <a href="tours.php" class="btn">Chọn Tour Trekking</a>
+                    <a href="contact.php" class="btn">Liên Hệ Tư Vấn</a>
                 </div>
             </div>
         </section>

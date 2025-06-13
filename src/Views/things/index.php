@@ -34,7 +34,7 @@ $adventureSection = [
         ['watersports-beaches', 'Watersports & Beaches'],
         ['canyoning-da-lat', 'Canyoning in Da Lat']
     ],
-    'cta' => ['url' => '/tours/adventure', 'text' => 'Khám Phá Tour Phiêu Lưu']
+    'cta' => ['url' => '/things/adventure', 'text' => 'Khám Phá Tour Phiêu Lưu']
 ];
 
 $cultureSection = [
@@ -121,7 +121,7 @@ $heroConfig = [
                 <div class="category-feature__list-wrapper">
                     <ul class="category-feature__list">
                         <?php foreach ($adventureSection['activities'] as $activity): ?>
-                            <li><a href="/activities/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
+                            <li><a href="/things/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
@@ -143,7 +143,7 @@ $heroConfig = [
                 <div class="category-feature__list-wrapper">
                     <ul class="category-feature__list">
                         <?php foreach ($cultureSection['activities'] as $activity): ?>
-                            <li><a href="/activities/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
+                            <li><a href="/things/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
@@ -165,7 +165,7 @@ $heroConfig = [
                 <div class="category-feature__list-wrapper">
                     <ul class="category-feature__list">
                         <?php foreach ($wellnessSection['activities'] as $activity): ?>
-                            <li><a href="/activities/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
+                            <li><a href="/things/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
