@@ -53,6 +53,11 @@ elseif (preg_match('#^/destinations/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) 
         $contentView = VIEWS_PATH . '/errors/404.php';
     }
 }
+// Route cho trang chi tiết tour (sử dụng query parameter)
+elseif ($requestUri === '/tours/detail' && isset($_GET['slug'])) {
+    // $pageTitle sẽ được đặt bên trong file view của tour-detail.php
+    $contentView = VIEWS_PATH . '/tours/tour-detail.php';
+}
 // 3. Route động cho chi tiết TOUR: /tours/{slug}
 elseif (preg_match('#^/tours/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
     $tourSlug = $matches[1]; // Lấy slug từ URL (ví dụ: "vinh-ha-long-tour")

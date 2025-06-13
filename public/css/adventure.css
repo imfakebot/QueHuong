@@ -1,142 +1,260 @@
-.adventure-hero {
-    background: url('/assets/images/adventure-hero.jpg') center/cover no-repeat;
-    height: 400px;
-    position: relative;
-    color: white;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.adventure-hero .overlay {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 40px;
-    text-align: center;
-    border-radius: 10px;
-    z-index: 2; /* Đảm bảo hero-text nằm trên lớp phủ */
-}
-.adventure-hero h1 {
-    font-size: 3rem;
-    margin-bottom: 10px;
-}
-.adventure-hero p {
-    font-size: 1.2rem;
-}
-.adventure-content {
-    padding: 60px 20px;
-    background: #f9f9f9;
-}
-.adventure-content h2 {
-    text-align: center;
-    font-size: 2rem;
-    margin-bottom: 40px;
-    color: #055160;
-}
-.grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-    gap: 20px;
-}
-.card {
-    background: white;
-    border-radius: 10px;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-    transition: transform 0.3s ease;
-}
-.card:hover {
-    transform: translateY(-5px);
-}
-.card img {
-    width: 100%;
-    height: 180px;
-    object-fit: cover;
-}
-.card h3 {
-    margin: 16px;
-    font-size: 1.3rem;
-}
-.card p {
-    margin: 0 16px 16px;
-    color: #555;
+/*
+ * ADVENTURE PAGE STYLES
+ * Sử dụng bộ biến màu riêng để không ảnh hưởng đến các thành phần chung (menu, footer).
+ */
+
+/* === BỘ BIẾN MÀU RIÊNG CHO TRANG ADVENTURE === */
+.adventure-page-wrapper {
+  --adventure-primary: #3c5b6f; /* Xanh xám đậm (Deep Slate Blue) */
+  --adventure-secondary: #dd4a48; /* Cam đất (Earthy Red-Orange) */
+  --adventure-text: #2d2d2d; /* Gần như đen (Charcoal) */
+  --adventure-bg: #faf9f6; /* Trắng ngà (Off-White) */
+  --adventure-surface: #ffffff; /* Trắng tinh cho thẻ card */
+  --adventure-accent-bg: #f7e7dc; /* Be sáng (Light Beige) */
+
+  /* Kế thừa font từ :root để đồng bộ, hoặc định nghĩa riêng nếu muốn */
+  --font-primary: "Roboto", sans-serif;
+  --font-headings: "Playfair Display", serif;
+  --shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+  --border-radius: 8px;
 }
 
-.hero-overlay {
+/* Áp dụng font và màu chữ mặc định cho toàn bộ nội dung trong wrapper */
+.adventure-page-wrapper {
+  font-family: var(--font-primary);
+  color: var(--adventure-text);
+  line-height: 1.7;
+  background-color: var(--adventure-bg);
+}
+
+/* === CÀI ĐẶT CHUNG TRONG TRANG === */
+.adventure-page-wrapper .container {
+  max-width: 1140px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.adventure-page-wrapper h1,
+.adventure-page-wrapper h2,
+.adventure-page-wrapper h3 {
+  font-family: var(--font-headings);
+  color: var(--adventure-primary);
+  line-height: 1.3;
+}
+
+.adventure-page-wrapper h2 {
+  font-size: 2.8rem;
+  margin-bottom: 1rem;
+}
+
+.adventure-page-wrapper h3 {
+  font-size: 1.5rem;
+}
+
+.adventure-page-wrapper p {
+  margin-bottom: 1.5rem;
+}
+
+.adventure-page-wrapper section {
+  padding: 100px 0;
+}
+
+/* === HIỆU ỨNG KHI CUỘN === */
+.adventure-page-wrapper .animate-on-scroll {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+.adventure-page-wrapper .animate-on-scroll.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* === NÚT BẤM (BUTTON) === */
+.adventure-page-wrapper .btn {
+  display: inline-block;
+  padding: 12px 30px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 700;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.adventure-page-wrapper .btn--primary {
+  background-color: var(--adventure-primary);
+  color: var(--adventure-surface);
+}
+.adventure-page-wrapper .btn--primary:hover {
+  background-color: var(--adventure-surface);
+  color: var(--adventure-primary);
+  border-color: var(--adventure-primary);
+  transform: translateY(-3px);
+}
+
+.adventure-page-wrapper .btn--light {
+  background-color: var(--adventure-surface);
+  color: var(--adventure-primary);
+}
+.adventure-page-wrapper .btn--light:hover {
+  background-color: var(--adventure-secondary);
+  color: var(--adventure-surface);
+  transform: translateY(-3px);
+}
+
+/* === HERO SECTION === */
+.adventure-page-wrapper .hero {
+  /* Các thuộc tính vị trí, kích thước giữ nguyên */
+  position: relative;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  color: var(--adventure-surface);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.adventure-page-wrapper .hero__overlay {
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(
-    0,
-    0,
-    0,
-    0.3
-  ); /* Màu đen với độ mờ 30%. Bạn có thể điều chỉnh màu và độ mờ */
-  z-index: 1; /* Đảm bảo lớp phủ nằm trên ảnh nền */
+  background-color: rgba(45, 45, 45, 0.5); /* Sử dụng màu cụ thể thay vì biến */
+}
+.adventure-page-wrapper .hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+  padding: 0 20px;
+}
+.adventure-page-wrapper .hero__title {
+  font-size: 4rem;
+  color: var(--adventure-surface);
+  margin-bottom: 1rem;
+}
+.adventure-page-wrapper .hero__subtitle {
+  font-size: 1.2rem;
+  font-weight: 300;
+  margin-bottom: 2rem;
 }
 
-/* gallery */
-.gallery .image-grid {
+/* === FEATURE SECTION (Núi & Biển) === */
+.adventure-page-wrapper .feature-section {
+  background-color: var(--adventure-bg); /* Nền trắng ngà */
+}
+.adventure-page-wrapper .feature-section__container {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 20px;
-}
-
-.gallery {
-  padding: 40px 20px;
-  text-align: center;
-  background: #fff;
-}
-
-.gallery h2 {
-  color: goldenrod;
-  font-size: 32px;
-  margin-bottom: 30px;
-}
-
-.swiper {
-  width: 100%;
-  max-width: 1200px;
-  margin: auto;
-  overflow: hidden; /* Thêm dòng này để ẩn các slide nằm ngoài khung */
-}
-
-.swiper-wrapper {
-  display: flex; /* Quan trọng: Cho phép các slide xếp hàng */
-  flex-direction: row; /* Quan trọng: Xếp theo hàng ngang */
-  align-items: stretch; /* Giúp các slide có chiều cao bằng nhau nếu nội dung khác nhau */
-  /* Các thuộc tính khác như width, transform, transition thường do Swiper.js quản lý */
-  /* height: auto; hoặc một giá trị cụ thể nếu cần */
-}
-
-.swiper-slide {
-  display: flex;
-  flex-direction: row;
-  justify-content: center;
+  grid-template-columns: 1fr 1fr;
+  gap: 60px;
   align-items: center;
-  /* Thêm overflow: hidden để cắt phần ảnh bị phóng to tràn ra ngoài */
-  overflow: hidden;
-  /* Chuyển border-radius từ img sang swiper-slide để áp dụng cho cả khung */
-  border-radius: 10px;
-  /* Bạn có thể thêm box-shadow ở đây nếu muốn bóng đổ cho toàn bộ slide */
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
-  /* Đặt chiều cao cố định cho slide để ảnh có thể lấp đầy 100% chiều cao này */
-  height: 300px; /* Dựa trên max-height bạn muốn cho ảnh trước đó. Điều chỉnh nếu cần. */
-
-  width: 90%;
-  flex-shrink: 0; /* Quan trọng: Ngăn slide bị co lại nhỏ hơn width đã đặt khi dùng với slidesPerView: 'auto' */
 }
-
-.swiper-slide img {
+.adventure-page-wrapper .feature-section__image-wrapper img {
   width: 100%;
-  height: 100%; /* Ảnh sẽ lấp đầy chiều cao của .swiper-slide */
+  height: auto;
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+}
+.adventure-page-wrapper .feature-section__content .btn {
+  margin-top: 1rem;
+}
+
+/* Biến thể đảo ngược vị trí */
+.adventure-page-wrapper .feature-section--reverse .feature-section__container {
+  grid-template-areas: "content image";
+}
+.adventure-page-wrapper
+  .feature-section--reverse
+  .feature-section__image-wrapper {
+  grid-area: image;
+}
+.adventure-page-wrapper .feature-section--reverse .feature-section__content {
+  grid-area: content;
+}
+
+.adventure-page-wrapper .activity-list {
+  list-style: none;
+  padding-left: 0;
+}
+.adventure-page-wrapper .activity-list li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 10px;
+}
+.adventure-page-wrapper .activity-list li::before {
+  content: "✓";
+  color: var(--adventure-secondary); /* Màu nhấn cam đất */
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+/* === CARD SECTION (Cắm trại) === */
+.adventure-page-wrapper .card-section {
+  background-color: var(--adventure-accent-bg); /* Nền be sáng */
+}
+.adventure-page-wrapper .section-title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.adventure-page-wrapper .card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 30px;
+}
+.adventure-page-wrapper .card {
+  background: var(--adventure-surface); /* Nền trắng tinh */
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.adventure-page-wrapper .card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.12);
+}
+.adventure-page-wrapper .card__image {
+  width: 100%;
+  height: 220px;
   object-fit: cover;
-
-  transition: transform 0.3s ease; /* Đồng bộ transition */
-  display: block; /* Đảm bảo ảnh là block element */
+}
+.adventure-page-wrapper .card__content {
+  padding: 25px;
+}
+.adventure-page-wrapper .card__title {
+  margin-bottom: 10px;
 }
 
-.swiper-slide img:hover {
-  transform: scale(1.07); /* Đồng bộ scale factor */
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 992px) {
+  .adventure-page-wrapper .feature-section__container,
+  .adventure-page-wrapper
+    .feature-section--reverse
+    .feature-section__container {
+    grid-template-columns: 1fr;
+    grid-template-areas: none;
+    gap: 40px;
+  }
+  .adventure-page-wrapper
+    .feature-section--reverse
+    .feature-section__image-wrapper {
+    grid-area: auto;
+  }
+  .adventure-page-wrapper .feature-section--reverse .feature-section__content {
+    grid-area: auto;
+    order: -1;
+  }
 }
 
+@media (max-width: 768px) {
+  .adventure-page-wrapper h2 {
+    font-size: 2.2rem;
+  }
+  .adventure-page-wrapper .hero__title {
+    font-size: 2.8rem;
+  }
+  .adventure-page-wrapper section {
+    padding: 60px 0;
+  }
+}
