@@ -133,7 +133,19 @@ $mountain_tours = array_map(function ($tour) {
 // Cấu hình trang
 $pageTitle = 'Các Tour Trekking & Leo Núi';
 $pageStyles = ['/css/mountain-tours.css']; // CSS riêng cho trang này
-$pageScripts = []; // Thêm JS nếu có
+$pageScripts = ['/js/mountain-tours.js']; // Thêm file JS cho việc lọc
+
+// Hàm để chuyển đổi độ khó sang một giá trị class/data đơn giản
+function normalize_difficulty_for_filter($difficulty)
+{
+    $normalized = strtolower(trim($difficulty));
+    if (str_contains($normalized, 'trung bình - khó') || str_contains($normalized, 'khó - trung bình')) return 'medium-hard';
+    if (str_contains($normalized, 'dễ - trung bình') || str_contains($normalized, 'trung bình - dễ')) return 'easy-medium';
+    if (str_contains($normalized, 'trung bình')) return 'medium';
+    if (str_contains($normalized, 'khó')) return 'hard';
+    if (str_contains($normalized, 'dễ')) return 'easy';
+    return 'all'; // Mặc định nếu không khớp
+}
 ?>
 <!-- Phần nội dung chính của trang mountain-tours -->
 <header class="tour-list-header">
@@ -145,10 +157,10 @@ $pageScripts = []; // Thêm JS nếu có
     <div class="container">
         <div class="filter-controls">
             <label>Lọc theo độ khó:</label>
-            <button class="filter-button active" data-difficulty="all">Tất cả</button>
-            <button class="filter-button" data-difficulty="easy">Dễ</button>
-            <button class="filter-button" data-difficulty="medium">Trung bình</button>
-            <button class="filter-button" data-difficulty="hard">Khó</button>
+            <button class="filter-button active" data-filter="all">Tất cả</button>
+            <button class="filter-button" data-filter="easy">Dễ</button>
+            <button class="filter-button" data-filter="medium">Trung bình</button>
+            <button class="filter-button" data-filter="hard">Khó</button>
         </div>
     </div>
 </div>
@@ -157,8 +169,9 @@ $pageScripts = []; // Thêm JS nếu có
     <div class="container">
         <div class="tour-grid">
             <?php foreach ($mountain_tours as $tour): ?>
-                <article class="tour-card">
-                    <img src="<?php echo htmlspecialchars($tour['image']); ?>" alt="<?php echo htmlspecialchars($tour['title']); ?>">
+                <?php $tour_difficulty_filter_class = normalize_difficulty_for_filter($tour['difficulty']); ?>
+                <article class="tour-card" data-difficulty="<?php echo $tour_difficulty_filter_class; ?>">
+                    <img src="<?php echo htmlspecialchars($tour['image']); ?>" alt="<?php echo htmlspecialchars($tour['title']); ?>" class="tour-card__image">
                     <div class="tour-card-content">
                         <h3><?php echo htmlspecialchars($tour['title']); ?></h3>
                         <div class="tour-info">
