@@ -35,7 +35,7 @@ $mountain_tours_data = [
     [
         'id' => 101,
         'title' => 'Trekking Tà Xùa Săn Mây',
-        'image' => 'https://images.unsplash.com/photo-1628157799793-db136b7650a5?q=80&w=1770&auto=format&fit=crop',
+        'image' => 'https://www.vietnambooking.com/wp-content/uploads/2020/07/ta-xua-san-may-1.jpg',
         'duration' => '3 Ngày 2 Đêm',
         'difficulty' => 'Trung bình',
         'price' => '2,500,000 VNĐ',

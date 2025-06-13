@@ -38,7 +38,7 @@ body {
 
 .container {
   max-width: 1200px;
-  margin: 0 auto;
+  margin: 20px auto;
   padding: 0 24px;
 }
 
@@ -69,13 +69,21 @@ body {
 
 /* === KHU VỰC BỘ LỌC (Filter Bar) === */
 .filter-bar {
-  background-color: var(--color-surface);
-  padding: 20px 0;
+  padding: 2px 0; /* Tăng padding để dễ nhìn hơn khi có blur */
   border-bottom: 1px solid var(--color-border);
   position: sticky;
-  top: 0; /* Giả sử header của bạn cao 80px */
+  top: 50px; /* Thanh filter sẽ dính ở trên cùng khi cuộn */
   z-index: 10;
-  box-shadow: var(--shadow-light);
+  /* Làm cho nền trong suốt và mờ */
+  background-color: rgba(
+    236,
+    240,
+    241,
+    0.8
+  ); /* Màu --color-background với 80% độ trong suốt */
+  backdrop-filter: blur(8px); /* Độ mờ, bạn có thể điều chỉnh giá trị này */
+  -webkit-backdrop-filter: blur(8px); /* Hỗ trợ cho Safari */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Giữ lại một chút shadow nhẹ */
 }
 
 .filter-controls {
@@ -127,6 +135,52 @@ body {
   transition: var(--transition-fast);
   display: flex;
   flex-direction: column;
+}
+.tour-card-content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1; /* Cho phép phần content này lấp đầy không gian còn lại trong .tour-card */
+  padding: 20px; /* Tăng padding cho thoáng hơn */
+  /* Bỏ margin cũ không cần thiết: margin: 5px 5px 0 0; */
+}
+
+.tour-card-content h3 {
+  font-family: var(--font-heading);
+  font-size: 1.4rem;
+  font-weight: 600;
+  color: var(--color-primary);
+  margin: 0 0 10px 0; /* Giảm margin dưới một chút */
+  line-height: 1.3;
+}
+
+.tour-card-content .tour-info {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px 16px; /* Khoảng cách giữa các mục thông tin (dọc và ngang) */
+  font-size: 0.85rem; /* Kích thước font nhỏ hơn một chút */
+  color: var(--color-text-light);
+  margin-bottom: 15px;
+}
+
+.tour-card-content .tour-info span strong {
+  color: var(--color-text); /* Làm nổi bật phần label */
+}
+
+.tour-card-content p {
+  /* Phần tóm tắt */
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  line-height: 1.6;
+  margin-bottom: 20px;
+  flex-grow: 1; /* Quan trọng: Giúp đẩy nút bấm xuống dưới cùng */
+}
+
+.tour-card-content .btn--primary {
+  margin-top: auto; /* Đảm bảo nút luôn ở cuối cùng của .tour-card-content */
+  padding: 10px 20px;
+  text-align: center;
+  /* Các style khác của .btn--primary (màu sắc, bo góc) nên được định nghĩa chung */
+  /* Ví dụ: width: 100%; nếu muốn nút rộng hết thẻ */
 }
 
 .tour-card:hover {
