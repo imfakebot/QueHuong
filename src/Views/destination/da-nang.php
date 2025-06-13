@@ -145,7 +145,7 @@ $pageScripts = [
         <p>A cluster of limestone hills with caves and sacred pagodas.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/Da-Nang/DragonBridge.jpg" alt="Dragon Bridge">
+        <img src="/images/destinations/Da-Nang/caurong.jpg" alt="Dragon Bridge">
         <h3>Dragon Bridge</h3>
         <p>Da Nang’s iconic bridge, designed like a dragon that breathes fire and water on weekends.</p>
       </div>
