@@ -62,7 +62,7 @@ $mountain_tours_data = [
     [
         'id' => 104,
         'title' => 'Trekking Cung Đường Tà Năng - Phan Dũng',
-        'image' => 'https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=1770&auto=format&fit=crop',
+        'image' => 'https://media-cdn-v2.laodong.vn/storage/newsportal/2023/10/8/1251758/Ta-Nang---Phan-Dung--02.jpg',
         'duration' => '3 Ngày 2 Đêm',
         'difficulty' => 'Trung bình - Khó',
         'price' => '2,900,000 VNĐ',
