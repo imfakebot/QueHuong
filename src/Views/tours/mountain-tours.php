@@ -44,7 +44,7 @@ $mountain_tours_data = [
     [
         'id' => 102,
         'title' => 'Chinh Phục Đỉnh Fansipan',
-        'image' => 'https://images.unsplash.com/photo-1589339336502-082195f45f3c?q=80&w=1774&auto=format&fit=crop',
+        'image' => 'https://toiphuot.net/uploads/news/2025_01/huong-dan-chinh-phuc-dinh-fansipan-diem-den-hap-dan-du-khach-trong-va-ngoai-nuoc-1.jpg',
         'duration' => '2 Ngày 1 Đêm',
         'difficulty' => 'Khó',
         'price' => '3,200,000 VNĐ',
@@ -53,7 +53,7 @@ $mountain_tours_data = [
     [
         'id' => 103,
         'title' => 'Khám Phá Cao Nguyên Đá Đồng Văn',
-        'image' => 'https://images.unsplash.com/photo-1568951197678-cf0127a83152?q=80&w=1770&auto=format&fit=crop',
+        'image' => 'https://dantocmiennui-media.baotintuc.vn/images/84426cb421b40f0fbef0009243df48a9fe6f464c46ac0c39b3a978ac43328566c9cc6e84362d6f215645354bd0bb73da1b1ac1cf370e166550ff28d599083434ec839f2b2b7895c187dd22d291d419d3495d79d3d341c423adc64b6aa015fa915782e4f5fbba4d663ae8449b82c35383c5cdac33d59923a08f897cc71a673809cbe8e35505cd548a91afcb0edeab5b86/vna-potal-kham-pha-net-dep-tren-cao-nguyen-da-dong-van-ha-giang-mua-du-lich-7695520-1-1335.jpg',
         'duration' => '4 Ngày 3 Đêm',
         'difficulty' => 'Dễ',
         'price' => '3,800,000 VNĐ',

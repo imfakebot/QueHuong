@@ -179,8 +179,10 @@ body {
   margin-top: auto; /* Đảm bảo nút luôn ở cuối cùng của .tour-card-content */
   padding: 10px 20px;
   text-align: center;
-  /* Các style khác của .btn--primary (màu sắc, bo góc) nên được định nghĩa chung */
-  /* Ví dụ: width: 100%; nếu muốn nút rộng hết thẻ */
+  background-color: var(--color-primary);
+  border-radius: 10px;
+  width: 100%;
+  color: var(--color-surface);
 }
 
 .tour-card:hover {
