@@ -102,7 +102,7 @@ $pageScripts = [
                     <div class="tour-item">
                         <a href="/tours/hoian-tour" class="tour-link">
                             <div class="tour-image-container">
-                                <img src="/images/tours/hoi-an-ancient-town.jpg" alt="Hoi An Ancient Town Tour">
+                                <img src="https://lh5.googleusercontent.com/proxy/wyG_LljX3QV2RZjPMpns6tn1rIpke_-6AWZgk2gMw2brKy4xz75JSSXCvh_XGMT7Lh668oomHjmz2zkjZVS5ZMhRQjR-zu53x4GZ6OMQ0eTE_aypLgC0jo4nF3LvrkwIL43cSP2vLRxQOiFDbMghutJcUiKsaGijTP478e6qrqA" alt="Hoi An Ancient Town Tour">
                                 <span class="tour-duration">2 Days 1 Night</span>
                             </div>
                             <div class="tour-content">
@@ -323,7 +323,7 @@ $pageScripts = [
                 <!-- Destination 6: Hoi An -->
                 <div class="swiper-slide destination-item">
                     <a href="/destinations/hoi-an" class="destination-link">
-                        <img src="/images/destinations/must-visit/hoian.jpg" alt="Hoi An">
+                        <img src="https://lh5.googleusercontent.com/proxy/wyG_LljX3QV2RZjPMpns6tn1rIpke_-6AWZgk2gMw2brKy4xz75JSSXCvh_XGMT7Lh668oomHjmz2zkjZVS5ZMhRQjR-zu53x4GZ6OMQ0eTE_aypLgC0jo4nF3LvrkwIL43cSP2vLRxQOiFDbMghutJcUiKsaGijTP478e6qrqA" alt="Hoi An">
                         <div class="destination-name">Hoi An</div>
                     </a>
                 </div>

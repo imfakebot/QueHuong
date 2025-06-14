@@ -1,0 +1,201 @@
+/*
+ * RELAXATION & WELLNESS PAGE STYLES
+ * Giao diện nhẹ nhàng, tinh tế và thư thái.
+ */
+
+/* === BIẾN MÀU CHO TRANG THƯ GIÃN === */
+/*
+   Sử dụng một wrapper class nếu bạn muốn bộ màu này
+   không ảnh hưởng đến menu/footer chung.
+   Ví dụ: <body class="relaxation-page-wrapper">
+   và thêm .relaxation-page-wrapper vào trước mỗi selector.
+   Ở đây, tôi viết trực tiếp để đơn giản.
+*/
+:root {
+  --relax-primary: #a8d8c9; /* Xanh Bạc Hà Dịu */
+  --relax-secondary: #e5b8b6; /* Hồng Đất Ấm */
+  --relax-text: #5d5d5d; /* Xám Đậm */
+  --relax-bg: #f5f5f5; /* Xám rất nhạt */
+  --relax-surface: #ffffff; /* Trắng tinh */
+
+  /* Kế thừa font từ các tệp CSS chung hoặc định nghĩa lại */
+  --font-primary: "Roboto", sans-serif; /* Giả định font đã được load */
+  --font-headings: "Playfair Display", serif; /* Giả định font đã được load */
+
+  --shadow-light: 0 4px 15px rgba(0, 0, 0, 0.06);
+  --shadow-hover: 0 8px 25px rgba(0, 0, 0, 0.1);
+  --border-radius-md: 12px;
+}
+
+/* === CÀI ĐẶT CHUNG === */
+body {
+  background-color: var(--relax-bg);
+  color: var(--relax-text);
+  font-family: var(--font-primary);
+  line-height: 1.6;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* === HEADER CỦA TRANG DANH MỤC === */
+.things-category-header {
+  /* background-image sẽ được đặt inline từ PHP. */
+  /* Gradient nền này sẽ bị ghi đè bởi style inline. */
+  background: linear-gradient(135deg, var(--relax-primary, #a8d8c9), #cce3db);
+  background-size: cover; /* Đảm bảo ảnh nền inline hiển thị đúng */
+  background-position: center; /* Căn giữa ảnh nền inline */
+  background-repeat: no-repeat; /* Không lặp lại ảnh nền inline */
+  text-align: center;
+  padding: 80px 20px;
+  color: var(--relax-surface);
+  position: relative; /* Cần thiết để định vị lớp phủ */
+  overflow: hidden; /* Đảm bảo lớp phủ không tràn ra ngoài */
+  min-height: 90vh; /* Sử dụng min-height để linh hoạt hơn, có thể điều chỉnh */
+  display: flex; /* Biến header thành flex container */
+  flex-direction: column; /* Sắp xếp các item con theo chiều dọc */
+  align-items: center; /* Căn giữa các item con theo chiều ngang */
+  justify-content: center; /* Căn giữa các item con theo chiều dọc */
+}
+
+/* Lớp phủ tối màu nhẹ nhàng */
+.things-category-header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.15); /* Lớp phủ màu đen với độ mờ 15% */
+  z-index: 1; /* Nằm trên nền và dưới chữ */
+}
+
+.things-category-header h1 {
+  font-family: var(--font-headings);
+  font-size: 3.5rem;
+  color: var(--relax-surface); /* Chữ vẫn màu trắng */
+  margin-bottom: 1rem;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.1);
+  position: relative; /* Đảm bảo chữ nằm trên lớp phủ */
+  z-index: 2;
+}
+
+.things-category-header p {
+  font-size: 1.1rem;
+  max-width: 600px;
+  margin: 0 auto;
+  opacity: 0.9;
+  position: relative; /* Đảm bảo chữ nằm trên lớp phủ */
+  z-index: 2;
+}
+
+/* === LƯỚI HIỂN THỊ CÁC HOẠT ĐỘNG === */
+main {
+  padding: 80px 0;
+}
+
+.activity-grid {
+  display: grid;
+  /* Tạo các cột có chiều rộng tối thiểu 300px và tối đa 1fr */
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 35px;
+}
+
+/* === THẺ CỦA MỖI HOẠT ĐỘNG === */
+.activity-card {
+  background-color: var(--relax-surface);
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--shadow-light);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex; /* Giúp link bên trong chiếm toàn bộ thẻ */
+  flex-direction: column;
+}
+
+.activity-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-hover);
+}
+
+/* Thẻ a bao bọc toàn bộ card */
+.activity-link {
+  text-decoration: none;
+  color: inherit; /* Kế thừa màu chữ từ thẻ cha */
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Đảm bảo thẻ a chiếm toàn bộ chiều cao của card */
+}
+
+/* Container chứa ảnh */
+.activity-image-container {
+  height: 220px;
+  overflow: hidden;
+}
+
+.activity-image-container img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+/* Hiệu ứng phóng to ảnh khi hover */
+.activity-card:hover .activity-image-container img {
+  transform: scale(1.05);
+}
+
+/* Phần nội dung text */
+.activity-content-details {
+  padding: 25px;
+  flex-grow: 1; /* Giúp phần content này giãn ra để đẩy footer (nếu có) xuống dưới */
+}
+
+.activity-card-title {
+  font-family: var(--font-headings);
+  font-size: 1.6rem;
+  color: #333; /* Màu chữ đậm hơn cho tiêu đề */
+  margin-bottom: 15px;
+  transition: color 0.3s ease;
+}
+
+.activity-card:hover .activity-card-title {
+  color: var(--relax-secondary); /* Đổi màu tiêu đề khi hover */
+}
+
+.activity-card-excerpt {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  /* Giới hạn hiển thị 3 dòng cho tóm tắt */
+  display: -webkit-box;
+  line-clamp: 3; /* Số dòng tối đa muốn hiển thị */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  /* Có thể đặt một min-height nhỏ để đảm bảo không gian nếu nội dung quá ngắn */
+}
+
+/* === RESPONSIVE DESIGN === */
+@media (max-width: 768px) {
+  .things-category-header {
+    padding: 60px 20px;
+  }
+  .things-category-header h1 {
+    font-size: 2.5rem;
+  }
+  main {
+    padding: 60px 0;
+  }
+  .activity-grid {
+    gap: 25px;
+  }
+}
+
+@media (max-width: 480px) {
+  /* Đảm bảo grid hiển thị 1 cột trên điện thoại nhỏ */
+  .activity-grid {
+    grid-template-columns: 1fr;
+  }
+}

@@ -79,12 +79,13 @@ $relaxation_activities = array_map(function ($activity) {
 
 // Cấu hình trang
 $pageTitle = 'Hoạt Động Thư Giãn & Chăm Sóc Sức Khỏe';
-$pageStyles = ['/css/things-category.css', '/css/main.css']; // Tạo file CSS mới hoặc tái sử dụng
+$pageStyles = ['/css/relax.css']; // Tạo file CSS mới hoặc tái sử dụng
 $pageScripts = []; // Thêm JS nếu cần filter hoặc tương tác khác
 
 ?>
 
-<header class="things-category-header">
+<!-- Sửa lỗi style nội tuyến: bỏ ",no repeat" không hợp lệ -->
+<header class="things-category-header" style="background-image: url('https://images.unsplash.com/photo-1604251405903-b8c4e83cdf7c?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8cmVsYXhhdGlvbnxlbnwwfHwwfHx8MA%3D%3D');">
     <h1><?php echo htmlspecialchars($pageTitle); ?></h1>
     <p>Tìm lại sự cân bằng và thư thái với những trải nghiệm tuyệt vời tại Việt Nam.</p>
 </header>

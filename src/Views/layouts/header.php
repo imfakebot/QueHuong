@@ -57,7 +57,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                         <a href="/life/culture"><img src="/images/mega_menu/cultural.webp" alt="Văn hóa Việt Nam"></a>
                                         <h4>CULTURE</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading">Traditions & Customs</h5>
+                                    <h5 class=" mega-menu-subheading region-title">Traditions & Customs</h5>
                                     <ul class="mega-menu-links">
                                         <li><a href="/life/festivals">Festivals & Holidays</a></li>
                                         <li><a href="/life/etiquette">Social Etiquette</a></li>
@@ -72,7 +72,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                         <a href="/life/food"><img src="/images/mega_menu/food.jpg" alt="Ẩm thực Việt Nam"></a>
                                         <h4>FOOD & DRINK</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading">A Taste of Vietnam</h5>
+                                    <h5 class="mega-menu-subheading region-title">A Taste of Vietnam</h5>
                                     <ul class="mega-menu-links">
                                         <li><a href="/life/street-food">Street Food Guide</a></li>
                                         <li><a href="/life/must-try">Must-Try Dishes</a></li>
@@ -87,7 +87,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                         <a href="/life/travel-tips"><img src="/images//mega_menu/travel_experience.jpg" alt="Kinh nghiệm du lịch"></a>
                                         <h4>TRAVEL ESSENTIALS</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading">Tips for Your Trip</h5>
+                                    <h5 class="mega-menu-subheading region-title">Tips for Your Trip</h5>
                                     <ul class="mega-menu-links">
                                         <li><a href="/life/visa">Visa Information</a></li>
                                         <li><a href="/life/transport">Getting Around</a></li>
@@ -165,7 +165,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                         <a href="/things/adventure"><img src="/images/mega_menu/adventure_and_outdoor.jpg" alt="Adventure & Outdoors"></a>
                                         <h4>ADVENTURE & OUTDOORS</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading">Thrills & Nature's Best</h5>
+                                    <h5 class="mega-menu-subheading region-title">Thrills & Nature's Best</h5>
                                     <ul class="mega-menu-links">
                                         <li><a href="/things/trekking_in_sapa">Trekking in Sapa</a></li>
                                         <li><a href="/things/kayaking-halong">Kayaking in Ha Long Bay</a></li>
@@ -181,7 +181,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                         <a href="/things/cultural-heritage-tours"><img src="/images/mega_menu/cultural_and_heritage.jpg" alt="Culture & Heritage"></a>
                                         <h4>CULTURE & HERITAGE</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading">Immerse in Local Life</h5>
+                                    <h5 class="mega-menu-subheading region-title">Immerse in Local Life</h5>
                                     <ul class="mega-menu-links">
                                         <li><a href="/things/historical-sites">Visiting Historical Sites</a></li>
                                         <li><a href="/things/museums">Exploring Museums</a></li>
@@ -197,7 +197,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                         <a href="/things/relaxation"><img src="/images/mega_menu/relax.jpg" alt="Relaxation & Wellness"></a>
                                         <h4>RELAXATION & WELLNESS</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading">Unwind & Rejuvenate</h5>
+                                    <h5 class="mega-menu-subheading region-title">Unwind & Rejuvenate</h5>
                                     <ul class="mega-menu-links">
                                         <li><a href="/things/spa-massage">Spa & Massage Therapies</a></li>
                                         <li><a href="/things/beach-relaxation">Beach Escapes</a></li>

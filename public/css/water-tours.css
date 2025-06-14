@@ -29,7 +29,7 @@
   color: #111827;
 }
 .adventure-page-wrapper .tour-card__title {
-  color: #0536bd;
+  color: #0d7c9c; /* Màu xanh biển/teal cho tiêu đề thẻ */
 }
 
 /* === BUTTONS === */
@@ -45,13 +45,13 @@
   cursor: pointer;
 }
 .adventure-page-wrapper .btn--primary {
-  background-color: #0040c5; /* --sea-cta */
+  background-color: #0077b6; /* Màu xanh dương sáng hơn cho nút chính */
   color: #ffffff; /* Màu chữ đậm trên nền vàng */
   box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05); /* --shadow-sm */
   text-align: center;
 }
 .adventure-page-wrapper .btn--primary:hover {
-  background-color: #1d00b0; /* Vàng đậm hơn khi hover */
+  background-color: #005f8e; /* Màu xanh đậm hơn khi hover */
   transform: translateY(-3px);
   box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
     0 2px 4px -1px rgba(0, 0, 0, 0.06); /* --shadow-md */
@@ -73,7 +73,7 @@
   background-size: cover;
   background-position: center 70%; /* Căn ảnh nền thấp hơn một chút */
   position: relative;
-  height:90vh;
+  height: 90vh;
 }
 /* Tạo lớp phủ tối màu để chữ dễ đọc hơn trên ảnh nền */
 .adventure-page-wrapper .tour-list-header::before {
@@ -125,7 +125,7 @@
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   display: flex;
   flex-direction: column;
-  border: 1px solid #e5e7eb; /* Viền mỏng */
+  border: 1px solid #dde2e7; /* Viền rõ nét hơn một chút */
 }
 .adventure-page-wrapper .tour-card:hover {
   transform: translateY(-8px);
@@ -182,6 +182,11 @@
 .adventure-page-wrapper .tour-card__summary {
   flex-grow: 1;
   margin-bottom: 1.5rem;
+}
+
+/* Nút bên trong card sẽ chiếm toàn bộ chiều rộng */
+.adventure-page-wrapper .tour-card .btn--primary {
+  width: 100%;
 }
 
 /* === ANIMATIONS === */
