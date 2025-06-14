@@ -59,10 +59,10 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                     <h5 class="mega-menu-subheading">Traditions & Customs</h5>
                                     <ul class="mega-menu-links">
                                         <li><a href="/life/festivals">Festivals & Holidays</a></li>
-                                        <li><a href="/life/culture/etiquette">Social Etiquette</a></li>
-                                        <li><a href="/life/culture/beliefs">Beliefs & Spirituality</a></li>
-                                        <li><a href="/life/culture/arts-crafts">Arts & Handicrafts</a></li>
-                                        <li><a href="/life/culture/ao-dai">Ao Dai: National Dress</a></li>
+                                        <li><a href="/life/etiquette">Social Etiquette</a></li>
+                                        <li><a href="/life/beliefs">Beliefs & Spirituality</a></li>
+                                        <li><a href="/life/arts-crafts">Arts & Handicrafts</a></li>
+                                        <li><a href="/life/ao-dai">Ao Dai: National Dress</a></li>
                                     </ul>
                                 </div>
                                 <!-- Cột 2: Food & Drink -->
@@ -73,11 +73,11 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                     </div>
                                     <h5 class="mega-menu-subheading">A Taste of Vietnam</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/life/food/street-food">Street Food Guide</a></li>
-                                        <li><a href="/life/food/must-try">Must-Try Dishes</a></li>
-                                        <li><a href="/life/food/coffee-culture">Vietnamese Coffee</a></li>
-                                        <li><a href="/life/food/regional-cuisine">Regional Specialties</a></li>
-                                        <li><a href="/life/food/markets">Local Markets</a></li>
+                                        <li><a href="/life/street-food">Street Food Guide</a></li>
+                                        <li><a href="/life/must-try">Must-Try Dishes</a></li>
+                                        <li><a href="/life/coffee-culture">Vietnamese Coffee</a></li>
+                                        <li><a href="/life/regional-cuisine">Regional Specialties</a></li>
+                                        <li><a href="/life/markets">Local Markets</a></li>
                                     </ul>
                                 </div>
                                 <!-- Cột 3: Travel Essentials -->
@@ -88,11 +88,11 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                     </div>
                                     <h5 class="mega-menu-subheading">Tips for Your Trip</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/life/travel-tips/visa">Visa Information</a></li>
-                                        <li><a href="/life/travel-tips/transport">Getting Around</a></li>
-                                        <li><a href="/life/travel-tips/money">Money & Budgeting</a></li>
-                                        <li><a href="/life/travel-tips/safety">Safety & Health</a></li>
-                                        <li><a href="/life/travel-tips/language">Basic Vietnamese Phrases</a></li>
+                                        <li><a href="/life/visa">Visa Information</a></li>
+                                        <li><a href="/life/transport">Getting Around</a></li>
+                                        <li><a href="/life/money">Money & Budgeting</a></li>
+                                        <li><a href="/life/safety">Safety & Health</a></li>
+                                        <li><a href="/life/language">Basic Vietnamese Phrases</a></li>
                                     </ul>
                                 </div>
                             </div> <!-- /mega-menu-container -->
