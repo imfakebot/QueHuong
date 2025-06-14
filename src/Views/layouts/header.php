@@ -18,6 +18,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
     <!-- CSS Thành phần (Component Styles) -->
     <link rel="stylesheet" href="/css/header.css">
     <link rel="stylesheet" href="/css/footer.css"> <!-- File CSS cho footer -->
+    <link rel="icon" href="/images/favicon.png" type="image/x-icon">
 
 
     <?php
