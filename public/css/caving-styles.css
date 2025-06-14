@@ -1,0 +1,218 @@
+/*
+ * CAVING PAGE STYLES
+ * Tông màu tối, huyền bí, tập trung vào trải nghiệm khám phá.
+*/
+
+/* === BỘ BIẾN MÀU RIÊNG === */
+.caving-page-wrapper {
+  --caving-primary: #1d2d44; /* Xanh đen (Deep Navy) */
+  --caving-secondary: #00a9a5; /* Xanh ngọc (Bright Teal) */
+  --caving-text-light: #e0e0e0; /* Xám rất nhạt */
+  --caving-text-dark: #333333; /* Xám đậm */
+  --caving-bg: #f4f7f5; /* Nền xám nhạt */
+  --caving-surface: #ffffff; /* Nền thẻ card */
+  --caving-accent-bg: #3e5062; /* Nền xám xanh đậm */
+
+  --font-primary: "Roboto", sans-serif;
+  --font-headings: "Playfair Display", serif;
+  --shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+  --border-radius: 8px;
+}
+
+/* === CÀI ĐẶT CHUNG === */
+.caving-page-wrapper {
+  font-family: var(--font-primary);
+  color: var(--caving-text-dark);
+  line-height: 1.7;
+  background-color: var(--caving-bg);
+}
+.caving-page-wrapper .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+.caving-page-wrapper h1,
+.caving-page-wrapper h2,
+.caving-page-wrapper h3 {
+  font-family: var(--font-headings);
+}
+.caving-page-wrapper section {
+  padding: 100px 0;
+}
+.caving-page-wrapper .section-header {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 60px auto;
+}
+.caving-page-wrapper .section-header h2 {
+  font-size: 2.8rem;
+  color: var(--caving-primary);
+  margin-bottom: 1rem;
+}
+.caving-page-wrapper .section-header p {
+  font-size: 1.1rem;
+  color: #bcbcbc;
+}
+.caving-page-wrapper .section-header--light h2,
+.caving-page-wrapper .section-header--light p {
+  color: var(--caving-text-light);
+}
+
+/* === HERO SECTION === */
+.caving-page-wrapper .hero {
+  position: relative;
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+.caving-page-wrapper .hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    0deg,
+    rgba(29, 45, 68, 0.8) 0%,
+    rgba(29, 45, 68, 0.3) 100%
+  );
+}
+.caving-page-wrapper .hero__content {
+  position: relative;
+  z-index: 2;
+  max-width: 800px;
+}
+.caving-page-wrapper .hero__title {
+  font-size: 4rem;
+  color: var(--caving-surface);
+  margin-bottom: 1rem;
+}
+.caving-page-wrapper .hero__subtitle {
+  font-size: 1.2rem;
+  color: var(--caving-text-light);
+}
+
+/* === TOUR LIST SECTION === */
+.caving-page-wrapper .tour-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 40px;
+}
+.caving-page-wrapper .tour-card {
+  background: var(--caving-surface);
+  border-radius: var(--border-radius);
+  box-shadow: var(--shadow);
+  transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+.caving-page-wrapper .tour-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.12);
+}
+.caving-page-wrapper .tour-card__link-wrapper {
+  text-decoration: none;
+  color: inherit;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  border-radius: 15px;
+}
+.caving-page-wrapper .tour-card__image-container {
+  height: 250px;
+  overflow: hidden;
+}
+.caving-page-wrapper .tour-card__image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+  border-radius: 15px 15px 0 0;
+}
+.caving-page-wrapper .tour-card:hover .tour-card__image {
+  transform: scale(1.05);
+}
+.caving-page-wrapper .tour-card__content {
+  padding: 25px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+}
+.caving-page-wrapper .tour-card__location {
+  font-size: 0.9rem;
+  color: var(--caving-secondary);
+  font-weight: 700;
+  margin-bottom: 10px;
+  display: block;
+}
+.caving-page-wrapper .tour-card__location .fa-solid {
+  margin-right: 5px;
+}
+.caving-page-wrapper .tour-card__title {
+  font-size: 1.6rem;
+  margin-bottom: 15px;
+  color: var(--caving-primary);
+}
+.caving-page-wrapper .tour-card__summary {
+  margin-bottom: 20px;
+  flex-grow: 1;
+}
+.caving-page-wrapper .tour-card__meta {
+  display: flex;
+  justify-content: space-between;
+  border-top: 1px solid #eee;
+  padding-top: 15px;
+  font-size: 0.9rem;
+  color: #666;
+}
+.caving-page-wrapper .tour-card__meta .fa-regular,
+.caving-page-wrapper .tour-card__meta .fa-solid {
+  margin-right: 8px;
+  color: var(--caving-secondary);
+}
+
+/* === PREPARATION GUIDE SECTION === */
+.caving-page-wrapper .guide-section {
+  background-color: var(--caving-accent-bg);
+}
+.caving-page-wrapper .guide-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 40px;
+  text-align: center;
+}
+.caving-page-wrapper .guide-item {
+  color: var(--caving-text-light);
+}
+.caving-page-wrapper .guide-item i {
+  font-size: 3rem;
+  color: var(--caving-secondary);
+  margin-bottom: 20px;
+}
+.caving-page-wrapper .guide-item h4 {
+  font-size: 1.4rem;
+  margin-bottom: 10px;
+  color: var(--caving-surface);
+}
+
+/* === RESPONSIVE === */
+@media (max-width: 768px) {
+  .caving-page-wrapper .hero {
+    height: 60vh;
+  }
+  .caving-page-wrapper .hero__title {
+    font-size: 2.8rem;
+  }
+  .caving-page-wrapper section {
+    padding: 60px 0;
+  }
+  .caving-page-wrapper .section-header h2 {
+    font-size: 2.2rem;
+  }
+}
+@media (max-width: 480px) {
+  .caving-page-wrapper .tour-grid {
+    grid-template-columns: 1fr;
+  }
+}
