@@ -58,7 +58,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                     </div>
                                     <h5 class="mega-menu-subheading">Traditions & Customs</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/life/culture/festivals">Festivals & Holidays</a></li>
+                                        <li><a href="/life/festivals">Festivals & Holidays</a></li>
                                         <li><a href="/life/culture/etiquette">Social Etiquette</a></li>
                                         <li><a href="/life/culture/beliefs">Beliefs & Spirituality</a></li>
                                         <li><a href="/life/culture/arts-crafts">Arts & Handicrafts</a></li>

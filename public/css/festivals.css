@@ -1,0 +1,143 @@
+:root {
+  --festivals-primary: #c62828; /* đỏ truyền thống */
+  --festivals-secondary: #f9a825; /* vàng tươi */
+  --festivals-bg: #fff8e1; /* nền dịu nhẹ */
+  --festivals-accent-bg: #fce4ec; /* nền nhẹ cho section nổi bật */
+  --festivals-text: #333;
+  --festivals-font-headline: 'Playfair Display', serif;
+  --festivals-font-body: 'Roboto', sans-serif;
+}
+
+.festivals-page-wrapper {
+  background-color: var(--festivals-bg);
+  color: var(--festivals-text);
+  font-family: var(--festivals-font-body);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero__content {
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+.hero__title {
+  font-family: var(--festivals-font-headline);
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.btn--primary {
+  background-color: var(--festivals-primary);
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: #b71c1c;
+}
+
+.btn--light {
+  background-color: white;
+  color: var(--festivals-primary);
+  border: 2px solid var(--festivals-primary);
+}
+
+.btn--light:hover {
+  background-color: var(--festivals-primary);
+  color: white;
+}
+
+/* FEATURE SECTION */
+.feature-section {
+  padding: 80px 0;
+}
+
+.feature-section__container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.feature-section__image-wrapper {
+  flex: 1;
+  min-width: 300px;
+}
+
+.feature-section__image-wrapper img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-section__content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.feature-section__content h2 {
+  font-family: var(--festivals-font-headline);
+  color: var(--festivals-primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-section__content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.activity-list {
+  list-style: disc inside;
+  margin-bottom: 1rem;
+}
+
+.feature-section--reverse .feature-section__container {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+  .feature-section__container {
+    flex-direction: column;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
+}
