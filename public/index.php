@@ -99,10 +99,10 @@ elseif (preg_match('#^/things/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
     }
 }
 
-//5. Route động cho chi tiết LIFE CULTURE: /life/culture/{slug}
-elseif (preg_match('#^/life/culture/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
+//5. Route động cho chi tiết LIFE CULTURE: /life/{slug}
+elseif (preg_match('#^/life/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
     $cultureSlug = $matches[1]; // ví dụ: festivals
-    $potentialView = VIEWS_PATH . '/life/culture/' . $cultureSlug . '.php';
+    $potentialView = VIEWS_PATH . '/life/' . $cultureSlug . '.php';
 
     if (file_exists($potentialView)) {
         $contentView = $potentialView;
