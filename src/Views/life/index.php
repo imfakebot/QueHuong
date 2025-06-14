@@ -33,7 +33,7 @@ $CultureSection = [
         ['arts-crafts', 'Arts crafts'],
         ['ao-dai', 'Ao Dai'],
     ],
-    'cta' => ['url' => '/life/festivals', 'text' => 'exploration of cultural heritage']
+    'cta' => ['url' => '/life/culture', 'text' => 'Exploration of cultural heritage']
 ];
 
 $foodSection = [
@@ -65,7 +65,7 @@ $essentialSection = [
         ['language', 'Language'],
         
     ],
-    'cta' => ['url' => '/life/visa', 'text' => 'Tìm Chốn Bình Yên']
+    'cta' => ['url' => '/life/travel-tips', 'text' => 'Tìm Chốn Bình Yên']
 ];
 
 // Hero section configuration
@@ -120,7 +120,7 @@ $heroConfig = [
                 <div class="category-feature__list-wrapper">
                     <ul class="category-feature__list">
                         <?php foreach ($CultureSection['activities'] as $activity): ?>
-                            <li><a href="/things/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
+                            <li><a href="/life/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
@@ -142,7 +142,7 @@ $heroConfig = [
                 <div class="category-feature__list-wrapper">
                     <ul class="category-feature__list">
                         <?php foreach ($foodSection['activities'] as $activity): ?>
-                            <li><a href="/things/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
+                            <li><a href="/life/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
@@ -164,7 +164,7 @@ $heroConfig = [
                 <div class="category-feature__list-wrapper">
                     <ul class="category-feature__list">
                         <?php foreach ($essentialSection['activities'] as $activity): ?>
-                            <li><a href="/things/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
+                            <li><a href="/life/<?php echo htmlspecialchars($activity[0]); ?>"><?php echo htmlspecialchars($activity[1]); ?></a></li>
                         <?php endforeach; ?>
                     </ul>
                 </div>
