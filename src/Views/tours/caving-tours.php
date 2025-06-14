@@ -100,7 +100,7 @@ $cavingTours = array_map(function ($tour) {
         <div class="hero__overlay"></div>
         <div class="hero__content animate-on-scroll">
             <h1 class="hero__title">Khám Phá Thế Giới Ngầm Kỳ Vĩ</h1>
-            <p class="hero__subtitle">Việt Nam, ngôi nhà của những hang động ngoạn mục nhất hành tinh, đang chờ bạn đến chinh phục.</p>
+            <p class="hero__subtitle">Việt Nam, ngôi nhà của những hang động ngoạn mục nhất hành tinh, đang chờ bạn đến <br>chinh phục và khám phá.</p>
         </div>
     </header>
 

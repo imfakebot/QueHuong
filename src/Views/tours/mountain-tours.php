@@ -180,6 +180,7 @@ function normalize_difficulty_for_filter($difficulty)
     no-repeat center center/cover;">
     <h1><?php echo htmlspecialchars($pageTitle); ?></h1>
     <p>Chọn một hành trình và bắt đầu chuyến phiêu lưu của bạn!</p>
+    <a href="/things/adventure" class="btn-light" style="margin-top: 20px;">← Quay lại trang Phiêu Lưu</a>
 </header>
 
 <div class="filter-bar">

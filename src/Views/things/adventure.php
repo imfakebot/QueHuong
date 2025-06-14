@@ -95,7 +95,7 @@ $waterAdventures = [
                             <li><?php echo htmlspecialchars($activity); ?></li>
                         <?php endforeach; ?>
                     </ul>
-                    <a href="/tours/caving" class="btn btn--primary">Tour Thám Hiểm</a>
+                    <a href="/tours/caving-tours" class="btn btn--primary">Tour Thám Hiểm</a>
                 </div>
             </div>
         </section>
@@ -114,7 +114,7 @@ $waterAdventures = [
                             <li><?php echo htmlspecialchars($activity); ?></li>
                         <?php endforeach; ?>
                     </ul>
-                    <a href="/tours/water" class="btn btn--primary">Tour Biển Đảo</a>
+                    <a href="/tours/water-tours" class="btn btn--primary">Tour Biển Đảo</a>
                 </div>
             </div>
         </section>

@@ -145,7 +145,7 @@ $pageScripts = [
                             </div>
                             <div class="tour-content">
                                 <h3 class="tour-title">Hue Imperial City</h3>
-                                <p class="tour-excerpt">Discover the ancient citadel and royal tombs...</p>
+                                <p class="tour-excerpt">Discover the ancient citadel and royal tombs...<br><br></p>
                                 <div class="tour-price-wrapper">
                                     <span class="tour-price">From $180 USD</span>
                                 </div>

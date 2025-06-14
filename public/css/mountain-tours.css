@@ -44,7 +44,6 @@ body {
 
 /* === HEADER CỦA TRANG === */
 .tour-list-header {
- 
   color: var(--color-surface);
   text-align: center;
   padding: 100px 20px;
@@ -63,6 +62,17 @@ body {
   max-width: 600px;
   margin: 1rem auto 0;
   opacity: 0.9;
+}
+
+.btn-light {
+  display: inline-block;
+  padding: 12px 24px;
+  background-color: rgb(255, 255, 255);
+  color:#34495e;
+  text-decoration: none;
+  font-weight: 600;
+  border-radius: var(--border-radius);
+  transition: var(--transition-fast);
 }
 
 /* === KHU VỰC BỘ LỌC (Filter Bar) === */

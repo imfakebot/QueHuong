@@ -178,7 +178,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 2: Culture & Heritage -->
                                 <div class="mega-menu-column culture-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/things/culture"><img src="/images/mega_menu/cultural_and_heritage.jpg" alt="Culture & Heritage"></a>
+                                        <a href="/things/cultural-heritage-tours"><img src="/images/mega_menu/cultural_and_heritage.jpg" alt="Culture & Heritage"></a>
                                         <h4>CULTURE & HERITAGE</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading">Immerse in Local Life</h5>
