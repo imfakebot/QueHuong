@@ -45,7 +45,7 @@ $cultureSection = [
     'activities' => [
         ['visiting-historical-sites', 'Visiting Historical Sites'],
         ['exploring-museums', 'Exploring Museums'],
-        ['hands-on-workshops', 'Hands-on Workshops (Cooking, Crafts)'],
+        ['hands-on-workshops', 'Hands-on Workshops'],
         ['traditional-performances', 'Traditional Performances'],
         ['wandering-ancient-towns', 'Wandering Ancient Towns'],
         ['visiting-local-markets', 'Visiting Local Markets']

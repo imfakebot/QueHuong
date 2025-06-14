@@ -152,6 +152,15 @@ body {
   margin-bottom: 2rem;
 }
 
+.category-feature__content--align-right .category-feature__list-wrapper {
+  direction: rtl;
+}
+
+.category-feature__content--align-right .category-feature__list {
+  direction: ltr;
+  text-align: right;
+}
+
 .category-feature__list {
   list-style: none;
 }
