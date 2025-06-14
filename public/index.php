@@ -37,6 +37,10 @@ if ($requestUri === '/' || $requestUri === '/home') {
 } elseif ($requestUri === '/life') { // Trang liệt kê tất cả "Things to do"
     $pageTitle = 'Life in Vietnam - Du Lịch Quê Hương';
     $contentView = VIEWS_PATH . '/life/index.php';
+} elseif ($requestUri === '/tours/cultural-heritage' || $requestUri === '/tours/culture') { // Trang liệt kê tour Văn Hóa & Di Sản
+    $pageTitle = 'Tour Văn Hóa & Di Sản - Du Lịch Quê Hương';
+    $contentView = VIEWS_PATH . '/tours/cultural-heritage-tours.php';
+    // Đảm bảo file cultural-heritage-tours.php tồn tại trong VIEWS_PATH . '/tours/'
 }
 // 2. Route động cho chi tiết ĐIỂM ĐẾN: /destinations/{slug}
 elseif (preg_match('#^/destinations/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
@@ -71,7 +75,16 @@ elseif (preg_match('#^/tours/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
         $pageTitle = '404 Not Found - Du Lịch Quê Hương';
         $contentView = VIEWS_PATH . '/errors/404.php';
     }
-} // 4. Route động cho chi tiết "THINGS TO DO": /things/{slug}
+}
+// Route cho trang danh mục "Relaxation & Wellness"
+elseif ($requestUri === '/things/relaxation') {
+    $pageTitle = 'Hoạt Động Thư Giãn & Chăm Sóc Sức Khỏe - Du Lịch Quê Hương';
+    $contentView = VIEWS_PATH . '/things/relaxation.php';
+} // Route cho trang danh mục "Hoạt động Văn hóa & Di sản" (Things to do)
+elseif ($requestUri === '/things/cultural-experiences') { // Bạn có thể chọn slug URL khác nếu muốn
+    $pageTitle = 'Trải Nghiệm Văn Hóa & Di Sản - Du Lịch Quê Hương';
+    $contentView = VIEWS_PATH . '/things/cultural-heritage-tours.php'; // Trỏ đến file bạn đã chỉ định
+} // Route động cho chi tiết "THINGS TO DO": /things/{slug}
 elseif (preg_match('#^/things/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
     $thingSlug = $matches[1]; // Lấy slug từ URL (ví dụ: "trekking-sapa")
     $potentialView = VIEWS_PATH . '/things/' . $thingSlug . '.php';

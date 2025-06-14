@@ -31,7 +31,39 @@ function create_slug($text)
     return $text;
 }
 
-$mountain_tours_data = [
+// Dữ liệu cho các tour nổi bật được thêm vào
+$suggested_mountain_tours_data = [
+    [
+        'id' => 201, // ID mới, đảm bảo không trùng
+        'title' => 'Sapa Terraces Adventure',
+        'image' => '/images/tours/sapa.jpg', // Đường dẫn từ trang chủ
+        'duration' => '4 Days 3 Nights', // Từ trang chủ
+        'difficulty' => 'Trung bình', // Giả định, bạn có thể điều chỉnh
+        'price' => '4,800,000 VNĐ', // Quy đổi từ $200 USD (ước chừng)
+        'summary' => 'Khám phá những thửa ruộng bậc thang kỳ vĩ và văn hóa địa phương độc đáo của Sapa.' // Mô tả tóm tắt
+    ],
+    [
+        'id' => 202, // ID mới
+        'title' => 'Da Lat Romantic Getaway',
+        'image' => '/images/tours/dalat-city.jpg', // Đường dẫn từ trang chủ
+        'duration' => '3 Days 2 Nights', // Từ trang chủ
+        'difficulty' => 'Dễ', // Giả định
+        'price' => '3,840,000 VNĐ', // Quy đổi từ $160 USD (ước chừng)
+        'summary' => "Khám phá 'Thành phố Ngàn hoa' Đà Lạt với những thác nước, hồ và vườn hoa tuyệt đẹp." // Mô tả tóm tắt
+    ],
+    [
+        'id' => 203, // ID mới
+        'title' => 'Phong Nha Caves Adventure',
+        'image' => '/images/tours/phong-nha.webp', // Đường dẫn từ trang chủ
+        'duration' => '3 Days 2 Nights', // Từ trang chủ
+        'difficulty' => 'Trung bình', // Giả định
+        'price' => '5,280,000 VNĐ', // Quy đổi từ $220 USD (ước chừng)
+        'summary' => 'Khám phá hệ thống hang động kỳ vĩ tại Vườn Quốc gia Phong Nha - Kẻ Bàng, di sản UNESCO.' // Mô tả tóm tắt
+    ],
+];
+
+// Dữ liệu các tour núi hiện có của bạn
+$existing_mountain_tours_data = [
     [
         'id' => 101,
         'title' => 'Trekking Tà Xùa Săn Mây',
@@ -86,15 +118,7 @@ $mountain_tours_data = [
         'price' => '2,700,000 VNĐ',
         'summary' => 'Đắm mình trong không gian xanh mát của khu bảo tồn thiên nhiên Pù Luông, khám phá ruộng bậc thang và văn hóa bản địa đặc sắc.'
     ],
-    [
-        'id' => 107,
-        'title' => 'Trekking Núi Chúa - Vườn Quốc Gia Núi Chúa',
-        'image' => 'https://toongadventure.vn/wp-content/uploads/2020/06/nc3-1024x576.jpg',
-        'duration' => '2 Ngày 1 Đêm',
-        'difficulty' => 'Trung bình',
-        'price' => '2,100,000 VNĐ',
-        'summary' => 'Trải nghiệm hệ sinh thái khô hạn độc đáo của Việt Nam, chinh phục các đỉnh núi và khám phá vịnh Vĩnh Hy tuyệt đẹp.'
-    ],
+
     [
         'id' => 108,
         'title' => 'Leo Núi Langbiang - Đà Lạt',
@@ -124,6 +148,9 @@ $mountain_tours_data = [
     ]
 ];
 
+// Gộp các tour gợi ý vào đầu danh sách
+$mountain_tours_data = array_merge($suggested_mountain_tours_data, $existing_mountain_tours_data);
+
 // Thêm slug vào dữ liệu
 $mountain_tours = array_map(function ($tour) {
     $tour['slug'] = create_slug($tour['title']);
@@ -148,7 +175,9 @@ function normalize_difficulty_for_filter($difficulty)
 }
 ?>
 <!-- Phần nội dung chính của trang mountain-tours -->
-<header class="tour-list-header">
+<header class="tour-list-header" style=" background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)),
+    url('https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1770&auto=format&fit=crop')
+    no-repeat center center/cover;">
     <h1><?php echo htmlspecialchars($pageTitle); ?></h1>
     <p>Chọn một hành trình và bắt đầu chuyến phiêu lưu của bạn!</p>
 </header>
