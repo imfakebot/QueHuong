@@ -104,6 +104,35 @@ $destination_slug_to_filename_map = [
     'sapa'            => 'sapa',
 ];
 
+// ======================= PHẦN THÊM MỚI =======================
+// Bảng ánh xạ cho mục "Life in Vietnam"
+$life_slug_to_filename_map = [
+    // Culture
+    'culture' => 'culture-main',
+    'festivals' => 'festivals',
+    'etiquette' => 'etiquette',
+    // Food
+    'food' => 'food-main',
+    'street-food' => 'street-food',
+    // Travel
+    'travel-tips' => 'travel-tips-main',
+    'visa' => 'visa-info',
+];
+
+// Bảng ánh xạ cho mục "Things to do"
+$things_slug_to_filename_map = [
+    // Adventure
+    'trekking-sapa' => 'trekking-sapa-detail',
+    'caving-phongnha' => 'caving-phongnha-detail',
+    // Culture
+    'historical-sites' => 'historical-sites',
+    'museums' => 'museums',
+    // Relaxation
+    'spa-massage' => 'spa-massage',
+    'beach-escapes' => 'beach-escapes',
+];
+// ===================== KẾT THÚC PHẦN THÊM MỚI =====================
+
 
 // =========================================================================
 // ==                        LOGIC XỬ LÝ CỦA ROUTER                        ==
@@ -136,14 +165,40 @@ elseif (preg_match('#^/destinations/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) 
         $contentView = VIEWS_PATH . "/destination/{$filename}.php";
     }
 }
-// Thêm các `elseif` khác cho /things, /life... nếu cần logic động tương tự
+// ======================= PHẦN THÊM MỚI =======================
+// Bước 4: Xử lý các route động cho "Life in Vietnam" (/life/{slug})
+elseif (preg_match('#^/life/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
+    $lifeSlug = $matches[1];
 
-// Bước 4: Nếu không có route nào khớp, gọi hàm abort để báo lỗi 404
+    if (isset($life_slug_to_filename_map[$lifeSlug])) {
+        $filename = $life_slug_to_filename_map[$lifeSlug];
+        // Giả sử các file view cho mục này nằm trong /src/Views/life/
+        $contentView = VIEWS_PATH . "/life/{$filename}.php";
+        // Bạn có thể tạo tiêu đề động ở đây nếu muốn
+        $pageTitle = ucwords(str_replace('-', ' ', $lifeSlug)) . ' - Cuộc Sống & Văn Hóa';
+    }
+}
+// Bước 5: Xử lý các route động cho "Things to do" (/things/{slug})
+elseif (preg_match('#^/things/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
+    $thingsSlug = $matches[1];
+
+    if (isset($things_slug_to_filename_map[$thingsSlug])) {
+        $filename = $things_slug_to_filename_map[$thingsSlug];
+        // Giả sử các file view cho mục này nằm trong /src/Views/things/
+        $contentView = VIEWS_PATH . "/things/{$filename}.php";
+        // Bạn có thể tạo tiêu đề động ở đây nếu muốn
+        $pageTitle = ucwords(str_replace('-', ' ', $thingsSlug)) . ' - Trải Nghiệm Đáng Thử';
+    }
+}
+// ===================== KẾT THÚC PHẦN THÊM MỚI =====================
+
+
+// Bước 6 (trước đây là bước 4): Nếu không có route nào khớp, gọi hàm abort để báo lỗi 404
 if (is_null($contentView)) {
     abort(404);
 }
 
-// Bước 5: Kiểm tra lại lần cuối xem tệp view có thực sự tồn tại trên máy chủ không
+// Bước 7 (trước đây là bước 5): Kiểm tra lại lần cuối xem tệp view có thực sự tồn tại trên máy chủ không
 if (!file_exists($contentView)) {
     error_log("Router Error: View file not found at '{$contentView}' for URI '{$requestUri}'");
     abort(404);
