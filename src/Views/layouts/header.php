@@ -109,7 +109,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 1: Northern -->
                                 <div class="mega-menu-column region-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/destinations/ha-noi"><img src="/images/mega_menu/hanoi.png" alt="Thủ đô Hà Nội"></a>
+                                        <a href="/destinations/hanoi"><img src="/images/mega_menu/hanoi.png" alt="Thủ đô Hà Nội"></a>
                                         <h4>HA NOI</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">BẮC VIỆT NAM</h5>
