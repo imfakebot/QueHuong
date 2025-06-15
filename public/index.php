@@ -70,7 +70,7 @@ $tour_slug_to_filename_map = [
     // Mountain Tours
     'sapa-terraces-adventure' => 'trekking-in-sapa',
     'da-lat-romantic-getaway' => 'da-lat-romantic-getaway-detail',
-    'phong-nha-caves-adventure' => 'exploring-phongnha-cave',
+    'exploring-phongnha-cave' => 'exploring-phongnha-cave',
     'trekking-ta-xua-san-may' => 'trekking-ta-xua-detail',
     'chinh-phuc-dinh-fansipan' => 'fansipan-conquest-detail',
     'kham-pha-cao-nguyen-da-dong-van' => 'dong-van-plateau-detail',

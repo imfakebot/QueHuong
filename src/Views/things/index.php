@@ -50,7 +50,7 @@ $cultureSection = [
         ['wandering-ancient-towns', 'Wandering Ancient Towns'],
         ['visiting-local-markets', 'Visiting Local Markets']
     ],
-    'cta' => ['url' => '/tours/culture', 'text' => 'Tìm Hiểu Tour Văn Hóa']
+    'cta' => ['url' => '/things/cultural-heritage-tours', 'text' => 'Tìm Hiểu Tour Văn Hóa']
 ];
 
 $wellnessSection = [
