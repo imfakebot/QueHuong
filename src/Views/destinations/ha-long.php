@@ -1,95 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hạ Long - Kỳ quan thiên nhiên thế giới</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/QueHuong/public/css/destination.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-  <header>
-    <div class="logo">Hạ Long Travel</div>
-  </header>
-
-  <section class="hero" style="background-image: url('/QueHuong/public/images/mega_menu/Ha-Long/vinh-ha-long.jpg');">
-    <div class="hero-text">
-      <h1>Khám phá Vịnh Hạ Long</h1>
-      <p>Kỳ quan thiên nhiên thế giới với hàng nghìn đảo đá vôi kỳ vĩ và nước biển xanh ngọc.</p>
-      <a href="#highlights" class="btn-cta">Khám phá ngay</a>
-    </div>
-  </section>
-
-  <main>
-    <section class="content-section overview fade-in">
-      <h2><i class="fas fa-city"></i> Tổng quan về Hạ Long</h2>
-      <p>Vịnh Hạ Long được UNESCO công nhận là di sản thiên nhiên thế giới, nổi bật với cảnh quan núi đá vôi trên mặt nước và những hang động tuyệt đẹp. Là điểm đến nổi tiếng thu hút cả khách trong và ngoài nước.</p>
-    </section>
-
-    <section class="tour-card fade-in">
-      <div class="tour-image">
-        <img src="/QueHuong/public/images/mega_menu/Ha-Long/du-thuyen.jpg" alt="Du thuyền trên vịnh">
-        <div class="badge">Sang trọng</div>
-      </div>
-      <div class="tour-details">
-        <h2>Trải nghiệm du thuyền trên Vịnh</h2>
-        <div class="rating">
-          <span class="stars">★★★★★</span>
-          <span>(290 đánh giá)</span>
-        </div>
-        <p>Ngủ đêm trên du thuyền, thưởng thức hải sản tươi ngon và ngắm hoàng hôn giữa vịnh là trải nghiệm không thể bỏ lỡ khi đến Hạ Long.</p>
-        <ul class="tour-info">
-          <li><i class="fa-regular fa-clock"></i> 2 ngày 1 đêm</li>
-          <li><i class="fa-solid fa-ship"></i> Du thuyền</li>
-          <li><i class="fa-solid fa-fish"></i> Hải sản</li>
-          <li><a href="#">Tour nghỉ dưỡng</a></li>
-        </ul>
-        <div class="price-and-button">
-          <span class="price">Từ <strong>1.500.000đ</strong></span>
-          <a href="#" class="btn-cta">Xem chi tiết</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="tour-card fade-in">
-      <div class="tour-image">
-        <img src="/QueHuong/public/images/mega_menu/Ha-Long/dong-thien-cung.jpg" alt="Động Thiên Cung">
-        <div class="badge">Huyền bí</div>
-      </div>
-      <div class="tour-details">
-        <h2>Khám phá động Thiên Cung</h2>
-        <div class="rating">
-          <span class="stars">★★★★☆</span>
-          <span>(170 đánh giá)</span>
-        </div>
-        <p>Động Thiên Cung nổi tiếng với hệ thống nhũ đá kỳ ảo và không gian rộng lớn, là một trong những hang động đẹp nhất của Hạ Long.</p>
-        <ul class="tour-info">
-          <li><i class="fa-regular fa-clock"></i> 1 giờ</li>
-          <li><i class="fa-solid fa-mountain-sun"></i> Hang động</li>
-          <li><i class="fa-solid fa-wand-magic-sparkles"></i> Kỳ quan</li>
-          <li><a href="#">Tour khám phá</a></li>
-        </ul>
-        <div class="price-and-button">
-          <span class="price">Từ <strong>100.000đ</strong></span>
-          <a href="#" class="btn-cta">Xem chi tiết</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Hạ Long Travel
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="/QueHuong/public/js/destination.js"></script>
-</body>
-</html> -->
-
 <?php
-$pageTitle = 'Ha Long Bay - A World Natural Wonder';
+$pageTitle = 'Vịnh Hạ Long - Kỳ Quan Thiên Nhiên Thế Giới';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -105,116 +15,116 @@ $pageScripts = [
 <section class="hero" style="background-image: url('/images/destinations/HaLong/review1.jpg');">
   <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Explore Ha Long Bay</h1>
-    <p>A UNESCO World Heritage Site with thousands of majestic limestone islands in emerald waters.</p>
-    <a href="#highlights" class="btn-cta">Start Your Journey</a>
+    <h1>Khám phá Vịnh Hạ Long</h1>
+    <p>Di sản thiên nhiên thế giới với hàng nghìn hòn đảo đá vôi kỳ vĩ giữa làn nước xanh ngọc.</p>
+    <a href="#highlights" class="btn-cta">Bắt đầu hành trình</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-map-location-dot"></i> Overview of Ha Long</h2>
-    <p>Located in Quang Ninh Province, Ha Long is one of Vietnam’s top destinations with its stunning bay recognized by UNESCO as a World Natural Heritage Site. Featuring thousands of limestone islands and magical caves, it's perfect for luxury cruises, cave exploration, and enjoying breathtaking landscapes.</p>
+    <h2><i class="fas fa-map-location-dot"></i> Tổng quan về Hạ Long</h2>
+    <p>Nằm ở tỉnh Quảng Ninh, Vịnh Hạ Long là một trong những điểm đến hàng đầu của Việt Nam với vịnh biển tuyệt đẹp được UNESCO công nhận là Di sản Thiên nhiên Thế giới. Với hàng nghìn đảo đá vôi và các hang động huyền bí, nơi đây lý tưởng để du thuyền sang trọng, khám phá hang động và chiêm ngưỡng phong cảnh tuyệt mỹ.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/HaLong/du-thuyen.jpg" alt="Ha Long Bay Cruise">
-      <div class="badge">Cruise</div>
+      <img src="/images/destinations/HaLong/du-thuyen.jpg" alt="Du thuyền Vịnh Hạ Long">
+      <div class="badge">Du thuyền</div>
     </div>
     <div class="tour-details">
-      <h2>Overnight Cruise on the Bay</h2>
+      <h2>Trải nghiệm du thuyền qua đêm</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(542 reviews)</span>
+        <span>(542 đánh giá)</span>
       </div>
-      <p>Relax on a luxurious cruise, visit stunning caves, and enjoy the sunrise over the sea.</p>
+      <p>Thư giãn trên du thuyền sang trọng, tham quan hang động kỳ thú và ngắm bình minh trên biển.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 days 1 night</li>
-        <li><i class="fa-solid fa-ship"></i> 5-star cruise</li>
-        <li><i class="fa-solid fa-bed"></i> Overnight stay</li>
-        <li><a href="#">Leisure</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 ngày 1 đêm</li>
+        <li><i class="fa-solid fa-ship"></i> Du thuyền 5 sao</li>
+        <li><i class="fa-solid fa-bed"></i> Ngủ qua đêm</li>
+        <li><a href="#">Nghỉ dưỡng</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">From <strong>2,200,000 VND/person</strong></span>
-        <a href="#" class="btn-cta">View Details</a>
+        <span class="price">Từ <strong>2.200.000đ/người</strong></span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Visit Thien Cung & Dau Go Caves</h2>
+      <h2>Thăm động Thiên Cung & hang Đầu Gỗ</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(358 reviews)</span>
+        <span>(358 đánh giá)</span>
       </div>
-      <p>Discover magical limestone caves filled with glittering stalactites and majestic scenery.</p>
+      <p>Khám phá những hang động đá vôi huyền ảo với thạch nhũ lấp lánh và khung cảnh hùng vĩ.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> Half day</li>
-        <li><i class="fa-solid fa-shoe-prints"></i> Light hiking</li>
-        <li><i class="fa-solid fa-camera-retro"></i> Sightseeing</li>
-        <li><a href="#">Explore</a></li>
+        <li><i class="fa-regular fa-clock"></i> Nửa ngày</li>
+        <li><i class="fa-solid fa-shoe-prints"></i> Đi bộ nhẹ</li>
+        <li><i class="fa-solid fa-camera-retro"></i> Tham quan</li>
+        <li><a href="#">Khám phá</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">From <strong>450,000 VND/person</strong></span>
-        <a href="#" class="btn-cta">View Details</a>
+        <span class="price">Từ <strong>450.000đ/người</strong></span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/HaLong/hang-dong.jpg" alt="Thien Cung Cave">
-      <div class="badge">Cave</div>
+      <img src="/images/destinations/HaLong/hang-dong.jpg" alt="Động Thiên Cung">
+      <div class="badge">Hang động</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/HaLong/kayak.jpg" alt="Kayaking in Ha Long">
-      <div class="badge">Adventure</div>
+      <img src="/images/destinations/HaLong/kayak.jpg" alt="Chèo kayak Vịnh Hạ Long">
+      <div class="badge">Mạo hiểm</div>
     </div>
     <div class="tour-details">
-      <h2>Kayaking Among Islands</h2>
+      <h2>Chèo kayak giữa các đảo</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(276 reviews)</span>
+        <span>(276 đánh giá)</span>
       </div>
-      <p>Experience kayaking through water caves and get a unique view of the limestone islands.</p>
+      <p>Trải nghiệm chèo thuyền qua các hang nước và ngắm nhìn các đảo đá vôi từ góc nhìn độc đáo.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> Half day</li>
-        <li><i class="fa-solid fa-person-swimming"></i> Physical activity</li>
-        <li><i class="fa-solid fa-water"></i> On the water</li>
-        <li><a href="#">Adventure</a></li>
+        <li><i class="fa-regular fa-clock"></i> Nửa ngày</li>
+        <li><i class="fa-solid fa-person-swimming"></i> Vận động</li>
+        <li><i class="fa-solid fa-water"></i> Trên mặt nước</li>
+        <li><a href="#">Phiêu lưu</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">From <strong>300,000 VND/person</strong></span>
-        <a href="#" class="btn-cta">View Details</a>
+        <span class="price">Từ <strong>300.000đ/người</strong></span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Highlights</h2>
+    <h2>Điểm nhấn</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/HaLong/hon-ga-choi.jpg" alt="Fighting Cocks Islet">
-        <h3>Fighting Cocks Islet</h3>
-        <p>A symbol of Ha Long Bay – two giant rocks shaped like fighting roosters.</p>
+        <img src="/images/destinations/HaLong/hon-ga-choi.jpg" alt="Hòn Gà Chọi">
+        <h3>Hòn Gà Chọi</h3>
+        <p>Biểu tượng của Vịnh Hạ Long – hai khối đá lớn như hình đôi gà đang đấu nhau.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/HaLong/bai-chay.jpg" alt="Bai Chay Beach">
-        <h3>Bai Chay Beach</h3>
-        <p>A lively beach with resorts, entertainment areas, and delicious local food.</p>
+        <img src="/images/destinations/HaLong/bai-chay.jpg" alt="Bãi Cháy">
+        <h3>Bãi Cháy</h3>
+        <p>Bãi biển sôi động với khu nghỉ dưỡng, giải trí và ẩm thực đặc sắc.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/HaLong/sung-sot.jpg" alt="Sung Sot Cave">
-        <h3>Sung Sot Cave</h3>
-        <p>One of the largest and most beautiful caves in Ha Long, like a fairy tale world.</p>
+        <img src="/images/destinations/HaLong/sung-sot.jpg" alt="Động Sửng Sốt">
+        <h3>Động Sửng Sốt</h3>
+        <p>Một trong những hang động lớn và đẹp nhất ở Hạ Long, như bước vào thế giới cổ tích.</p>
       </div>
     </div>
   </section>
 
   <section class="gallery">
-    <h2>GALLERY</h2>
+    <h2>BỘ SƯU TẬP</h2>
     <div class="swiper-button-prev gallery-nav-prev"></div>
     <div class="swiper-button-next gallery-nav-next"></div>
 
@@ -222,12 +132,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['du-thuyen.jpg', 'Cruise on the Bay'],
-          ['hang-dong.jpg', 'Thien Cung Cave'],
-          ['kayak.jpg', 'Kayaking'],
-          ['hon-ga-choi.jpg', 'Fighting Cocks Islet'],
-          ['bai-chay.jpg', 'Bai Chay Beach'],
-          ['sung-sot.jpg', 'Sung Sot Cave']
+          ['du-thuyen.jpg', 'Du thuyền trên vịnh'],
+          ['hang-dong.jpg', 'Động Thiên Cung'],
+          ['kayak.jpg', 'Chèo kayak'],
+          ['hon-ga-choi.jpg', 'Hòn Gà Chọi'],
+          ['bai-chay.jpg', 'Bãi Cháy'],
+          ['sung-sot.jpg', 'Động Sửng Sốt']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -240,4 +150,3 @@ $pageScripts = [
     </div>
   </section>
 </main>
-

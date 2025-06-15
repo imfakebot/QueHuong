@@ -1,95 +1,5 @@
-<!-- <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Phú Quốc - Đảo ngọc thiên đường</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/QueHuong/public/css/destination.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-  <header>
-    <div class="logo">Phú Quốc Travel</div>
-  </header>
-
-  <section class="hero" style="background-image: url('/QueHuong/public/images/mega_menu/Phu-Quoc/phu-quoc-bien.jpg');">
-    <div class="hero-text">
-      <h1>Khám phá Phú Quốc</h1>
-      <p>Đảo ngọc lớn nhất Việt Nam với những bãi biển tuyệt đẹp, resort sang trọng và văn hóa bản địa phong phú.</p>
-      <a href="#highlights" class="btn-cta">Khám phá ngay</a>
-    </div>
-  </section>
-
-  <main>
-    <section class="content-section overview fade-in">
-      <h2><i class="fas fa-city"></i> Tổng quan về Phú Quốc</h2>
-      <p>Phú Quốc là hòn đảo lớn nhất Việt Nam, nổi tiếng với các bãi biển đẹp như Bãi Sao, Bãi Dài, cùng hệ thống resort cao cấp, ẩm thực hải sản phong phú và các làng nghề truyền thống như làm nước mắm, trồng tiêu.</p>
-    </section>
-
-    <section class="tour-card fade-in">
-      <div class="tour-image">
-        <img src="/QueHuong/public/images/mega_menu/Phu-Quoc/bai-sao.jpg" alt="Bãi Sao">
-        <div class="badge">Biển đẹp</div>
-      </div>
-      <div class="tour-details">
-        <h2>Tắm biển Bãi Sao</h2>
-        <div class="rating">
-          <span class="stars">★★★★★</span>
-          <span>(350 đánh giá)</span>
-        </div>
-        <p>Bãi Sao nổi tiếng với làn cát trắng mịn, nước biển xanh ngọc và khung cảnh yên bình – là một trong những bãi biển đẹp nhất Việt Nam.</p>
-        <ul class="tour-info">
-          <li><i class="fa-regular fa-clock"></i> Nửa ngày</li>
-          <li><i class="fa-solid fa-umbrella-beach"></i> Biển</li>
-          <li><i class="fa-solid fa-water"></i> Thư giãn</li>
-          <li><a href="#">Tour nghỉ dưỡng</a></li>
-        </ul>
-        <div class="price-and-button">
-          <span class="price">Từ <strong>100.000đ</strong></span>
-          <a href="#" class="btn-cta">Xem chi tiết</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="tour-card fade-in">
-      <div class="tour-image">
-        <img src="/QueHuong/public/images/mega_menu/Phu-Quoc/nha-thung-nuoc-mam.jpg" alt="Làng nghề nước mắm">
-        <div class="badge">Đặc sản</div>
-      </div>
-      <div class="tour-details">
-        <h2>Tham quan nhà thùng nước mắm</h2>
-        <div class="rating">
-          <span class="stars">★★★★☆</span>
-          <span>(180 đánh giá)</span>
-        </div>
-        <p>Phú Quốc là nơi nổi tiếng với nghề làm nước mắm truyền thống. Bạn sẽ được tìm hiểu quy trình ủ mắm và thưởng thức đặc sản vùng đảo.</p>
-        <ul class="tour-info">
-          <li><i class="fa-regular fa-clock"></i> 1 giờ</li>
-          <li><i class="fa-solid fa-flask"></i> Làng nghề</li>
-          <li><i class="fa-solid fa-fish"></i> Ẩm thực</li>
-          <li><a href="#">Tour văn hóa</a></li>
-        </ul>
-        <div class="price-and-button">
-          <span class="price">Từ <strong>Miễn phí</strong></span>
-          <a href="#" class="btn-cta">Xem chi tiết</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Phú Quốc Travel
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="/QueHuong/public/js/destination.js"></script>
-</body>
-</html> -->
-
 <?php
-$pageTitle = 'Phu Quoc - Vietnam\'s Pearl Island Paradise';
+$pageTitle = 'Phú Quốc - Đảo ngọc thiên đường của Việt Nam';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
@@ -105,116 +15,116 @@ $pageScripts = [
 <section class="hero" style="background-image: url('/images/destinations/PhuQuoc/review.jpg');">
   <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Discover Phu Quoc</h1>
-    <p>A paradise for relaxation with blue seas, white sands, luxurious resorts, and top-tier entertainment.</p>
-    <a href="#highlights" class="btn-cta">Explore Now</a>
+    <h1>Khám phá Phú Quốc</h1>
+    <p>Thiên đường nghỉ dưỡng với biển xanh, cát trắng, resort sang trọng và những trải nghiệm giải trí hàng đầu.</p>
+    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-map-location-dot"></i> Overview of Phu Quoc</h2>
-    <p>Phu Quoc is the largest island in Vietnam, part of Kien Giang province, famous for its pristine beaches, fresh seafood, and diverse tropical forests. It is an ideal destination with many high-end resorts and exciting marine activities.</p>
+    <h2><i class="fas fa-map-location-dot"></i> Tổng quan về Phú Quốc</h2>
+    <p>Phú Quốc là hòn đảo lớn nhất Việt Nam, thuộc tỉnh Kiên Giang, nổi tiếng với những bãi biển hoang sơ, hải sản tươi ngon và hệ sinh thái rừng nhiệt đới phong phú. Đây là điểm đến lý tưởng với nhiều khu nghỉ dưỡng cao cấp và hoạt động biển thú vị.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/PhuQuoc/bai-sao.jpg" alt="Sao Beach">
-      <div class="badge">Beach</div>
+      <img src="/images/destinations/PhuQuoc/bai-sao.jpg" alt="Bãi Sao">
+      <div class="badge">Biển</div>
     </div>
     <div class="tour-details">
-      <h2>Relax at Sao Beach</h2>
+      <h2>Thư giãn tại Bãi Sao</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(2,345 reviews)</span>
+        <span>(2.345 đánh giá)</span>
       </div>
-      <p>The most beautiful beach in Phu Quoc with crystal-clear water and smooth white sand – perfect for swimming and photography.</p>
+      <p>Bãi biển đẹp nhất Phú Quốc với làn nước trong xanh và bãi cát trắng mịn – lý tưởng để tắm biển và chụp ảnh.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> Flexible time</li>
-        <li><i class="fa-solid fa-umbrella-beach"></i> Beach</li>
-        <li><i class="fa-solid fa-camera"></i> Photo spot</li>
-        <li><a href="#">Sao Beach</a></li>
+        <li><i class="fa-regular fa-clock"></i> Thời gian linh hoạt</li>
+        <li><i class="fa-solid fa-umbrella-beach"></i> Biển</li>
+        <li><i class="fa-solid fa-camera"></i> Check-in</li>
+        <li><a href="#">Bãi Sao</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">Free</span>
-        <a href="#" class="btn-cta">View Details</a>
+        <span class="price">Miễn phí</span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Explore VinWonders & Safari</h2>
+      <h2>Khám phá VinWonders & Safari</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(4,578 reviews)</span>
+        <span>(4.578 đánh giá)</span>
       </div>
-      <p>The largest theme park and semi-wild zoo in Vietnam, offering hundreds of fun activities for the whole family.</p>
+      <p>Công viên chủ đề và vườn thú bán hoang dã lớn nhất Việt Nam với hàng trăm hoạt động vui chơi dành cho cả gia đình.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> Full day</li>
-        <li><i class="fa-solid fa-landmark"></i> Theme park</li>
+        <li><i class="fa-regular fa-clock"></i> Cả ngày</li>
+        <li><i class="fa-solid fa-landmark"></i> Công viên giải trí</li>
         <li><i class="fa-solid fa-paw"></i> Safari</li>
         <li><a href="#">VinWonders</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">From <strong>650,000đ</strong></span>
-        <a href="#" class="btn-cta">Book Ticket</a>
+        <span class="price">Từ <strong>650.000đ</strong></span>
+        <a href="#" class="btn-cta">Đặt vé</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/PhuQuoc/vinwonders.jpg" alt="VinWonders Phu Quoc">
-      <div class="badge">Entertainment</div>
+      <img src="/images/destinations/PhuQuoc/vinwonders.jpg" alt="VinWonders Phú Quốc">
+      <div class="badge">Giải trí</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/PhuQuoc/lan-bien.jpg" alt="Scuba Diving Coral Reef">
-      <div class="badge">Experience</div>
+      <img src="/images/destinations/PhuQuoc/lan-bien.jpg" alt="Lặn ngắm san hô">
+      <div class="badge">Trải nghiệm</div>
     </div>
     <div class="tour-details">
-      <h2>Scuba Diving to See Coral Reefs</h2>
+      <h2>Lặn ngắm san hô</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(1,123 reviews)</span>
+        <span>(1.123 đánh giá)</span>
       </div>
-      <p>Dive into the waters around An Thoi Archipelago to admire colorful coral reefs and diverse marine life.</p>
+      <p>Khám phá hệ sinh thái biển quanh Quần đảo An Thới với rạn san hô rực rỡ và sinh vật biển đa dạng.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2–3 hours</li>
-        <li><i class="fa-solid fa-water"></i> Ocean</li>
-        <li><i class="fa-solid fa-fish"></i> Coral</li>
-        <li><a href="#">An Thoi</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2–3 giờ</li>
+        <li><i class="fa-solid fa-water"></i> Đại dương</li>
+        <li><i class="fa-solid fa-fish"></i> San hô</li>
+        <li><a href="#">An Thới</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">From <strong>500,000đ</strong></span>
-        <a href="#" class="btn-cta">Book Tour</a>
+        <span class="price">Từ <strong>500.000đ</strong></span>
+        <a href="#" class="btn-cta">Đặt tour</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Highlights</h2>
+    <h2>Điểm nổi bật</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/PhuQuoc/chua-ho-quoc.jpg" alt="Ho Quoc Pagoda">
-        <h3>Ho Quoc Pagoda</h3>
-        <p>A sacred temple nestled on the mountain overlooking the sea, offering breathtaking views.</p>
+        <img src="/images/destinations/PhuQuoc/chua-ho-quoc.jpg" alt="Chùa Hộ Quốc">
+        <h3>Chùa Hộ Quốc</h3>
+        <p>Ngôi chùa linh thiêng nằm trên núi hướng ra biển với tầm nhìn tuyệt đẹp.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/PhuQuoc/cho-dem.jpg" alt="Phu Quoc Night Market">
-        <h3>Dinh Cau Night Market</h3>
-        <p>A lively food and souvenir paradise that lights up every evening.</p>
+        <img src="/images/destinations/PhuQuoc/cho-dem.jpg" alt="Chợ đêm Phú Quốc">
+        <h3>Chợ đêm Dinh Cậu</h3>
+        <p>Thiên đường ẩm thực và quà lưu niệm sôi động mỗi buổi tối.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/PhuQuoc/nuoc-mam.jpg" alt="Phu Quoc Fish Sauce">
-        <h3>Traditional Fish Sauce Factory</h3>
-        <p>Discover the traditional process behind Vietnam’s famous Phu Quoc fish sauce.</p>
+        <img src="/images/destinations/PhuQuoc/nuoc-mam.jpg" alt="Nước mắm Phú Quốc">
+        <h3>Nhà thùng nước mắm</h3>
+        <p>Khám phá quy trình làm nước mắm truyền thống nổi tiếng của Phú Quốc.</p>
       </div>
     </div>
   </section>
 
   <section class="gallery">
-    <h2>GALLERY</h2>
+    <h2>THƯ VIỆN ẢNH</h2>
     <div class="swiper-button-prev gallery-nav-prev"></div>
     <div class="swiper-button-next gallery-nav-next"></div>
 
@@ -222,12 +132,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['bai-sao.jpg', 'Sao Beach'],
+          ['bai-sao.jpg', 'Bãi Sao'],
           ['vinwonders.jpg', 'VinWonders'],
-          ['lan-bien.jpg', 'Scuba Diving'],
-          ['chua-ho-quoc.jpg', 'Ho Quoc Pagoda'],
-          ['cho-dem.jpg', 'Night Market'],
-          ['nuoc-mam.jpg', 'Fish Sauce Factory']
+          ['lan-bien.jpg', 'Lặn ngắm san hô'],
+          ['chua-ho-quoc.jpg', 'Chùa Hộ Quốc'],
+          ['cho-dem.jpg', 'Chợ đêm'],
+          ['nuoc-mam.jpg', 'Nước mắm']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
@@ -240,4 +150,3 @@ $pageScripts = [
     </div>
   </section>
 </main>
-
