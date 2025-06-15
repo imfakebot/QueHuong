@@ -76,6 +76,20 @@ elseif (preg_match('#^/tours/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
         $contentView = VIEWS_PATH . '/errors/404.php';
     }
 }
+// 4. Route động cho chi tiết TOUR trong thư mục con: /tours/detail-mountain-tours/{slug}
+elseif (preg_match('#^/tours/detail-mountain-tours/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
+    $tourSlug = $matches[1]; // Lấy slug từ URL (ví dụ: "trekking-in-sapa")
+    $potentialView = VIEWS_PATH . '/tours/detail-mountain-tours/' . $tourSlug . '.php';
+
+    if (file_exists($potentialView)) {
+        // $pageTitle sẽ được đặt bên trong file view của tour đó
+        $contentView = $potentialView;
+    } else {
+        http_response_code(404);
+        $pageTitle = '404 Not Found - Du Lịch Quê Hương';
+        $contentView = VIEWS_PATH . '/errors/404.php';
+    }
+}
 // Route cho trang danh mục "Relaxation & Wellness"
 elseif ($requestUri === '/things/relaxation') {
     $pageTitle = 'Hoạt Động Thư Giãn & Chăm Sóc Sức Khỏe - Du Lịch Quê Hương';

@@ -167,7 +167,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">Thrills & Nature's Best</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/things/trekking_in_sapa">Trekking in Sapa</a></li>
+                                        <li><a href="/tours/detail-mountain-tours/trekking-in-sapa">Trekking in Sapa</a></li>
                                         <li><a href="/things/kayaking-halong">Kayaking in Ha Long Bay</a></li>
                                         <li><a href="/things/caving-phongnha">Exploring Phong Nha Caves</a></li>
                                         <li><a href="/things/motorbiking">Motorbiking Adventures</a></li>
