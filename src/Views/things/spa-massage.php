@@ -32,35 +32,34 @@ $page_details = [
             'duration' => '60 / 90 phút',
             'price' => 'Từ 750,000 VNĐ',
             'description' => 'Liệu pháp kết hợp kỹ thuật massage truyền thống với túi thảo dược nóng, giúp giảm đau nhức cơ bắp, cải thiện tuần hoàn máu và mang lại cảm giác thư thái sâu.',
-            'image' => 'https://sp-ao.shortpixel.ai/client/to_webp,q_glossy,ret_img,w_750,h_500/https://saigonsmilespa.com.vn/images/a-trong/massage-body-tui-thao-duoc.jpg'
+            'image' => 'https://easysalon.vn/wp-content/uploads/2020/09/goi-dau-thao-duoc-spa-2.jpg'
         ],
         [
             'name' => 'Chăm Sóc Da Mặt Chuyên Sâu',
             'duration' => '75 phút',
             'price' => 'Từ 900,000 VNĐ',
             'description' => 'Làm sạch sâu, tẩy tế bào chết, đắp mặt nạ và massage da mặt bằng các sản phẩm hữu cơ. Giúp làn da của bạn trở nên tươi sáng, mịn màng và tràn đầy sức sống.',
-            'image' => 'https://images.squarespace-cdn.com/content/v1/58f0309d29687f8742512130/1608466601452-47P6A9MML504T0E82TMW/ch%C4%83m+s%C3%B3c+da+m%E1%BA%B7t+chuy%C3%AAn+s%C3%A2u.jpeg'
+            'image' => 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvNFjlpSvrW4b7opUAfaQCjVW-7iOiAu7kpA&s'
         ],
         [
             'name' => 'Massage Đá Nóng',
             'duration' => '90 phút',
             'price' => 'Từ 1,100,000 VNĐ',
             'description' => 'Sử dụng những viên đá bazan được làm nóng, đặt lên các huyệt đạo trên cơ thể. Hơi nóng từ đá giúp giải tỏa căng thẳng, giảm stress và cân bằng năng lượng.',
-            'image' => 'https://htgsoft.vn/wp-content/uploads/2023/12/massage-da-nong-la-gi.jpg'
+            'image' => 'https://fujigroup.vn/media/news/2611_cach-su-dung-da-nong-masssage-ngu-ngon.jpg'
         ],
         [
             'name' => 'Gói Tái Tạo Năng Lượng Toàn Thân',
             'duration' => '120 phút',
             'price' => 'Từ 1,800,000 VNĐ',
             'description' => 'Gói dịch vụ cao cấp bao gồm tẩy tế bào chết toàn thân, ủ dưỡng thể và massage thư giãn. Một trải nghiệm hoàn hảo để nuông chiều bản thân.',
-            'image' => 'https://lamourspadalat.com/wp-content/uploads/2023/07/combo-1.png'
+            'image' => 'https://product.hstatic.net/200000738809/product/untitled-4_8b870605b3ed4623b1477776de91adf6_master.jpg'
         ]
     ],
     'gallery' => [
-        ['url' => 'https://www.intercontinentalphuquoc.com/uploads/harnn-spa/harnn-spa-reception.jpg', 'alt' => 'Không gian lễ tân spa'],
-        ['url' => 'https://www.marriott.com/content/dam/mar-biz/hotels/property-images/repository-images/hnasi/hnasi-spa-treatment-room-9993-hor-clsc.jpg', 'alt' => 'Phòng trị liệu đôi'],
-        ['url' => 'https://www.hyatt.com/content/dam/hyatt/hyattdam/images/2022/04/12/1443/DADXT-P0219-Xuan-Spa-Single-Treatment-Room.jpg', 'alt' => 'Chi tiết sản phẩm spa'],
-        ['url' => 'https://www.aman.com/sites/default/files/2021-03/Amanoi-Spa-massage-treatment.jpg', 'alt' => 'Khách hàng đang thư giãn']
+        ['url' => 'https://anviethouse.vn/wp-content/uploads/2021/09/Thiet-ke-phong-khach-spa-sang-trong-1-2.jpg', 'alt' => 'Không gian lễ tân spa'],
+        ['url' => 'https://senspa.com.vn/wp-content/uploads/2021/01/foot-3.jpg', 'alt' => 'Phòng trị liệu đôi'],
+        ['url' => 'https://physiodermie.vn/wp-content/uploads/2019/12/My-pham-danh-cho-spa-Anh-bia.jpg', 'alt' => 'Chi tiết sản phẩm spa'],
     ]
 ];
 ?>
