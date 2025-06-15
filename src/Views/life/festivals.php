@@ -4,6 +4,14 @@ $pageTitle = 'Festivals & Holidays - Lễ Hội Và Ngày Lễ Ở Việt Nam';
 $pageStyles = ['/css/festivals.css'];
 $pageScripts = ['/js/festivals.js'];
 
+function generateSlug($title) {
+    // Chuyển tiếng Việt có dấu thành không dấu (nếu cần)
+    $title = iconv('UTF-8', 'ASCII//TRANSLIT', $title);
+    // Xoá ký tự đặc biệt, chuyển khoảng trắng thành dấu gạch ngang
+    $slug = strtolower(trim(preg_replace('/[^a-z0-9]+/i', '-', $title), '-'));
+    return $slug;
+}
+
 // Lễ hội truyền thống
 $traditionalFestivals = [
     'Tết Nguyên Đán - Lễ hội quan trọng nhất năm',
@@ -120,15 +128,16 @@ $holidays = [
             foreach ($eventsByMonth as $monthIndex => $events) {
                 echo "<div class='month-events' data-month='$monthIndex' style='display: ".($monthIndex === 5 ? 'flex' : 'none')."'>";
                 foreach ($events as $event) {
+                    $slug = generateSlug($event['title']); // Tạo slug
                     echo "
-                        <div class='event-card'>
+                        <a href='$slug' class='event-card'>
                             <img src='{$event['img']}' alt='{$event['title']}'>
                             <div class='event-info'>
                                 <p class='event-date'>{$event['date']}</p>
                                 <h3 class='event-title'>{$event['title']}</h3>
                             </div>
-                        </div>";
-                }
+                        </a>";
+}
                 echo "</div>";
             }
             ?>
