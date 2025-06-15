@@ -31,6 +31,28 @@ $tour_details = [
             ]
         ]
     ],
+    // ================== PHẦN MỚI: DỮ LIỆU ĐÁNH GIÁ (Ví dụ) ==================
+    'reviews' => [
+        [
+            'user_name' => 'Hoàng Lan Anh',
+            'rating' => 5,
+            'comment' => 'Trải nghiệm chèo kayak ở Hạ Long thật sự rất đáng nhớ. Nước trong xanh, cảnh đẹp hùng vĩ. Hướng dẫn viên nhiệt tình, bữa trưa hải sản tươi ngon. Sẽ quay lại!',
+            'date' => '25/07/2024'
+        ],
+        [
+            'user_name' => 'Michael Chen',
+            'rating' => 5,
+            'comment' => 'Absolutely stunning! Kayaking through the caves and around the limestone karsts was magical. The crew was friendly and the seafood lunch was delicious. A must-do in Halong Bay.',
+            'date' => '18/07/2024'
+        ],
+        [
+            'user_name' => 'Trần Văn Đức',
+            'rating' => 4,
+            'comment' => 'Tour tổ chức tốt, cảnh quan Vịnh Hạ Long thì không chê vào đâu được. Kayak dễ chèo, an toàn. Chỉ có điều thời gian chèo hơi ít một chút. Tổng thể là một chuyến đi vui.',
+            'date' => '10/07/2024'
+        ]
+    ],
+    // ================== KẾT THÚC PHẦN MỚI ==================
     'includes' => ['Xe đưa đón tại Hạ Long', 'Du thuyền tham quan Vịnh', 'Hướng dẫn viên chuyên nghiệp', 'Thuyền Kayak và áo phao', 'Vé thắng cảnh', '01 bữa trưa hải sản', 'Nước uống trên tàu'],
     'excludes' => ['Đồ uống gọi thêm', 'Chi phí cá nhân ngoài chương trình', 'Tiền tip cho HDV & lái xe (không bắt buộc)'],
     'price' => '850,000 VNĐ / người'
@@ -110,6 +132,38 @@ $tour_details = [
                                 </div>
                             </div>
                         <?php endforeach; ?>
+                    </div>
+                </section>
+
+                <!-- ================== PHẦN MỚI: HIỂN THỊ ĐÁNH GIÁ ================== -->
+                <section class="tour-reviews">
+                    <h2>Đánh giá từ khách hàng</h2>
+                    <div class="review-list">
+                        <?php if (!empty($tour_details['reviews'])): ?>
+                            <?php foreach ($tour_details['reviews'] as $review): ?>
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <strong class="review-author"><?php echo htmlspecialchars($review['user_name']); ?></strong>
+                                        <span class="review-date"><?php echo htmlspecialchars($review['date']); ?></span>
+                                    </div>
+                                    <div class="review-stars">
+                                        <?php for ($i = 0; $i < 5; $i++): ?>
+                                            <?php if ($i < $review['rating']): ?>
+                                                <span class="star-filled">★</span>
+                                            <?php else: ?>
+                                                <span class="star-empty">☆</span>
+                                            <?php endif; ?>
+                                        <?php endfor; ?>
+                                    </div>
+                                    <p class="review-comment"><?php echo nl2br(htmlspecialchars($review['comment'])); ?></p>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>Chưa có đánh giá nào cho tour này.</p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="review-call-to-action">
+                        <p>Đã trải nghiệm tour này? Hãy liên hệ với chúng tôi để chia sẻ cảm nhận của bạn!</p>
                     </div>
                 </section>
             </div>

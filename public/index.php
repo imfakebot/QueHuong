@@ -141,7 +141,7 @@ $life_slug_to_filename_map = [
 
 // Bảng ánh xạ cho mục "Things to do"
 $things_slug_to_filename_map = [
-    // Bạn có thể thêm các file trong thư mục /things vào đây
+    'spa-massage' => 'spa-massage',
 ];
 // ===================== KẾT THÚC PHẦN CẬP NHẬT =====================
 

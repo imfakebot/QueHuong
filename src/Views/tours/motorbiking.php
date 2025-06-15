@@ -53,6 +53,28 @@ $tour_details = [
             ]
         ]
     ],
+    // ================== PHẦN MỚI: DỮ LIỆU ĐÁNH GIÁ (Ví dụ) ==================
+    'reviews' => [
+        [
+            'user_name' => 'Phạm Văn Mạnh',
+            'rating' => 5,
+            'comment' => 'Không thể tin được! Cung đường Hà Giang quá đẹp, hùng vĩ. Xe tốt, hướng dẫn viên nhiệt tình, am hiểu. Homestay sạch sẽ, đồ ăn ngon. Chắc chắn sẽ đi lại lần nữa!',
+            'date' => '10/08/2024'
+        ],
+        [
+            'user_name' => 'Sarah Miller',
+            'rating' => 5,
+            'comment' => 'The Ha Giang Loop was the highlight of my Vietnam trip! Incredible landscapes, challenging roads, and a fantastic guide (Mr. Tuan). The homestays were authentic and welcoming. Highly recommend this adventure.',
+            'date' => '02/08/2024'
+        ],
+        [
+            'user_name' => 'Lê Thị Bích Ngọc',
+            'rating' => 4,
+            'comment' => 'Tour rất tuyệt vời, cảnh đẹp mê hồn. Tuy nhiên, một vài đoạn đường hơi khó đi, cần tay lái vững. Đồ bảo hộ được cung cấp đầy đủ. Hướng dẫn viên rất có kinh nghiệm.',
+            'date' => '25/07/2024'
+        ]
+    ],
+    // ================== KẾT THÚC PHẦN MỚI ==================
     'includes' => ['Xe máy (số tự động hoặc côn tay)', 'Xăng xe cho toàn bộ hành trình', 'Hướng dẫn viên chuyên nghiệp', 'Các bữa ăn trong chương trình', '3 đêm tại homestay', 'Phí tham quan', 'Đồ bảo hộ (mũ bảo hiểm, giáp tay chân)'],
     'excludes' => ['Chi phí di chuyển Hà Nội - Hà Giang', 'Đồ uống cá nhân', 'Bảo hiểm du lịch cá nhân', 'Tiền tip cho HDV'],
     'price' => '4,800,000 VNĐ / người'
@@ -133,6 +155,38 @@ $tour_details = [
                                 </div>
                             </div>
                         <?php endforeach; ?>
+                    </div>
+                </section>
+
+                <!-- ================== PHẦN MỚI: HIỂN THỊ ĐÁNH GIÁ ================== -->
+                <section class="tour-reviews">
+                    <h2>Đánh giá từ khách hàng</h2>
+                    <div class="review-list">
+                        <?php if (!empty($tour_details['reviews'])): ?>
+                            <?php foreach ($tour_details['reviews'] as $review): ?>
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <strong class="review-author"><?php echo htmlspecialchars($review['user_name']); ?></strong>
+                                        <span class="review-date"><?php echo htmlspecialchars($review['date']); ?></span>
+                                    </div>
+                                    <div class="review-stars">
+                                        <?php for ($i = 0; $i < 5; $i++): ?>
+                                            <?php if ($i < $review['rating']): ?>
+                                                <span class="star-filled">★</span>
+                                            <?php else: ?>
+                                                <span class="star-empty">☆</span>
+                                            <?php endif; ?>
+                                        <?php endfor; ?>
+                                    </div>
+                                    <p class="review-comment"><?php echo nl2br(htmlspecialchars($review['comment'])); ?></p>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>Chưa có đánh giá nào cho tour này.</p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="review-call-to-action">
+                        <p>Đã trải nghiệm tour này? Hãy liên hệ với chúng tôi để chia sẻ cảm nhận của bạn!</p>
                     </div>
                 </section>
             </div>

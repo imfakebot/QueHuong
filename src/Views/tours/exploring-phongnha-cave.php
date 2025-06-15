@@ -37,6 +37,28 @@ $tour_details = [
             ]
         ]
     ],
+    // ================== PHẦN MỚI: DỮ LIỆU ĐÁNH GIÁ (Ví dụ) ==================
+    'reviews' => [
+        [
+            'user_name' => 'Nguyễn Văn Hùng',
+            'rating' => 5,
+            'comment' => 'Phong Nha quá đẹp! Động Phong Nha và Thiên Đường đều hùng vĩ, kỳ ảo. Hướng dẫn viên rất am hiểu và nhiệt tình. Dịch vụ tour tốt, đồ ăn ngon. Rất đáng tiền!',
+            'date' => '12/08/2024'
+        ],
+        [
+            'user_name' => 'Emily Carter',
+            'rating' => 5,
+            'comment' => 'An unforgettable experience! The caves are absolutely breathtaking. Our guide was knowledgeable and the tour was well-organized. The optional zipline and mud bath at Dark Cave were so much fun. Highly recommend!',
+            'date' => '05/08/2024'
+        ],
+        [
+            'user_name' => 'Trần Thị Mai',
+            'rating' => 4,
+            'comment' => 'Chuyến đi tuyệt vời, cảnh quan Phong Nha đúng là di sản thế giới. Động Thiên Đường rất ấn tượng. Chỉ có một chút là thời gian di chuyển giữa các điểm hơi nhiều. Nhưng tổng thể rất hài lòng.',
+            'date' => '28/07/2024'
+        ]
+    ],
+    // ================== KẾT THÚC PHẦN MỚI ==================
     'includes' => ['Xe du lịch đời mới đưa đón tại Đồng Hới', 'Hướng dẫn viên am hiểu', 'Các bữa ăn trong chương trình (2 trưa, 1 tối, 1 sáng)', 'Vé tham quan các điểm (Động Phong Nha, Động Thiên Đường)', 'Thuyền tham quan', '1 đêm tại khách sạn/homestay', 'Nước uống'],
     'excludes' => ['Vé tham quan Sông Chày - Hang Tối hoặc Suối Moọc (tùy chọn)', 'Đồ uống trong bữa ăn', 'Chi phí cá nhân', 'Tiền tip cho HDV & lái xe'],
     'price' => '2,850,000 VNĐ / người'
@@ -117,6 +139,38 @@ $tour_details = [
                                 </div>
                             </div>
                         <?php endforeach; ?>
+                    </div>
+                </section>
+
+                <!-- ================== PHẦN MỚI: HIỂN THỊ ĐÁNH GIÁ ================== -->
+                <section class="tour-reviews">
+                    <h2>Đánh giá từ khách hàng</h2>
+                    <div class="review-list">
+                        <?php if (!empty($tour_details['reviews'])): ?>
+                            <?php foreach ($tour_details['reviews'] as $review): ?>
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <strong class="review-author"><?php echo htmlspecialchars($review['user_name']); ?></strong>
+                                        <span class="review-date"><?php echo htmlspecialchars($review['date']); ?></span>
+                                    </div>
+                                    <div class="review-stars">
+                                        <?php for ($i = 0; $i < 5; $i++): ?>
+                                            <?php if ($i < $review['rating']): ?>
+                                                <span class="star-filled">★</span>
+                                            <?php else: ?>
+                                                <span class="star-empty">☆</span>
+                                            <?php endif; ?>
+                                        <?php endfor; ?>
+                                    </div>
+                                    <p class="review-comment"><?php echo nl2br(htmlspecialchars($review['comment'])); ?></p>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>Chưa có đánh giá nào cho tour này.</p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="review-call-to-action">
+                        <p>Đã trải nghiệm tour này? Hãy liên hệ với chúng tôi để chia sẻ cảm nhận của bạn!</p>
                     </div>
                 </section>
             </div>
