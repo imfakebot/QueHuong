@@ -680,10 +680,10 @@ $pageScripts = [
                     ['title' => 'Reunification Day', 'date' => '30 Apr 2025', 'img' => 'https://cdn-s3.vtconline.vn/ioe-resource-02/filePublish/NewsImages/news/2025/4/tcta280401.jpg']
                 ],
                 5 => [
-                    ['title' => 'Quang Nam Culture, Sports and Tourism Days 2025', 'date' => '06 Jun - 29 Jun 2025', 'img' => 'https://image.vietnam.travel/sites/default/files/2025-06/292-Qu%E1%BA%A3ng%20Nam-tmluong50%40gmail.com-thuyen%20hoa%20%281%29.jpg?v=1749186169'],
+                    ['title' => 'Quang Nam Culture', 'date' => '06 Jun - 29 Jun 2025', 'img' => 'https://image.vietnam.travel/sites/default/files/2025-06/292-Qu%E1%BA%A3ng%20Nam-tmluong50%40gmail.com-thuyen%20hoa%20%281%29.jpg?v=1749186169'],
                     ['title' => 'Hue Community Ao Dai Week 2025', 'date' => '06 Jun - 15 Jun 2025', 'img' => 'https://image.vovworld.vn/w500/Uploaded/vovworld/vjryqdxwp/2025_06_06/tsctfmngay06-6_anh1_BVUC.jpg'],
-                    ['title' => '2025 Sea Tourism and Culture Festival', 'date' => '01 Jun - 30 Jun 2025', 'img' => 'https://image.vietnamnews.vn/uploadvnnews/Article/2024/11/14/387445_5008084991858881_image.png'],
-                    ['title' => 'The 21st Southern Fruit Festival', 'date' => '01 Jun - 31 Aug 2025', 'img' => 'https://images.vietnamtourism.gov.vn/en/images/2025/jun/anh_1_%281%29.jpg']
+                    ['title' => 'Sea Tourism and Culture Festival', 'date' => '01 Jun - 30 Jun 2025', 'img' => 'https://image.vietnamnews.vn/uploadvnnews/Article/2024/11/14/387445_5008084991858881_image.png'],
+                    ['title' => 'Southern Fruit Festival', 'date' => '01 Jun - 31 Aug 2025', 'img' => 'https://images.vietnamtourism.gov.vn/en/images/2025/jun/anh_1_%281%29.jpg']
                 ],
                 6 => [
                     ['title' => 'Double Seventh Festival', 'date' => '7th day of Lunar July', 'img' => 'https://www.chinatrainbooking.com/pic/festival/qixi/meet.jpg'],
@@ -691,10 +691,10 @@ $pageScripts = [
                 ],
                 8 => [
                     ['title' => 'Vietnam National Day', 'date' => '2 Sep 2025', 'img' => 'https://nn.ntt.edu.vn/wp-content/uploads/2023/08/vietnam-national-day-a-poster-to-celebrate-and-welcome-vietnam-independence-with-big-vietnamese-figures-vector.jpeg'],
-                    ['title' => 'Chongyang Festival / Double Ninth Festival', 'date' => '9th day of Lunar Sep', 'img' => 'https://nhakhoachampion.com/upload/double-ninth-festival-presentation-169-.png']
+                    ['title' => 'Chongyang Festival', 'date' => '9th day of Lunar Sep', 'img' => 'https://nhakhoachampion.com/upload/double-ninth-festival-presentation-169-.png']
                 ],
                 9 => [
-                    ['title' => 'Vietnamese Women’s Day', 'date' => '20 Oct 2025', 'img' => 'https://vnvis.com/wp-content/uploads/2021/10/HW2019-1-1-800x365.jpg'],
+                    ['title' => 'Vietnamese Womens Day', 'date' => '20 Oct 2025', 'img' => 'https://vnvis.com/wp-content/uploads/2021/10/HW2019-1-1-800x365.jpg'],
                     ['title' => 'Full Moon Lantern Festival in Hoi An', 'date' => 'monthly on full moon days', 'img' => 'https://jackytravel.com/wp-content/uploads/2023/12/Hoi-An-Lantern-Festival.jpg']
                 ],
 
