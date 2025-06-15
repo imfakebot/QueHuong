@@ -1,0 +1,234 @@
+/* File: public/css/page-yoga-meditation.css */
+/* CSS Độc Lập Cho Trang Yoga & Thiền Định */
+
+/* --- Cài đặt biến và kiểu dáng toàn cục cho trang --- */
+:root {
+  --font-serif: "Lora", serif;
+  --font-sans: "Poppins", sans-serif;
+  --color-bg-light: #f8f7f4; /* Màu nền be, off-white */
+  --color-secondary: #a3b18a; /* Màu xanh sage */
+  --color-accent: #e07a5f; /* Màu nhấn cam đất */
+  --color-text-dark: #3d405b;
+  --color-text-light: #707386;
+  --color-white: #ffffff;
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section {
+  padding: 5rem 0;
+}
+
+.section.bg-light {
+  background-color: var(--color-bg-light);
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-dark);
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(40, 30, 30, 0.4);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+}
+
+/* --- Bố cục 2 cột cho phần giới thiệu --- */
+.intro-grid {
+  display: grid;
+  grid-template-columns: 1.1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+}
+
+.intro-image-wrapper {
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 15px 40px rgba(0, 0, 0, 0.1);
+}
+
+.intro-image-wrapper img {
+  width: 100%;
+  display: block;
+}
+
+.intro-content .highlight {
+  font-family: var(--font-serif);
+  font-size: 1.2rem;
+  color: var(--color-secondary);
+  display: block;
+  margin-bottom: 1rem;
+}
+
+.intro-content p {
+  margin-bottom: 1.5rem;
+}
+
+/* --- Section các khóa tu (Retreats) --- */
+.retreat-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(340px, 1fr));
+  gap: 2rem;
+}
+
+.retreat-card {
+  background-color: var(--color-white);
+  border: 1px solid #eae8e1;
+  border-radius: 12px;
+  overflow: hidden;
+  transition: box-shadow 0.3s, transform 0.3s;
+}
+
+.retreat-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 35px rgba(0, 0, 0, 0.08);
+}
+
+.retreat-image img {
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+}
+
+.retreat-content {
+  padding: 1.5rem;
+}
+
+.retreat-content h3 {
+  font-family: var(--font-serif);
+  font-size: 1.5rem;
+  margin: 0 0 0.5rem 0;
+}
+
+.retreat-location {
+  font-size: 0.9rem;
+  color: var(--color-text-light);
+  margin-bottom: 1rem;
+}
+
+.retreat-tags {
+  margin-bottom: 1rem;
+}
+
+.tag {
+  display: inline-block;
+  background-color: #ebf0e4;
+  color: var(--color-secondary);
+  padding: 0.3rem 0.8rem;
+  border-radius: 15px;
+  font-size: 0.8rem;
+  font-weight: 600;
+  margin-right: 0.5rem;
+  margin-bottom: 0.5rem;
+}
+
+/* --- Section Lời kêu gọi hành động (CTA) --- */
+.cta-section {
+  background: var(--color-secondary)
+    url("https://www.transparenttextures.com/patterns/light-paper-fibers.png");
+  text-align: center;
+}
+
+.cta-section .section-title {
+  color: var(--color-white);
+}
+
+.cta-section .section-subtitle {
+  color: var(--color-bg-light);
+}
+
+.btn-cta {
+  display: inline-block;
+  background-color: var(--color-white);
+  color: var(--color-accent);
+  padding: 0.8rem 2.5rem;
+  border: none;
+  border-radius: 50px;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background-color 0.3s, transform 0.3s;
+  margin-top: 2rem;
+}
+
+.btn-cta:hover {
+  background-color: var(--color-bg-light);
+  transform: translateY(-3px);
+}
+
+/* --- Responsive --- */
+@media (max-width: 992px) {
+  .intro-grid {
+    grid-template-columns: 1fr;
+  }
+}
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .section-title {
+    font-size: 2.2rem;
+  }
+}

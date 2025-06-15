@@ -160,6 +160,7 @@ $life_slug_to_filename_map = [
 $things_slug_to_filename_map = [
     'spa-massage' => 'spa-massage',
     'beach-relaxation' => 'beach-escapes',
+    'yoga-meditation' => 'yoga-meditation',
 ];
 // ===================== KẾT THÚC PHẦN CẬP NHẬT =====================
 
