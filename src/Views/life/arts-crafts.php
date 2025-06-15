@@ -72,7 +72,7 @@ $modernRole = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/craft-heritage" class="btn btn--primary">Khám Phá Di Sản</a>
+          <a  class="btn btn--primary">Khám Phá Di Sản</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ $modernRole = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/craft-villages" class="btn btn--primary">Xem Làng Nghề</a>
+          <a class="btn btn--primary">Xem Làng Nghề</a>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ $modernRole = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/modern-craft" class="btn btn--primary">Xem Chi Tiết</a>
+          <a  class="btn btn--primary">Xem Chi Tiết</a>
         </div>
       </div>
     </section>

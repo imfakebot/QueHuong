@@ -72,7 +72,7 @@ $culturalImpact = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/streetfood-flavors" class="btn btn--primary">Khám Phá Hương Vị</a>
+          <a  class="btn btn--primary">Khám Phá Hương Vị</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ $culturalImpact = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/night-market" class="btn btn--primary">Khám Phá Chợ Đêm</a>
+          <a  class="btn btn--primary">Khám Phá Chợ Đêm</a>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ $culturalImpact = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/culinary-culture" class="btn btn--primary">Tìm Hiểu Văn Hóa</a>
+          <a  class="btn btn--primary">Tìm Hiểu Văn Hóa</a>
         </div>
       </div>
     </section>

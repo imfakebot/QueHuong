@@ -72,7 +72,7 @@ $mobilityImpact = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/transport-options" class="btn btn--primary">Tìm Hiểu Chi Tiết</a>
+          <a  class="btn btn--primary">Tìm Hiểu Chi Tiết</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ $mobilityImpact = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/travel-tips" class="btn btn--primary">Xem Mẹo Hữu Ích</a>
+          <a  class="btn btn--primary">Xem Mẹo Hữu Ích</a>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ $mobilityImpact = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/connected-experience" class="btn btn--primary">Khám Phá Thêm</a>
+          <a  class="btn btn--primary">Khám Phá Thêm</a>
         </div>
       </div>
     </section>

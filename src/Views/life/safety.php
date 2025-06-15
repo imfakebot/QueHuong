@@ -72,7 +72,7 @@ $medicalRequirements = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/travel-safety" class="btn btn--primary">Mẹo Du Lịch An Toàn</a>
+          <a  class="btn btn--primary">Mẹo Du Lịch An Toàn</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ $medicalRequirements = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/health-tips" class="btn btn--primary">Xem Lời Khuyên</a>
+          <a  class="btn btn--primary">Xem Lời Khuyên</a>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ $medicalRequirements = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/vietnam-healthcare" class="btn btn--primary">Tìm Hiểu Dịch Vụ Y Tế</a>
+          <a class="btn btn--primary">Tìm Hiểu Dịch Vụ Y Tế</a>
         </div>
       </div>
     </section>
