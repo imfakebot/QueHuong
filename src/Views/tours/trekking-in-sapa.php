@@ -1,5 +1,5 @@
 <?php
-// Dữ liệu cụ thể cho trang "Trekking in Sapa" VỚI CẤU TRÚC ITINERARY GỐC
+// Dữ liệu cụ thể cho trang "Trekking in Sapa"
 $tour_details = [
     'title' => 'Trekking Sapa: Chinh Phục Thung Lũng Mường Hoa',
     'subtitle' => 'Một hành trình 2 ngày 1 đêm đi sâu vào trái tim của Hoàng Liên Sơn, khám phá những thửa ruộng bậc thang kỳ vĩ và cuộc sống bản địa mộc mạc.',
@@ -35,6 +35,28 @@ $tour_details = [
             ]
         ]
     ],
+    // ================== PHẦN MỚI: DỮ LIỆU ĐÁNH GIÁ ==================
+    'reviews' => [
+        [
+            'user_name' => 'Nguyễn Thu An',
+            'rating' => 5,
+            'comment' => 'Chuyến đi thật tuyệt vời! Hướng dẫn viên rất nhiệt tình, am hiểu văn hóa. Homestay sạch sẽ và đồ ăn rất ngon. Khung cảnh thì không còn gì để chê. Chắc chắn sẽ giới thiệu cho bạn bè!',
+            'date' => '20/07/2024'
+        ],
+        [
+            'user_name' => 'John Smith',
+            'rating' => 5,
+            'comment' => 'An amazing and authentic experience. The trek was challenging but rewarding. Our guide, May, was fantastic. The views are breathtaking. Highly recommended!',
+            'date' => '15/07/2024'
+        ],
+        [
+            'user_name' => 'Trần Minh Hoàng',
+            'rating' => 4,
+            'comment' => 'Tour rất ổn, cảnh đẹp. Chỉ có một góp ý nhỏ là bữa trưa ngày 2 hơi đơn giản. Còn lại mọi thứ đều tốt, đáng tiền.',
+            'date' => '05/07/2024'
+        ]
+    ],
+    // ================== KẾT THÚC PHẦN MỚI ==================
     'includes' => ['Xe đưa đón', 'Hướng dẫn viên địa phương', 'Các bữa ăn trong chương trình', 'Phí tham quan', '1 đêm tại khách sạn', 'Nước uống'],
     'excludes' => ['Đồ uống cá nhân', 'Chi phí cá nhân', 'Tiền tip cho HDV & lái xe'],
     'price' => '2,500,000 VNĐ / người'
@@ -48,7 +70,6 @@ $tour_details = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($tour_details['title']); ?></title>
-    <!-- Link đến file CSS cuối cùng bạn đã nhận được -->
     <link rel="stylesheet" href="/css/detail-page-mountain.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -57,7 +78,7 @@ $tour_details = [
 
 <body>
     <main class="tour-detail-page">
-        <!-- HERO SECTION -->
+        <!-- ... (GIỮ NGUYÊN HERO SECTION) ... -->
         <header class="tour-hero" style="background-image: url('<?php echo htmlspecialchars($tour_details['hero_image']); ?>');">
             <div class="tour-hero-content">
                 <h1><?php echo htmlspecialchars($tour_details['title']); ?></h1>
@@ -67,7 +88,7 @@ $tour_details = [
 
         <div class="page-container">
             <div class="tour-main-content">
-                <!-- TOUR OVERVIEW -->
+                <!-- ... (GIỮ NGUYÊN TOUR OVERVIEW, GALLERY, ITINERARY) ... -->
                 <section class="tour-overview">
                     <div class="overview-grid">
                         <div class="overview-item">
@@ -92,15 +113,11 @@ $tour_details = [
                         </div>
                     </div>
                 </section>
-
-                <!-- GALLERY -->
                 <section class="tour-gallery">
                     <?php foreach ($tour_details['gallery'] as $image): ?>
                         <img src="<?php echo htmlspecialchars($image['url']); ?>" alt="<?php echo htmlspecialchars($image['alt']); ?>">
                     <?php endforeach; ?>
                 </section>
-
-                <!-- ITINERARY SECTION - CẤU TRÚC HTML GỐC -->
                 <section class="tour-itinerary">
                     <h2>Lịch trình</h2>
                     <div class="timeline">
@@ -109,17 +126,51 @@ $tour_details = [
                                 <div class="timeline-content">
                                     <h3><?php echo htmlspecialchars($day_data['title']); ?></h3>
                                     <?php foreach ($day_data['details'] as $detail): ?>
-                                        <p><?php echo $detail; // Cho phép thẻ <strong> để CSS có thể tách cột 
-                                            ?></p>
+                                        <p><?php echo $detail; ?></p>
                                     <?php endforeach; ?>
                                 </div>
                             </div>
                         <?php endforeach; ?>
                     </div>
                 </section>
+
+
+                <!-- ================== PHẦN MỚI: HIỂN THỊ ĐÁNH GIÁ ================== -->
+                <section class="tour-reviews">
+                    <h2>Đánh giá từ khách hàng</h2>
+                    <div class="review-list">
+                        <?php if (!empty($tour_details['reviews'])): ?>
+                            <?php foreach ($tour_details['reviews'] as $review): ?>
+                                <div class="review-item">
+                                    <div class="review-header">
+                                        <strong class="review-author"><?php echo htmlspecialchars($review['user_name']); ?></strong>
+                                        <span class="review-date"><?php echo htmlspecialchars($review['date']); ?></span>
+                                    </div>
+                                    <div class="review-stars">
+                                        <?php for ($i = 0; $i < 5; $i++): ?>
+                                            <?php if ($i < $review['rating']): ?>
+                                                <span class="star-filled">★</span>
+                                            <?php else: ?>
+                                                <span class="star-empty">☆</span>
+                                            <?php endif; ?>
+                                        <?php endfor; ?>
+                                    </div>
+                                    <p class="review-comment"><?php echo nl2br(htmlspecialchars($review['comment'])); ?></p>
+                                </div>
+                            <?php endforeach; ?>
+                        <?php else: ?>
+                            <p>Chưa có đánh giá nào cho tour này.</p>
+                        <?php endif; ?>
+                    </div>
+                    <div class="review-call-to-action">
+                        <p>Đã trải nghiệm tour này? Hãy liên hệ với chúng tôi để chia sẻ cảm nhận của bạn!</p>
+                    </div>
+                </section>
+                <!-- ================== KẾT THÚC PHẦN MỚI ================== -->
+
             </div>
 
-            <!-- SIDEBAR -->
+            <!-- ... (GIỮ NGUYÊN SIDEBAR) ... -->
             <aside class="tour-sidebar">
                 <div class="booking-widget">
                     <div class="price-section">
@@ -152,6 +203,7 @@ $tour_details = [
             </aside>
         </div>
     </main>
+    <!-- ... (GIỮ NGUYÊN MODAL, SCRIPT) ... -->
     <div id="image-modal-viewer" class="modal-viewer">
         <span class="close-modal-btn">×</span>
         <div class="modal-content">
