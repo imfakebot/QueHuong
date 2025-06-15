@@ -551,3 +551,96 @@ body {
     padding: 10px 15px;
   }
 }
+
+/* Tour Reviews Section Styling */
+.tour-reviews {
+  margin-top: 4rem;
+  padding-top: 2rem;
+  border-top: 1px solid #e0e0e0;
+}
+
+.tour-reviews h2 {
+  font-size: 2rem;
+  font-family: "Lora", serif;
+  margin-bottom: 2rem;
+  color: #333;
+}
+
+.review-list {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.review-item {
+  border-bottom: 1px solid #eee;
+  padding-bottom: 1.5rem;
+  transition: transform 0.3s ease;
+}
+
+.review-item:hover {
+  transform: translateY(-2px);
+}
+
+.review-item:last-child {
+  border-bottom: none;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 0.5rem;
+}
+
+.review-author {
+  font-size: 1.1rem;
+  font-weight: bold;
+  color: #2c3e50;
+}
+
+.review-date {
+  font-size: 0.9rem;
+  color: #888;
+}
+
+.review-stars {
+  margin-bottom: 0.75rem;
+  font-size: 1.2rem;
+  color: #ffc107;
+}
+
+.review-stars .star-empty {
+  color: #ccc;
+}
+
+.review-comment {
+  line-height: 1.6;
+  color: #555;
+  margin: 0;
+  font-style: italic;
+  padding: 0.5rem 0;
+}
+
+.review-call-to-action p {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #890047;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .tour-reviews h2 {
+    font-size: 1.5rem;
+  }
+
+  .review-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.5rem;
+  }
+
+  .review-date {
+    font-size: 0.8rem;
+  }
+}

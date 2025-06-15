@@ -170,9 +170,9 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                         <li><a href="/tours/sapa-terraces-adventure">Trekking in Sapa</a></li>
                                         <li><a href="/tours/kayaking-in-halong-bay">Kayaking in Ha Long Bay</a></li>
                                         <li><a href="/tours/exploring-phongnha-cave">Exploring Phong Nha Caves</a></li>
-                                        <li><a href="/things/motorbiking">Motorbiking Adventures</a></li>
-                                        <li><a href="/things/watersports">Watersports & Beaches</a></li>
-                                        <li><a href="/things/canyoning-dalat">Canyoning in Da Lat</a></li>
+                                        <li><a href="/tours/motorbiking">Motorbiking Adventures</a></li>
+                                        <li><a href="/tours/watersports">Watersports & Beaches</a></li>
+                                        <li><a href="tours/canyoning-dalat">Canyoning in Da Lat</a></li>
                                     </ul>
                                 </div>
                                 <!-- Cột 2: Culture & Heritage -->

@@ -69,8 +69,9 @@ $static_routes = [
 $tour_slug_to_filename_map = [
     // Mountain Tours
     'sapa-terraces-adventure' => 'trekking-in-sapa',
+    'motorbiking' => 'motorbiking',
+    'exploring-phongnha-cave' => 'exploring-phongnha-cave',
     'da-lat-romantic-getaway' => 'da-lat-romantic-getaway-detail',
-    'phong-nha-caves-adventure' => 'exploring-phongnha-cave',
     'trekking-ta-xua-san-may' => 'trekking-ta-xua-detail',
     'chinh-phuc-dinh-fansipan' => 'fansipan-conquest-detail',
     'kham-pha-cao-nguyen-da-dong-van' => 'dong-van-plateau-detail',
@@ -189,7 +190,7 @@ elseif (preg_match('#^/destinations/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) 
 
     if (isset($destination_slug_to_filename_map[$destinationSlug])) {
         $filename = $destination_slug_to_filename_map[$destinationSlug];
-        $contentView = VIEWS_PATH . "/destination/{$filename}.php";
+        $contentView = VIEWS_PATH . "/destinations/{$filename}.php";
     }
 }
 // Bước 4: Xử lý các route động cho "Life in Vietnam" (/life/{slug})
