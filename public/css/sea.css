@@ -1,0 +1,324 @@
+:root {
+  --festivals-primary: #c62828; /* đỏ truyền thống */
+  --festivals-secondary: #f9a825; /* vàng tươi */
+  --festivals-bg: #fff8e1; /* nền dịu nhẹ */
+  --festivals-accent-bg: #fce4ec; /* nền nhẹ cho section nổi bật */
+  --festivals-text: #333;
+  --festivals-font-headline: 'Playfair Display', serif;
+  --festivals-font-body: 'Roboto', sans-serif;
+}
+
+.festivals-page-wrapper {
+  background-color: var(--festivals-bg);
+  color: var(--festivals-text);
+  font-family: var(--festivals-font-body);
+}
+
+/* HERO */
+.hero {
+  position: relative;
+  height: 80vh;
+  background-size: cover;
+  background-position: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.hero__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+}
+
+.hero__content {
+  position: relative;
+  color: white;
+  z-index: 1;
+}
+
+.hero__title {
+  font-family: var(--festivals-font-headline);
+  font-size: 4rem;
+  margin-bottom: 1rem;
+}
+
+.hero__subtitle {
+  font-size: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  border: none;
+  text-decoration: none;
+  font-weight: bold;
+  cursor: pointer;
+  border-radius: 6px;
+  transition: background 0.3s;
+}
+
+.btn--primary {
+  background-color: var(--festivals-primary);
+  color: white;
+}
+
+.btn--primary:hover {
+  background-color: #b71c1c;
+}
+
+.btn--light {
+  background-color: white;
+  color: var(--festivals-primary);
+  border: 2px solid var(--festivals-primary);
+}
+
+.btn--light:hover {
+  background-color: var(--festivals-primary);
+  color: white;
+}
+
+/* FEATURE SECTION */
+.feature-section {
+  padding: 80px 0;
+}
+
+.feature-section__container {
+  display: flex;
+  gap: 3rem;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.feature-section__image-wrapper {
+  flex: 1;
+  min-width: 300px;
+}
+
+.feature-section__image-wrapper img {
+  width: 100%;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+}
+
+.feature-section__content {
+  flex: 1;
+  min-width: 300px;
+}
+
+.feature-section__content h2 {
+  font-family: var(--festivals-font-headline);
+  color: var(--festivals-primary);
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.feature-section__content p {
+  font-size: 1.1rem;
+  margin-bottom: 1rem;
+}
+
+.activity-list {
+  list-style: disc inside;
+  margin-bottom: 1rem;
+}
+
+.feature-section--reverse .feature-section__container {
+  flex-direction: row-reverse;
+}
+
+@media screen and (max-width: 768px) {
+  .feature-section__container {
+    flex-direction: column;
+  }
+
+  .hero__title {
+    font-size: 2.5rem;
+  }
+
+  .hero__subtitle {
+    font-size: 1.2rem;
+  }
+}
+
+/* timeline */
+.timeline-section {
+    position: relative;
+    padding: 50px 20px;
+    color: white;
+}
+
+.timeline-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0, 0, 0, 0.55);
+    z-index: 1;
+}
+
+.timeline-container {
+    position: relative;
+    z-index: 2;
+    max-width: 1200px;
+    margin: auto;
+    text-align: center;
+}
+
+.timeline-title {
+    font-size: 2rem;
+    margin-bottom: 20px;
+    font-family: 'Playfair Display', serif;
+}
+
+.timeline-navigation {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.timeline-month {
+    background: #ffd54f;
+    border: none;
+    padding: 8px 16px;
+    font-weight: bold;
+    color: #000;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: background 0.3s;
+}
+
+.timeline-month.active,
+.timeline-month:hover {
+    background: #f57c00;
+    color: white;
+}
+
+.timeline-events {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.month-events {
+    display: none;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.event-card {
+    background: white;
+    color: black;
+    width: 230px;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+    transition: transform 0.3s;
+}
+
+.event-card:hover {
+    transform: translateY(-5px);
+}
+
+.event-card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.event-info {
+    padding: 10px;
+}
+
+.event-date {
+    font-size: 0.85rem;
+    color: #555;
+}
+
+.event-title {
+    font-size: 1rem;
+    font-weight: bold;
+}
+
+
+body {
+      font-family: 'Roboto', sans-serif;
+      background: #e0f7fa;
+      color: #004d40;
+    }
+
+    .hero-seafest {
+      background-image: url('https://image.vietnamnews.vn/uploadvnnews/Article/2024/11/14/387445_5008084991858881_image.png');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 100px 20px;
+      text-align: center;
+      color: white;
+    }
+
+    .hero-seafest::before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      /* background: rgba(0, 60, 60, 0.5); */
+    }
+
+    .hero-seafest .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-seafest h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 3rem;
+      color: #ffeb3b;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #00796b;
+      margin-bottom: 20px;
+    }
+
+    .section img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+    }
+
+    .highlight-box {
+      background: #b2ebf2;
+      border-left: 6px solid #0097a7;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .cta a {
+      background: #009688;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .cta a:hover {
+      background: #00695c;
+    }

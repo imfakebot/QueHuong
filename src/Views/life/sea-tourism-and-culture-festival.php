@@ -1,6 +1,6 @@
 <?php
 $eventTitle = "Sea Tourism and Culture Festival 2025";
-$pageStyles = ['/css/festivals.css'];
+$pageStyles = ['/css/sea.css'];
 ?>
 <!DOCTYPE html>
 <html lang="vi">
@@ -11,87 +11,7 @@ $pageStyles = ['/css/festivals.css'];
   <?php foreach ($pageStyles as $style): ?>
     <link rel="stylesheet" href="<?php echo $style; ?>">
   <?php endforeach; ?>
-  <style>
-    body {
-      font-family: 'Roboto', sans-serif;
-      background: #e0f7fa;
-      color: #004d40;
-    }
-
-    .hero-seafest {
-      background-image: url('https://image.vietnamnews.vn/uploadvnnews/Article/2024/11/14/387445_5008084991858881_image.png');
-      background-size: cover;
-      background-position: center;
-      position: relative;
-      padding: 100px 20px;
-      text-align: center;
-      color: white;
-    }
-
-    .hero-seafest::before {
-      content: "";
-      position: absolute;
-      inset: 0;
-      background: rgba(0, 60, 60, 0.5);
-    }
-
-    .hero-seafest .content {
-      position: relative;
-      z-index: 1;
-    }
-
-    .hero-seafest h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 3rem;
-      color: #ffeb3b;
-    }
-
-    .section {
-      padding: 50px 20px;
-      max-width: 1000px;
-      margin: auto;
-    }
-
-    .section h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
-      color: #00796b;
-      margin-bottom: 20px;
-    }
-
-    .section img {
-      width: 100%;
-      border-radius: 12px;
-      margin: 20px 0;
-      box-shadow: 0 4px 12px rgba(0,0,0,0.2);
-    }
-
-    .highlight-box {
-      background: #b2ebf2;
-      border-left: 6px solid #0097a7;
-      padding: 20px;
-      border-radius: 8px;
-      margin: 30px 0;
-    }
-
-    .cta {
-      text-align: center;
-      margin: 50px 0;
-    }
-
-    .cta a {
-      background: #009688;
-      color: white;
-      padding: 12px 24px;
-      text-decoration: none;
-      border-radius: 8px;
-      font-weight: bold;
-    }
-
-    .cta a:hover {
-      background: #00695c;
-    }
-  </style>
+  
 </head>
 <body>
 
