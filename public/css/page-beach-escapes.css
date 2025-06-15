@@ -1,0 +1,299 @@
+/* File: public/css/page-beach-escapes.css */
+/* CSS Độc Lập Cho Trang Bãi Biển */
+
+/* --- Cài đặt biến và kiểu dáng toàn cục cho trang --- */
+:root {
+  --font-serif: "Lora", serif;
+  --font-sans: "Poppins", sans-serif;
+  --color-sand: #f4e9d8; /* Màu cát */
+  --color-ocean: #a9d4d9; /* Màu biển nhạt */
+  --color-text-dark: #3d405b; /* Màu chữ tối */
+  --color-text-light: #707386; /* Màu chữ phụ */
+  --color-white: #ffffff;
+  --color-accent: #e07a5f; /* Màu nhấn (cam đất) */
+}
+
+body {
+  font-family: var(--font-sans);
+  background-color: var(--color-white);
+  color: var(--color-text-dark);
+  margin: 0;
+  line-height: 1.7;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1.5rem;
+}
+
+.section-title {
+  font-family: var(--font-serif);
+  font-size: 2.8rem;
+  font-weight: 600;
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--color-text-dark);
+}
+
+.section-subtitle {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 4rem auto;
+  font-size: 1.1rem;
+  color: var(--color-text-light);
+}
+
+/* --- Hero Section --- */
+.hero-section {
+  position: relative;
+  height: 90vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  color: var(--color-white);
+}
+
+.hero-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  padding: 1rem;
+}
+
+.hero-title {
+  font-family: var(--font-serif);
+  font-size: 4rem;
+  margin: 0 0 1rem 0;
+  text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-subtitle {
+  font-size: 1.25rem;
+  font-weight: 300;
+  max-width: 800px;
+  margin: 0 auto;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.5);
+}
+
+/* --- Section giới thiệu bãi biển --- */
+.beach-intro-section {
+  padding: 5rem 0;
+  background-color: var(--color-sand);
+}
+
+.beach-list {
+  display: grid;
+  gap: 3rem;
+}
+
+.beach-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+  background-color: var(--color-white);
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.07);
+  overflow: hidden;
+}
+
+.beach-card:nth-child(even) {
+  grid-template-columns: 1fr 1fr;
+}
+
+.beach-card:nth-child(even) .beach-image {
+  order: 2;
+}
+
+.beach-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.beach-content {
+  padding: 2.5rem;
+}
+
+.beach-name {
+  font-family: var(--font-serif);
+  font-size: 2.5rem;
+  color: var(--color-text-dark);
+  margin: 0 0 1rem 0;
+}
+
+.beach-location {
+  font-size: 1rem;
+  color: var(--color-accent);
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  display: block;
+}
+
+.beach-description {
+  margin-bottom: 2rem;
+  color: var(--color-text-light);
+}
+
+.activity-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.activity-list li {
+  padding-left: 1.5rem;
+  position: relative;
+  margin-bottom: 0.5rem;
+}
+
+.activity-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--color-accent);
+  font-weight: bold;
+}
+
+/* --- Section tiện ích --- */
+.amenities-section {
+  padding: 5rem 0;
+  background-color: var(--color-white);
+}
+
+.amenities-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
+  gap: 2rem;
+  text-align: center;
+}
+
+.amenity-item h3 {
+  font-family: var(--font-serif);
+  font-size: 1.4rem;
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+
+.amenity-icon {
+  font-size: 3rem;
+  color: var(--color-ocean);
+}
+
+/* --- Responsive --- */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.8rem;
+  }
+  .section-title {
+    font-size: 2.2rem;
+  }
+
+  .beach-card,
+  .beach-card:nth-child(even) {
+    grid-template-columns: 1fr;
+  }
+
+  .beach-card:nth-child(even) .beach-image {
+    order: 1;
+  }
+
+  .beach-content {
+    padding: 2rem;
+  }
+}
+/* ... CSS hiện có của bạn ... */
+
+.booking-cta-section {
+  background-color: #f4f8ff; /* Màu nền nhẹ nhàng */
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.booking-cta-section .section-title {
+  color: var(--primary-color); /* Giả sử bạn có biến màu này */
+  margin-bottom: 15px;
+}
+
+.booking-cta-section .section-subtitle {
+  font-size: 1.1rem;
+  color: #555;
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  line-height: 1.6;
+}
+
+.contact-actions {
+  margin-bottom: 30px;
+}
+
+.contact-actions .btn-primary,
+.contact-actions .btn-secondary {
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-weight: 600;
+  margin: 0 10px;
+  display: inline-block;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+.contact-actions .btn-primary {
+  background-color: #a80303; /* Giả sử bạn có biến màu này */
+  color: #fff;
+}
+.contact-actions .btn-primary:hover {
+  background-color: #940404; /* Giả sử bạn có biến màu này */
+  transform: translateY(-2px);
+}
+
+.contact-actions .btn-secondary {
+  background-color: #e9ecef;
+  color: #333;
+  border: 1px solid #ced4da;
+}
+.contact-actions .btn-secondary:hover {
+  background-color: #940404;
+  color: rgb(255, 255, 255);
+  transform: translateY(-2px);
+}
+
+.contact-details-inline p {
+  margin: 8px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.contact-details-inline a {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.contact-details-inline a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .contact-actions .btn-primary,
+  .contact-actions .btn-secondary {
+    display: block;
+    margin: 10px auto;
+    width: 80%;
+    max-width: 300px;
+  }
+}

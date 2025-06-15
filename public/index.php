@@ -126,7 +126,7 @@ $life_slug_to_filename_map = [
     'reunification-day'             => 'reunification-day',
     'diff-2025'                     => 'diff-2025',
     'quang-nam-culture'             => 'quang-nam-culture',
-    'hue-community-ao-dai-week-2025'=> 'hue-community-ao-dai-week-2025',
+    'hue-community-ao-dai-week-2025' => 'hue-community-ao-dai-week-2025',
     'sea-tourism-and-culture-festival'  => 'sea-tourism-and-culture-festival',
     'southern-fruit-festival'       => 'southern-fruit-festival',
     'double-seventh-festival'       => 'double-seventh-festival',
@@ -158,6 +158,7 @@ $life_slug_to_filename_map = [
 // Bảng ánh xạ cho mục "Things to do"
 $things_slug_to_filename_map = [
     'spa-massage' => 'spa-massage',
+    'beach-relaxation' => 'beach-escapes',
 ];
 // ===================== KẾT THÚC PHẦN CẬP NHẬT =====================
 
