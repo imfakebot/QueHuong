@@ -1,126 +1,126 @@
 <?php
-$pageTitle = 'Top Destinations - Explore Vietnam';
+$pageTitle = 'Điểm Đến Hàng Đầu - Khám Phá Việt Nam';
 
-// Load necessary CSS files. Assume /css/destination.css contains styles for .card and .btn-cta
+// Tải các tệp CSS cần thiết
 $pageStyles = [
-    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css', // If you need icons
+    'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
     '/css/destination.css'
 ];
 
 $pageScripts = [
     'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
     '/js/destination.js'
-]; // Add scripts if needed
+];
 
-// Sample data for destinations. In a real application, you'd fetch this from a database.
+// Dữ liệu mẫu cho các điểm đến
 $destinations = [
     [
         'slug' => 'hanoi',
-        'name' => 'Hanoi',
+        'name' => 'Hà Nội',
         'image' => '/images/destinations/Ha-Noi/Hanoi-review.jpg',
-        'description' => 'The thousand-year-old capital known for its ancient charm and distinctive cuisine.'
+        'description' => 'Thủ đô nghìn năm văn hiến với nét cổ kính và ẩm thực đặc trưng.'
     ],
     [
         'slug' => 'ha-giang',
-        'name' => 'Ha Giang',
+        'name' => 'Hà Giang',
         'image' => '/images/destinations/HaGiang/review.jpg',
-        'description' => 'Northernmost land of Vietnam with majestic rocky plateaus and scenic mountain passes.'
+        'description' => 'Vùng cực Bắc hùng vĩ với cao nguyên đá và những cung đường đèo tuyệt đẹp.'
     ],
     [
         'slug' => 'ha-long',
-        'name' => 'Ha Long Bay',
+        'name' => 'Vịnh Hạ Long',
         'image' => '/images/destinations/HaLong/review.jpg',
-        'description' => 'A UNESCO World Heritage site famous for its limestone islands and emerald waters.'
+        'description' => 'Di sản thiên nhiên thế giới với hàng nghìn đảo đá vôi trên làn nước xanh ngọc.'
     ],
     [
         'slug' => 'mai-chau',
-        'name' => 'Mai Chau',
+        'name' => 'Mai Châu',
         'image' => '/images/destinations/MaiChau/review.jpg',
-        'description' => 'A peaceful valley with stilt houses, green rice fields, and rich Thai culture.'
+        'description' => 'Thung lũng yên bình với nhà sàn, ruộng lúa xanh mướt và văn hóa người Thái.'
     ],
     [
         'slug' => 'ninh-binh',
-        'name' => 'Ninh Binh',
+        'name' => 'Ninh Bình',
         'image' => '/images/destinations/NinhBinh/review.jpg',
-        'description' => 'Known as "Halong Bay on land" with Trang An, Tam Coc, and the historic Hoa Lu.'
+        'description' => '“Vịnh Hạ Long trên cạn” với Tràng An, Tam Cốc và cố đô Hoa Lư.'
     ],
     [
         'slug' => 'sapa',
         'name' => 'Sa Pa',
         'image' => '/images/destinations/Sapa/review.jpg',
-        'description' => 'A misty mountain town with terraced rice fields and unique ethnic culture.'
+        'description' => 'Thị trấn sương mù với ruộng bậc thang và bản sắc văn hóa dân tộc độc đáo.'
     ],
     [
         'slug' => 'da-nang',
-        'name' => 'Da Nang',
+        'name' => 'Đà Nẵng',
         'image' => '/images/destinations/Da-Nang/BaNaHills.jpg',
-        'description' => 'A dynamic coastal city with iconic bridges, beautiful beaches, and stunning mountains.'
+        'description' => 'Thành phố biển năng động với cầu nổi tiếng, bãi biển đẹp và núi non hùng vĩ.'
     ],
     [
         'slug' => 'da-lat',
-        'name' => 'Da Lat',
+        'name' => 'Đà Lạt',
         'image' => '/images/destinations/Da-Lat/DaLat-review.jpg',
-        'description' => 'The City of Flowers with cool weather, romantic lakes, and French colonial architecture.'
+        'description' => 'Thành phố ngàn hoa với khí hậu mát mẻ, hồ thơ mộng và kiến trúc Pháp.'
     ],
     [
         'slug' => 'hoi-an',
-        'name' => 'Hoi An',
+        'name' => 'Hội An',
         'image' => '/images/destinations/Hoi-An/review.jpg',
-        'description' => 'An ancient town where time stands still with glowing lanterns and traditional buildings.'
+        'description' => 'Phố cổ yên bình với đèn lồng rực rỡ và kiến trúc truyền thống.'
     ],
     [
         'slug' => 'hue',
-        'name' => 'Hue',
+        'name' => 'Huế',
         'image' => '/images/destinations/Hue/review.jpg',
-        'description' => 'The poetic former capital with the Perfume River, Imperial City, and royal tombs.'
+        'description' => 'Kinh đô xưa thơ mộng bên dòng sông Hương với Hoàng thành và lăng tẩm vua chúa.'
     ],
     [
         'slug' => 'nha-trang',
         'name' => 'Nha Trang',
         'image' => '/images/destinations/NhaTrang/review.jpg',
-        'description' => 'A beach city known for its bays, islands, and vibrant diving experiences.'
+        'description' => 'Thành phố biển sôi động với vịnh đẹp, đảo hoang sơ và hoạt động lặn biển hấp dẫn.'
     ],
     [
         'slug' => 'phong-nha',
         'name' => 'Phong Nha',
         'image' => '/images/destinations/PhongNha/review1.jpg',
-        'description' => 'A national park with stunning caves, including the world’s largest cave, Son Doong.'
+        'description' => 'Công viên quốc gia với những hang động kỳ vĩ, trong đó có hang Sơn Đoòng lớn nhất thế giới.'
     ],
     [
         'slug' => 'ho-chi-minh',
-        'name' => 'Ho Chi Minh City',
+        'name' => 'TP. Hồ Chí Minh',
         'image' => '/images/destinations/HCM/hcm.jpg',
-        'description' => 'Vietnam’s economic hub with historic landmarks and a bustling modern lifestyle.'
+        'description' => 'Trung tâm kinh tế sôi động với những công trình lịch sử và cuộc sống hiện đại náo nhiệt.'
     ],
     [
         'slug' => 'con-dao',
-        'name' => 'Con Dao',
+        'name' => 'Côn Đảo',
         'image' => '/images/destinations/ConDao/review.jpg',
-        'description' => 'A pristine archipelago with beautiful beaches, historical sites, and rich marine life.'
+        'description' => 'Quần đảo hoang sơ với bãi biển đẹp, di tích lịch sử và hệ sinh thái biển phong phú.'
     ],
     [
         'slug' => 'binh-thuan',
-        'name' => 'Binh Thuan',
+        'name' => 'Bình Thuận',
         'image' => '/images/destinations/BinhThuan/review.jpg',
-        'description' => 'Famous for Mui Ne, red sand dunes, blue beaches, and luxury resorts.'
+        'description' => 'Nổi tiếng với Mũi Né, đồi cát đỏ, biển xanh và các khu nghỉ dưỡng cao cấp.'
     ],
     [
         'slug' => 'can-tho',
-        'name' => 'Can Tho',
+        'name' => 'Cần Thơ',
         'image' => '/images/destinations/CanTho/review.jpg',
-        'description' => 'Heart of the Mekong Delta with floating markets, fruit orchards, and river culture.'
+        'description' => 'Trái tim của miền Tây với chợ nổi, vườn cây trái và văn hóa sông nước đặc trưng.'
     ],
     [
         'slug' => 'chau-doc',
-        'name' => 'Chau Doc',
+        'name' => 'Châu Đốc',
         'image' => '/images/destinations/ChauDoc/review.jpg',
-        'description' => 'A spiritual destination with Ba Chua Xu Temple and the scenic Tra Su cajuput forest.'
+        'description' => 'Điểm đến tâm linh với miếu Bà Chúa Xứ và rừng tràm Trà Sư thơ mộng.'
     ],
     [
         'slug' => 'phu-quoc',
-        'name' => 'Phu Quoc',
+        'name' => 'Phú Quốc',
         'image' => '/images/destinations/PhuQuoc/review.jpg',
-        'description' => 'The Pearl Island with white sandy beaches, rainforests, and modern attractions.'
+        'description' => 'Đảo ngọc với biển cát trắng, rừng nguyên sinh và các khu vui chơi hiện đại.'
     ]
 ];
 ?>
@@ -128,21 +128,21 @@ $destinations = [
 <section class="hero" style="background-image: url('https://cms.junglebosstours.com/assets/0a767e37-3aa6-45e5-9222-6caeb8983e45?format=webp');">
     <div class="hero-overlay"></div>
     <div class="hero-text">
-        <h1>Discover Amazing Destinations</h1>
-        <p>Vietnam’s breathtaking beauty awaits — from majestic mountains to dreamy beaches.</p>
+        <h1>Khám Phá Những Điểm Đến Tuyệt Vời</h1>
+        <p>Vẻ đẹp Việt Nam đang chờ bạn — từ núi non hùng vĩ đến bãi biển mộng mơ.</p>
     </div>
 </section>
 
 <main class="container page-container" style="padding-top: 2rem; padding-bottom: 2rem;">
     <section class="content-section destination-listing">
-        <h2 style="text-align: center; margin-bottom: 2rem;">All Destinations</h2>
+        <h2 style="text-align: center; margin-bottom: 2rem;">Tất Cả Các Điểm Đến</h2>
         <div class="cards">
             <?php foreach ($destinations as $destination): ?>
                 <div class="card">
-                    <img src="<?php echo htmlspecialchars($destination['image']); ?>" alt="Image of <?php echo htmlspecialchars($destination['name']); ?>" style="width:100%; height:auto; object-fit: cover; aspect-ratio: 16/9;">
-                    <h3 style="margin-top: 1rem;color:red"><?php echo htmlspecialchars($destination['name']); ?></h3>
+                    <img src="<?php echo htmlspecialchars($destination['image']); ?>" alt="Hình ảnh <?php echo htmlspecialchars($destination['name']); ?>" style="width:100%; height:auto; object-fit: cover; aspect-ratio: 16/9;">
+                    <h3 style="margin-top: 1rem; color:red"><?php echo htmlspecialchars($destination['name']); ?></h3>
                     <p><?php echo htmlspecialchars($destination['description']); ?></p>
-                    <a href="/destinations/<?php echo htmlspecialchars($destination['slug']); ?>" class="btn-cta" style="display: inline-block; margin-top: 10px;text-align: center">View Details</a>
+                    <a href="/destinations/<?php echo htmlspecialchars($destination['slug']); ?>" class="btn-cta" style="display: inline-block; margin-top: 10px; text-align: center;">Xem Chi Tiết</a>
                 </div>
             <?php endforeach; ?>
         </div>

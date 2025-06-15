@@ -1,102 +1,11 @@
-<!-- <!DOCTYPE html>
-<html lang="vi">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <title>Hà Giang - Vùng cao hùng vĩ</title>
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Roboto&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-  <link rel="stylesheet" href="/QueHuong/public/css/destination.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-</head>
-<body>
-  <header>
-    <div class="logo">Hà Giang Travel</div>
-  </header>
-
-  <section class="hero" style="background-image: url('/QueHuong/public/images/mega_menu/Ha-Giang/ma-pi-leng.jpg');">
-    <div class="hero-text">
-      <h1>Khám phá Hà Giang</h1>
-      <p>Miền đá nở hoa với cảnh sắc hùng vĩ, cao nguyên đá và văn hóa dân tộc đặc sắc.</p>
-      <a href="#highlights" class="btn-cta">Khám phá ngay</a>
-    </div>
-  </section>
-
-  <main>
-    <section class="content-section overview fade-in">
-      <h2><i class="fas fa-city"></i> Tổng quan về Hà Giang</h2>
-      <p>Hà Giang là điểm đến hấp dẫn cho những người yêu thiên nhiên hoang sơ và trải nghiệm văn hóa bản địa. Cao nguyên đá Đồng Văn, đèo Mã Pí Lèng, những cánh đồng hoa tam giác mạch... tất cả tạo nên một Hà Giang vừa dữ dội, vừa nên thơ.</p>
-    </section>
-
-    <section class="tour-card fade-in">
-      <div class="tour-image">
-        <img src="/QueHuong/public/images/mega_menu/Ha-Giang/ma-pi-leng.jpg" alt="Đèo Mã Pí Lèng">
-        <div class="badge">Hùng vĩ</div>
-      </div>
-      <div class="tour-details">
-        <h2>Chinh phục đèo Mã Pí Lèng</h2>
-        <div class="rating">
-          <span class="stars">★★★★★</span>
-          <span>(230 đánh giá)</span>
-        </div>
-        <p>Mã Pí Lèng là một trong "tứ đại đỉnh đèo" Việt Nam, nơi lý tưởng để ngắm sông Nho Quế và trải nghiệm cung đường hiểm trở nhưng ngoạn mục.</p>
-        <ul class="tour-info">
-          <li><i class="fa-regular fa-clock"></i> Nửa ngày</li>
-          <li><i class="fa-solid fa-mountain"></i> Đèo núi</li>
-          <li><i class="fa-solid fa-camera"></i> Sống ảo</li>
-          <li><a href="#">Tour khám phá</a></li>
-        </ul>
-        <div class="price-and-button">
-          <span class="price">Từ <strong>250.000đ</strong></span>
-          <a href="#" class="btn-cta">Xem chi tiết</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="tour-card fade-in">
-      <div class="tour-image">
-        <img src="/QueHuong/public/images/mega_menu/Ha-Giang/hoa-tam-giac-mach.jpg" alt="Hoa tam giác mạch">
-        <div class="badge">Thơ mộng</div>
-      </div>
-      <div class="tour-details">
-        <h2>Mùa hoa tam giác mạch</h2>
-        <div class="rating">
-          <span class="stars">★★★★☆</span>
-          <span>(180 đánh giá)</span>
-        </div>
-        <p>Cuối thu, khắp các bản làng Hà Giang rực rỡ sắc hồng tím của hoa tam giác mạch. Đây là thời điểm lý tưởng để chụp ảnh và hoà mình vào vẻ đẹp núi rừng.</p>
-        <ul class="tour-info">
-          <li><i class="fa-regular fa-clock"></i> 1 ngày</li>
-          <li><i class="fa-solid fa-leaf"></i> Thiên nhiên</li>
-          <li><i class="fa-solid fa-people-roof"></i> Văn hóa</li>
-          <li><a href="#">Tour mùa hoa</a></li>
-        </ul>
-        <div class="price-and-button">
-          <span class="price">Từ <strong>300.000đ</strong></span>
-          <a href="#" class="btn-cta">Xem chi tiết</a>
-        </div>
-      </div>
-    </section>
-  </main>
-
-  <footer>
-    © 2025 Hà Giang Travel
-  </footer>
-
-  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-  <script src="/QueHuong/public/js/destination.js"></script>
-</body>
-</html> -->
-
 <?php
-$pageTitle = 'Ha Giang - The Land Where Rocks Bloom';
+$pageTitle = 'Hà Giang - Miền đá nở hoa';
 
 $pageStyles = [
   'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css',
   '/css/destination.css'
 ];
 
-// Add page-specific scripts (already exists)
 $pageScripts = [
   'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js',
   '/js/destination.js'
@@ -106,116 +15,116 @@ $pageScripts = [
 <section class="hero" style="background-image: url('/images/destinations/HaGiang/review.jpg');">
   <div class="hero-overlay"></div>
   <div class="hero-text">
-    <h1>Conquer Ha Giang</h1>
-    <p>The majestic rocky plateau with winding mountain passes and peaceful villages amidst the clouds.</p>
-    <a href="#highlights" class="btn-cta">Explore now</a>
+    <h1>Khám phá Hà Giang</h1>
+    <p>Cao nguyên đá hùng vĩ, đèo uốn lượn và những bản làng yên bình giữa mây trời.</p>
+    <a href="#highlights" class="btn-cta">Khám phá ngay</a>
   </div>
 </section>
 
 <main>
   <section class="content-section overview fade-in">
-    <h2><i class="fas fa-map-location-dot"></i> Overview of Ha Giang</h2>
-    <p>Ha Giang is the northernmost point of Vietnam, famous for the majestic Ma Pi Leng Pass, the Dong Van Karst Plateau, the terraced fields of Hoang Su Phi, and the rich culture of ethnic minorities. It's a paradise for travel enthusiasts, photographers, and those seeking authentic cultural experiences.</p>
+    <h2><i class="fas fa-map-location-dot"></i> Tổng quan về Hà Giang</h2>
+    <p>Hà Giang là điểm cực Bắc của Việt Nam, nổi tiếng với đèo Mã Pí Lèng hùng vĩ, cao nguyên đá Đồng Văn, ruộng bậc thang Hoàng Su Phì và văn hóa đặc sắc của các dân tộc thiểu số. Đây là thiên đường cho những ai yêu du lịch trải nghiệm, nhiếp ảnh và khám phá văn hóa nguyên bản.</p>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/HaGiang/ma-pi-leng.jpg" alt="Ma Pi Leng Pass">
-      <div class="badge">Mountain Pass</div>
+      <img src="/images/destinations/HaGiang/ma-pi-leng.jpg" alt="Đèo Mã Pí Lèng">
+      <div class="badge">Đèo núi</div>
     </div>
     <div class="tour-details">
-      <h2>Ma Pi Leng Pass & Nho Que River Tour</h2>
+      <h2>Tour đèo Mã Pí Lèng & sông Nho Quế</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(312 reviews)</span>
+        <span>(312 đánh giá)</span>
       </div>
-      <p>Conquer Vietnam's most dangerous pass and take a boat ride through the majestic Tu San Canyon.</p>
+      <p>Chinh phục một trong những con đèo nguy hiểm nhất Việt Nam và trải nghiệm du thuyền trên hẻm Tu Sản hùng vĩ.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 1 day</li>
-        <li><i class="fa-solid fa-mountain"></i> Mountain ride</li>
-        <li><i class="fa-solid fa-ship"></i> Boat tour</li>
-        <li><a href="#">Nature</a></li>
+        <li><i class="fa-regular fa-clock"></i> 1 ngày</li>
+        <li><i class="fa-solid fa-mountain"></i> Leo đèo</li>
+        <li><i class="fa-solid fa-ship"></i> Du thuyền</li>
+        <li><a href="#">Thiên nhiên</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">From <strong>550,000 VND/person</strong></span>
-        <a href="#" class="btn-cta">View details</a>
+        <span class="price">Từ <strong>550.000đ/người</strong></span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
       </div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-details">
-      <h2>Dong Van Karst Plateau</h2>
+      <h2>Cao nguyên đá Đồng Văn</h2>
       <div class="rating">
         <span class="stars">★★★★☆</span>
-        <span>(224 reviews)</span>
+        <span>(224 đánh giá)</span>
       </div>
-      <p>Explore the ancient town of Dong Van, Lung Cu Flag Tower, and Hmong villages nestled among the limestone mountains.</p>
+      <p>Khám phá phố cổ Đồng Văn, cột cờ Lũng Cú và các bản làng của người H'Mông giữa núi đá vôi hùng vĩ.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 days 1 night</li>
+        <li><i class="fa-regular fa-clock"></i> 2 ngày 1 đêm</li>
         <li><i class="fa-solid fa-house-chimney-window"></i> Homestay</li>
-        <li><i class="fa-solid fa-road"></i> Motorbike or car</li>
-        <li><a href="#">Culture</a></li>
+        <li><i class="fa-solid fa-road"></i> Xe máy hoặc ô tô</li>
+        <li><a href="#">Văn hóa</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">From <strong>1,200,000 VND/person</strong></span>
-        <a href="#" class="btn-cta">View details</a>
+        <span class="price">Từ <strong>1.200.000đ/người</strong></span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
       </div>
     </div>
     <div class="tour-image">
-      <img src="/images/destinations/HaGiang/dong-van.jpg" alt="Dong Van">
-      <div class="badge">Heritage</div>
+      <img src="/images/destinations/HaGiang/dong-van.jpg" alt="Đồng Văn">
+      <div class="badge">Di sản</div>
     </div>
   </section>
 
   <section class="tour-card fade-in">
     <div class="tour-image">
-      <img src="/images/destinations/HaGiang/hoang-su-phi.jpg" alt="Hoang Su Phi golden rice season">
-      <div class="badge">Terraced Fields</div>
+      <img src="/images/destinations/HaGiang/hoang-su-phi.jpg" alt="Mùa vàng Hoàng Su Phì">
+      <div class="badge">Ruộng bậc thang</div>
     </div>
     <div class="tour-details">
-      <h2>Golden Season in Hoang Su Phi</h2>
+      <h2>Mùa vàng Hoàng Su Phì</h2>
       <div class="rating">
         <span class="stars">★★★★★</span>
-        <span>(187 reviews)</span>
+        <span>(187 đánh giá)</span>
       </div>
-      <p>Admire breathtaking terraced rice fields during the golden harvest season and enjoy peaceful village life in nature.</p>
+      <p>Chiêm ngưỡng vẻ đẹp ruộng bậc thang mùa lúa chín và tận hưởng không khí làng quê yên bình giữa thiên nhiên.</p>
       <ul class="tour-info">
-        <li><i class="fa-regular fa-clock"></i> 2 days</li>
-        <li><i class="fa-solid fa-leaf"></i> Ecotourism</li>
-        <li><i class="fa-solid fa-utensils"></i> Ethnic cuisine</li>
-        <li><a href="#">Seasonal</a></li>
+        <li><i class="fa-regular fa-clock"></i> 2 ngày</li>
+        <li><i class="fa-solid fa-leaf"></i> Du lịch sinh thái</li>
+        <li><i class="fa-solid fa-utensils"></i> Ẩm thực dân tộc</li>
+        <li><a href="#">Theo mùa</a></li>
       </ul>
       <div class="price-and-button">
-        <span class="price">From <strong>1,500,000 VND/person</strong></span>
-        <a href="#" class="btn-cta">View details</a>
+        <span class="price">Từ <strong>1.500.000đ/người</strong></span>
+        <a href="#" class="btn-cta">Xem chi tiết</a>
       </div>
     </div>
   </section>
 
   <section class="content-section highlights" id="highlights">
-    <h2>Highlights</h2>
+    <h2>Điểm nổi bật</h2>
     <div class="cards">
       <div class="card">
-        <img src="/images/destinations/HaGiang/lung-cu.jpg" alt="Lung Cu Flag Tower">
-        <h3>Lung Cu Flag Tower</h3>
-        <p>Stand at the sacred northernmost point of Vietnam and take in the sweeping mountain views.</p>
+        <img src="/images/destinations/HaGiang/lung-cu.jpg" alt="Cột cờ Lũng Cú">
+        <h3>Cột cờ Lũng Cú</h3>
+        <p>Đặt chân đến điểm cực Bắc thiêng liêng của Tổ quốc và chiêm ngưỡng khung cảnh núi rừng hùng vĩ.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/HaGiang/cho-phien.jpg" alt="Ha Giang local market">
-        <h3>Highland Markets</h3>
-        <p>Experience local culture through weekend markets of ethnic minorities.</p>
+        <img src="/images/destinations/HaGiang/cho-phien.jpg" alt="Chợ phiên Hà Giang">
+        <h3>Chợ phiên vùng cao</h3>
+        <p>Trải nghiệm văn hóa địa phương qua các phiên chợ cuối tuần đầy sắc màu dân tộc.</p>
       </div>
       <div class="card">
-        <img src="/images/destinations/HaGiang/thang-co.jpg" alt="Ha Giang cuisine">
-        <h3>Local Cuisine</h3>
-        <p>Try traditional dishes such as Thang Co, corn wine, au tau porridge, and other unique highland foods.</p>
+        <img src="/images/destinations/HaGiang/thang-co.jpg" alt="Ẩm thực Hà Giang">
+        <h3>Ẩm thực vùng cao</h3>
+        <p>Thưởng thức các món ăn đặc trưng như thắng cố, rượu ngô, cháo ấu tẩu và nhiều món ngon độc đáo.</p>
       </div>
     </div>
   </section>
 
   <section class="gallery">
-    <h2>GALLERY</h2>
+    <h2>THƯ VIỆN ẢNH</h2>
     <div class="swiper-button-prev gallery-nav-prev"></div>
     <div class="swiper-button-next gallery-nav-next"></div>
 
@@ -223,12 +132,12 @@ $pageScripts = [
       <div class="swiper-wrapper">
         <?php
         $galleryImages = [
-          ['ma-pi-leng.jpg', 'Ma Pi Leng Pass'],
-          ['dong-van.jpg', 'Dong Van Ancient Town'],
-          ['hoang-su-phi.jpg', 'Golden Hoang Su Phi'],
-          ['lung-cu.jpg', 'Lung Cu Flag Tower'],
-          ['cho-phien.jpg', 'Highland Market'],
-          ['thang-co.jpg', 'Highland Cuisine']
+          ['ma-pi-leng.jpg', 'Đèo Mã Pí Lèng'],
+          ['dong-van.jpg', 'Phố cổ Đồng Văn'],
+          ['hoang-su-phi.jpg', 'Hoàng Su Phì mùa vàng'],
+          ['lung-cu.jpg', 'Cột cờ Lũng Cú'],
+          ['cho-phien.jpg', 'Chợ phiên vùng cao'],
+          ['thang-co.jpg', 'Ẩm thực vùng cao']
         ];
 
         foreach ($galleryImages as [$image, $alt]) {
