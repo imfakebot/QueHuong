@@ -25,3 +25,28 @@ document.addEventListener("DOMContentLoaded", function () {
     observer.observe(el);
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+    const monthButtons = document.querySelectorAll('.timeline-month');
+    const allMonthSections = document.querySelectorAll('.month-events');
+
+    monthButtons.forEach(button => {
+        button.addEventListener('click', () => {
+            // Remove active class from all
+            monthButtons.forEach(b => b.classList.remove('active'));
+            button.classList.add('active');
+
+            const selectedMonth = button.dataset.month;
+
+            // Show corresponding events
+            allMonthSections.forEach(section => {
+                if (section.dataset.month === selectedMonth) {
+                    section.style.display = 'flex';
+                } else {
+                    section.style.display = 'none';
+                }
+            });
+        });
+    });
+});
+
