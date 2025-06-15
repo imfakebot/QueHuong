@@ -72,7 +72,7 @@ $spiritualImpact = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/spiritual-roots" class="btn btn--primary">Xem Thêm</a>
+          <a  class="btn btn--primary">Xem Thêm</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ $spiritualImpact = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/sacred-sites" class="btn btn--primary">Địa Điểm Tâm Linh</a>
+          <a  class="btn btn--primary">Địa Điểm Tâm Linh</a>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ $spiritualImpact = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/spiritual-experiences" class="btn btn--primary">Trải Nghiệm</a>
+          <a  class="btn btn--primary">Trải Nghiệm</a>
         </div>
       </div>
     </section>

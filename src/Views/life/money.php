@@ -72,7 +72,7 @@ $financialTips = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/currency-guide" class="btn btn--primary">Xem Chi Tiết Tiền Tệ</a>
+          <a  class="btn btn--primary">Xem Chi Tiết Tiền Tệ</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ $financialTips = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/budget-planning" class="btn btn--primary">Lên Kế Hoạch Chi Tiêu</a>
+          <a  class="btn btn--primary">Lên Kế Hoạch Chi Tiêu</a>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ $financialTips = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/money-safety" class="btn btn--primary">Xem Lời Khuyên</a>
+          <a  class="btn btn--primary">Xem Lời Khuyên</a>
         </div>
       </div>
     </section>

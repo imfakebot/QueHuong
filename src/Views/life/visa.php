@@ -72,7 +72,7 @@ $visaTips = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/visa-types" class="btn btn--primary">Tìm Hiểu Thêm</a>
+          <a  class="btn btn--primary">Tìm Hiểu Thêm</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ $visaTips = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/visa-application" class="btn btn--primary">Hướng Dẫn Chi Tiết</a>
+          <a  class="btn btn--primary">Hướng Dẫn Chi Tiết</a>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ $visaTips = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="https://xuatnhapcanh.gov.vn" class="btn btn--primary" target="_blank">Xem Thông Tin Chính Thức</a>
+          <a  class="btn btn--primary" target="_blank">Xem Thông Tin Chính Thức</a>
         </div>
       </div>
     </section>

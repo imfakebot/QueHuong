@@ -72,7 +72,7 @@ $modernUses = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/aodai-heritage" class="btn btn--primary">Khám Phá Di Sản</a>
+          <a  class="btn btn--primary">Khám Phá Di Sản</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ $modernUses = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/aodai-culture" class="btn btn--primary">Tìm Hiểu Thêm</a>
+          <a  class="btn btn--primary">Tìm Hiểu Thêm</a>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ $modernUses = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/aodai-modern" class="btn btn--primary">Xem Xu Hướng</a>
+          <a  class="btn btn--primary">Xem Xu Hướng</a>
         </div>
       </div>
     </section>

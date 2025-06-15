@@ -152,7 +152,7 @@ $holidays = [
                             <li><?php echo htmlspecialchars($activity); ?></li>
                         <?php endforeach; ?>
                     </ul>
-                    <a href="/tours/cultural-events" class="btn btn--primary">Lịch Sự Kiện</a>
+                    <a  class="btn btn--primary">Lịch Sự Kiện</a>
                 </div>
             </div>
         </section>
@@ -171,7 +171,7 @@ $holidays = [
                             <li><?php echo htmlspecialchars($activity); ?></li>
                         <?php endforeach; ?>
                     </ul>
-                    <a href="/tours/holiday-packages" class="btn btn--primary">Gói Nghỉ Lễ</a>
+                    <a  class="btn btn--primary">Gói Nghỉ Lễ</a>
                 </div>
             </div>
         </section>

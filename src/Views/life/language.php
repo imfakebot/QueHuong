@@ -72,7 +72,7 @@ $shoppingDining = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/vietnamese-basics" class="btn btn--primary">Học Thêm Câu Hỏi</a>
+          <a class="btn btn--primary">Học Thêm Câu Hỏi</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ $shoppingDining = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/phrasebook" class="btn btn--primary">Sổ Tay Câu Nói</a>
+          <a  class="btn btn--primary">Sổ Tay Câu Nói</a>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ $shoppingDining = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/food-phrases" class="btn btn--primary">Từ Vựng Ẩm Thực</a>
+          <a  class="btn btn--primary">Từ Vựng Ẩm Thực</a>
         </div>
       </div>
     </section>

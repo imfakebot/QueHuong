@@ -72,7 +72,7 @@ $culturalSignificance = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/food-tours" class="btn btn--primary">Khám Phá Món Ngon</a>
+          <a  class="btn btn--primary">Khám Phá Món Ngon</a>
         </div>
       </div>
     </section>
@@ -91,7 +91,7 @@ $culturalSignificance = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/vietnamese-cuisine" class="btn btn--primary">Trải Nghiệm Vị Việt</a>
+          <a  class="btn btn--primary">Trải Nghiệm Vị Việt</a>
         </div>
       </div>
     </section>
@@ -110,7 +110,7 @@ $culturalSignificance = [
               <li><?php echo htmlspecialchars($item); ?></li>
             <?php endforeach; ?>
           </ul>
-          <a href="/tours/food-and-culture" class="btn btn--primary">Tìm Hiểu Văn Hóa</a>
+          <a  class="btn btn--primary">Tìm Hiểu Văn Hóa</a>
         </div>
       </div>
     </section>
