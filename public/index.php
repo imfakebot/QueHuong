@@ -68,7 +68,7 @@ $static_routes = [
 // Ánh xạ từ slug trên URL sang tên tệp vật lý (không có .php)
 $tour_slug_to_filename_map = [
     // Mountain Tours
-    'sapa-terraces-adventure' => 'sapa-trekking-detail',
+    'sapa-terraces-adventure' => 'trekking-in-sapa',
     'da-lat-romantic-getaway' => 'da-lat-romantic-getaway-detail',
     'phong-nha-caves-adventure' => 'exploring-phongnha-cave', // Đã thêm gạch ngang
     'trekking-ta-xua-san-may' => 'trekking-ta-xua-detail',
@@ -125,7 +125,7 @@ elseif (preg_match('#^/tours/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
 
     if (isset($tour_slug_to_filename_map[$tourSlug])) {
         $filename = $tour_slug_to_filename_map[$tourSlug];
-        $contentView = VIEWS_PATH . "/tours/detail-mountain-tours/{$filename}.php";
+        $contentView = VIEWS_PATH . "/tours/{$filename}.php";
     }
 }
 // Bước 3: Xử lý các route động cho chi tiết điểm đến (/destinations/{slug})
