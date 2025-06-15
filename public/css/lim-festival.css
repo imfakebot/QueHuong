@@ -1,4 +1,84 @@
-:root {
+body {
+      font-family: 'Roboto', sans-serif;
+      background: #fefefe;
+      color: #333;
+    }
+
+    .hero-lim {
+      background-image: url('https://www.vivutravel.com/images/blog17/lim-festival-in-bac-ninh.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 100px 20px;
+      color: white;
+      text-align: center;
+    }
+
+    .hero-lim::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.45);
+    }
+
+    .hero-lim .content {
+      position: relative;
+      z-index: 1;
+    }
+
+    .hero-lim h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      color: #ffeb3b;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #e91e63;
+      margin-bottom: 20px;
+    }
+
+    .section img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.1);
+    }
+
+    .highlight-box {
+      background: #fff0f5;
+      border-left: 6px solid #e91e63;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .cta a {
+      background: #e91e63;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .cta a:hover {
+      background: #c2185b;
+    }
+
+    :root {
   --festivals-primary: #c62828; /* đỏ truyền thống */
   --festivals-secondary: #f9a825; /* vàng tươi */
   --festivals-bg: #fff8e1; /* nền dịu nhẹ */

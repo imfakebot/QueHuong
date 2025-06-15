@@ -243,3 +243,82 @@
 }
 
 
+body {
+      font-family: 'Roboto', sans-serif;
+      background: #f8f9fa;
+      color: #333;
+    }
+    .hero-pagoda {
+      background-image: url('https://backend.threeland.com/storage/images/bloggallery/files/Perfuma-Pagoda.jpg');
+      background-size: cover;
+      background-position: center;
+      position: relative;
+      padding: 100px 20px;
+      color: white;
+      text-align: center;
+    }
+    .hero-pagoda::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(0, 0, 0, 0.5);
+    }
+    .hero-pagoda .content {
+      position: relative;
+      z-index: 1;
+    }
+    .hero-pagoda h1 {
+      font-size: 3rem;
+      font-family: 'Playfair Display', serif;
+      color: #ffcc80;
+    }
+    .hero-pagoda p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+    }
+
+    .section {
+      padding: 50px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .section h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      color: #9c27b0;
+      margin-bottom: 20px;
+    }
+
+    .section img {
+      width: 100%;
+      border-radius: 12px;
+      margin: 20px 0;
+      box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+    }
+
+    .highlight-box {
+      background: #ede7f6;
+      border-left: 6px solid #7b1fa2;
+      padding: 20px;
+      border-radius: 8px;
+      margin: 30px 0;
+    }
+
+    .cta {
+      text-align: center;
+      margin: 50px 0;
+    }
+
+    .cta a {
+      background: #7b1fa2;
+      color: white;
+      padding: 12px 24px;
+      text-decoration: none;
+      border-radius: 8px;
+      font-weight: bold;
+    }
+
+    .cta a:hover {
+      background: #4a0072;
+    }
