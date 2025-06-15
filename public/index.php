@@ -162,6 +162,15 @@ $things_slug_to_filename_map = [
     'beach-relaxation' => 'beach-escapes',
     'yoga-meditation' => 'yoga-meditation',
 ];
+
+$foot_slug_to_filename_map = [
+    'about'   => 'about',
+    'contact' => 'contact',
+    'privacy' => 'privacy',
+    'terms'   => 'terms',
+];
+
+
 // ===================== KẾT THÚC PHẦN CẬP NHẬT =====================
 
 
@@ -216,6 +225,15 @@ elseif (preg_match('#^/things/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
         $filename = $things_slug_to_filename_map[$thingsSlug];
         $contentView = VIEWS_PATH . "/things/{$filename}.php";
         $pageTitle = ucwords(str_replace('-', ' ', $thingsSlug)) . ' - Du Lịch Quê Hương';
+    }
+}
+
+elseif (preg_match('#^/foot/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
+    $footSlug = $matches[1];
+
+    if (isset($foot_slug_to_filename_map[$footSlug])) {
+        $filename = $foot_slug_to_filename_map[$footSlug];
+        $contentView = VIEWS_PATH . "/foot/{$filename}.php";
     }
 }
 

@@ -10,11 +10,11 @@
             <div class="footer-column">
                 <h4 class="footer-heading">Về Chúng Tôi</h4>
                 <ul class="footer-links">
-                    <li><a href="/about">Giới Thiệu</a></li>
+                    <li><a href="/foot/about">Giới Thiệu</a></li>
                     <li><a href="/careers">Tuyển Dụng</a></li>
-                    <li><a href="/terms">Điều Khoản Sử Dụng</a></li>
-                    <li><a href="/privacy">Chính Sách Bảo Mật</a></li>
-                    <li><a href="/contact">Liên Hệ</a></li>
+                    <li><a href="/foot/terms">Điều Khoản Sử Dụng</a></li>
+                    <li><a href="/foot/privacy">Chính Sách Bảo Mật</a></li>
+                    <li><a href="/foot/contact">Liên Hệ</a></li>
                     <li><a href="/sitemap">Sơ Đồ Website</a></li>
                 </ul>
             </div>
@@ -27,7 +27,7 @@
                     <li><a href="/payment-info">Thông Tin Thanh Toán</a></li>
                     <li><a href="/contact#form">Gửi Yêu Cầu Hỗ Trợ</a></li>
                     <li><a href="/blog">Blog Du Lịch</a></li> <!-- Chuyển Blog sang đây nếu muốn -->
-                    <li><a href="/tips">Mẹo Du Lịch</a></li> <!-- Chuyển Tips sang đây nếu muốn -->
+                    <li><a href="/life/travel-tips">Mẹo Du Lịch</a></li> <!-- Chuyển Tips sang đây nếu muốn -->
                 </ul>
             </div>
 
@@ -35,13 +35,13 @@
                 <h4 class="footer-heading">Kết Nối Với Chúng Tôi</h4>
                 <p class="footer-contact-info">
                     <!-- !!! Thay thông tin thật !!! -->
-                    Địa chỉ: [Số nhà, Đường, Phường/Xã], [Quận/Huyện], [Tỉnh/Thành phố]<br>
+                    Địa chỉ: 470 Đ. Trần Đại Nghĩa, Hoà Hải, Ngũ Hành Sơn, Đà Nẵng<br>
                     Hotline: <a href="tel:+84123456789">0123 456 789</a><br>
-                    Email: <a href="mailto:support@yourdomain.com">support@yourdomain.com</a>
+                    Email: <a href="mailto:support@yourdomain.com">anhtt@vku.udn.vn</a>
                 </p>
                 <div class="social-icons">
                     <!-- !!! Thay thế # bằng link thật và đảm bảo có SVG/Ảnh !!! -->
-                    <a href="#" target="_blank" aria-label="Facebook"><img src="/svg/facebook.svg" alt="Facebook"></a>
+                    <a href="https://www.facebook.com/truong.linh.820300" target="_blank" aria-label="Facebook"><img src="/svg/facebook.svg" alt="Facebook"></a>
                     <a href="#" target="_blank" aria-label="Instagram"><img src="/svg/instagram.svg" alt="Instagram"></a>
                     <a href="#" target="_blank" aria-label="YouTube"><img src="/svg/youtube.svg" alt="YouTube"></a>
                 </div>
