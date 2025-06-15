@@ -2,181 +2,163 @@
 
 declare(strict_types=1);
 
+// =========================================================================
+// ==                           KHỞI TẠO & CẤU HÌNH                        ==
+// =========================================================================
+
 define('BASE_PATH', dirname(__DIR__));
 define('VIEWS_PATH', BASE_PATH . '/src/Views');
 
+/**
+ * Hàm xử lý lỗi tập trung.
+ * Dừng chương trình và hiển thị trang lỗi tương ứng.
+ * @param int $code Mã lỗi HTTP (ví dụ: 404, 403, 500)
+ */
+function abort(int $code = 404): void
+{
+    http_response_code($code);
+    $viewPath = VIEWS_PATH . "/errors/{$code}.php";
+    if (file_exists($viewPath)) {
+        require $viewPath;
+    } else {
+        // Fallback text nếu file lỗi không tồn tại
+        echo "Error {$code}: Page Not Found.";
+    }
+    die();
+}
 
-$pageTitle = 'Quê Hương Việt Nam'; // Tiêu đề mặc định
-
+// Chuẩn hóa Request URI để xử lý nhất quán
 $requestUri = strtok($_SERVER['REQUEST_URI'], '?');
-if (strlen($requestUri) > 1 && substr($requestUri, -1) === '/') {
+if (strlen($requestUri) > 1) {
     $requestUri = rtrim($requestUri, '/');
 }
 if (empty($requestUri)) {
     $requestUri = '/';
 }
 
-$contentView = '';
-$matches = []; // Để lưu kết quả từ preg_match
 
-// ----- XỬ LÝ ROUTING -----
+// =========================================================================
+// ==                         BẢNG ĐỊNH TUYẾN (ROUTING)                    ==
+// =========================================================================
 
-// 1. Các route tĩnh (ưu tiên khớp trước)
-if ($requestUri === '/' || $requestUri === '/home') {
-    $pageTitle = 'Trang Chủ - Du Lịch Quê Hương';
-    $contentView = VIEWS_PATH . '/home/index.php';
-} elseif ($requestUri === '/tours') { // Trang liệt kê tất cả tours
-    $pageTitle = 'Danh Sách Tours - Du Lịch Quê Hương';
-    $contentView = VIEWS_PATH . '/tours/index.php';
-} elseif ($requestUri === '/destinations') { // Trang liệt kê tất cả destinations
-    $pageTitle = 'Các Điểm Đến - Du Lịch Quê Hương';
-    $contentView = VIEWS_PATH . '/destination/index.php';
-} elseif ($requestUri === '/things') { // Trang liệt kê tất cả "Things to do"
-    $pageTitle = 'Things To Do in Vietnam - Du Lịch Quê Hương';
-    $contentView = VIEWS_PATH . '/things/index.php';
-} elseif ($requestUri === '/life') { // Trang liệt kê tất cả "Things to do"
-    $pageTitle = 'Life in Vietnam - Du Lịch Quê Hương';
-    $contentView = VIEWS_PATH . '/life/index.php';
-} elseif ($requestUri === '/tours/cultural-heritage' || $requestUri === '/tours/culture') { // Trang liệt kê tour Văn Hóa & Di Sản
-    $pageTitle = 'Tour Văn Hóa & Di Sản - Du Lịch Quê Hương';
-    $contentView = VIEWS_PATH . '/tours/cultural-heritage-tours.php';
-    // Đảm bảo file cultural-heritage-tours.php tồn tại trong VIEWS_PATH . '/tours/'
-}
-// 2. Route động cho chi tiết ĐIỂM ĐẾN: /destinations/{slug}
-elseif (preg_match('#^/destinations/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
-    $destinationSlug = $matches[1]; // Lấy slug từ URL (ví dụ: "da-nang")
-    $potentialView = VIEWS_PATH . '/destination/' . $destinationSlug . '.php';
+// ----- 1. CÁC ROUTE TĨNH (URL cố định) -----
+$static_routes = [
+    // Trang chính
+    '/' => ['view' => '/home/index.php', 'title' => 'Trang Chủ'],
+    '/home' => ['view' => '/home/index.php', 'title' => 'Trang Chủ'],
+    '/contact' => ['view' => '/contact/index.php', 'title' => 'Liên Hệ'],
 
-    if (file_exists($potentialView)) {
-        // $pageTitle sẽ được đặt bên trong file view của destination đó
-        $contentView = $potentialView;
-    } else {
-        // Slug hợp lệ nhưng không có file view tương ứng
-        http_response_code(404);
-        $pageTitle = '404 Not Found - Du Lịch Quê Hương';
-        $contentView = VIEWS_PATH . '/errors/404.php';
-    }
+    // Các trang danh sách chính
+    '/tours' => ['view' => '/tours/index.php', 'title' => 'Danh Sách Tours'],
+    '/destinations' => ['view' => '/destination/index.php', 'title' => 'Các Điểm Đến'],
+    '/things' => ['view' => '/things/index.php', 'title' => 'Trải Nghiệm Đáng Thử'],
+    '/life' => ['view' => '/life/index.php', 'title' => 'Cuộc Sống & Văn Hóa'],
+
+    // Các trang danh sách con
+    '/tours/cultural-heritage' => ['view' => '/tours/cultural-heritage-tours.php', 'title' => 'Tour Văn Hóa & Di Sản'],
+    '/tours/adventure-outdoors' => ['view' => '/tours/adventure-outdoors-tours.php', 'title' => 'Tour Mạo Hiểm & Ngoài Trời'],
+    '/tours/mountain-tours' => ['view' => '/tours/mountain-tours.php', 'title' => 'Các Tour Leo Núi & Trekking'],
+    '/things/relaxation' => ['view' => '/things/relaxation.php', 'title' => 'Hoạt Động Thư Giãn'],
+    '/things/adventure' => ['view' => '/things/adventure.php', 'title' => 'Hoạt Động Phiêu Lưu & Mạo Hiểm'],
+    '/things/cultural-heritage-tours' => ['view' => '/things/cultural-heritage-tours.php', 'title' => 'Trải Nghiệm Văn Hóa & Di Sản'],
+];
+
+
+// ----- 2. BẢNG ÁNH XẠ CHO CÁC ROUTE ĐỘNG -----
+// Ánh xạ từ slug trên URL sang tên tệp vật lý (không có .php)
+$tour_slug_to_filename_map = [
+    // Mountain Tours
+    'sapa-terraces-adventure' => 'sapa-trekking-detail',
+    'da-lat-romantic-getaway' => 'da-lat-romantic-getaway-detail',
+    'phong-nha-caves-adventure' => 'exploring-phongnha-cave', // Đã thêm gạch ngang
+    'trekking-ta-xua-san-may' => 'trekking-ta-xua-detail',
+    'chinh-phuc-dinh-fansipan' => 'fansipan-conquest-detail',
+    'kham-pha-cao-nguyen-da-dong-van' => 'dong-van-plateau-detail',
+    'trekking-cung-duong-ta-nang-phan-dung' => 'ta-nang-phan-dung-detail',
+    'leo-nui-ba-den-tay-ninh' => 'ba-den-mountain-detail',
+    'kham-pha-pu-luong-thanh-hoa' => 'pu-luong-discovery-detail',
+    'leo-nui-langbiang-da-lat' => 'langbiang-mountain-detail',
+    'trekking-bidoup-nui-ba' => 'bidoup-nuiba-trek-detail',
+    'kham-pha-y-ty-lao-than' => 'y-ty-lao-than-detail',
+    // Water/Beach Tours (ví dụ)
+    'halong-bay-kayaking' => 'halong-kayaking-detail'
+];
+
+$destination_slug_to_filename_map = [
+    'binh-thuan'     => 'binh-thuan',
+    'can-tho'         => 'can-tho',
+    'chau-doc'        => 'chau-doc',
+    'con-dao'         => 'con-dao',
+    'da-lat'          => 'da-lat',
+    'da-nang'         => 'da-nang',
+    'ha-giang'        => 'ha-giang',
+    'ha-long'         => 'ha-long',
+    'ha-noi'          => 'hanoi', // Tên tệp là hanoi.php
+    'ho-chi-minh'     => 'ho-chi-minh',
+    'hoi-an'          => 'hoi-an',
+    'hue'             => 'hue',
+    'mai-chau'        => 'mai-chau',
+    'nha-trang'       => 'nha-trang',
+    'ninh-binh'       => 'ninh-binh',
+    'phong-nha'       => 'phong-nha',
+    'phu-quoc'        => 'phu-quoc',
+    'sapa'            => 'sapa',
+];
+
+
+// =========================================================================
+// ==                        LOGIC XỬ LÝ CỦA ROUTER                        ==
+// =========================================================================
+
+$contentView = null;
+$pageTitle = 'Quê Hương Việt Nam'; // Tiêu đề mặc định
+
+// Bước 1: Ưu tiên tìm trong các route tĩnh
+if (array_key_exists($requestUri, $static_routes)) {
+    $route = $static_routes[$requestUri];
+    $contentView = VIEWS_PATH . $route['view'];
+    $pageTitle = $route['title'] . ' - Du Lịch Quê Hương';
 }
-// Route cho trang chi tiết tour (sử dụng query parameter)
-elseif ($requestUri === '/tours/detail' && isset($_GET['slug'])) {
-    // $pageTitle sẽ được đặt bên trong file view của tour-detail.php
-    $contentView = VIEWS_PATH . '/tours/tour-detail.php';
-}
-// 3. Route động cho chi tiết TOUR: /tours/{slug}
+// Bước 2: Xử lý các route động cho chi tiết tour (/tours/{slug})
 elseif (preg_match('#^/tours/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
-    $tourSlug = $matches[1]; // Lấy slug từ URL (ví dụ: "vinh-ha-long-tour")
-    $potentialView = VIEWS_PATH . '/tours/' . $tourSlug . '.php';
+    $tourSlug = $matches[1];
 
-    if (file_exists($potentialView)) {
-        // $pageTitle sẽ được đặt bên trong file view của tour đó
-        $contentView = $potentialView;
-    } else {
-        http_response_code(404);
-        $pageTitle = '404 Not Found - Du Lịch Quê Hương';
-        $contentView = VIEWS_PATH . '/errors/404.php';
+    if (isset($tour_slug_to_filename_map[$tourSlug])) {
+        $filename = $tour_slug_to_filename_map[$tourSlug];
+        $contentView = VIEWS_PATH . "/tours/detail-mountain-tours/{$filename}.php";
     }
 }
-// 4. Route động cho chi tiết TOUR trong thư mục con: /tours/detail-mountain-tours/{slug}
-elseif (preg_match('#^/tours/detail-mountain-tours/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
-    $tourSlug = $matches[1]; // Lấy slug từ URL (ví dụ: "trekking-in-sapa")
-    $potentialView = VIEWS_PATH . '/tours/detail-mountain-tours/' . $tourSlug . '.php';
+// Bước 3: Xử lý các route động cho chi tiết điểm đến (/destinations/{slug})
+elseif (preg_match('#^/destinations/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
+    $destinationSlug = $matches[1];
 
-    if (file_exists($potentialView)) {
-        // $pageTitle sẽ được đặt bên trong file view của tour đó
-        $contentView = $potentialView;
-    } else {
-        http_response_code(404);
-        $pageTitle = '404 Not Found - Du Lịch Quê Hương';
-        $contentView = VIEWS_PATH . '/errors/404.php';
+    if (isset($destination_slug_to_filename_map[$destinationSlug])) {
+        $filename = $destination_slug_to_filename_map[$destinationSlug];
+        $contentView = VIEWS_PATH . "/destination/{$filename}.php";
     }
 }
-// Route cho trang danh mục "Relaxation & Wellness"
-elseif ($requestUri === '/things/relaxation') {
-    $pageTitle = 'Hoạt Động Thư Giãn & Chăm Sóc Sức Khỏe - Du Lịch Quê Hương';
-    $contentView = VIEWS_PATH . '/things/relaxation.php';
-} // Route cho trang danh mục "Hoạt động Văn hóa & Di sản" (Things to do)
-elseif ($requestUri === '/things/cultural-experiences') { // Bạn có thể chọn slug URL khác nếu muốn
-    $pageTitle = 'Trải Nghiệm Văn Hóa & Di Sản - Du Lịch Quê Hương';
-    $contentView = VIEWS_PATH . '/things/cultural-heritage-tours.php'; // Trỏ đến file bạn đã chỉ định
-} // Route động cho chi tiết "THINGS TO DO": /things/{slug}
-elseif (preg_match('#^/things/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
-    $thingSlug = $matches[1]; // Lấy slug từ URL (ví dụ: "trekking-sapa")
-    $potentialView = VIEWS_PATH . '/things/' . $thingSlug . '.php';
+// Thêm các `elseif` khác cho /things, /life... nếu cần logic động tương tự
 
-    if (file_exists($potentialView)) {
-        // $pageTitle sẽ được đặt bên trong file view của "thing" đó
-        $contentView = $potentialView;
-    } else {
-        http_response_code(404);
-        $pageTitle = '404 Not Found - Du Lịch Quê Hương';
-        $contentView = VIEWS_PATH . '/errors/404.php';
-    }
+// Bước 4: Nếu không có route nào khớp, gọi hàm abort để báo lỗi 404
+if (is_null($contentView)) {
+    abort(404);
 }
 
-//5. Route động cho chi tiết LIFE CULTURE: /life/{slug}
-elseif (preg_match('#^/life/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
-    $cultureSlug = $matches[1]; // ví dụ: festivals
-    $potentialView = VIEWS_PATH . '/life/' . $cultureSlug . '.php';
-
-    if (file_exists($potentialView)) {
-        $contentView = $potentialView;
-    } else {
-        http_response_code(404);
-        $pageTitle = '404 Not Found - Du Lịch Quê Hương';
-        $contentView = VIEWS_PATH . '/errors/404.php';
-    }
-}
-
-// ... (Thêm các route động khác nếu cần, ví dụ /blog/{slug}) ...
-
-// 5. Mặc định / Xử lý 404 cho các trường hợp còn lại
-else {
-    // Kiểm tra file tĩnh (CSS, JS, images, video) trước khi báo 404
-    $filePath = __DIR__ . $requestUri; // __DIR__ là thư mục public
-    if (preg_match('/\.(?:png|jpg|jpeg|gif|css|js|mp4|webp|svg|ico|woff|woff2|ttf|eot)$/i', $requestUri) && file_exists($filePath)) { // Thêm các định dạng file tĩnh phổ biến
-        // Khi sử dụng máy chủ web tích hợp của PHP (php -S),
-        // việc trả về `false` từ script router sẽ yêu cầu máy chủ phục vụ file tĩnh đó trực tiếp.
-        // Nếu không, PHP sẽ cố gắng xử lý nó như một route.
-        return false;
-    }
-
-    http_response_code(404);
-    $pageTitle = '404 Not Found - Du Lịch Quê Hương';
-    $contentView = VIEWS_PATH . '/errors/404.php';
+// Bước 5: Kiểm tra lại lần cuối xem tệp view có thực sự tồn tại trên máy chủ không
+if (!file_exists($contentView)) {
+    error_log("Router Error: View file not found at '{$contentView}' for URI '{$requestUri}'");
+    abort(404);
 }
 
 
-// ----- NẠP LAYOUT -----
-if (http_response_code() === 404) {
-    // Nếu là trang 404, chỉ hiển thị nội dung 404 mà không có header/footer
-    if (file_exists(VIEWS_PATH . '/errors/404.php')) {
-        require_once VIEWS_PATH . '/errors/404.php';
-    } else {
-    }
-} else {
-    // Các trang bình thường sẽ nạp đầy đủ layout
-    ob_start();
-    if (!empty($contentView) && file_exists($contentView)) {
-        require_once $contentView;
-    }
-    $pageContentHtml = ob_get_clean();
+// =========================================================================
+// ==                       NẠP LAYOUT & HIỂN THỊ TRANG                    ==
+// =========================================================================
 
-    // Nạp Header
-    if (file_exists(VIEWS_PATH . '/layouts/header.php')) {
-        require_once VIEWS_PATH . '/layouts/header.php';
-    } else {
-        error_log("Lỗi: Không tìm thấy tệp header.php tại " . VIEWS_PATH . '/layouts/header.php');
-        die('Lỗi hệ thống: Header không tồn tại.');
-    }
+ob_start();
+require_once $contentView;
+$pageContentHtml = ob_get_clean();
 
-    // Xuất nội dung chính
-    echo $pageContentHtml;
-
-    // Nạp Footer
-    if (file_exists(VIEWS_PATH . '/layouts/footer.php')) {
-        require_once VIEWS_PATH . '/layouts/footer.php';
-    } else {
-        error_log("Lỗi: Không tìm thấy tệp footer.php tại " . VIEWS_PATH . '/layouts/footer.php');
-        die('Lỗi hệ thống: Footer không tồn tại.');
-    }
-}
+require_once VIEWS_PATH . '/layouts/header.php';
+echo $pageContentHtml;
+require_once VIEWS_PATH . '/layouts/footer.php';

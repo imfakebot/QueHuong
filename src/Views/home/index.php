@@ -214,7 +214,7 @@ $pageScripts = [
                 <!-- Swiper Slide 8: Phong Nha Caves Adventure -->
                 <div class="swiper-slide">
                     <div class="tour-item">
-                        <a href="/tours/phong-nha-tour" class="tour-link">
+                        <a href="/tours/detail-mountain-tours/exploring-phongnha-cave.php" class="tour-link">
                             <div class="tour-image-container">
                                 <img src="/images/tours/phong-nha.webp" alt="Phong Nha Caves Adventure">
                                 <span class="tour-duration">3 Days 2 Nights</span>
