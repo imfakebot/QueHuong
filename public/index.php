@@ -52,7 +52,7 @@ $static_routes = [
     '/tours' => ['view' => '/tours/index.php', 'title' => 'Danh Sách Tours'],
     '/destinations' => ['view' => '/destination/index.php', 'title' => 'Các Điểm Đến'],
     '/things' => ['view' => '/things/index.php', 'title' => 'Trải Nghiệm Đáng Thử'],
-    '/life' => ['view' => '/life/index.php', 'title' => 'Cuộc Sống & Văn Hóa'],
+    '/life' => ['view' => '/life/index.php', 'title' => 'Cuộc Sống & Văn Hóa'], // Trang này sẽ dùng file /life/index.php
 
     // Các trang danh sách con
     '/tours/cultural-heritage' => ['view' => '/tours/cultural-heritage-tours.php', 'title' => 'Tour Văn Hóa & Di Sản'],
@@ -104,34 +104,45 @@ $destination_slug_to_filename_map = [
     'sapa'            => 'sapa',
 ];
 
-// ======================= PHẦN THÊM MỚI =======================
+// ======================= PHẦN ĐƯỢC CẬP NHẬT =======================
 // Bảng ánh xạ cho mục "Life in Vietnam"
 $life_slug_to_filename_map = [
-    // Culture
-    'culture' => 'culture-main',
-    'festivals' => 'festivals',
-    'etiquette' => 'etiquette',
-    // Food
-    'food' => 'food-main',
-    'street-food' => 'street-food',
-    // Travel
-    'travel-tips' => 'travel-tips-main',
-    'visa' => 'visa-info',
+    // Culture & Traditions
+    'culture'                       => 'culture',
+    'ao-dai'                        => 'ao-dai',
+    'arts-crafts'                   => 'arts-crafts',
+    'beliefs'                       => 'beliefs',
+    'etiquette'                     => 'etiquette',
+    'festivals'                     => 'festivals', // trang danh sách các lễ hội
+    // Các lễ hội cụ thể
+    'cold-food-festival'            => 'cold-food-festival',
+    'enjoy-danang-festival-2025'    => 'enjoy-danang-festival-2025',
+    'lim-festival'                  => 'lim-festival',
+    'perfume-pagoda-festival'       => 'perfume-pagoda-festival',
+    'vietnamese-lunar-new-year'     => 'vietnamese-lunar-new-year',
+
+    // Food & Drink
+    'food'                          => 'food',
+    'coffee-culture'                => 'coffee-culture',
+    'must-try'                      => 'must-try',
+    'regional-cuisine'              => 'regional-cuisine',
+    'street-food'                   => 'street-food',
+    'markets'                       => 'markets',
+
+    // Travel Essentials
+    'travel-tips'                   => 'travel-tips',
+    'language'                      => 'language',
+    'money'                         => 'money',
+    'safety'                        => 'safety',
+    'transport'                     => 'transport',
+    'visa'                          => 'visa',
 ];
 
 // Bảng ánh xạ cho mục "Things to do"
 $things_slug_to_filename_map = [
-    // Adventure
-    'trekking-sapa' => 'trekking-sapa-detail',
-    'caving-phongnha' => 'caving-phongnha-detail',
-    // Culture
-    'historical-sites' => 'historical-sites',
-    'museums' => 'museums',
-    // Relaxation
-    'spa-massage' => 'spa-massage',
-    'beach-escapes' => 'beach-escapes',
+    // Bạn có thể thêm các file trong thư mục /things vào đây
 ];
-// ===================== KẾT THÚC PHẦN THÊM MỚI =====================
+// ===================== KẾT THÚC PHẦN CẬP NHẬT =====================
 
 
 // =========================================================================
@@ -165,17 +176,16 @@ elseif (preg_match('#^/destinations/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) 
         $contentView = VIEWS_PATH . "/destination/{$filename}.php";
     }
 }
-// ======================= PHẦN THÊM MỚI =======================
 // Bước 4: Xử lý các route động cho "Life in Vietnam" (/life/{slug})
 elseif (preg_match('#^/life/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
     $lifeSlug = $matches[1];
 
     if (isset($life_slug_to_filename_map[$lifeSlug])) {
         $filename = $life_slug_to_filename_map[$lifeSlug];
-        // Giả sử các file view cho mục này nằm trong /src/Views/life/
+        // Tất cả các file view cho mục này đều nằm trong /src/Views/life/
         $contentView = VIEWS_PATH . "/life/{$filename}.php";
-        // Bạn có thể tạo tiêu đề động ở đây nếu muốn
-        $pageTitle = ucwords(str_replace('-', ' ', $lifeSlug)) . ' - Cuộc Sống & Văn Hóa';
+        // Tạo tiêu đề động
+        $pageTitle = ucwords(str_replace('-', ' ', $lifeSlug)) . ' - Du Lịch Quê Hương';
     }
 }
 // Bước 5: Xử lý các route động cho "Things to do" (/things/{slug})
@@ -184,21 +194,18 @@ elseif (preg_match('#^/things/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
 
     if (isset($things_slug_to_filename_map[$thingsSlug])) {
         $filename = $things_slug_to_filename_map[$thingsSlug];
-        // Giả sử các file view cho mục này nằm trong /src/Views/things/
         $contentView = VIEWS_PATH . "/things/{$filename}.php";
-        // Bạn có thể tạo tiêu đề động ở đây nếu muốn
-        $pageTitle = ucwords(str_replace('-', ' ', $thingsSlug)) . ' - Trải Nghiệm Đáng Thử';
+        $pageTitle = ucwords(str_replace('-', ' ', $thingsSlug)) . ' - Du Lịch Quê Hương';
     }
 }
-// ===================== KẾT THÚC PHẦN THÊM MỚI =====================
 
 
-// Bước 6 (trước đây là bước 4): Nếu không có route nào khớp, gọi hàm abort để báo lỗi 404
+// Bước 6: Nếu không có route nào khớp, gọi hàm abort để báo lỗi 404
 if (is_null($contentView)) {
     abort(404);
 }
 
-// Bước 7 (trước đây là bước 5): Kiểm tra lại lần cuối xem tệp view có thực sự tồn tại trên máy chủ không
+// Bước 7: Kiểm tra lại lần cuối xem tệp view có thực sự tồn tại trên máy chủ không
 if (!file_exists($contentView)) {
     error_log("Router Error: View file not found at '{$contentView}' for URI '{$requestUri}'");
     abort(404);
