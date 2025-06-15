@@ -11,22 +11,22 @@
                 <h4 class="footer-heading">Về Chúng Tôi</h4>
                 <ul class="footer-links">
                     <li><a href="/foot/about">Giới Thiệu</a></li>
-                    <li><a href="/careers">Tuyển Dụng</a></li>
+                    <li><a >Tuyển Dụng</a></li>
                     <li><a href="/foot/terms">Điều Khoản Sử Dụng</a></li>
                     <li><a href="/foot/privacy">Chính Sách Bảo Mật</a></li>
                     <li><a href="/foot/contact">Liên Hệ</a></li>
-                    <li><a href="/sitemap">Sơ Đồ Website</a></li>
+                    <li><a >Sơ Đồ Website</a></li>
                 </ul>
             </div>
 
             <div class="footer-column">
                 <h4 class="footer-heading">Hỗ Trợ Khách Hàng</h4>
                 <ul class="footer-links">
-                    <li><a href="/faq">Câu Hỏi Thường Gặp</a></li>
-                    <li><a href="/booking-guide">Hướng Dẫn Đặt Tour</a></li>
-                    <li><a href="/payment-info">Thông Tin Thanh Toán</a></li>
-                    <li><a href="/contact#form">Gửi Yêu Cầu Hỗ Trợ</a></li>
-                    <li><a href="/blog">Blog Du Lịch</a></li> <!-- Chuyển Blog sang đây nếu muốn -->
+                    <li><a >Câu Hỏi Thường Gặp</a></li>
+                    <li><a >Hướng Dẫn Đặt Tour</a></li>
+                    <li><a >Thông Tin Thanh Toán</a></li>
+                    <li><a href="/foot/contact#form">Gửi Yêu Cầu Hỗ Trợ</a></li>
+                    <li><a href="/destinations">Blog Du Lịch</a></li> <!-- Chuyển Blog sang đây nếu muốn -->
                     <li><a href="/life/travel-tips">Mẹo Du Lịch</a></li> <!-- Chuyển Tips sang đây nếu muốn -->
                 </ul>
             </div>

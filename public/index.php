@@ -169,6 +169,7 @@ $foot_slug_to_filename_map = [
     'contact' => 'contact',
     'privacy' => 'privacy',
     'terms'   => 'terms',
+    'contact#form' => 'contact#form',
 ];
 
 
