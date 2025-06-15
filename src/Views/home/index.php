@@ -1,7 +1,8 @@
 <?php
 $pageTitle = 'Trang Chủ - Du Lịch Quê Hương'; // Hoặc tiêu đề bạn muốn cho trang chủ
 
-function generateSlug($title) {
+function generateSlug($title)
+{
     // Chuyển tiếng Việt có dấu thành không dấu (nếu cần)
     $title = iconv('UTF-8', 'ASCII//TRANSLIT', $title);
     // Xoá ký tự đặc biệt, chuyển khoảng trắng thành dấu gạch ngang
@@ -127,7 +128,7 @@ $pageScripts = [
                 <!-- Swiper Slide 3: Sapa Terraces Tour -->
                 <div class="swiper-slide">
                     <div class="tour-item">
-                        <a href="/tours/sapa-tour" class="tour-link">
+                        <a href="/tours/sapa-terraces-adventure" class="tour-link">
                             <div class="tour-image-container">
                                 <img src="/images/tours/sapa.jpg" alt="Sapa Terraces Tour">
                                 <span class="tour-duration">4 Days 3 Nights</span>
@@ -294,7 +295,7 @@ $pageScripts = [
             <div class="swiper-wrapper">
                 <!-- Destination 1: Hanoi -->
                 <div class="swiper-slide destination-item"> <!-- Thêm destination-item để style riêng nếu cần -->
-                    <a href="/destinations/hanoi" class="destination-link">
+                    <a href="/destinations/ha-noi" class="destination-link">
                         <img src="/images/destinations/must-visit/hanoi.jpg" alt="Hanoi">
                         <div class="destination-name">Hanoi</div>
                     </a>
@@ -641,8 +642,8 @@ $pageScripts = [
     </div>
 </section>
 
- <!-- SECTION 1: TRUYỀN THỐNG -->
-       <section id="section-traditional" class="timeline-section" style="background-image: url('https://img.lovepik.com/background/20211020/large/lovepik-background-of-red-festival-display-image_400051574.jpg'); background-size: cover; background-position: center;">
+<!-- SECTION 1: TRUYỀN THỐNG -->
+<section id="section-traditional" class="timeline-section" style="background-image: url('https://img.lovepik.com/background/20211020/large/lovepik-background-of-red-festival-display-image_400051574.jpg'); background-size: cover; background-position: center;">
     <div class="timeline-overlay"></div>
     <div class="timeline-container">
         <h2 class="timeline-title">Các Lễ Hội Theo Tháng</h2>
@@ -650,7 +651,7 @@ $pageScripts = [
         <!-- Navigation Months -->
         <div class="timeline-navigation">
             <?php
-            $months = ['JAN','FEB','MAR','APR','MAY','JUN','JUL','AUG','SEP','OCT','NOV','DEC'];
+            $months = ['JAN', 'FEB', 'MAR', 'APR', 'MAY', 'JUN', 'JUL', 'AUG', 'SEP', 'OCT', 'NOV', 'DEC'];
             foreach ($months as $index => $month) {
                 $isActive = ($month === 'JUN') ? 'active' : '';
                 echo "<button class='timeline-month $isActive' data-month='$index'>$month</button>";
@@ -696,15 +697,15 @@ $pageScripts = [
                     ['title' => 'Vietnamese Women’s Day', 'date' => '20 Oct 2025', 'img' => 'https://vnvis.com/wp-content/uploads/2021/10/HW2019-1-1-800x365.jpg'],
                     ['title' => 'Full Moon Lantern Festival in Hoi An', 'date' => 'monthly on full moon days', 'img' => 'https://jackytravel.com/wp-content/uploads/2023/12/Hoi-An-Lantern-Festival.jpg']
                 ],
-                
+
                 4 => [['title' => 'DIFF 2025', 'date' => '12 MAY - 18 MAY 2025', 'img' => 'https://cdn.quangnam.gov.vn/thumbs/1200x630/2025/01/15/le-hoi-phao-hoa-quoc-te-da-nang.-anh-kim-lien-5-.jpg']],
                 7 => [['title' => 'Central Highlands Gong Festival', 'date' => '12 Aug - 18 Aug 2025', 'img' => 'https://image.vovworld.vn/w500/Uploaded/vovworld/vjryqdxwp/2022_11_18/festiuva_PSHJ.jpg']],
                 11 => [['title' => 'Vietnam National Day Parade', 'date' => '02 Dec 2025', 'img' => 'https://localvietnam.com/wp-content/uploads/2023/05/national-day-ba-dinh-square-flag-ceremony-1.jpg']]
             ];
 
             foreach ($eventsByMonth as $monthIndex => $events) {
-                echo "<div class='month-events' data-month='$monthIndex' style='display: ".($monthIndex === 5 ? 'flex' : 'none')."'>";
-               foreach ($events as $event) {
+                echo "<div class='month-events' data-month='$monthIndex' style='display: " . ($monthIndex === 5 ? 'flex' : 'none') . "'>";
+                foreach ($events as $event) {
                     $slug = generateSlug($event['title']); // Tạo slug
                     echo "
                         <a href='/life/$slug' class='event-card'>
@@ -714,7 +715,7 @@ $pageScripts = [
                                 <h3 class='event-title'>{$event['title']}</h3>
                             </div>
                         </a>";
-}
+                }
                 echo "</div>";
             }
             ?>
