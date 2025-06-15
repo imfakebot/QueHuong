@@ -58,6 +58,7 @@ $static_routes = [
     '/tours/cultural-heritage' => ['view' => '/tours/cultural-heritage-tours.php', 'title' => 'Tour Văn Hóa & Di Sản'],
     '/tours/adventure-outdoors' => ['view' => '/tours/adventure-outdoors-tours.php', 'title' => 'Tour Mạo Hiểm & Ngoài Trời'],
     '/tours/mountain-tours' => ['view' => '/tours/mountain-tours.php', 'title' => 'Các Tour Leo Núi & Trekking'],
+    '/tours/water-tours' => ['view' => '/tours/water-tours.php', 'title' => 'Tour Biển Đảo & Sông Nước'],
     '/things/relaxation' => ['view' => '/things/relaxation.php', 'title' => 'Hoạt Động Thư Giãn'],
     '/things/adventure' => ['view' => '/things/adventure.php', 'title' => 'Hoạt Động Phiêu Lưu & Mạo Hiểm'],
     '/things/cultural-heritage-tours' => ['view' => '/things/cultural-heritage-tours.php', 'title' => 'Trải Nghiệm Văn Hóa & Di Sản'],

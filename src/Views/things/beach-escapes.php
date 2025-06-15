@@ -124,7 +124,7 @@ $beaches = [
                 <p class="section-subtitle">Liên hệ với chúng tôi để được tư vấn và đặt những gói dịch vụ tốt nhất cho chuyến đi của bạn đến những bờ biển thiên đường này!</p>
                 <div class="contact-actions">
                     <a href="/contact" class="btn-primary">Liên Hệ Tư Vấn</a>
-                    <a href="/tours" class="btn-secondary">Xem Các Tour Biển</a>
+                    <a href="/tours/water-tours" class="btn-secondary">Xem Các Tour Biển</a>
                 </div>
                 <div class="contact-details-inline">
                     <p>Hoặc gọi ngay: <a href="tel:+84123456789">(+84) 123 456 789</a></p>

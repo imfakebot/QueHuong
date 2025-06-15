@@ -1,5 +1,4 @@
 <?php
-// File: src/View/layout/header.php
 
 declare(strict_types=1);
 // Đặt tiêu đề mặc định hoặc lấy từ Controller (nếu có)
@@ -46,63 +45,65 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
 
             <nav class="main-navigation" id="main-navigation">
                 <ul class="nav-list">
-                    <!-- === LIFE IN VIETNAM - MEGA MENU === -->
+                    <!-- === CUỘC SỐNG TẠI VIỆT NAM - MEGA MENU === -->
                     <li class="nav-item has-mega-menu">
-                        <a href="/life" aria-haspopup="true" aria-expanded="false">Life in VietNam</a>
+                        <a href="/life" aria-haspopup="true" aria-expanded="false">Cuộc Sống Tại Việt Nam</a>
                         <div class="mega-menu-panel life-mega-menu" aria-hidden="true">
                             <div class="mega-menu-container">
-                                <!-- Cột 1: Culture & Traditions -->
+                                <!-- Cột 1: Văn Hóa & Truyền Thống -->
                                 <div class="mega-menu-column culture-column">
                                     <div class="mega-menu-image-header">
                                         <a href="/life/culture"><img src="/images/mega_menu/cultural.webp" alt="Văn hóa Việt Nam"></a>
-                                        <h4>CULTURE</h4>
+                                        <h4>VĂN HÓA</h4>
                                     </div>
-                                    <h5 class=" mega-menu-subheading region-title">Traditions & Customs</h5>
+                                    <h5 class="mega-menu-subheading region-title">Truyền Thống & Phong Tục</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/life/festivals">Festivals & Holidays</a></li>
-                                        <li><a href="/life/etiquette">Social Etiquette</a></li>
-                                        <li><a href="/life/beliefs">Beliefs & Spirituality</a></li>
-                                        <li><a href="/life/arts-crafts">Arts & Handicrafts</a></li>
-                                        <li><a href="/life/ao-dai">Ao Dai: National Dress</a></li>
+                                        <li><a href="/life/festivals">Lễ Hội & Ngày Lễ</a></li>
+                                        <li><a href="/life/etiquette">Phong Tục Xã Hội</a></li>
+                                        <li><a href="/life/beliefs">Tín Ngưỡng & Tâm Linh</a></li>
+                                        <li><a href="/life/arts-crafts">Nghệ Thuật & Thủ Công</a></li>
+                                        <li><a href="/life/ao-dai">Áo Dài: Trang Phục Dân Tộc</a></li>
                                     </ul>
                                 </div>
-                                <!-- Cột 2: Food & Drink -->
+
+                                <!-- Cột 2: Ẩm Thực -->
                                 <div class="mega-menu-column food-column">
                                     <div class="mega-menu-image-header">
                                         <a href="/life/food"><img src="/images/mega_menu/food.jpg" alt="Ẩm thực Việt Nam"></a>
-                                        <h4>FOOD & DRINK</h4>
+                                        <h4>ẨM THỰC</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading region-title">A Taste of Vietnam</h5>
+                                    <h5 class="mega-menu-subheading region-title">Hương Vị Việt Nam</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/life/street-food">Street Food Guide</a></li>
-                                        <li><a href="/life/must-try">Must-Try Dishes</a></li>
-                                        <li><a href="/life/coffee-culture">Vietnamese Coffee</a></li>
-                                        <li><a href="/life/regional-cuisine">Regional Specialties</a></li>
-                                        <li><a href="/life/markets">Local Markets</a></li>
+                                        <li><a href="/life/street-food">Ẩm Thực Đường Phố</a></li>
+                                        <li><a href="/life/must-try">Món Ăn Không Thể Bỏ Qua</a></li>
+                                        <li><a href="/life/coffee-culture">Cà Phê Việt Nam</a></li>
+                                        <li><a href="/life/regional-cuisine">Đặc Sản Vùng Miền</a></li>
+                                        <li><a href="/life/markets">Chợ Địa Phương</a></li>
                                     </ul>
                                 </div>
-                                <!-- Cột 3: Travel Essentials -->
+
+                                <!-- Cột 3: Thông Tin Du Lịch -->
                                 <div class="mega-menu-column travel-column">
                                     <div class="mega-menu-image-header">
                                         <a href="/life/travel-tips"><img src="/images//mega_menu/travel_experience.jpg" alt="Kinh nghiệm du lịch"></a>
-                                        <h4>TRAVEL ESSENTIALS</h4>
+                                        <h4>THÔNG TIN DU LỊCH</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading region-title">Tips for Your Trip</h5>
+                                    <h5 class="mega-menu-subheading region-title">Lưu Ý Khi Du Lịch</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/life/visa">Visa Information</a></li>
-                                        <li><a href="/life/transport">Getting Around</a></li>
-                                        <li><a href="/life/money">Money & Budgeting</a></li>
-                                        <li><a href="/life/safety">Safety & Health</a></li>
-                                        <li><a href="/life/language">Basic Vietnamese Phrases</a></li>
+                                        <li><a href="/life/visa">Thông Tin Visa</a></li>
+                                        <li><a href="/life/transport">Phương Tiện Di Chuyển</a></li>
+                                        <li><a href="/life/money">Tài Chính & Chi Phí</a></li>
+                                        <li><a href="/life/safety">An Toàn & Sức Khỏe</a></li>
+                                        <li><a href="/life/language">Những Câu Tiếng Việt Cơ Bản</a></li>
                                     </ul>
                                 </div>
                             </div> <!-- /mega-menu-container -->
                         </div> <!-- /mega-menu-panel -->
-                    </li> <!-- /has-mega-menu (Life in Vietnam) -->
+                    </li> <!-- /has-mega-menu (Cuộc Sống Tại Việt Nam) -->
 
-                    <!-- === PLACES MUST GO - MEGA MENU === -->
+                    <!-- === ĐỊA ĐIỂM PHẢI ĐẾN - MEGA MENU === -->
                     <li class="nav-item has-mega-menu">
-                        <a href="/destinations" aria-haspopup="true" aria-expanded="false">Places must go</a>
+                        <a href="/destinations" aria-haspopup="true" aria-expanded="false">Địa Điểm Phải Đến</a>
                         <div class="mega-menu-panel places-mega-menu" aria-hidden="true">
                             <div class="mega-menu-container">
                                 <!-- Cột 1: Northern -->
@@ -111,13 +112,13 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                         <a href="/destinations/ha-noi"><img src="/images/mega_menu/hanoi.png" alt="Thủ đô Hà Nội"></a>
                                         <h4>HA NOI</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading region-title">NORTHERN VIETNAM</h5>
+                                    <h5 class="mega-menu-subheading region-title">BẮC VIỆT NAM</h5>
                                     <ul class="mega-menu-links region-links">
-                                        <li><a href="/destinations/ha-giang">Ha Giang</a></li>
-                                        <li><a href="/destinations/ha-long">Ha Long</a></li>
-                                        <li><a href="/destinations/mai-chau">Mai Chau</a></li>
-                                        <li><a href="/destinations/ninh-binh">Ninh Binh</a></li>
-                                        <li><a href="/destinations/sapa">Sapa</a></li>
+                                        <li><a href="/destinations/ha-giang">Hà Giang</a></li>
+                                        <li><a href="/destinations/ha-long">Hạ Long</a></li>
+                                        <li><a href="/destinations/mai-chau">Mai Châu</a></li>
+                                        <li><a href="/destinations/ninh-binh">Ninh Bình</a></li>
+                                        <li><a href="/destinations/sapa">Sa Pa</a></li>
                                     </ul>
                                 </div>
                                 <!-- Cột 2: Central -->
@@ -126,11 +127,11 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                         <a href="/destinations/da-nang"><img src="/images/mega_menu/DaNang.jpg" alt="Thành phố Đà Nẵng"></a>
                                         <h4>DA NANG</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading region-title">CENTRAL VIETNAM</h5>
+                                    <h5 class="mega-menu-subheading region-title">TRUNG VIỆT NAM</h5>
                                     <ul class="mega-menu-links region-links">
-                                        <li><a href="/destinations/da-lat">Da Lat</a></li>
-                                        <li><a href="/destinations/hoi-an">Hoi An</a></li>
-                                        <li><a href="/destinations/hue">Hue</a></li>
+                                        <li><a href="/destinations/da-lat">Đà Lạt</a></li>
+                                        <li><a href="/destinations/hoi-an">Hội An</a></li>
+                                        <li><a href="/destinations/hue">Huế</a></li>
                                         <li><a href="/destinations/nha-trang">Nha Trang</a></li>
                                         <li><a href="/destinations/phong-nha">Phong Nha</a></li>
                                     </ul>
@@ -141,80 +142,77 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                         <a href="/destinations/ho-chi-minh"><img src="/images/mega_menu/TPHCM.jpg" alt="Thành phố Hồ Chí Minh"></a>
                                         <h4>HO CHI MINH CITY</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading region-title">SOUTHERN VIETNAM</h5>
+                                    <h5 class="mega-menu-subheading region-title">NAM VIỆT NAM</h5>
                                     <ul class="mega-menu-links region-links">
-                                        <li><a href="/destinations/con-dao">Con Dao</a></li>
-                                        <li><a href="/destinations/binh-thuan">Binh Thuan</a></li>
-                                        <li><a href="/destinations/can-tho">Can Tho</a></li>
-                                        <li><a href="/destinations/chau-doc">Chau Doc</a></li>
-                                        <li><a href="/destinations/phu-quoc">Phu Quoc</a></li>
+                                        <li><a href="/destinations/con-dao">Côn Đảo</a></li>
+                                        <li><a href="/destinations/binh-thuan">Bình Thuận</a></li>
+                                        <li><a href="/destinations/can-tho">Cần Thơ</a></li>
+                                        <li><a href="/destinations/chau-doc">Châu Đốc</a></li>
+                                        <li><a href="/destinations/phu-quoc">Phú Quốc</a></li>
                                     </ul>
                                 </div>
                             </div> <!-- /mega-menu-container -->
                         </div> <!-- /mega-menu-panel -->
-                    </li> <!-- /has-mega-menu (Places must go) -->
+                    </li> <!-- /has-mega-menu (Địa Điểm Phải Đến) -->
 
-                    <!-- === THINGS TO DO - MEGA MENU === -->
+                    <!-- === HOẠT ĐỘNG DU LỊCH - MEGA MENU === -->
                     <li class="nav-item has-mega-menu">
-                        <a href="/things" aria-haspopup="true" aria-expanded="false">Things to do</a>
+                        <a href="/things" aria-haspopup="true" aria-expanded="false">Hoạt Động Du Lịch</a>
                         <div class="mega-menu-panel things-mega-menu" aria-hidden="true">
                             <div class="mega-menu-container">
-                                <!-- Cột 1: Adventure & Outdoors -->
+                                <!-- Cột 1: Khám Phá & Ngoài Trời -->
                                 <div class="mega-menu-column adventure-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/things/adventure"><img src="/images/mega_menu/adventure_and_outdoor.jpg" alt="Adventure & Outdoors"></a>
-                                        <h4>ADVENTURE & OUTDOORS</h4>
+                                        <a href="/things/adventure"><img src="/images/mega_menu/adventure_and_outdoor.jpg" alt="Khám Phá & Ngoài Trời"></a>
+                                        <h4>KHÁM PHÁ & NGOÀI TRỜI</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading region-title">Thrills & Nature's Best</h5>
+                                    <h5 class="mega-menu-subheading region-title">Trải Nghiệm Thiên Nhiên</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/tours/sapa-terraces-adventure">Trekking in Sapa</a></li>
-                                        <li><a href="/tours/kayaking-in-halong-bay">Kayaking in Ha Long Bay</a></li>
-                                        <li><a href="/tours/exploring-phongnha-cave">Exploring Phong Nha Caves</a></li>
-                                        <li><a href="/tours/motorbiking">Motorbiking Adventures</a></li>
-                                        <li><a href="/tours/watersports">Watersports & Beaches</a></li>
-                                        <li><a href="tours/canyoning-dalat">Canyoning in Da Lat</a></li>
+                                        <li><a href="/tours/sapa-terraces-adventure">Leo Núi Tại Sapa</a></li>
+                                        <li><a href="/tours/kayaking-in-halong-bay">Chèo Thuyền Vịnh Hạ Long</a></li>
+                                        <li><a href="/tours/exploring-phongnha-cave">Khám Phá Hang Động Phong Nha</a></li>
+                                        <li><a href="/tours/motorbiking">Phượt Xe Máy</a></li>
+                                        <li><a href="/tours/watersports">Thể Thao Biển & Bãi Biển</a></li>
+                                        <li><a href="tours/canyoning-dalat">Vượt Thác Tại Đà Lạt</a></li>
                                     </ul>
                                 </div>
-                                <!-- Cột 2: Culture & Heritage -->
+
+                                <!-- Cột 2: Văn Hóa & Di Sản -->
                                 <div class="mega-menu-column culture-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/things/cultural-heritage-tours"><img src="/images/mega_menu/cultural_and_heritage.jpg" alt="Culture & Heritage"></a>
-                                        <h4>CULTURE & HERITAGE</h4>
+                                        <a href="/things/cultural-heritage-tours"><img src="/images/mega_menu/cultural_and_heritage.jpg" alt="Văn Hóa & Di Sản"></a>
+                                        <h4>VĂN HÓA & DI SẢN</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading region-title">Immerse in Local Life</h5>
+                                    <h5 class="mega-menu-subheading region-title">Hòa Mình Vào Đời Sống Địa Phương</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/things/historical-sites">Visiting Historical Sites</a></li>
-                                        <li><a href="/things/museums">Exploring Museums</a></li>
-                                        <li><a href="/things/workshops">Hands-on Workshops (Cooking, Crafts)</a></li>
-                                        <li><a href="/things/performances">Traditional Performances</a></li>
-                                        <li><a href="/things/ancient-towns">Wandering Ancient Towns</a></li>
-                                        <li><a href="/things/local-markets">Visiting Local Markets</a></li>
+                                        <li><a href="/things/historical-sites">Thăm Di Tích Lịch Sử</a></li>
+                                        <li><a href="/things/museums">Khám Phá Bảo Tàng</a></li>
+                                        <li><a href="/things/workshops">Học Nấu Ăn & Thủ Công</a></li>
+                                        <li><a href="/things/performances">Xem Biểu Diễn Truyền Thống</a></li>
+                                        <li><a href="/things/ancient-towns">Dạo Phố Cổ</a></li>
+                                        <li><a href="/things/local-markets">Khám Phá Chợ Địa Phương</a></li>
                                     </ul>
                                 </div>
-                                <!-- Cột 3: Relaxation & Wellness -->
+
+                                <!-- Cột 3: Nghỉ Dưỡng & Thư Giãn -->
                                 <div class="mega-menu-column wellness-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/things/relaxation"><img src="/images/mega_menu/relax.jpg" alt="Relaxation & Wellness"></a>
-                                        <h4>RELAXATION & WELLNESS</h4>
+                                        <a href="/things/relaxation"><img src="/images/mega_menu/relax.jpg" alt="Nghỉ Dưỡng & Thư Giãn"></a>
+                                        <h4>NGHỈ DƯỠNG & THƯ GIÃN</h4>
                                     </div>
-                                    <h5 class="mega-menu-subheading region-title">Unwind & Rejuvenate</h5>
+                                    <h5 class="mega-menu-subheading region-title">Thư Giãn & Phục Hồi</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/things/spa-massage">Spa & Massage Therapies</a></li>
-                                        <li><a href="/things/beach-relaxation">Beach Escapes</a></li>
-                                        <li><a href="/things/yoga-meditation">Yoga & Meditation Retreats</a></li>
-                                        <li><a href="/things/cruises">Relaxing River & Bay Cruises</a></li>
-                                        <li><a href="/things/scenic-cafes">Enjoying Scenic Cafes</a></li>
-                                        <li><a href="/things/hot-springs">Natural Hot Springs</a></li>
+                                        <li><a href="/things/spa-massage">Spa & Massage Trị Liệu</a></li>
+                                        <li><a href="/things/beach-relaxation">Nghỉ Dưỡng Biển</a></li>
+                                        <li><a href="/things/yoga-meditation">Yoga & Thiền</a></li>
+                                        <li><a href="/things/cruises">Du Thuyền Sông & Vịnh</a></li>
+                                        <li><a href="/things/scenic-cafes">Thưởng Thức Café View Đẹp</a></li>
+                                        <li><a href="/things/hot-springs">Suối Nước Nóng</a></li>
                                     </ul>
                                 </div>
                             </div> <!-- /mega-menu-container -->
                         </div> <!-- /mega-menu-panel -->
-                    </li> <!-- /has-mega-menu (Things to do) -->
-
-                    <!-- === MỤC MENU CUỐI CÙNG === -->
-                    <li class="nav-item">
-                        <a href="/trip">Your trip</a> <!-- Mục này không có mega menu -->
-                    </li>
+                    </li> <!-- /has-mega-menu (Hoạt Động Du Lịch) -->
 
                 </ul> <!-- /nav-list -->
             </nav> <!-- /main-navigation -->
