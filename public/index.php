@@ -50,7 +50,7 @@ $static_routes = [
 
     // Các trang danh sách chính
     '/tours' => ['view' => '/tours/index.php', 'title' => 'Danh Sách Tours'],
-    '/destinations' => ['view' => '/destination/index.php', 'title' => 'Các Điểm Đến'],
+    '/destinations' => ['view' => '/destinations/index.php', 'title' => 'Các Điểm Đến'],
     '/things' => ['view' => '/things/index.php', 'title' => 'Trải Nghiệm Đáng Thử'],
     '/life' => ['view' => '/life/index.php', 'title' => 'Cuộc Sống & Văn Hóa'], // Trang này sẽ dùng file /life/index.php
 
@@ -85,7 +85,7 @@ $tour_slug_to_filename_map = [
     'kayaking-in-halong-bay' => 'kayaking-in-Halong'
 ];
 
-$destination_slug_to_filename_map = [
+$destinations_slug_to_filename_map = [
     'binh-thuan'     => 'binh-thuan',
     'can-tho'         => 'can-tho',
     'chau-doc'        => 'chau-doc',
@@ -94,7 +94,7 @@ $destination_slug_to_filename_map = [
     'da-nang'         => 'da-nang',
     'ha-giang'        => 'ha-giang',
     'ha-long'         => 'ha-long',
-    'ha-noi'          => 'hanoi', // Tên tệp là hanoi.php
+    'ha-noi'           => 'ha-noi', // Tên tệp là hanoi.php
     'ho-chi-minh'     => 'ho-chi-minh',
     'hoi-an'          => 'hoi-an',
     'hue'             => 'hue',
@@ -161,6 +161,7 @@ $things_slug_to_filename_map = [
     'spa-massage' => 'spa-massage',
     'beach-relaxation' => 'beach-escapes',
     'yoga-meditation' => 'yoga-meditation',
+    'cruises' => 'river-bay-cruises',
 ];
 
 $foot_slug_to_filename_map = [
@@ -200,11 +201,13 @@ elseif (preg_match('#^/tours/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
 elseif (preg_match('#^/destinations/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
     $destinationSlug = $matches[1];
 
-    if (isset($destination_slug_to_filename_map[$destinationSlug])) {
-        $filename = $destination_slug_to_filename_map[$destinationSlug];
+    if (isset($destinations_slug_to_filename_map[$destinationSlug])) {
+        $filename = $destinations_slug_to_filename_map[$destinationSlug];
         $contentView = VIEWS_PATH . "/destinations/{$filename}.php";
     }
 }
+
+
 // Bước 4: Xử lý các route động cho "Life in Vietnam" (/life/{slug})
 elseif (preg_match('#^/life/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
     $lifeSlug = $matches[1];
