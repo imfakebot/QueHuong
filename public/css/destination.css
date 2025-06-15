@@ -47,7 +47,7 @@ nav ul li a:hover {
 } */
 
 .hero {
-  height: 80vh;
+  height: 90vh;
   overflow: hidden;
   background-attachment: scroll;
   background-size: cover;
@@ -111,7 +111,6 @@ main {
 
 .content-section {
   margin-bottom: 60px;
- 
 }
 
 h2 {
@@ -141,19 +140,18 @@ h2 {
   transition: transform 0.3s ease;
   display: flex;
   flex-direction: column;
-  
 }
 
-.card img{
+.card img {
   margin-bottom: 10px;
 }
 
-.card h3{
+.card h3 {
   margin: 10px;
   color: red;
 }
 
-.card p{
+.card p {
   margin: 10px;
 }
 

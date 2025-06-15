@@ -70,7 +70,7 @@ $tour_slug_to_filename_map = [
     // Mountain Tours
     'sapa-terraces-adventure' => 'sapa-trekking-detail',
     'da-lat-romantic-getaway' => 'da-lat-romantic-getaway-detail',
-    'phong-nha-caves-adventure' => 'exploring-phongnha-cave',
+    'phong-nha-caves-adventure' => 'exploring-phongnha-cave', // Đã thêm gạch ngang
     'trekking-ta-xua-san-may' => 'trekking-ta-xua-detail',
     'chinh-phuc-dinh-fansipan' => 'fansipan-conquest-detail',
     'kham-pha-cao-nguyen-da-dong-van' => 'dong-van-plateau-detail',
@@ -85,11 +85,24 @@ $tour_slug_to_filename_map = [
 ];
 
 $destination_slug_to_filename_map = [
-    // === ĐÃ SỬA LẠI KEY Ở ĐÂY ===
-    'ha-noi' => 'hanoi',
-    'da-nang' => 'da-nang',
-    'ho-chi-minh' => 'ho-chi-minh',
-
+    'binh-thuan'     => 'binh-thuan',
+    'can-tho'         => 'can-tho',
+    'chau-doc'        => 'chau-doc',
+    'con-dao'         => 'con-dao',
+    'da-lat'          => 'da-lat',
+    'da-nang'         => 'da-nang',
+    'ha-giang'        => 'ha-giang',
+    'ha-long'         => 'ha-long',
+    'ha-noi'          => 'hanoi', // Tên tệp là hanoi.php
+    'ho-chi-minh'     => 'ho-chi-minh',
+    'hoi-an'          => 'hoi-an',
+    'hue'             => 'hue',
+    'mai-chau'        => 'mai-chau',
+    'nha-trang'       => 'nha-trang',
+    'ninh-binh'       => 'ninh-binh',
+    'phong-nha'       => 'phong-nha',
+    'phu-quoc'        => 'phu-quoc',
+    'sapa'            => 'sapa',
 ];
 
 
