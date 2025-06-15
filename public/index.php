@@ -94,7 +94,7 @@ $destinations_slug_to_filename_map = [
     'da-nang'         => 'da-nang',
     'ha-giang'        => 'ha-giang',
     'ha-long'         => 'ha-long',
-    'ha-noi'           => 'hanoi',
+    'hanoi'           => 'hanoi', // Tên tệp là hanoi.php
     'ho-chi-minh'     => 'ho-chi-minh',
     'hoi-an'          => 'hoi-an',
     'hue'             => 'hue',
@@ -163,6 +163,15 @@ $things_slug_to_filename_map = [
     'yoga-meditation' => 'yoga-meditation',
     'cruises' => 'river-bay-cruises',
 ];
+
+$foot_slug_to_filename_map = [
+    'about'   => 'about',
+    'contact' => 'contact',
+    'privacy' => 'privacy',
+    'terms'   => 'terms',
+];
+
+
 // ===================== KẾT THÚC PHẦN CẬP NHẬT =====================
 
 
@@ -219,6 +228,20 @@ elseif (preg_match('#^/things/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
         $filename = $things_slug_to_filename_map[$thingsSlug];
         $contentView = VIEWS_PATH . "/things/{$filename}.php";
         $pageTitle = ucwords(str_replace('-', ' ', $thingsSlug)) . ' - Du Lịch Quê Hương';
+    }
+} elseif (preg_match('#^/foot/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
+    $footSlug = $matches[1];
+
+    if (isset($foot_slug_to_filename_map[$footSlug])) {
+        $filename = $foot_slug_to_filename_map[$footSlug];
+        $contentView = VIEWS_PATH . "/foot/{$filename}.php";
+    }
+} elseif (preg_match('#^/foot/([a-zA-Z0-9-]+)$#', $requestUri, $matches)) {
+    $footSlug = $matches[1];
+
+    if (isset($foot_slug_to_filename_map[$footSlug])) {
+        $filename = $foot_slug_to_filename_map[$footSlug];
+        $contentView = VIEWS_PATH . "/foot/{$filename}.php";
     }
 }
 
