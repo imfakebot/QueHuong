@@ -82,8 +82,11 @@ $tour_slug_to_filename_map = [
     'leo-nui-langbiang-da-lat' => 'langbiang-mountain-detail',
     'trekking-bidoup-nui-ba' => 'bidoup-nuiba-trek-detail',
     'kham-pha-y-ty-lao-than' => 'y-ty-lao-than-detail',
-    'kayaking-in-halong-bay' => 'kayaking-in-Halong'
+    'kayaking-in-halong-bay' => 'kayaking-in-Halong',
+    'lan-bien-ngam-san-ho-phu-quoc' => 'phu-quoc-diving',
 ];
+
+
 
 $destinations_slug_to_filename_map = [
     'binh-thuan'     => 'binh-thuan',

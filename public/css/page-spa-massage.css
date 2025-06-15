@@ -10,10 +10,11 @@
   --spa-background-light: #fdf8ee; /* Nền trắng ngà */
   --font-playfair: "Playfair Display", serif;
   --font-poppins: "Poppins", sans-serif;
+  --shadow-light: 0 5px 15px rgba(0, 0, 0, 0.05);
+  --shadow-medium: 0 8px 25px rgba(0, 0, 0, 0.08);
 }
 
-body.spa-page {
-  /* Thêm class này vào thẻ body của trang spa nếu cần */
+body {
   font-family: var(--font-poppins);
   color: var(--spa-text-dark);
   background-color: var(--spa-background-light);
@@ -26,7 +27,6 @@ body.spa-page {
   width: 90%;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 15px;
 }
 
 .section-title {
@@ -34,8 +34,22 @@ body.spa-page {
   font-size: 2.8rem;
   color: var(--spa-primary-color);
   text-align: center;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
   font-weight: 600;
+  position: relative;
+  padding-bottom: 1rem;
+}
+
+/* Thêm gạch chân trang trí cho tiêu đề */
+.section-title::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 3px;
+  background-color: var(--spa-accent-color);
 }
 
 .section-subtitle {
@@ -43,11 +57,11 @@ body.spa-page {
   color: var(--spa-secondary-color);
   text-align: center;
   max-width: 700px;
-  margin: 0 auto 40px auto;
+  margin: 0 auto 4rem auto;
 }
 
 /* ==========================================================================
-   Hero Section
+   Hero Section (Đã cải tiến)
    ========================================================================== */
 .spa-hero {
   position: relative;
@@ -60,122 +74,156 @@ body.spa-page {
   justify-content: center;
   text-align: center;
   color: #fff;
+  padding: 2rem;
 }
 
-.spa-hero-overlay {
+/* Sử dụng ::before để tạo lớp phủ, giúp HTML gọn gàng hơn */
+.spa-hero::before {
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.4); /* Lớp phủ tối nhẹ */
+  /* Dải màu chuyển tiếp sang trọng thay vì màu đen đơn điệu */
+  background: linear-gradient(
+    to top,
+    rgba(61, 50, 34, 0.7) 0%,
+    rgba(141, 123, 104, 0.3) 100%
+  );
+  z-index: 1;
 }
 
 .spa-hero-content {
   position: relative;
-  z-index: 1;
-  padding: 20px;
+  z-index: 2; /* Đảm bảo nội dung nằm trên lớp phủ */
 }
 
 .spa-title {
   font-family: var(--font-playfair);
-  font-size: 3.5rem;
-  margin-bottom: 15px;
+  font-size: 3.8rem;
+  margin-bottom: 1rem;
   font-weight: 600;
   color: #fff;
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
 }
 
 .spa-subtitle {
   font-size: 1.3rem;
   max-width: 800px;
-  margin: 0 auto 30px auto;
+  margin: 0 auto 2.5rem auto;
   line-height: 1.6;
   color: var(--spa-text-light);
+  opacity: 0.95;
 }
 
 .btn-discover {
   background-color: var(--spa-primary-color);
   color: #fff;
-  padding: 12px 30px;
+  padding: 14px 35px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px; /* Bo tròn mềm mại hơn */
   font-weight: 600;
-  transition: background-color 0.3s ease;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
 }
 
 .btn-discover:hover {
-  background-color: var(--spa-secondary-color);
+  background-color: transparent;
+  border-color: var(--spa-text-light);
+  color: var(--spa-text-light);
+  transform: translateY(-3px);
 }
 
 /* ==========================================================================
    Why Choose Us Section
    ========================================================================== */
 .why-choose-section {
-  padding: 60px 0;
+  padding: 5rem 0;
 }
 
 .features-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-  gap: 30px;
+  gap: 2rem;
   margin-top: 40px;
 }
 
 .feature-item {
   text-align: center;
-  padding: 20px;
+  padding: 2.5rem 1.5rem;
   background-color: #fff;
-  border-radius: 8px;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.feature-item:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
 }
 
 .feature-icon {
   width: 60px;
   height: 60px;
-  margin-bottom: 15px;
+  margin-bottom: 1.5rem;
   filter: grayscale(30%) sepia(20%) hue-rotate(0deg) saturate(70%)
-    brightness(95%); /* Tạo màu icon nhẹ nhàng */
+    brightness(95%);
 }
 
 .feature-item h3 {
   font-family: var(--font-playfair);
   font-size: 1.5rem;
   color: var(--spa-primary-color);
-  margin-bottom: 10px;
+  margin-bottom: 0.5rem;
 }
 
 /* ==========================================================================
    Service Packages Section
    ========================================================================== */
 .service-packages-section {
-  padding: 60px 0;
+  padding: 5rem 0;
   background-color: #fff;
 }
 
 .packages-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(360px, 1fr));
-  gap: 30px;
-  margin-top: 40px;
+  grid-template-columns: repeat(auto-fit, minmax(440px, 1fr));
+  gap: 2rem;
 }
 
 .package-card {
   background-color: var(--spa-background-light);
-  border-radius: 8px;
+  border-radius: 12px;
   overflow: hidden;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.07);
+  box-shadow: var(--shadow-light);
   display: flex;
   flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.package-card:hover {
+  transform: translateY(-8px);
+  box-shadow: var(--shadow-medium);
+}
+
+.package-image {
+  overflow: hidden; /* Quan trọng để hiệu ứng zoom ảnh không bị tràn */
 }
 
 .package-image img {
   width: 100%;
-  height: 220px;
+  height: 240px;
   object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.package-card:hover .package-image img {
+  transform: scale(1.05);
 }
 
 .package-content {
-  padding: 25px;
+  padding: 1.5rem 2rem;
   flex-grow: 1;
   display: flex;
   flex-direction: column;
@@ -185,34 +233,34 @@ body.spa-page {
   font-family: var(--font-playfair);
   font-size: 1.6rem;
   color: var(--spa-primary-color);
-  margin-bottom: 10px;
+  margin: 0 0 0.75rem 0;
 }
 
 .package-meta {
   font-size: 0.9rem;
   color: var(--spa-secondary-color);
-  margin-bottom: 15px;
+  margin-bottom: 1rem;
 }
 
 .package-meta span {
-  margin-right: 15px;
+  margin-right: 1rem;
 }
 
 .package-content p {
   flex-grow: 1;
-  margin-bottom: 20px;
+  margin-bottom: 1.5rem;
 }
 
 .btn-book-package {
   background-color: var(--spa-secondary-color);
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 25px;
   text-decoration: none;
-  border-radius: 5px;
+  border-radius: 50px;
   text-align: center;
   font-weight: 500;
   transition: background-color 0.3s ease;
-  align-self: flex-start; /* Nút ở cuối card */
+  align-self: flex-start;
 }
 
 .btn-book-package:hover {
@@ -223,67 +271,79 @@ body.spa-page {
    Gallery Section
    ========================================================================== */
 .spa-gallery-section {
-  padding: 60px 0;
+  padding: 5rem 0;
 }
 
 .gallery-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 15px;
-  margin-top: 40px;
+  gap: 1rem;
+}
+
+.gallery-item {
+  overflow: hidden;
+  border-radius: 12px;
+  box-shadow: var(--shadow-light);
 }
 
 .gallery-item img {
   width: 100%;
   height: 250px;
   object-fit: cover;
-  border-radius: 8px;
-  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.05);
 }
 
 /* ==========================================================================
    Booking/Contact Section
    ========================================================================== */
 .booking-section {
-  padding: 60px 0;
+  padding: 5rem 0;
   background-color: var(--spa-accent-color);
-  color: var(--spa-text-dark);
 }
 
-.booking-section .section-title {
-  color: var(--spa-text-dark);
-}
+.booking-section .section-title,
 .booking-section .section-subtitle {
   color: var(--spa-text-dark);
-  opacity: 0.9;
 }
 
 .contact-info {
-  margin-top: 30px;
+  margin-top: 2rem;
   text-align: center;
   font-size: 1.1rem;
 }
 
 .contact-item {
-  margin-bottom: 10px;
+  margin-bottom: 1rem;
 }
 
 .contact-item a {
   color: var(--spa-primary-color);
   text-decoration: none;
   font-weight: 600;
+  transition: color 0.3s;
 }
 
 .contact-item a:hover {
-  text-decoration: underline;
+  color: var(--spa-text-dark);
 }
 
 /* Responsive adjustments */
 @media (max-width: 768px) {
   .spa-title {
-    font-size: 2.5rem;
+    font-size: 2.8rem;
   }
   .section-title {
     font-size: 2.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .packages-grid {
+    grid-template-columns: 1fr;
   }
 }

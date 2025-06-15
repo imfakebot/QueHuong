@@ -63,7 +63,6 @@ $page_details = [
     ]
 ];
 ?>
-
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -71,7 +70,6 @@ $page_details = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($page_details['title']); ?></title>
-    <!-- Link đến file CSS mới cho trang Spa -->
     <link rel="stylesheet" href="/css/page-spa-massage.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -83,7 +81,6 @@ $page_details = [
     <main class="spa-page">
         <!-- HERO SECTION -->
         <header class="spa-hero" style="background-image: url('<?php echo htmlspecialchars($page_details['hero_image']); ?>');">
-            <div class="spa-hero-overlay"></div>
             <div class="spa-hero-content">
                 <h1 class="spa-title"><?php echo htmlspecialchars($page_details['title']); ?></h1>
                 <p class="spa-subtitle"><?php echo htmlspecialchars($page_details['subtitle']); ?></p>

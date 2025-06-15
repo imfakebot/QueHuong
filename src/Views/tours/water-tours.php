@@ -183,7 +183,7 @@ $pageStyles = ['/css/adventure.css', '/css/water-tours.css'];
                                 <span><i class="icon-activity"></i> <?php echo htmlspecialchars($tour['activity_type']); ?></span>
                             </div>
                             <p class="tour-card__summary"><?php echo htmlspecialchars($tour['summary']); ?></p>
-                            <a href="tour-detail.php?slug=<?php echo htmlspecialchars($tour['slug']); ?>" class="btn btn--primary">Xem Chi Tiết & Đặt Tour</a>
+                            <a href="/tours/<?php echo htmlspecialchars($tour['slug']); ?>" class="btn btn--primary">Xem Chi Tiết & Đặt Tour</a>
                         </div>
                     </article>
                 <?php endforeach; ?>

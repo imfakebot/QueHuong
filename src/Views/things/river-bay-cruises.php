@@ -10,14 +10,14 @@ $featured_cruises = [
     [
         'name' => 'Hạ Long Bay Overnight Odyssey',
         'location' => 'Vịnh Hạ Long, Di sản Thế giới UNESCO',
-        'image' => 'https://image.vietnamnews.vn/upload/2020/05/29/102521_du-thuyen-ha-long.jpg',
+        'image' => 'https://statics.vinpearl.com/Halong-Bay-overnight-cruises-01_1690268584.jpg',
         'description' => 'Hành trình 2 ngày 1 đêm trên du thuyền 5 sao, khám phá những hang động kỳ vĩ, làng chài nổi và chèo thuyền kayak giữa hàng ngàn đảo đá vôi.',
         'highlights' => ['Cabin ban công riêng view vịnh', 'Ăn tối sang trọng trên boong tàu', 'Lớp học Thái Cực Quyền buổi sáng', 'Thăm hang Sửng Sốt']
     ],
     [
         'name' => 'Mekong Delta Discovery',
         'location' => 'Đồng bằng sông Cửu Long',
-        'image' => 'https://statics.vinpearl.com/du-thuyen-can-tho-1_1657962777.jpg',
+        'image' => 'https://res.klook.com/image/upload/u_activities:nnnkple3bhl3ek7xmdek,w_1.0,ar_4:3,c_scale,e_blur:10000/c_fill,w_750,h_750/q_80/w_80,x_15,y_15,g_south_west,l_Klook_water_br_trans_yhcmh3/activities/nnnkple3bhl3ek7xmdek.jpg',
         'description' => 'Khám phá cuộc sống sông nước miền Tây trên những con thuyền gỗ mộc mạc nhưng đầy đủ tiện nghi. Ghé thăm chợ nổi, vườn trái cây và các làng nghề thủ công.',
         'highlights' => ['Trải nghiệm chợ nổi Cái Răng', 'Ghé thăm lò kẹo dừa thủ công', 'Đạp xe khám phá làng quê', 'Thưởng thức đờn ca tài tử']
     ]
@@ -58,15 +58,10 @@ $page_details['reviews'] = [
 
     <main class="cruise-page">
         <!-- HERO SECTION -->
-        <header class="hero-section">
-            <div class="hero-background" style="background-image: url('<?php echo htmlspecialchars($page_details['hero_image']); ?>');"></div>
-
-            <div class="hero-content-wrapper">
-                <div class="hero-content-blurry-background" style="background-image: url('<?php echo htmlspecialchars($page_details['hero_image']); ?>');"></div>
-                <div class="hero-content">
-                    <h1 class="hero-title"><?php echo htmlspecialchars($page_details['title']); ?></h1>
-                    <p class="hero-subtitle"><?php echo htmlspecialchars($page_details['subtitle']); ?></p>
-                </div>
+        <header class="hero-section" style="background-image: url('<?php echo htmlspecialchars($page_details['hero_image']); ?>');">
+            <div class="hero-content">
+                <h1 class="hero-title"><?php echo htmlspecialchars($page_details['title']); ?></h1>
+                <p class="hero-subtitle"><?php echo htmlspecialchars($page_details['subtitle']); ?></p>
             </div>
         </header>
 
@@ -75,7 +70,7 @@ $page_details['reviews'] = [
             <div class="container">
                 <div class="intro-grid">
                     <div class="intro-image-wrapper">
-                        <img src="https://paradisecruises.vn/wp-content/uploads/2023/12/du-thuyen-paradise-delight-nha-hang-2.jpg" alt="Nhà hàng sang trọng trên du thuyền">
+                        <img src="https://tausaigon.com.vn/upload/elfinder/an-toi-tren-du-thuyen-saigon-princess%20(1).jpg" alt="Nhà hàng sang trọng trên du thuyền">
                     </div>
                     <div class="intro-content">
                         <h2 class="section-title" style="text-align: left;">Trải Nghiệm Một Chuyến Đi Khác Biệt</h2>
@@ -177,7 +172,7 @@ $page_details['reviews'] = [
             <div class="container">
                 <h2 class="section-title">Bắt Đầu Hành Trình Của Bạn</h2>
                 <p class="section-subtitle">Khám phá các lựa chọn du thuyền và tìm cho mình chuyến đi trong mơ.</p>
-                <a href="/tours/water-tours-list" class="btn-cta">Khám Phá Các Tour Du Thuyền</a>
+                <a href="/tours/water-tours" class="btn-cta">Khám Phá Các Tour Du Thuyền</a>
             </div>
         </section>
 
