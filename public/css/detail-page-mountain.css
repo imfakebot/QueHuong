@@ -43,7 +43,7 @@ body {
 
 /* === HERO, OVERVIEW, GALLERY === */
 .tour-hero {
-  height: 65vh; /* Chiều cao hero */
+  height: 90vh; /* Chiều cao hero */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -132,10 +132,12 @@ body {
   height: 100%;
   object-fit: cover;
   border-radius: var(--border-radius-base);
-  transition: transform 0.3s ease; /* Hiệu ứng zoom nhẹ */
+  transition: transform 0.3s ease, opacity 0.3s ease; /* Hiệu ứng zoom nhẹ */
+  cursor: zoom-in;
 }
 .tour-gallery img:hover {
   transform: scale(1.04);
+  opacity: 0.8;
 }
 
 /* === LỊCH TRÌNH - ITINERARY SECTION (PHẦN QUAN TRỌNG NHẤT) === */
@@ -370,6 +372,105 @@ body {
   color: #c1121f; /* Màu đỏ cho "không bao gồm" */
   position: absolute;
   left: -18px;
+}
+
+/* ===== STYLES FOR IMAGE MODAL GALLERY ===== */
+
+/* Modal overlay */
+.modal-viewer {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.85);
+  justify-content: center;
+  align-items: center;
+  animation: fadeIn 0.3s;
+}
+
+/* Modal content container */
+.modal-viewer .modal-content {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Large modal image */
+#modal-image {
+  max-width: 90vw;
+  max-height: 90vh;
+  object-fit: contain;
+  border-radius: 5px;
+  animation: zoomIn 0.3s;
+}
+
+/* Close button */
+.close-modal-btn {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #fff;
+  font-size: 45px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: color 0.3s ease;
+}
+
+.close-modal-btn:hover {
+  color: #bbb;
+}
+
+/* Navigation buttons */
+.prev-btn,
+.next-btn {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  padding: 16px;
+  color: white;
+  font-weight: bold;
+  font-size: 24px;
+  transition: background-color 0.3s ease;
+  user-select: none;
+}
+
+.prev-btn {
+  left: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.next-btn {
+  right: 0;
+  border-radius: 0 3px 3px 0;
+}
+
+.prev-btn:hover,
+.next-btn:hover {
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes zoomIn {
+  from {
+    transform: scale(0.9);
+  }
+  to {
+    transform: scale(1);
+  }
 }
 
 /* === RESPONSIVE === */

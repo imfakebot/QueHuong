@@ -1,46 +1,41 @@
 <?php
-// Dữ liệu cụ thể cho trang "Trekking in Sapa" VỚI CẤU TRÚC ITINERARY GỐC
+// Dữ liệu cụ thể cho trang "Kayaking in Ha Long Bay"
+// CẤU TRÚC ĐÃ ĐƯỢC ĐỒNG BỘ HOÀN TOÀN VỚI TRANG SAPA
 $tour_details = [
-    'title' => 'Trekking Sapa: Chinh Phục Thung Lũng Mường Hoa',
-    'subtitle' => 'Một hành trình 2 ngày 1 đêm đi sâu vào trái tim của Hoàng Liên Sơn, khám phá những thửa ruộng bậc thang kỳ vĩ và cuộc sống bản địa mộc mạc.',
-    'hero_image' => 'https://vietnamdiscovery.com/wp-content/uploads/2021/03/sapa-trekking-3-1.jpg', // Thay bằng đường dẫn ảnh của bạn
+    'title' => 'Chèo Kayak Khám Phá Vịnh Hạ Long',
+    'subtitle' => 'Một ngày đắm mình trong kỳ quan thiên nhiên thế giới, tự do len lỏi qua những hang động và bãi biển ẩn mình bằng chính chiếc thuyền kayak của bạn.',
+    'hero_image' => 'https://images.vietnamtourism.gov.vn/vn/images/2016/anhInternet/00Halong-kayak.jpg', // Ảnh hero cho Hạ Long
     'overview' => [
-        'duration' => '2 Ngày / 1 Đêm',
-        'departure' => 'Hàng ngày từ Hà Nội / Sapa',
-        'difficulty' => 'Trung bình (Phù hợp cho người có sức khỏe tốt)',
-        'group_size' => 'Tối đa 10 người'
+        'duration' => 'Trọn 1 Ngày',
+        'departure' => 'Hàng ngày từ Hạ Long',
+        'difficulty' => 'Dễ (Phù hợp cho mọi lứa tuổi)',
+        'group_size' => 'Tối đa 15 người'
     ],
     'gallery' => [
-        ['url' => 'https://images2.thanhnien.vn/528068263637045248/2023/8/4/ban-sao-cua-dji0901-1691132710706875636958.jpg', 'alt' => 'Ruộng bậc thang mùa lúa xanh'],
-        ['url' => 'https://mia.vn/media/uploads/blog-du-lich/trang-phuc-dan-toc-hmong-hoa-1726418370.jpg', 'alt' => 'Người dân tộc H\'Mông'],
-        ['url' => 'https://motogo.vn/wp-content/uploads/2023/03/homestay-ban-ta-van-9.jpg', 'alt' => 'Homestay tại bản Tả Van'],
-        ['url' => 'https://fansipanlegend.sunworld.vn/wp-content/uploads/2024/03/5-long-suoi.png', 'alt' => 'Vượt qua một con suối nhỏ'],
+        ['url' => 'https://www.dulichhalong.net/wp-content/uploads/2013/07/Kayak-VInh-Ha-Long.jpg', 'alt' => 'Du khách chèo kayak qua một hang động'],
+        ['url' => 'https://dulichviet.com.vn/images/bandidau/bai-tam-ba-trai-dao-ha-long.jpg', 'alt' => 'Một bãi biển hoang sơ trong vịnh'],
+        ['url' => 'https://owa.bestprice.vn/images/cruises/uploads/du-thuyen-ambassador-1-ngay-6507fce2dfcfe.jpg', 'alt' => 'Du thuyền trên Vịnh Hạ Long'],
+        ['url' => 'https://www.1travel.vn/uploads/photo-e/blog/Am-Thuc-Du-Thuyen-Ha-Long/Untitled%20design%20(16)-ori.jpg', 'alt' => 'Bữa trưa hải sản tươi ngon trên tàu'],
     ],
     'itinerary' => [
-        'day_1' => [
-            'title' => 'NGÀY 1 | HÀ NỘI– SAPA – HÀM RỒNG',
+        'day_1' => [ // Sử dụng 'day_1' để giữ cấu trúc, dù tour chỉ có 1 ngày
+            'title' => 'TRỌN NGÀY | HẠ LONG – KHÁM PHÁ VỊNH BẰNG KAYAK',
             'details' => [
-                '<strong>6:30:</strong> Xe và hướng dẫn viên của chương trình đón quý khách tại khách sạn. Khởi hành đi Lào Cai, trên chạy theo đường cao tốc Nội Bài – Lào Cai dài 245km với chưa đầy 5h đồng hồ. Quý khách nghỉ ngơi trên xe và ngắm phong cảnh tuyệt đẹp trên cung đường này.',
-                '<strong>12h00:</strong> Xe đưa du khách đến Sapa cách thành phố Lào cai 38km. Trưa: Đến Sapa, Quý khách ăn trưa và nhận phòng khách sạn. Nghỉ trưa.',
-                '<strong>Chiều:</strong> Hướng dẫn viên đón khách tham quan: Khu du lịch Hàm Rồng với khung cảnh hoang sơ, kỳ vĩ. Thăm vườn lan Đông Dương với đủ loại, muôn sắc màu. Đầu Rồng Thạch Lâm kì vĩ, Vượt qua Cổng trời 1, Cổng trời 2, du khách sẽ được đặt chân đến nơi cao nhất của Hàm Rồng đó là sân Mây – nơi giao thoa của đất trời, ngắm toàn cảnh Sapa từ trên cao,...',
-                '<strong>Tối:</strong> Quý khách ngủ trở về Khách sạn. Quý khách ăn tối. tự do khám phá thị trấn Sapa về đêm. Nghỉ đêm tại Sapa.'
-            ]
-        ],
-        'day_2' => [
-            'title' => 'NGÀY 2 | CÁT CÁT– HÀ NỘI',
-            'details' => [
-                '<strong>Sáng:</strong> Quý khách ăn sáng tại khách sạn.',
-                '<strong>Trưa:</strong> Quý khách làm thủ tục trả phòng và ăn trưa.',
-                '<strong>Chiều:</strong> Quý khách tự do mua sắm trước khi lên xe về Hà Nội.'
+                '<strong>8:00:</strong> Xe đón tại khách sạn hoặc điểm hẹn ở khu vực Bãi Cháy, Hạ Long, di chuyển đến bến tàu du lịch.',
+                '<strong>9:00:</strong> Lên du thuyền, bắt đầu hành trình khám phá Vịnh. Hướng dẫn viên sẽ phổ biến lịch trình và các quy tắc an toàn khi chèo kayak.',
+                '<strong>10:00:</strong> Tàu dừng tại khu vực Hang Luồn. Quý khách nhận kayak và bắt đầu chèo thuyền, len lỏi qua các hang động để khám phá các áng, hồ nước yên tĩnh bên trong núi đá.',
+                '<strong>12:00:</strong> Thưởng thức bữa trưa trên du thuyền với các món hải sản tươi sống được chế biến theo phong cách địa phương.',
+                '<strong>13:30:</strong> Tàu di chuyển đến khu vực đảo Ti Tốp. Quý khách có thể tự do tắm biển, nghỉ ngơi trên bãi cát trắng mịn hoặc leo lên đỉnh núi để ngắm toàn cảnh Vịnh Hạ Long.',
+                '<strong>15:30:</strong> Quý khách lên tàu quay trở về đất liền. Thư giãn và ngắm cảnh hoàng hôn buông xuống trên Vịnh.',
+                '<strong>16:30:</strong> Tàu cập bến. Xe đưa quý khách về lại điểm đón ban đầu. Kết thúc chương trình.'
             ]
         ]
     ],
-    'includes' => ['Xe đưa đón', 'Hướng dẫn viên địa phương', 'Các bữa ăn trong chương trình', 'Phí tham quan', '1 đêm tại khách sạn', 'Nước uống'],
-    'excludes' => ['Đồ uống cá nhân', 'Chi phí cá nhân', 'Tiền tip cho HDV & lái xe'],
-    'price' => '2,500,000 VNĐ / người'
+    'includes' => ['Xe đưa đón tại Hạ Long', 'Du thuyền tham quan Vịnh', 'Hướng dẫn viên chuyên nghiệp', 'Thuyền Kayak và áo phao', 'Vé thắng cảnh', '01 bữa trưa hải sản', 'Nước uống trên tàu'],
+    'excludes' => ['Đồ uống gọi thêm', 'Chi phí cá nhân ngoài chương trình', 'Tiền tip cho HDV & lái xe (không bắt buộc)'],
+    'price' => '850,000 VNĐ / người'
 ];
 ?>
-
 <!DOCTYPE html>
 <html lang="vi">
 
@@ -48,7 +43,7 @@ $tour_details = [
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title><?php echo htmlspecialchars($tour_details['title']); ?></title>
-    <!-- Link đến file CSS cuối cùng bạn đã nhận được -->
+    <!-- Link đến file CSS CHUNG cho cả 2 trang -->
     <link rel="stylesheet" href="/css/detail-page-mountain.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -76,7 +71,7 @@ $tour_details = [
                             <span class="overview-value"><?php echo htmlspecialchars($tour_details['overview']['duration']); ?></span>
                         </div>
                         <div class="overview-item">
-                            <span class="overview-icon">⛰️</span>
+                            <span class="overview-icon">🚣</span> <!-- Thay icon phù hợp -->
                             <span class="overview-label">Độ khó</span>
                             <span class="overview-value"><?php echo htmlspecialchars($tour_details['overview']['difficulty']); ?></span>
                         </div>
@@ -100,7 +95,7 @@ $tour_details = [
                     <?php endforeach; ?>
                 </section>
 
-                <!-- ITINERARY SECTION - CẤU TRÚC HTML GỐC -->
+                <!-- ITINERARY SECTION -->
                 <section class="tour-itinerary">
                     <h2>Lịch trình</h2>
                     <div class="timeline">
@@ -109,7 +104,7 @@ $tour_details = [
                                 <div class="timeline-content">
                                     <h3><?php echo htmlspecialchars($day_data['title']); ?></h3>
                                     <?php foreach ($day_data['details'] as $detail): ?>
-                                        <p><?php echo $detail; // Cho phép thẻ <strong> để CSS có thể tách cột 
+                                        <p><?php echo $detail; // Cho phép thẻ <strong> 
                                             ?></p>
                                     <?php endforeach; ?>
                                 </div>
