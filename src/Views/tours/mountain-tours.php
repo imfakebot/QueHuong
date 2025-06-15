@@ -39,8 +39,9 @@ $suggested_mountain_tours_data = [
         'image' => '/images/tours/sapa.jpg', // Đường dẫn từ trang chủ
         'duration' => '4 Days 3 Nights', // Từ trang chủ
         'difficulty' => 'Trung bình', // Giả định, bạn có thể điều chỉnh
-        'price' => '4,800,000 VNĐ', // Quy đổi từ $200 USD (ước chừng)
-        'summary' => 'Khám phá những thửa ruộng bậc thang kỳ vĩ và văn hóa địa phương độc đáo của Sapa.' // Mô tả tóm tắt
+        'price' => '4,800,000 VNĐ',
+        'summary' => 'Khám phá những thửa ruộng bậc thang kỳ vĩ và văn hóa địa phương độc đáo của Sapa.',
+        'filename' => 'trekking-in-sapa.php' // Tên file chi tiết
     ],
     [
         'id' => 202, // ID mới
@@ -48,8 +49,9 @@ $suggested_mountain_tours_data = [
         'image' => '/images/tours/dalat-city.jpg', // Đường dẫn từ trang chủ
         'duration' => '3 Days 2 Nights', // Từ trang chủ
         'difficulty' => 'Dễ', // Giả định
-        'price' => '3,840,000 VNĐ', // Quy đổi từ $160 USD (ước chừng)
-        'summary' => "Khám phá 'Thành phố Ngàn hoa' Đà Lạt với những thác nước, hồ và vườn hoa tuyệt đẹp." // Mô tả tóm tắt
+        'price' => '3,840,000 VNĐ',
+        'summary' => "Khám phá 'Thành phố Ngàn hoa' Đà Lạt với những thác nước, hồ và vườn hoa tuyệt đẹp.",
+        'filename' => 'da-lat-romantic-getaway-detail.php' // Placeholder, bạn cần tạo file này
     ],
     [
         'id' => 203, // ID mới
@@ -57,30 +59,33 @@ $suggested_mountain_tours_data = [
         'image' => '/images/tours/phong-nha.webp', // Đường dẫn từ trang chủ
         'duration' => '3 Days 2 Nights', // Từ trang chủ
         'difficulty' => 'Trung bình', // Giả định
-        'price' => '5,280,000 VNĐ', // Quy đổi từ $220 USD (ước chừng)
-        'summary' => 'Khám phá hệ thống hang động kỳ vĩ tại Vườn Quốc gia Phong Nha - Kẻ Bàng, di sản UNESCO.' // Mô tả tóm tắt
+        'price' => '5,280,000 VNĐ',
+        'summary' => 'Khám phá hệ thống hang động kỳ vĩ tại Vườn Quốc gia Phong Nha - Kẻ Bàng, di sản UNESCO.',
+        'filename' => 'exploring-phongnha-cave.php' // Tên file chi tiết
     ],
 ];
 
 // Dữ liệu các tour núi hiện có của bạn
 $existing_mountain_tours_data = [
     [
-        'id' => 101,
+        'id' => 101, // Giữ ID cũ
         'title' => 'Trekking Tà Xùa Săn Mây',
         'image' => 'https://www.vietnambooking.com/wp-content/uploads/2020/07/ta-xua-san-may-1.jpg',
         'duration' => '3 Ngày 2 Đêm',
         'difficulty' => 'Trung bình',
         'price' => '2,500,000 VNĐ',
-        'summary' => 'Hành trình chinh phục "sống lưng khủng long" và biển mây huyền ảo tại một trong những cung đường trekking đẹp nhất miền Bắc.'
+        'summary' => 'Hành trình chinh phục "sống lưng khủng long" và biển mây huyền ảo tại một trong những cung đường trekking đẹp nhất miền Bắc.',
+        'filename' => 'trekking-ta-xua-detail.php' // Placeholder
     ],
     [
-        'id' => 102,
+        'id' => 102, // Giữ ID cũ
         'title' => 'Chinh Phục Đỉnh Fansipan',
         'image' => 'https://toiphuot.net/uploads/news/2025_01/huong-dan-chinh-phuc-dinh-fansipan-diem-den-hap-dan-du-khach-trong-va-ngoai-nuoc-1.jpg',
         'duration' => '2 Ngày 1 Đêm',
         'difficulty' => 'Khó',
         'price' => '3,200,000 VNĐ',
-        'summary' => 'Thử thách giới hạn bản thân với hành trình leo lên "Nóc nhà Đông Dương" hùng vĩ, một trải nghiệm không thể nào quên.'
+        'summary' => 'Thử thách giới hạn bản thân với hành trình leo lên "Nóc nhà Đông Dương" hùng vĩ, một trải nghiệm không thể nào quên.',
+        'filename' => 'fansipan-conquest-detail.php' // Placeholder
     ],
     [
         'id' => 103,
@@ -89,7 +94,8 @@ $existing_mountain_tours_data = [
         'duration' => '4 Ngày 3 Đêm',
         'difficulty' => 'Dễ',
         'price' => '3,800,000 VNĐ',
-        'summary' => 'Chiêm ngưỡng vẻ đẹp hùng vĩ của công viên địa chất toàn cầu UNESCO, từ những cung đường đèo uốn lượn đến những bản làng bình yên.'
+        'summary' => 'Chiêm ngưỡng vẻ đẹp hùng vĩ của công viên địa chất toàn cầu UNESCO, từ những cung đường đèo uốn lượn đến những bản làng bình yên.',
+        'filename' => 'dong-van-plateau-detail.php' // Placeholder
     ],
     [
         'id' => 104,
@@ -98,7 +104,8 @@ $existing_mountain_tours_data = [
         'duration' => '3 Ngày 2 Đêm',
         'difficulty' => 'Trung bình - Khó',
         'price' => '2,900,000 VNĐ',
-        'summary' => 'Một trong những cung đường trekking đẹp nhất Việt Nam, trải dài qua ba tỉnh Lâm Đồng, Ninh Thuận và Bình Thuận với cảnh quan đa dạng.'
+        'summary' => 'Một trong những cung đường trekking đẹp nhất Việt Nam, trải dài qua ba tỉnh Lâm Đồng, Ninh Thuận và Bình Thuận với cảnh quan đa dạng.',
+        'filename' => 'ta-nang-phan-dung-detail.php' // Placeholder
     ],
     [
         'id' => 105,
@@ -107,7 +114,8 @@ $existing_mountain_tours_data = [
         'duration' => '1 Ngày',
         'difficulty' => 'Dễ - Trung bình',
         'price' => '850,000 VNĐ',
-        'summary' => 'Chinh phục "Nóc nhà Nam Bộ", ngắm nhìn toàn cảnh đồng bằng và hồ Dầu Tiếng từ trên cao, kết hợp viếng chùa Bà linh thiêng.'
+        'summary' => 'Chinh phục "Nóc nhà Nam Bộ", ngắm nhìn toàn cảnh đồng bằng và hồ Dầu Tiếng từ trên cao, kết hợp viếng chùa Bà linh thiêng.',
+        'filename' => 'ba-den-mountain-detail.php' // Placeholder
     ],
     [
         'id' => 106,
@@ -116,7 +124,8 @@ $existing_mountain_tours_data = [
         'duration' => '3 Ngày 2 Đêm',
         'difficulty' => 'Dễ',
         'price' => '2,700,000 VNĐ',
-        'summary' => 'Đắm mình trong không gian xanh mát của khu bảo tồn thiên nhiên Pù Luông, khám phá ruộng bậc thang và văn hóa bản địa đặc sắc.'
+        'summary' => 'Đắm mình trong không gian xanh mát của khu bảo tồn thiên nhiên Pù Luông, khám phá ruộng bậc thang và văn hóa bản địa đặc sắc.',
+        'filename' => 'pu-luong-discovery-detail.php' // Placeholder
     ],
 
     [
@@ -126,7 +135,8 @@ $existing_mountain_tours_data = [
         'duration' => '1 Ngày',
         'difficulty' => 'Dễ - Trung bình',
         'price' => '950,000 VNĐ',
-        'summary' => 'Chinh phục đỉnh núi huyền thoại của Đà Lạt, ngắm nhìn toàn cảnh thành phố ngàn hoa từ trên cao và tìm hiểu câu chuyện tình yêu bất diệt.'
+        'summary' => 'Chinh phục đỉnh núi huyền thoại của Đà Lạt, ngắm nhìn toàn cảnh thành phố ngàn hoa từ trên cao và tìm hiểu câu chuyện tình yêu bất diệt.',
+        'filename' => 'langbiang-mountain-detail.php' // Placeholder
     ],
     [
         'id' => 109,
@@ -135,7 +145,8 @@ $existing_mountain_tours_data = [
         'duration' => '2 Ngày 1 Đêm',
         'difficulty' => 'Trung bình - Khó',
         'price' => '2,600,000 VNĐ',
-        'summary' => 'Khám phá Vườn Quốc Gia Bidoup Núi Bà, một trong những trung tâm đa dạng sinh học lớn nhất Việt Nam, với hệ động thực vật phong phú.'
+        'summary' => 'Khám phá Vườn Quốc Gia Bidoup Núi Bà, một trong những trung tâm đa dạng sinh học lớn nhất Việt Nam, với hệ động thực vật phong phú.',
+        'filename' => 'bidoup-nuiba-trek-detail.php' // Placeholder
     ],
     [
         'id' => 111,
@@ -144,7 +155,8 @@ $existing_mountain_tours_data = [
         'duration' => '3 Ngày 2 Đêm',
         'difficulty' => 'Trung bình',
         'price' => '3,100,000 VNĐ',
-        'summary' => 'Trải nghiệm săn mây trên đỉnh Lảo Thẩn và khám phá vẻ đẹp hoang sơ, bình dị của vùng đất Y Tý, Lào Cai.'
+        'summary' => 'Trải nghiệm săn mây trên đỉnh Lảo Thẩn và khám phá vẻ đẹp hoang sơ, bình dị của vùng đất Y Tý, Lào Cai.',
+        'filename' => 'y-ty-lao-than-detail.php' // Placeholder
     ]
 ];
 
@@ -152,8 +164,11 @@ $existing_mountain_tours_data = [
 $mountain_tours_data = array_merge($suggested_mountain_tours_data, $existing_mountain_tours_data);
 
 // Thêm slug vào dữ liệu
+// Và đảm bảo 'filename' tồn tại, nếu không có thì tạo từ slug (cần đảm bảo file này tồn tại)
 $mountain_tours = array_map(function ($tour) {
     $tour['slug'] = create_slug($tour['title']);
+    // Nếu 'filename' chưa được đặt ở trên, tạo một filename mặc định từ slug
+    $tour['filename'] = $tour['filename'] ?? $tour['slug'] . '.php';
     return $tour;
 }, $mountain_tours_data);
 
@@ -177,7 +192,7 @@ function normalize_difficulty_for_filter($difficulty)
 <!-- Phần nội dung chính của trang mountain-tours -->
 <header class="tour-list-header" style=" background: linear-gradient(rgba(44, 62, 80, 0.7), rgba(44, 62, 80, 0.7)),
     url('https://images.unsplash.com/photo-1551632811-561732d1e306?q=80&w=1770&auto=format&fit=crop')
-    no-repeat center center/cover;">
+    no-repeat center center/cover;height:77vh">
     <h1><?php echo htmlspecialchars($pageTitle); ?></h1>
     <p>Chọn một hành trình và bắt đầu chuyến phiêu lưu của bạn!</p>
     <a href="/things/adventure" class="btn-light" style="margin-top: 20px;">← Quay lại trang Phiêu Lưu</a>
@@ -209,7 +224,12 @@ function normalize_difficulty_for_filter($difficulty)
                             <span><strong>Độ khó:</strong> <?php echo htmlspecialchars($tour['difficulty']); ?></span>
                         </div>
                         <p><?php echo htmlspecialchars($tour['summary']); ?></p>
-                        <a href="/tours/detail?slug=<?php echo htmlspecialchars($tour['slug']); ?>" class="btn btn--primary">Xem Chi Tiết</a>
+                        <!-- Tour card content -->
+                        <a href="/tours/<?php echo htmlspecialchars($tour['slug']); ?>"
+                            class="btn btn--primary"
+                            title="<?php echo htmlspecialchars($tour['title']); ?>">
+                            Xem Chi Tiết
+                        </a>
                     </div>
                 </article>
             <?php endforeach; ?>

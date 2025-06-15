@@ -108,7 +108,7 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                 <!-- Cột 1: Northern -->
                                 <div class="mega-menu-column region-column">
                                     <div class="mega-menu-image-header">
-                                        <a href="/destinations/hanoi"><img src="/images/mega_menu/hanoi.png" alt="Thủ đô Hà Nội"></a>
+                                        <a href="/destinations/ha-noi"><img src="/images/mega_menu/hanoi.png" alt="Thủ đô Hà Nội"></a>
                                         <h4>HA NOI</h4>
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">NORTHERN VIETNAM</h5>
@@ -167,9 +167,9 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                                     </div>
                                     <h5 class="mega-menu-subheading region-title">Thrills & Nature's Best</h5>
                                     <ul class="mega-menu-links">
-                                        <li><a href="/tours/detail-mountain-tours/trekking-in-sapa">Trekking in Sapa</a></li>
-                                        <li><a href="/tours/detail-mountain-tours/kayaking-in-HaLong">Kayaking in Ha Long Bay</a></li>
-                                        <li><a href="/things/caving-phongnha">Exploring Phong Nha Caves</a></li>
+                                        <li><a href="/tours/detail-mountain-tours/trekking-in-sapa.php">Trekking in Sapa</a></li>
+                                        <li><a href="/tours/detail-mountain-tours/kayaking-in-Halong.php">Kayaking in Ha Long Bay</a></li>
+                                        <li><a href="/tours/detail-mountain-tours/exploring-phongnha-cave.php">Exploring Phong Nha Caves</a></li>
                                         <li><a href="/things/motorbiking">Motorbiking Adventures</a></li>
                                         <li><a href="/things/watersports">Watersports & Beaches</a></li>
                                         <li><a href="/things/canyoning-dalat">Canyoning in Da Lat</a></li>
