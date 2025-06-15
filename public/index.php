@@ -70,7 +70,7 @@ $tour_slug_to_filename_map = [
     // Mountain Tours
     'sapa-terraces-adventure' => 'trekking-in-sapa',
     'da-lat-romantic-getaway' => 'da-lat-romantic-getaway-detail',
-    'phong-nha-caves-adventure' => 'exploring-phongnha-cave', // Đã thêm gạch ngang
+    'phong-nha-caves-adventure' => 'exploring-phongnha-cave',
     'trekking-ta-xua-san-may' => 'trekking-ta-xua-detail',
     'chinh-phuc-dinh-fansipan' => 'fansipan-conquest-detail',
     'kham-pha-cao-nguyen-da-dong-van' => 'dong-van-plateau-detail',
@@ -80,8 +80,7 @@ $tour_slug_to_filename_map = [
     'leo-nui-langbiang-da-lat' => 'langbiang-mountain-detail',
     'trekking-bidoup-nui-ba' => 'bidoup-nuiba-trek-detail',
     'kham-pha-y-ty-lao-than' => 'y-ty-lao-than-detail',
-    // Water/Beach Tours (ví dụ)
-    'halong-bay-kayaking' => 'halong-kayaking-detail'
+    'kayaking-in-halong-bay' => 'kayaking-in-Halong'
 ];
 
 $destination_slug_to_filename_map = [

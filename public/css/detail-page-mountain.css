@@ -56,7 +56,7 @@ body {
   max-width: 800px;
   padding: 20px;
   background: rgba(0, 0, 0, 0.2); /* Lớp phủ nhẹ */
-  backdrop-filter: blur(4px); /* Hiệu ứng mờ nền */
+  backdrop-filter: blur(2px); /* Hiệu ứng mờ nền */
   border-radius: var(--border-radius-base);
 }
 .tour-hero h1 {
