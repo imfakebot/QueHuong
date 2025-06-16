@@ -84,6 +84,9 @@ $tour_slug_to_filename_map = [
     'kham-pha-y-ty-lao-than' => 'y-ty-lao-than-detail',
     'kayaking-in-halong-bay' => 'kayaking-in-Halong',
     'lan-bien-ngam-san-ho-phu-quoc' => 'phu-quoc-diving',
+    'ninh-binh-di-san-kep-trang-an' => 'ninh-binh-detail',
+    'ninhbinh-disnkeptrangancdohoal' => 'ninh-binh-detail',
+    'ninh-binh-tour' => 'ninh-binh-detail',
 ];
 
 

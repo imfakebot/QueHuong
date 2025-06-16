@@ -161,7 +161,7 @@ $pageScripts = ['/js/cultural-heritage-tours.js']; // JS riêng cho trang này
                             <span><strong>Giá từ:</strong> <?php echo htmlspecialchars($tour['price']); ?></span>
                         </div>
                         <p><?php echo htmlspecialchars($tour['summary']); ?></p>
-                        <a href="/tours/detail?slug=<?php echo htmlspecialchars($tour['slug']); ?>" class="btn btn--primary">Xem Chi Tiết</a>
+                        <a href="/tours/<?php echo htmlspecialchars($tour['slug']); ?>" class="btn btn--primary">Xem Chi Tiết</a>
                     </div>
                 </article>
             <?php endforeach; ?>

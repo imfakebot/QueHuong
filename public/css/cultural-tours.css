@@ -1,0 +1,298 @@
+/* =================================================== */
+/*            CSS CHUNG CHO TRANG CHI TIẾT TOUR        */
+/* =================================================== */
+
+/* === BIẾN VÀ CÀI ĐẶT CHUNG === */
+/* Các giá trị màu sắc và font chữ được nhúng trực tiếp */
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/* === LAYOUT CHÍNH & SIDEBAR === */
+.page-container {
+  max-width: 1140px;
+  margin: 40px auto;
+  padding: 0 20px;
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 40px;
+}
+.tour-main-content {
+  /* Nội dung chính */
+}
+.tour-sidebar {
+  /* Cột bên phải */
+}
+section {
+  margin-bottom: 40px;
+}
+h2 {
+  font-family: "Lora", serif;
+  font-size: 2rem;
+  color: #3c5b6f;
+  margin-bottom: 20px;
+}
+h3 {
+  font-family: "Lora", serif;
+  font-size: 1.5rem;
+  color: #3c5b6f;
+  margin-bottom: 15px;
+}
+h4 {
+  font-family: "Lora", serif;
+  font-size: 1.2rem;
+  margin-bottom: 10px;
+  border-left: 3px solid #dd4a48;
+  padding-left: 10px;
+}
+
+/* === HERO SECTION === */
+.tour-hero {
+  height: 90vh;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  color: white;
+}
+.tour-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.1));
+}
+.tour-hero-content {
+  position: relative;
+  max-width: 800px;
+  padding: 20px;
+}
+.tour-hero h1 {
+  font-family: "Lora", serif;
+  font-size: 3rem;
+  margin-bottom: 10px;
+}
+.tour-hero p {
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* === OVERVIEW & GALLERY === */
+.overview-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 15px;
+  background: #fff;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.overview-item {
+  text-align: center;
+}
+.overview-icon {
+  font-size: 2rem;
+}
+.overview-label {
+  display: block;
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 5px;
+}
+.overview-value {
+  display: block;
+  font-weight: 700;
+}
+.tour-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+}
+.tour-gallery img {
+  width: 100%;
+  height: 250px;
+  object-fit: cover;
+  border-radius: 8px;
+  cursor: zoom-in;
+  transition: opacity 0.3s ease;
+}
+.tour-gallery img:hover {
+  opacity: 0.8;
+}
+
+/* === TAB CHUYỂN ĐỔI === */
+.tour-tabs {
+  border-bottom: 2px solid #e0e0e0;
+}
+.tab-buttons {
+  display: flex;
+}
+.tab-button {
+  padding: 15px 25px;
+  cursor: pointer;
+  border: none;
+  background: transparent;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #888;
+  position: relative;
+  transition: color 0.3s ease;
+}
+.tab-button:hover {
+  color: #333;
+}
+.tab-button.active {
+  color: #dd4a48;
+}
+.tab-button.active::after {
+  content: "";
+  position: absolute;
+  bottom: -2px;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #dd4a48;
+}
+.tab-content {
+  padding: 30px 10px;
+  display: none;
+}
+.tab-content.active {
+  display: block;
+}
+.includes-list,
+.excludes-list,
+.notes-list {
+  list-style: none;
+  padding-left: 0;
+}
+.includes-list li,
+.notes-list li {
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.includes-list li::before {
+  content: "✓";
+  color: #27ae60;
+  position: absolute;
+  left: 0;
+}
+.excludes-list li {
+  /* Thêm padding-left cho excludes-list li */
+  padding-left: 25px;
+  position: relative;
+  margin-bottom: 8px;
+}
+.excludes-list li::before {
+  content: "✗";
+  color: #c0392b;
+  position: absolute;
+  left: 0;
+}
+
+/* === TIMELINE === */
+.timeline-item {
+  position: relative;
+  padding-left: 30px;
+  border-left: 2px solid #e0e0e0;
+  margin-bottom: 30px;
+}
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  left: -11px;
+  top: 0;
+  width: 20px;
+  height: 20px;
+  background: white;
+  border: 3px solid #3c5b6f;
+  border-radius: 50%;
+}
+.timeline-content p {
+  margin-bottom: 10px;
+  line-height: 1.7;
+}
+.timeline-content strong {
+  color: #3c5b6f;
+}
+
+/* === SIDEBAR & BOOKING WIDGET === */
+.tour-sidebar {
+  position: sticky;
+  top: 20px;
+}
+.booking-widget {
+  background: #fff;
+  padding: 25px;
+  border-radius: 8px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08);
+}
+.price-section {
+  text-align: center;
+  margin-bottom: 20px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 20px;
+}
+.price-label {
+  display: block;
+  color: #777;
+}
+.price-value {
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #dd4a48;
+}
+.form-group {
+  margin-bottom: 15px;
+}
+.form-group label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: 600;
+}
+.form-group input {
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+.btn-book-now {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  background: #dd4a48;
+  color: white;
+  font-size: 1.2rem;
+  font-weight: 700;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+.btn-book-now:hover {
+  background: #e74c3c;
+}
+
+/* === MODAL XEM ẢNH === */
+/* ... (Dán toàn bộ CSS cho modal gallery đã có từ trước vào đây) ... */
+
+/* === RESPONSIVE === */
+@media (max-width: 992px) {
+  .page-container {
+    grid-template-columns: 1fr;
+  }
+  .tour-sidebar {
+    position: static;
+    margin-top: 40px;
+  }
+}
+@media (max-width: 768px) {
+  .tour-hero h1 {
+    font-size: 2.5rem;
+  }
+}
