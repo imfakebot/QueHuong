@@ -1,5 +1,4 @@
 {
-  "types": "module",
   "name": "quehuong-travel",
   "version": "1.0.0",
   "description": "A travel website for Vietnam.",
@@ -23,7 +22,7 @@
   "keywords": [],
   "author": "",
   "license": "ISC",
-  "type": "commonjs",
+  "type": "module",
   "bugs": {
     "url": "https://github.com/imfakebot/QueHuong/issues"
   },
