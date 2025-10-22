@@ -154,6 +154,107 @@ button {
   flex-shrink: 0; /* Ngăn co lại */
 }
 
+/* === Login button styles === */
+.auth-actions {
+  margin-left: 10px; /* Khoảng cách so với search */
+}
+
+.login-button {
+  display: inline-block;
+  padding: 8px 12px;
+  background: transparent;
+  color: var(--text-dark);
+  border: 1px solid transparent;
+  border-radius: 6px;
+  font-weight: 600;
+  transition: background 0.18s ease, color 0.18s ease, border-color 0.18s ease;
+}
+
+.login-button:hover {
+  background: var(--primary-color);
+  color: #fff;
+  border-color: var(--primary-color);
+}
+
+.login-button:active {
+  transform: translateY(1px);
+}
+
+/* Modal styles */
+.modal {
+  position: fixed;
+  inset: 0; /* top:0; right:0; bottom:0; left:0 */
+  display: none; /* hidden by default */
+  align-items: center;
+  justify-content: center;
+  background: rgba(0, 0, 0, 0.5);
+  z-index: 2000;
+  padding: 20px;
+}
+.modal.open {
+  display: flex;
+}
+.modal-dialog {
+  background: #fff;
+  border-radius: 10px;
+  padding: 22px;
+  max-width: 420px;
+  width: 100%;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+  position: relative;
+}
+.modal-close {
+  position: absolute;
+  top: 10px;
+  right: 12px;
+  background: none;
+  border: none;
+  font-size: 22px;
+  line-height: 1;
+  cursor: pointer;
+}
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.login-form input[type="text"],
+.login-form input[type="password"] {
+  padding: 10px 12px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 14px;
+}
+.login-actions {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 6px;
+}
+.btn-primary {
+  background: var(--primary-color);
+  color: #fff;
+  padding: 8px 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+}
+.btn-link {
+  color: var(--primary-color);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+/* Utility: visually hidden (for labels) */
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px, 1px, 1px, 1px);
+  white-space: nowrap; /* added line */
+}
+
 /* === Search Customization (Ví dụ 1) === */
 .search-container {
   position: relative;

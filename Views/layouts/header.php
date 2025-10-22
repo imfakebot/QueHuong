@@ -226,6 +226,12 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                         <!-- Hoặc <i class="fas fa-search"></i> nếu dùng Font Awesome -->
                     </button>
                 </div>
+                <!-- Nút đăng nhập  -->
+                <div class="auth-actions">
+                    <a href="/login" class="login-button" aria-label="Đăng nhập">Đăng nhập</a>
+                </div>
+                
+
                 <!-- Nút Hamburger (chỉ hiển thị trên màn hình nhỏ) -->
                 <button class="hamburger-button" id="hamburger-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="main-navigation">
                     <span class="hamburger-box">
@@ -243,3 +249,23 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
         </form>
 
     </header> <!-- /site-header -->
+
+    <!-- Login Modal -->
+    <div id="login-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+        <div class="modal-dialog" role="document">
+            <button class="modal-close" aria-label="Đóng">&times;</button>
+            <h2>Đăng nhập</h2>
+            <form class="login-form" action="/login" method="POST">
+                <label for="login-username" class="visually-hidden">Tài khoản</label>
+                <input id="login-username" name="username" type="text" placeholder="Tài khoản" required>
+
+                <label for="login-password" class="visually-hidden">Mật khẩu</label>
+                <input id="login-password" name="password" type="password" placeholder="Mật khẩu" required>
+
+                <div class="login-actions">
+                    <button type="submit" class="btn-primary">Đăng nhập</button>
+                    <a href="/register" class="btn-link">Đăng ký</a>
+                </div>
+            </form>
+        </div>
+    </div>

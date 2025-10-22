@@ -62,7 +62,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
       if (
         mainNavigation.classList.contains("is-open") &&
-        !isClickInsideNav &&
+        ! isClickInsideNav &&
         !isClickOnHamburger
       ) {
         hamburgerButton.classList.remove("is-active");
@@ -90,6 +90,53 @@ document.addEventListener("DOMContentLoaded", function () {
     console.warn(
       "Site header element (.site-header) not found for sticky effect."
     );
+  }
+  // === Xử lý nút Đăng nhập (mở modal nếu có, hoặc điều hướng) ===
+  const loginButton = document.querySelector('.login-button');
+  const loginModal = document.getElementById('login-modal');
+
+  if (loginButton) {
+    loginButton.addEventListener('click', function (e) {
+      // Nếu có modal trên trang, chặn điều hướng và mở modal
+      if (loginModal) {
+        e.preventDefault();
+        // Thêm lớp open để hiển thị modal; class và styles modal cần được định nghĩa nếu sử dụng
+        loginModal.classList.add('open');
+        loginModal.setAttribute('aria-hidden', 'false');
+        // Tìm input đầu tiên để focus
+        const firstInput = loginModal.querySelector('input, button, textarea, [tabindex]');
+        if (firstInput) firstInput.focus();
+      }
+      // Nếu không có modal, liên kết /login sẽ hoạt động mặc định (điều hướng)
+    });
+
+    // Nếu modal tồn tại, xử lý đóng modal khi click ngoài hoặc nhấn ESC
+    if (loginModal) {
+      // Click outside để đóng
+      loginModal.addEventListener('click', function (evt) {
+        if (evt.target === loginModal) {
+          loginModal.classList.remove('open');
+          loginModal.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // ESC để đóng
+      document.addEventListener('keydown', function (evt) {
+        if (evt.key === 'Escape' && loginModal.classList.contains('open')) {
+          loginModal.classList.remove('open');
+          loginModal.setAttribute('aria-hidden', 'true');
+        }
+      });
+
+      // Nút đóng trong modal
+      const modalClose = loginModal.querySelector('.modal-close');
+      if (modalClose) {
+        modalClose.addEventListener('click', function () {
+          loginModal.classList.remove('open');
+          loginModal.setAttribute('aria-hidden', 'true');
+        });
+      }
+    }
   }
   // === Kết thúc mã cho hiệu ứng header sticky ===
 }); // Kết thúc DOMContentLoaded
