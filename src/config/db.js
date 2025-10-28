@@ -23,4 +23,19 @@ const pool = mysql.createPool({
   charset: 'utf8mb4',
 });
 
+// Hàm kiểm tra kết nối CSDL
+async function testDbConnection() {
+  let connection;
+  try {
+    connection = await pool.getConnection();
+    console.log('✅ Database connection successful!');
+  } catch (error) {
+    console.error('❌ Could not connect to the database:', error.message);
+    process.exit(1);
+  } finally {
+    if (connection) connection.release();
+  }
+}
+
+testDbConnection();
 export default pool;
