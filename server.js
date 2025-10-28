@@ -1,14 +1,11 @@
-import dotenv from 'dotenv';
-dotenv.config();
-
 import express from 'express';
 import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 import hbs from 'hbs';
 import session from 'express-session';
 import MySQLStoreFactory from 'express-mysql-session';
-import authRoutes from './routes/auth.js';
-import pool from './lib/db.js';
+import authRoutes from './src/routes/auth.js';
+import pool from './src/config/db.js';
 
 
 const app = express();
