@@ -6,6 +6,7 @@ import session from 'express-session';
 import MySQLStoreFactory from 'express-mysql-session';
 import authRoutes from './src/routes/auth.js';
 import pool from './src/config/db.js';
+require('reflect-data')
 
 
 const app = express();
