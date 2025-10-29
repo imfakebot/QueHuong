@@ -263,9 +263,11 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
                 <input id="login-password" name="password" type="password" placeholder="Mật khẩu" required>
 
                 <div class="login-actions">
-                    <button type="submit" class="btn-primary">Đăng nhập</button>
-                    <a href="/register" class="btn-link">Đăng ký</a>
+                    <button type="submit" class="btn-primary"  >Đăng nhập</button>
+                    <a href="/register" class="btn-link" >Đăng ký</a>
                 </div>
             </form>
         </div>
     </div>
+
+    

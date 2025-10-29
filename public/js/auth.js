@@ -19,23 +19,26 @@ document.addEventListener('DOMContentLoaded', function () {
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify(payload),
       });
+
       const data = await resp.json();
-      if (!data.ok) {
+
+      if (!resp.ok || !data.ok) {
         alert(data.error || 'Đăng nhập thất bại');
         return;
       }
 
-      // đóng modal và cập nhật header: thay nút Đăng nhập bằng tên user + nút Đăng xuất
+      // Đóng modal
       if (loginModal) {
         loginModal.classList.remove('open');
         loginModal.setAttribute('aria-hidden', 'true');
       }
 
+      // Cập nhật header
       if (loginButton) {
         const parent = loginButton.parentElement;
         if (parent) {
           parent.innerHTML = `
-            <span class="user-greeting">Xin chào, ${escapeHtml(data.user.userName)}</span>
+            <span class="user-greeting">Xin chào, ${escapeHtml(data.user?.userName || 'Người dùng')}</span>
             <button id="logout-btn" class="login-button">Đăng xuất</button>
           `;
           const logoutBtn = document.getElementById('logout-btn');
@@ -49,7 +52,7 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     } catch (err) {
       console.error(err);
-      alert('Lỗi mạng');
+      alert('Lỗi mạng hoặc server không phản hồi');
     }
   });
 

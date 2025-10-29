@@ -68,4 +68,14 @@ router.post('/api/register', async (req, res) => {
   }
 });
 
+// GET /api/me - return current logged-in user from session
+router.get('/api/me', (req, res) => {
+  if (req.session && req.session.user) {
+    return res.json({ ok: true, user: req.session.user });
+  }
+  return res.status(200).json({ ok: false, user: null });
+});
+
 export default router;
+
+

@@ -43,6 +43,31 @@ app.use(
 // Mount auth routes
 app.use(authRoutes);
 
+app.post('/api/login', async (req, res) => {
+  const { username, password } = req.body;
+
+  
+  if (username === 'admin' && password === '123') {
+    req.session.user = { userName: 'Admin' };
+    return res.json({
+      ok: true,
+      user: { userName: 'Admin' }
+    });
+  }
+
+  res.status(401).json({
+    ok: false,
+    error: 'Sai tài khoản hoặc mật khẩu'
+  });
+});
+
+// API đăng xuất
+app.post('/api/logout', (req, res) => {
+  req.session.destroy(() => {
+    res.json({ ok: true });
+  });
+});
+
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
 });
