@@ -4,8 +4,9 @@ import { fileURLToPath } from 'url';
 import hbs from 'hbs';
 import session from 'express-session';
 import MySQLStoreFactory from 'express-mysql-session';
-import authRoutes from './src/routes/auth.js';
+import authRoutes from './routes/auth.js';
 import pool from './src/config/db.js';
+import bcrypt from 'bcrypt';
 
 
 const app = express();
@@ -43,28 +44,44 @@ app.use(
 
 app.use(authRoutes);
 
-app.post('/api/login', async (req, res) => {
+// Handle form-based login coming from header.php modal (POST /login)
+app.post('/login', async (req, res) => {
   const { username, password } = req.body;
+  const referer = req.get('Referer') || '/';
 
-  
-  if (username === 'admin' && password === '123') {
-    req.session.user = { userName: 'Admin' };
-    return res.json({
-      ok: true,
-      user: { userName: 'Admin' }
-    });
+  if (!username || !password) {
+    return res.redirect(referer + (referer.includes('?') ? '&' : '?') + 'login_error=missing');
   }
 
-  res.status(401).json({
-    ok: false,
-    error: 'Sai tài khoản hoặc mật khẩu'
-  });
+  try {
+    const [rows] = await pool.query('SELECT * FROM Account WHERE userName = ? LIMIT 1', [username]);
+    const account = rows[0];
+    if (!account) {
+      return res.redirect(referer + (referer.includes('?') ? '&' : '?') + 'login_error=invalid');
+    }
+
+    const match = await bcrypt.compare(password, account.passwordHash);
+    if (!match) {
+      return res.redirect(referer + (referer.includes('?') ? '&' : '?') + 'login_error=invalid');
+    }
+
+    // Save session and redirect back
+    req.session.user = {
+      accountID: account.accountID ? account.accountID.toString('hex') : null,
+      userName: account.userName,
+    };
+
+    return res.redirect(referer + (referer.includes('?') ? '&' : '?') + 'login_success=1');
+  } catch (err) {
+    console.error('Form login error', err);
+    return res.status(500).send('Lỗi server');
+  }
 });
 
-// API đăng xuất
-app.post('/api/logout', (req, res) => {
+// API đăng xuất (kept in routes/auth.js as well, but keep a form-friendly logout here)
+app.post('/logout', (req, res) => {
   req.session.destroy(() => {
-    res.json({ ok: true });
+    res.redirect('/');
   });
 });
 
