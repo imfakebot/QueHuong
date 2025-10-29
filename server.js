@@ -42,7 +42,7 @@ app.use(
 );
 
 
-app.use(authRoutes);
+ app.use(authRoutes);
 
 app.listen(port, () => {
     console.log(`Server is running at http://localhost:${port}`);
