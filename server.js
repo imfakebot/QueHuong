@@ -4,8 +4,9 @@ import { fileURLToPath } from 'url';
 import hbs from 'hbs';
 import session from 'express-session';
 import MySQLStoreFactory from 'express-mysql-session';
-import authRoutes from './routes/auth.js';
-import pool from './lib/db.js';
+import authRoutes from './src/routes/auth.js';
+import pool from './src/config/db.js';
+
 
 const app = express();
 const port = process.env.PORT || 3000;
@@ -21,26 +22,25 @@ app.set('view engine', 'hbs');
 app.set('views', join(__dirname, 'views'));
 hbs.registerPartials(join(__dirname, 'views', 'partials'));
 
-// Session store setup using MySQL
 const MySQLStore = MySQLStoreFactory(session);
 const sessionStore = new MySQLStore({}, pool.promise ? pool.promise() : pool);
 
 app.use(
     session({
         key: 'connect.sid',
-        secret: process.env.SESSION_SECRET || 'change-this-secret',
+        secret: process.env.SESSION_SECRET,
         store: sessionStore,
         resave: false,
         saveUninitialized: false,
         cookie: {
-            maxAge: 1000 * 60 * 60 * 24, // 1 day
+            maxAge: 1000 * 60 * 60 * 24,
             httpOnly: true,
             sameSite: 'lax',
         },
     })
 );
 
-// Mount auth routes
+
 app.use(authRoutes);
 
 app.post('/api/login', async (req, res) => {
