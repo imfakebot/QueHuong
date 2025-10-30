@@ -9,6 +9,7 @@
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js"
   },
   "dependencies": {
+    "awilix-express": "^9.0.2",
     "bcrypt": "^6.0.0",
     "dotenv": "^17.2.3",
     "express": "^4.21.2",
@@ -16,7 +17,7 @@
     "express-session": "^1.18.2",
     "hbs": "^4.2.0",
     "joi": "^18.0.1",
-    "reflect-metadata": "^0.2.2",
+    "sequelize": "^6.37.7",
     "uuid": "^13.0.0"
   },
   "devDependencies": {
