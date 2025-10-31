@@ -1,0 +1,100 @@
+{{!-- layouts/header.hbs --}}
+<header class="site-header">
+    <div class="nav-menu">
+        <div class="logo-container">
+            <a href="/">
+                <img src="/images/logo/Vietnam.png" alt="Logo Du Lịch Quê Hương" id="logoVietNam">
+            </a>
+        </div>
+
+        <nav class="main-navigation" id="main-navigation">
+            <ul class="nav-list">
+                <!-- Life in Vietnam -->
+                <li class="nav-item has-mega-menu">
+                    <a href="/life" aria-haspopup="true" aria-expanded="false">Cuộc Sống Tại Việt Nam</a>
+                    <div class="mega-menu-panel life-mega-menu" aria-hidden="true">
+                        <div class="mega-menu-container">
+                            {{!-- Mega menu content for Life --}}
+                            {{> menus/life-menu}}
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Destinations -->
+                <li class="nav-item has-mega-menu">
+                    <a href="/destinations" aria-haspopup="true" aria-expanded="false">Địa Điểm Phải Đến</a>
+                    <div class="mega-menu-panel places-mega-menu" aria-hidden="true">
+                        <div class="mega-menu-container">
+                            {{!-- Mega menu content for Destinations --}}
+                            {{> menus/destinations-menu}}
+                        </div>
+                    </div>
+                </li>
+
+                <!-- Things to Do -->
+                <li class="nav-item has-mega-menu">
+                    <a href="/things" aria-haspopup="true" aria-expanded="false">Hoạt Động Du Lịch</a>
+                    <div class="mega-menu-panel things-mega-menu" aria-hidden="true">
+                        <div class="mega-menu-container">
+                            {{!-- Mega menu content for Things to Do --}}
+                            {{> menus/things-menu}}
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <div class="search-container">
+                <button id="search-toggle-btn" aria-label="Toggle search input">
+                    <img src="/svg/search.svg" alt="Tìm kiếm" class="search-icon">
+                </button>
+            </div>
+
+            <div class="auth-actions">
+                {{#if user}}
+                    <span class="user-name">{{user.userName}}</span>
+                    <form action="/logout" method="POST" class="logout-form">
+                        <button type="submit" class="logout-button">Đăng xuất</button>
+                    </form>
+                {{else}}
+                    <a href="/login" class="login-button" aria-label="Đăng nhập">Đăng nhập</a>
+                {{/if}}
+            </div>
+
+            <button class="hamburger-button" id="hamburger-button" aria-label="Toggle Menu" aria-expanded="false" aria-controls="main-navigation">
+                <span class="hamburger-box">
+                    <span class="hamburger-inner"></span>
+                </span>
+            </button>
+        </div>
+    </div>
+
+    <form id="search-form" class="search-form hidden" action="/search" method="GET">
+        <input type="search" id="search-input" name="q" placeholder="Nhập từ khóa...">
+        <button type="submit">Tìm</button>
+    </form>
+</header>
+
+<!-- Login Modal -->
+<div id="login-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+    <div class="modal-dialog" role="document">
+        <button class="modal-close" aria-label="Đóng">&times;</button>
+        <h2>Đăng nhập</h2>
+
+        <form class="login-form">
+            <label for="login-username" class="visually-hidden">Tài khoản</label>
+            <input id="login-username" name="username" type="text" placeholder="Tài khoản" required/>
+
+            <label for="login-password" class="visually-hidden">Mật khẩu</label>  
+            <input id="login-password" name="password" type="password" placeholder="Mật khẩu" required/>
+
+            <p class="login-message"></p>
+
+            <div class="login-actions">
+                <button type="submit" class="btn-primary">Đăng nhập</button>
+                <a href="/register" class="btn-link">Đăng ký</a>
+            </div>
+        </form>
+    </div>
+</div>

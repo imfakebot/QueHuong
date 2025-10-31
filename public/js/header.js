@@ -93,32 +93,50 @@ document.addEventListener("DOMContentLoaded", function () {
   }
 
   // chức năng login và test bằng API
-  document.addEventListener('submit', async function (e) {
+    document.addEventListener('submit', async function (e) {
     if (e.target && e.target.classList.contains('login-form')) {
       e.preventDefault();
-      const formData = new FormData(e.target);
+
+      const form = e.target;
+      const msg = form.querySelector('.login-message');
+      msg.textContent = ''; // Xóa thông báo cũ
+
+      const formData = new FormData(form);
       const payload = {
         username: formData.get('username'),
         password: formData.get('password'),
       };
+
       try {
         const resp = await fetch('/api/login', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(payload),
         });
+
         const data = await resp.json();
         if (!data.ok) {
-          alert(data.error || 'Đăng nhập thất bại');
+          msg.textContent = data.error || 'Đăng nhập thất bại';
+          msg.style.color = 'red';
           return;
         }
-        alert(`Đăng nhập thành công! Xin chào, ${data.user.userName}`);
+
+        msg.textContent = data.message;
+        msg.style.color = 'green';
+
+        // Đóng modal sau 1.5s và chuyển hướng về trang chính
+        setTimeout(() => {
+          document.getElementById('login-modal').style.display = 'none';
+          window.location.reload();
+        }, 1500);
       } catch (err) {
+        msg.textContent = 'Lỗi kết nối máy chủ';
+        msg.style.color = 'red';
         console.error(err);
-        alert('Lỗi mạng');
       }
     }
   });
+
 
   // === Kết thúc mã cho hiệu ứng header sticky ===
 }); // Kết thúc DOMContentLoaded

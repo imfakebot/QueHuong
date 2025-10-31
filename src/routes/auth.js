@@ -1,49 +1,58 @@
+// routes/auth.js
 import express from 'express';
-import bcrypt from 'bcryptjs';
+import bcrypt from 'bcrypt';
 import pool from '../config/db.js';
 
 const router = express.Router();
 
-// Helper to find account by username
+// 🔹 Hàm tìm tài khoản
 async function findAccountByUsername(username) {
-  const [rows] = await pool.query('SELECT * FROM Account WHERE userName = ? LIMIT 1', [username]);
+  const [rows] = await pool.query(
+    'SELECT * FROM Account WHERE email = ? LIMIT 1',
+    [username]
+  );
   return rows[0];
 }
 
-// POST /api/login
+// 🔹 Đăng nhập
 router.post('/api/login', async (req, res) => {
   try {
     const { username, password } = req.body;
-    if (!username || !password) return res.status(400).json({ ok: false, error: 'Thiếu username hoặc password' });
+    if (!username || !password)
+      return res
+        .status(400)
+        .json({ ok: false, error: 'Thiếu tài khoản hoặc mật khẩu' });
 
     const account = await findAccountByUsername(username);
-    if (!account) return res.status(401).json({ ok: false, error: 'Tài khoản không tồn tại' });
+    if (!account)
+      return res.status(401).json({ ok: false, error: 'Tài khoản không tồn tại' });
 
     const match = await bcrypt.compare(password, account.passwordHash);
-    if (!match) return res.status(401).json({ ok: false, error: 'Sai mật khẩu' });
+    if (!match)
+      return res.status(401).json({ ok: false, error: 'Sai mật khẩu' });
 
-    // Lưu session
     req.session.user = {
-      accountID: account.accountID.toString('hex'),
-      userName: account.userName,
+      id: account.accountID,
+      username: account.userName,
     };
 
-    return res.json({ ok: true, user: req.session.user });
+    return res.json({
+      ok: true,
+      message: 'Đăng nhập thành công!',
+      user: req.session.user,
+    });
   } catch (err) {
-    console.error('Login error', err);
-    return res.status(500).json({ ok: false, error: 'Lỗi server' });
+    console.error('Login error:', err);
+    res.status(500).json({ ok: false, error: 'Lỗi máy chủ' });
   }
 });
 
-// POST /api/logout
+// 🔹 Đăng xuất
 router.post('/api/logout', (req, res) => {
   req.session.destroy((err) => {
-    if (err) {
-      console.error('Destroy session error', err);
-      return res.status(500).json({ ok: false, error: 'Không thể logout' });
-    }
+    if (err) return res.status(500).json({ ok: false, error: 'Lỗi khi đăng xuất' });
     res.clearCookie('connect.sid');
-    return res.json({ ok: true });
+    res.json({ ok: true, message: 'Đã đăng xuất' });
   });
 });
 
