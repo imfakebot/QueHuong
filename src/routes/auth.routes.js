@@ -1,6 +1,6 @@
 import { Router } from 'express';
 import { validationMiddleware } from '../middleware/validation.middleware.js';
-import { registerSchema } from '../schemas/register.schema.js';
+import { registerSchema } from '../schema/register.schema.js';
 import { makeInvoker } from 'awilix-express';
 
 const router = Router();

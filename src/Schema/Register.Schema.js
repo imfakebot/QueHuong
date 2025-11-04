@@ -5,25 +5,25 @@ export const registerSchema = Joi.object({
         .min(5)
         .max(30)
         .required()
-        .message({
+        .messages({
             'string-min': 'Tên đăng nhập phải có ít nhất 5 ký tự',
             'string-max': 'Tên đăng nhập không được vượt quá 30 ký tự',
             'any.required': 'Vui lòng nhập tên đăng nhập'
         }),
 
     email: Joi.string()
-        .email()
+        .email({ tlds: { allow: false } }) // Cho phép email không có TLD như localhost
         .required()
-        .message({
+        .messages({
             'string-email': 'Vui lòng nhập đúng định dạng email',
-            'any.reqiure': 'Email là bắt buộc'
+            'any.required': 'Email là bắt buộc'
         }),
 
-    password: Joi.password()
+    password: Joi.string()
         .min(8)
         .max(30)
         .required()
-        .message({
+        .messages({
             'string-min': 'Mật khẩu phải có ít nhất 8 ký tự',
             'string-max': 'Mật khẩu không được vượt quá 30 ký tự',
             'any.required': 'Vui lòng nhập mật khẩu'
@@ -38,7 +38,6 @@ export const registerSchema = Joi.object({
         }),
 
     phoneNumber: Joi.string()
-        .phoneNumber()
         .required()
         .messages({
             'string.phoneNumber': 'Vui lòng nhập đúng định dạng số điện thoại',
@@ -75,11 +74,11 @@ export const registerSchema = Joi.object({
             'any.required': 'Vui lòng nhập trạng thái xác thực hai yếu tố'
         }),
 
-    twoFactorSecert: Joi.string .when('is2FAEnabled', {
-            is: true,
-            then: Joi.required().messages({
-                'any.required': 'Vui lòng nhập mã xác thực hai yếu tố'
-            }),
-            otherwise: Joi.optional()
+    twoFactorSecret: Joi.string().when('is2FAEnabled', {
+        is: true,
+        then: Joi.required().messages({
+            'any.required': 'Vui lòng nhập mã xác thực hai yếu tố'
         }),
+        otherwise: Joi.string().optional().allow('')
+    }),
 });

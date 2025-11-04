@@ -17,13 +17,10 @@
     "express-mysql-session": "^3.0.3",
     "express-session": "^1.18.2",
     "hbs": "^4.2.0",
-<<<<<<< HEAD
-    "mysql2": "^3.15.3"
-=======
+    "mysql2": "^3.15.3",
     "joi": "^18.0.1",
     "sequelize": "^6.37.7",
     "uuid": "^13.0.0"
->>>>>>> b24341c38846291003122b7f11e63f98f12e1015
   },
   "devDependencies": {
     "jest": "^30.2.0",
