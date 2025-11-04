@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../config/database.config.js'; // Import instance sequelize
+import Account from './account.model.js'; // Import model Account
 
 const User = sequelize.define('User', {
     id: {
@@ -32,6 +33,11 @@ const User = sequelize.define('User', {
 }, {
     timestamps: true,
     tableName: 'users', // Tên bảng trong DB (tùy chọn, Sequelize sẽ tự động pluralize nếu không có)
+});
+
+User.hasOne(Account, {
+    foreignKey: 'userId',
+    as: 'account'
 });
 
 export default User;
