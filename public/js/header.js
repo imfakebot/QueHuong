@@ -91,52 +91,52 @@ document.addEventListener("DOMContentLoaded", function () {
       "Site header element (.site-header) not found for sticky effect."
     );
   }
-  // === Xử lý nút Đăng nhập (mở modal nếu có, hoặc điều hướng) ===
-  const loginButton = document.querySelector('.login-button');
-  const loginModal = document.getElementById('login-modal');
 
-  if (loginButton) {
-    loginButton.addEventListener('click', function (e) {
-      // Nếu có modal trên trang, chặn điều hướng và mở modal
-      if (loginModal) {
-        e.preventDefault();
-        // Thêm lớp open để hiển thị modal; class và styles modal cần được định nghĩa nếu sử dụng
-        loginModal.classList.add('open');
-        loginModal.setAttribute('aria-hidden', 'false');
-        // Tìm input đầu tiên để focus
-        const firstInput = loginModal.querySelector('input, button, textarea, [tabindex]');
-        if (firstInput) firstInput.focus();
-      }
-      // Nếu không có modal, liên kết /login sẽ hoạt động mặc định (điều hướng)
-    });
+  // chức năng login và test bằng API
+    document.addEventListener('submit', async function (e) {
+    if (e.target && e.target.classList.contains('login-form')) {
+      e.preventDefault();
 
-    // Nếu modal tồn tại, xử lý đóng modal khi click ngoài hoặc nhấn ESC
-    if (loginModal) {
-      // Click outside để đóng
-      loginModal.addEventListener('click', function (evt) {
-        if (evt.target === loginModal) {
-          loginModal.classList.remove('open');
-          loginModal.setAttribute('aria-hidden', 'true');
-        }
-      });
+      const form = e.target;
+      const msg = form.querySelector('.login-message');
+      msg.textContent = ''; // Xóa thông báo cũ
 
-      // ESC để đóng
-      document.addEventListener('keydown', function (evt) {
-        if (evt.key === 'Escape' && loginModal.classList.contains('open')) {
-          loginModal.classList.remove('open');
-          loginModal.setAttribute('aria-hidden', 'true');
-        }
-      });
+      const formData = new FormData(form);
+      const payload = {
+        username: formData.get('username'),
+        password: formData.get('password'),
+      };
 
-      // Nút đóng trong modal
-      const modalClose = loginModal.querySelector('.modal-close');
-      if (modalClose) {
-        modalClose.addEventListener('click', function () {
-          loginModal.classList.remove('open');
-          loginModal.setAttribute('aria-hidden', 'true');
+      try {
+        const resp = await fetch('/api/login', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
         });
+
+        const data = await resp.json();
+        if (!data.ok) {
+          msg.textContent = data.error || 'Đăng nhập thất bại';
+          msg.style.color = 'red';
+          return;
+        }
+
+        msg.textContent = data.message;
+        msg.style.color = 'green';
+
+        // Đóng modal sau 1.5s và chuyển hướng về trang chính
+        setTimeout(() => {
+          document.getElementById('login-modal').style.display = 'none';
+          window.location.reload();
+        }, 1500);
+      } catch (err) {
+        msg.textContent = 'Lỗi kết nối máy chủ';
+        msg.style.color = 'red';
+        console.error(err);
       }
     }
-  }
+  });
+
+
   // === Kết thúc mã cho hiệu ứng header sticky ===
 }); // Kết thúc DOMContentLoaded

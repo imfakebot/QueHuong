@@ -251,21 +251,38 @@ $pageTitle = $pageTitle ?? 'Du Lịch Quê Hương - Khám Phá Việt Nam';
     </header> <!-- /site-header -->
 
     <!-- Login Modal -->
-    <div id="login-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
-        <div class="modal-dialog" role="document">
-            <button class="modal-close" aria-label="Đóng">&times;</button>
-            <h2>Đăng nhập</h2>
-            <form class="login-form" action="/login" method="POST">
-                <label for="login-username" class="visually-hidden">Tài khoản</label>
-                <input id="login-username" name="username" type="text" placeholder="Tài khoản" required>
+<div id="login-modal" class="modal" aria-hidden="true" role="dialog" aria-modal="true">
+  <div class="modal-dialog" role="document">
+    <button class="modal-close" aria-label="Đóng">&times;</button>
+    <h2>Đăng nhập</h2>
 
-                <label for="login-password" class="visually-hidden">Mật khẩu</label>
-                <input id="login-password" name="password" type="password" placeholder="Mật khẩu" required>
+    <form class="login-form">
+      <label for="login-username" class="visually-hidden">Tài khoản</label>
+      <input
+        id="login-username"
+        name="username"
+        type="text"
+        placeholder="Tài khoản"
+        required
+      />
 
-                <div class="login-actions">
-                    <button type="submit" class="btn-primary">Đăng nhập</button>
-                    <a href="/register" class="btn-link">Đăng ký</a>
-                </div>
-            </form>
-        </div>
-    </div>
+      <label for="login-password" class="visually-hidden">Mật khẩu</label>
+      <input
+        id="login-password"
+        name="password"
+        type="password"
+        placeholder="Mật khẩu"
+        required
+      />
+
+      <p class="login-message"></p>
+
+      <div class="login-actions">
+        <button type="submit" class="btn-primary">Đăng nhập</button>
+        <a href="/register" class="btn-link">Đăng ký</a>
+      </div>
+    </form>
+  </div>
+</div>
+    
+    

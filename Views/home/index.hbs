@@ -1,0 +1,172 @@
+{{!-- index.hbs --}}
+<div class="video">
+    <video src="/video/trailer.mp4" autoplay muted loop playsinline></video>
+</div>
+
+<div class="why-vietnam">
+    <div class="container">
+        <h2 class="section-title">Why Choose Vietnam?</h2>
+        <div class="features-grid">
+            <div class="feature-item">
+                <div class="image-container">
+                    <img src="/images/others/unique_culture.webp" alt="Unique Culture">
+                </div>
+                <h3>Unique Culture</h3>
+                <p>Vietnam proudly boasts a diverse and rich culture...</p>
+            </div>
+            <div class="feature-item">
+                <div class="image-container">
+                    <img src="/images/others/rick_cuisine.jpg" alt="Rich Cuisine">
+                </div>
+                <h3>Rich Cuisine</h3>
+                <p>Discover exceptional cuisine with world-famous dishes like pho, banh mi, spring rolls, and Vietnamese coffee.</p>
+            </div>
+            <div class="feature-item">
+                <div class="image-container">
+                    <img src="/images/others/beautiful_landscape.jpg" alt="Beautiful Landscapes">
+                </div>
+                <h3>Beautiful Landscapes</h3>
+                <p>From the majestic Ha Long Bay to the lush Mekong Delta, Vietnam possesses countless stunning natural wonders.</p>
+            </div>
+            <div class="feature-item">
+                <div class="image-container">
+                    <img src="/images/others/friendly_people.png" alt="Friendly People">
+                </div>
+                <h3>Friendly People</h3>
+                <p>Vietnamese people are renowned for their hospitality, friendliness, and eagerness to help visitors from around the world.</p>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Featured Tours Section with Custom Slider -->
+<section class="featured-tours">
+    <div class="container">
+        <h2 class="section-title">Featured Tours</h2>
+        
+        <div class="swiper-button-prev tour-nav-prev">{{> svg/prev-arrow }}</div>
+        <div class="swiper-button-next tour-nav-next">{{> svg/next-arrow }}</div>
+
+        <div class="swiper tour-swiper">
+            <div class="swiper-wrapper">
+                {{#each featuredTours}}
+                <div class="swiper-slide">
+                    <div class="tour-item">
+                        <a href="/tours/{{slug}}" class="tour-link">
+                            <div class="tour-image-container">
+                                <img src="{{image}}" alt="{{title}}">
+                                <span class="tour-duration">{{duration}}</span>
+                            </div>
+                            <div class="tour-content">
+                                <h3 class="tour-title">{{title}}</h3>
+                                <p class="tour-excerpt">{{excerpt}}</p>
+                                <div class="tour-price-wrapper">
+                                    <span class="tour-price">From {{price}} USD</span>
+                                </div>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            <div class="swiper-pagination tour-pagination"></div>
+        </div>
+
+        <div class="view-all-tours">
+            <a href="/tours" class="btn btn-primary">View All Tours</a>
+        </div>
+    </div>
+</section>
+
+<!-- Featured Destinations Section -->
+<section class="featured-destinations">
+    <div class="container">
+        <h2 class="section-title">Must-Visit Destinations</h2>
+        
+        <div class="swiper-button-prev destination-nav-prev">{{> svg/prev-arrow }}</div>
+        <div class="swiper-button-next destination-nav-next">{{> svg/next-arrow }}</div>
+
+        <div class="swiper destination-swiper">
+            <div class="swiper-wrapper">
+                {{#each destinations}}
+                <div class="swiper-slide destination-item">
+                    <a href="/destinations/{{slug}}" class="destination-link">
+                        <img src="{{image}}" alt="{{name}}">
+                        <div class="destination-name">{{name}}</div>
+                    </a>
+                </div>
+                {{/each}}
+            </div>
+            <div class="swiper-pagination destination-pagination"></div>
+        </div>
+
+        <div class="view-all-destinations">
+            <a href="/destinations" class="btn btn-secondary">Explore More Destinations</a>
+        </div>
+    </div>
+</section>
+
+<!-- Exciting Activities Section -->
+<section class="exciting-activities-slider">
+    <div class="container">
+        <h2 class="section-title">Unforgettable Experiences in Vietnam</h2>
+
+        <div class="swiper-button-prev activity-nav-prev">{{> svg/prev-arrow }}</div>
+        <div class="swiper-button-next activity-nav-next">{{> svg/next-arrow }}</div>
+
+        <div class="swiper activities-swiper">
+            <div class="swiper-wrapper">
+                {{#each activities}}
+                <div class="swiper-slide">
+                    <div class="activity-card">
+                        <a href="/things/{{slug}}" class="activity-link">
+                            <div class="activity-image-container">
+                                <img src="{{image}}" alt="{{title}}">
+                            </div>
+                            <div class="activity-content-details">
+                                <h3 class="activity-card-title">{{title}}</h3>
+                                <p class="activity-card-excerpt">{{excerpt}}</p>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                {{/each}}
+            </div>
+            <div class="swiper-pagination activities-pagination"></div>
+        </div>
+
+        <div class="view-all-activities">
+            <a href="/things" class="btn btn-primary">Discover More Activities</a>
+        </div>
+    </div>
+</section>
+
+<!-- Timeline Section -->
+<section id="section-traditional" class="timeline-section" style="background-image: url('https://img.lovepik.com/background/20211020/large/lovepik-background-of-red-festival-display-image_400051574.jpg');">
+    <div class="timeline-overlay"></div>
+    <div class="timeline-container">
+        <h2 class="timeline-title">Các Lễ Hội Theo Tháng</h2>
+
+        <div class="timeline-navigation">
+            {{#each months}}
+            <button class="timeline-month {{#if isActive}}active{{/if}}" data-month="{{@index}}">{{this}}</button>
+            {{/each}}
+        </div>
+
+        <div class="timeline-events">
+            {{#each eventsByMonth}}
+            <div class="month-events" data-month="{{@index}}" {{#unless isActive}}style="display: none;"{{/unless}}>
+                {{#each events}}
+                <a href="/life/{{slug}}" class="event-card">
+                    <img src="{{image}}" alt="{{title}}">
+                    <div class="event-info">
+                        <p class="event-date">{{date}}</p>
+                        <h3 class="event-title">{{title}}</h3>
+                    </div>
+                </a>
+                {{/each}}
+            </div>
+            {{/each}}
+        </div>
+    </div>
+</section>
