@@ -1,5 +1,6 @@
 import { DataTypes } from 'sequelize';
 import sequelize from '../config/database.config.js'; // Import instance sequelize
+import Booking from './booking.model.js';
 
 const User = sequelize.define('User', {
     id: {
@@ -33,5 +34,12 @@ const User = sequelize.define('User', {
     timestamps: true,
     tableName: 'users', // Tên bảng trong DB (tùy chọn, Sequelize sẽ tự động pluralize nếu không có)
 });
+
+User.hasMany(Booking,{
+    foreignKey:userId,
+    as: Booking
+})
+
+
 
 export default User;
