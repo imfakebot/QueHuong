@@ -1,6 +1,6 @@
 
 
-export class AuthController {
+export class authController { // Đổi tên thành chữ thường để nhất quán với container
     constructor({ userService }) {
         this.userService = userService;
     }
