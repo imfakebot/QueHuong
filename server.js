@@ -4,7 +4,6 @@ import { dirname, join } from 'path';
 import { fileURLToPath } from 'url';
 
 // Third-party libraries
-import express from 'express';
 import hbs from 'hbs';
 import session from 'express-session';
 import MySQLStoreFactory from 'express-mysql-session';
@@ -15,7 +14,6 @@ import dotenv from 'dotenv';
 import authRoutes from './src/routes/auth.routes.js';
 import sequelize from './src/config/database.config.js';
 import container from './src/container.js';
-import { syncDB } from './src/models/index.js';
 
 // --- CONFIGURATION ---
 dotenv.config(); // Load environment variables from .env file
