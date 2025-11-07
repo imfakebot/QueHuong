@@ -13,6 +13,20 @@ db.User = initUserModel(sequelize);
 db.Account = initAccountModel(sequelize);
 db.Role = initRoleModel(sequelize);
 db.AccountRole = initAccountRoleModel(sequelize);
+db.Article = initArticleModel(sequelize); //
+db.ToursSchedule = initToursScheduleModel(sequelize);//
+db.ToursExclusions = initToursExclusionsModel(sequelize);//
+db.ToursInclusions = initToursInclusionsModel(sequelize);//
+db.Booking = initBookingModel(sequelize);//
+db.Tags = initTagsModel(sequelize);//
+db.Tour = initTourModel(sequelize);//
+db.Location = initLocationModel(sequelize);//
+db.TourTags = initTourTagsModel(sequelize);//
+db.TourHighlight = initTourHighlightModel(sequelize);//
+db.LocationGallery = initLocationGalleryModel(sequelize);//
+db.Category = initCategoryModel(sequelize);//
+db.Reviews = initReviewsModel(sequelize);//
+
 
 // Thiết lập các mối quan hệ (associations) tại đây
 const { User, Account, Role, AccountRole } = db;
@@ -32,5 +46,12 @@ Role.belongsToMany(Account, {
     foreignKey: 'roleId',
     as: 'accounts'
 });
+
+// Thêm các mối quan hệ khác nếu cần thiết
+Booking.belongsTo(User, { foreignKey: 'userID', as: 'user' });
+User.hasMany(Booking, { foreignKey: 'userID', as: 'bookings' });
+Booking.belongsTo(ToursSchedule, { foreignKey: 'tourScheduleId', as: 'tourSchedule' });
+ToursSchedule.hasMany(Booking, { foreignKey: 'tourScheduleId', as: 'bookings' });
+
 
 export default db;
