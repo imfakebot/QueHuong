@@ -27,6 +27,19 @@ export default function initUserModel(sequelize) {
         address: {
             type: DataTypes.STRING,
             allowNull: true,
+        },
+        isEmailVerified: {
+            type: DataTypes.BOOLEAN,
+            allowNull: false,
+            defaultValue: false,
+        },
+        emailVerificationToken: {
+            type: DataTypes.STRING,
+            allowNull: true,
+        },
+        emailVerificationExpires: {
+            type: DataTypes.DATE,
+            allowNull: true,
         }
     }, {
         timestamps: true,

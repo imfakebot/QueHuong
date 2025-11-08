@@ -1,11 +1,20 @@
 import { Router } from 'express';
 import { validationMiddleware } from '../middleware/validation.middleware.js';
 import { registerSchema } from '../schema/register.schema.js';
-import { makeInvoker } from 'awilix-express';
 
-const router = Router();
-const api = makeInvoker(awilixContainer => awilixContainer.resolve('authController'));
+/**
+ * Tạo router cho các chức năng xác thực.
+ * @param {object} container - Container của Awilix.
+ * @returns {Router} Router của Express.
+ */
+export default function createAuthRouter({ authController }) {
+    const router = Router();
 
-router.post('/register', validationMiddleware(registerSchema), api('register'));
+    // Route để đăng ký tài khoản mới, có middleware để validate dữ liệu
+    router.post('/register', validationMiddleware(registerSchema), authController.register);
 
-export default router;
+    // Route để xử lý khi người dùng nhấp vào link xác thực email
+    router.get('/verify-email/:token', authController.verifyEmail);
+
+    return router;
+}
